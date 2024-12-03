@@ -19,6 +19,7 @@ namespace Enigmas.Ouija
         [SerializeField] private LinkCore linkCore;
 
         public int _linkRemoveCount = 5;
+        public int _linkAddCount = 5;
         
         public Action OnGoodAnswerEvent;
         public Action OnBadAnswerEvent;
@@ -45,7 +46,7 @@ namespace Enigmas.Ouija
 
         private void OnGoodAnswer()
         {
-            
+            linkCore.AddLink(_linkAddCount);
         }
 
         private void DrawCharacters()
