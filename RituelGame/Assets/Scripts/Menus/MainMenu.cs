@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -18,6 +19,16 @@ public class MainMenu : MonoBehaviour
         lastCanvasOpen = _startCanvas;
     }
 
+    public void StartAsHuman(string firstSceneHuman)
+    {
+        SceneManager.LoadScene(firstSceneHuman);
+    }
+    
+    public void StartAsSpirit(string firstSceneSpirit)
+    {
+        SceneManager.LoadScene(firstSceneSpirit);
+    }
+    
     public void Option()
     {
         _startCanvas.SetActive(false);
