@@ -307,6 +307,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _bodyImage: {fileID: 753582730}
+  _bodyData:
+    _serializedList:
+    - Key: a
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: b
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: c
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: d
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: e
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: f
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: g
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: h
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: i
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+    - Key: j
+      Value: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
 --- !u!4 &324686303
 Transform:
   m_ObjectHideFlags: 0
