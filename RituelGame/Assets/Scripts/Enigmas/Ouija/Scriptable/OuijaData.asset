@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44e1244c9969421aad724706ad9be60f, type: 3}
+  m_Name: OuijaData
+  m_EditorClassIdentifier: 
+  <_answerCharacters>k__BackingField: 43004f00550043004f005500
+  <_ouijaCharacters>k__BackingField:
+    _serializedList:
+    - Key: 65
+      Value: {fileID: 0}
+    - Key: 66
+      Value: {fileID: 0}
+    - Key: 67
+      Value: {fileID: 0}
+    - Key: 68
+      Value: {fileID: 0}
+    - Key: 69
+      Value: {fileID: 0}
+    - Key: 70
+      Value: {fileID: 0}
+    - Key: 71
+      Value: {fileID: 0}
+    - Key: 72
+      Value: {fileID: 0}
+    - Key: 73
+      Value: {fileID: 0}
+    - Key: 74
+      Value: {fileID: 0}
+    - Key: 75
+      Value: {fileID: 0}
+    - Key: 76
+      Value: {fileID: 0}
+    - Key: 77
+      Value: {fileID: 0}
+    - Key: 78
+      Value: {fileID: 0}
+    - Key: 79
+      Value: {fileID: 0}
+    - Key: 80
+      Value: {fileID: 0}
+    - Key: 81
+      Value: {fileID: 0}
+    - Key: 82
+      Value: {fileID: 0}
+    - Key: 83
+      Value: {fileID: 0}
+    - Key: 84
+      Value: {fileID: 0}
+    - Key: 85
+      Value: {fileID: 0}
+    - Key: 86
+      Value: {fileID: 0}
+    - Key: 87
+      Value: {fileID: 0}
+    - Key: 88
+      Value: {fileID: 0}
+    - Key: 89
+      Value: {fileID: 0}
+    - Key: 90
+      Value: {fileID: 0}
