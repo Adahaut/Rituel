@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 230021148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 767323944}
+        m_TargetAssemblyTypeName: HumainPiano, Assembly-CSharp
+        m_MethodName: PlayMusic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &230021148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +433,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1117336447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &767323944
@@ -436,8 +449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6744de1b75eb3c46ade14668944b41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minPitch: 0.6
-  maxPitch: 1.4
+  scriptableObject: {fileID: 11400000, guid: 80ecbae966967ab44b08ffc9e967e316, type: 2}
+  minPitch: 0.8
+  maxPitch: 1.2
 --- !u!1 &1117336443
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,7 +547,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 230021146}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 767323943}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -748,6 +762,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 655677199}
   - {fileID: 767323943}
-  - {fileID: 1117336447}
   - {fileID: 1421117076}
   - {fileID: 310556145}
