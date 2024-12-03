@@ -43,12 +43,7 @@ namespace Enigmas.Ouija
 
         public void OnConfirmButtonClicked()
         {
-            string answer = "";
-            foreach (char humanChar in _currentInput)
-            {
-                answer += humanChar;
-            }
-            ouijaCore.CheckAnswer(answer);
+            ouijaCore.CheckAnswer(_currentInput);
         }
 
         public void OnEraseButtonClicked()

@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
@@ -48,9 +49,16 @@ namespace Enigmas.Ouija
             }
         }
         
-        public bool CheckAnswer(string answer)
+        public bool CheckAnswer(List<char> answer)
         {
             bool result = true;
+            for (int i = 0; i < answer.Count; i++)
+            {
+                if (answer[i] == _currentOuijaData._answerCharacters[i]) continue;
+                
+                result = false;
+                break;
+            }
             
             
             Debug.Log($"The answer is {result}");
