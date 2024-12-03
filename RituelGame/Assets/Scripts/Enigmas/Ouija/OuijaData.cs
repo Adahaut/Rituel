@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Enigmas.Ouija
 {
-    [CreateAssetMenu(fileName = "OuijaData", menuName = "OuijaData")]
+    [CreateAssetMenu(fileName = "OuijaData", menuName = "Ouija/OuijaData")]
     public class OuijaData : ScriptableObject
     {
         [field:SerializeField] public List<char> _answerCharacters { get; private set; }

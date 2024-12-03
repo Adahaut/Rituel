@@ -16,12 +16,18 @@ namespace Enigmas.Ouija
         private OuijaData ouijaData;
 
         [field: SerializeField] private int maxCharInput = 5;
-        public List<char> _currentInput = new();
+        public List<char> _currentInput;
         
         private void Awake()
         {
+            CreateInputList();
             ScreenSetup();
             AttachButtonListener();
+        }
+
+        private void CreateInputList()
+        {
+            _currentInput = new List<char>(maxCharInput);
         }
 
         public void SetOuijaCore(OuijaCore newOuijaCore)
