@@ -57,62 +57,9 @@ MonoBehaviour:
   enigmaData: {fileID: 11400000, guid: 81ee7e3a328e0394589307a6e16b6bbf, type: 2}
   <_currentWorld>k__BackingField: 1
   <_currentOuijaData>k__BackingField: {fileID: 11400000, guid: be3d4c77d7fe20a42b6eb7e76196e690, type: 2}
-  <_characterObjects>k__BackingField:
-    _serializedList:
-    - Key: 65
-      Value: {fileID: 8587002008531343525}
-    - Key: 66
-      Value: {fileID: 1878567240396634749}
-    - Key: 67
-      Value: {fileID: 8005597480002120432}
-    - Key: 68
-      Value: {fileID: 7753763554929190331}
-    - Key: 69
-      Value: {fileID: 7190419979285360964}
-    - Key: 70
-      Value: {fileID: 3233812061294264013}
-    - Key: 71
-      Value: {fileID: 8929877884788092175}
-    - Key: 72
-      Value: {fileID: 8865486585515585238}
-    - Key: 73
-      Value: {fileID: 7521296867778184072}
-    - Key: 74
-      Value: {fileID: 1301153813442094734}
-    - Key: 75
-      Value: {fileID: 8871146919015977359}
-    - Key: 76
-      Value: {fileID: 471004259250086097}
-    - Key: 77
-      Value: {fileID: 4412052730282087980}
-    - Key: 78
-      Value: {fileID: 3559927608004741729}
-    - Key: 79
-      Value: {fileID: 4981918204025094960}
-    - Key: 80
-      Value: {fileID: 7168616982944343518}
-    - Key: 81
-      Value: {fileID: 1998213833085658008}
-    - Key: 82
-      Value: {fileID: 1309791766961936986}
-    - Key: 83
-      Value: {fileID: 2304970454752740374}
-    - Key: 84
-      Value: {fileID: 1604088700384109132}
-    - Key: 85
-      Value: {fileID: 1546732811960191224}
-    - Key: 86
-      Value: {fileID: 5817401739873783726}
-    - Key: 87
-      Value: {fileID: 3037348138056684293}
-    - Key: 88
-      Value: {fileID: 863371093860826937}
-    - Key: 89
-      Value: {fileID: 1814029801199375133}
-    - Key: 90
-      Value: {fileID: 1331714485742329021}
   <_ouijaCursor>k__BackingField: {fileID: 8415004728797245223}
   <_ouijaInputPanel>k__BackingField: {fileID: 3397120545938239555}
+  <_ouijaBoard>k__BackingField: {fileID: 5984470231315657054}
 --- !u!223 &6188746182700107281
 Canvas:
   m_ObjectHideFlags: 0
@@ -423,10 +370,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: OuijaBoard
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5787311091782854910, guid: 689de452a22d51f4b9b7be5758790001, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8353302231863019572, guid: 689de452a22d51f4b9b7be5758790001, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5984470231315657054}
   m_SourcePrefab: {fileID: 100100000, guid: 689de452a22d51f4b9b7be5758790001, type: 3}
 --- !u!224 &237393956001142668 stripped
 RectTransform:
@@ -532,6 +483,77 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81d91bffe0842d5a461d258d6dbd62e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1939736564469411770 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8353302231863019572, guid: 689de452a22d51f4b9b7be5758790001, type: 3}
+  m_PrefabInstance: {fileID: 7568211485942704014}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5984470231315657054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1939736564469411770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 153f1ba8334d16547ae2ba9b5285f39c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_characterObjects>k__BackingField:
+    _serializedList:
+    - Key: 65
+      Value: {fileID: 8587002008531343525}
+    - Key: 66
+      Value: {fileID: 1878567240396634749}
+    - Key: 67
+      Value: {fileID: 8005597480002120432}
+    - Key: 68
+      Value: {fileID: 7753763554929190331}
+    - Key: 69
+      Value: {fileID: 7190419979285360964}
+    - Key: 70
+      Value: {fileID: 3233812061294264013}
+    - Key: 71
+      Value: {fileID: 8929877884788092175}
+    - Key: 72
+      Value: {fileID: 8865486585515585238}
+    - Key: 73
+      Value: {fileID: 7521296867778184072}
+    - Key: 74
+      Value: {fileID: 1301153813442094734}
+    - Key: 75
+      Value: {fileID: 8871146919015977359}
+    - Key: 76
+      Value: {fileID: 471004259250086097}
+    - Key: 77
+      Value: {fileID: 4412052730282087980}
+    - Key: 78
+      Value: {fileID: 3559927608004741729}
+    - Key: 79
+      Value: {fileID: 4981918204025094960}
+    - Key: 80
+      Value: {fileID: 7168616982944343518}
+    - Key: 81
+      Value: {fileID: 1998213833085658008}
+    - Key: 82
+      Value: {fileID: 1309791766961936986}
+    - Key: 83
+      Value: {fileID: 2304970454752740374}
+    - Key: 84
+      Value: {fileID: 1604088700384109132}
+    - Key: 85
+      Value: {fileID: 1546732811960191224}
+    - Key: 86
+      Value: {fileID: 5817401739873783726}
+    - Key: 87
+      Value: {fileID: 3037348138056684293}
+    - Key: 88
+      Value: {fileID: 863371093860826937}
+    - Key: 89
+      Value: {fileID: 1814029801199375133}
+    - Key: 90
+      Value: {fileID: 1331714485742329021}
 --- !u!114 &1998213833085658008 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8267664278580020246, guid: 689de452a22d51f4b9b7be5758790001, type: 3}

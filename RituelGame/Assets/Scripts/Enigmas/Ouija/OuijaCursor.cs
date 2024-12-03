@@ -55,7 +55,7 @@ namespace Enigmas.Ouija
             }
 
             char currentChar = ouijaData._answerCharacters[_currentCharIndex];
-            OuijaCharacter currentCharacter = ouijaCore._characterObjects[currentChar];
+            OuijaCharacter currentCharacter = ouijaCore._ouijaBoard._characterObjects[currentChar];
             rectTransform.DOMove(currentCharacter._rectTransform.position, _timeToNextPosition).
                 SetEase(moveEase).onComplete += OnMovementCompleted;
         }

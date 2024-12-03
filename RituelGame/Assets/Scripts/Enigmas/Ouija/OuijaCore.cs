@@ -13,13 +13,14 @@ namespace Enigmas.Ouija
         [SerializeField] private EnigmaData enigmaData;
         [field:SerializeField] public WorldType _currentWorld { get; private set; }
         [field:SerializeField] public OuijaData _currentOuijaData { get; private set; }
-        [field:SerializeField] public SerializedDictionary<char, OuijaCharacter> _characterObjects { get; private set; }
         [field:SerializeField] public OuijaCursor _ouijaCursor { get; private set; }
         [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
+        [field:SerializeField] public OuijaBoard _ouijaBoard { get; private set; }
 
         private void Awake()
         {
             _ouijaCursor.SetOuijaCore(this);
+            _ouijaBoard.SetOuijaCore(this);
             DrawCharacters();
             if (_currentWorld == WorldType.Spirit)
             {
@@ -30,24 +31,18 @@ namespace Enigmas.Ouija
 
         private void DrawCharacters()
         {
-            foreach (OuijaCharacter ouijaCharacter in _characterObjects.Keys.Select(character => _characterObjects[character]))
-            {
-                if (_currentWorld == WorldType.Human)
-                {
-                    ouijaCharacter._humanCharacter.gameObject.SetActive(true);
-                    ouijaCharacter._spiritCharacter.gameObject.SetActive(false);
-                }
-                else
-                {
-                    ouijaCharacter._humanCharacter.gameObject.SetActive(false);
-                    ouijaCharacter._spiritCharacter.gameObject.SetActive(true);
-                }
-            }
+            _ouijaBoard.DrawCharacters();
         }
         
         public bool CheckAnswer(List<char> answer)
         {
             bool result = true;
+            if (answer.Count != _currentOuijaData._answerCharacters.Count)
+            {
+                result = false;
+                Debug.Log($"The answer is {result}");
+                return result;
+            }
             for (int i = 0; i < answer.Count; i++)
             {
                 if (answer[i] == _currentOuijaData._answerCharacters[i]) continue;
@@ -55,7 +50,6 @@ namespace Enigmas.Ouija
                 result = false;
                 break;
             }
-            
             
             Debug.Log($"The answer is {result}");
             return result;
