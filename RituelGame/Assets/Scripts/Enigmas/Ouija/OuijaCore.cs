@@ -14,11 +14,17 @@ namespace Enigmas.Ouija
         [field:SerializeField] public OuijaData _currentOuijaData { get; private set; }
         [field:SerializeField] public SerializedDictionary<char, OuijaCharacter> _characterObjects { get; private set; }
         [field:SerializeField] public OuijaCursor _ouijaCursor { get; private set; }
+        [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
 
         private void Awake()
         {
             _ouijaCursor.SetOuijaCore(this);
+            _ouijaInputPanel.SetOuijaCore(this);
             DrawCharacters();
+            if (_currentWorld == WorldType.Spirit)
+            {
+                _ouijaCursor.gameObject.SetActive(false);
+            }
         }
 
         private void DrawCharacters()
