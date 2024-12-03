@@ -1668,7 +1668,7 @@ MonoBehaviour:
   enigmaData: {fileID: 11400000, guid: 81ee7e3a328e0394589307a6e16b6bbf, type: 2}
   <_currentWorld>k__BackingField: 0
   <_currentOuijaData>k__BackingField: {fileID: 11400000, guid: be3d4c77d7fe20a42b6eb7e76196e690, type: 2}
-  <_characterTransforms>k__BackingField:
+  <_characterObjects>k__BackingField:
     _serializedList:
     - Key: 65
       Value: {fileID: 6299078113577730901}
