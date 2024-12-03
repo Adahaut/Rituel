@@ -10,11 +10,11 @@ public class HumanBodyEnigma : MonoBehaviour
     private int bodyIndex;
 
     public Image _bodyImage;
-    public SerializedDictionary<string, Sprite> _bodyData = new SerializedDictionary<string, Sprite>();
+    public SerializedDictionary<string, Sprite> _bodyData = new SerializedDictionary<string, Sprite>(10);
 
     private void Start()
     {
-        bodyIndex = Random.Range(0, 9);
+        bodyIndex = Random.Range(0, _bodyData.Count);
 
         _bodyImage.sprite = _bodyData.ElementAt(bodyIndex).Value;
         
