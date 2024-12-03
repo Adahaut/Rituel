@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
@@ -12,35 +13,71 @@ namespace Enigmas.Ouija
         [SerializeField] private EnigmaData enigmaData;
         [field:SerializeField] public WorldType _currentWorld { get; private set; }
         [field:SerializeField] public OuijaData _currentOuijaData { get; private set; }
-        [field:SerializeField] public SerializedDictionary<char, OuijaCharacter> _characterObjects { get; private set; }
         [field:SerializeField] public OuijaCursor _ouijaCursor { get; private set; }
+        [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
+        [field:SerializeField] public OuijaBoard _ouijaBoard { get; private set; }
+        [SerializeField] private LinkCore linkCore;
 
+        public int _linkRemoveCount = 5;
+        public int _linkAddCount = 5;
+        
+        public Action OnGoodAnswerEvent;
+        public Action OnBadAnswerEvent;
+        
         private void Awake()
         {
             _ouijaCursor.SetOuijaCore(this);
+            _ouijaBoard.SetOuijaCore(this);
             DrawCharacters();
+            if (_currentWorld == WorldType.Spirit)
+            {
+                _ouijaInputPanel.SetOuijaCore(this);
+                _ouijaCursor.gameObject.SetActive(false);
+            }
+
+            OnGoodAnswerEvent += OnGoodAnswer;
+            OnBadAnswerEvent += OnBadAnswer;
+        }
+
+        private void OnBadAnswer()
+        {
+            linkCore.RemoveLink(_linkRemoveCount);
+        }
+
+        private void OnGoodAnswer()
+        {
+            linkCore.AddLink(_linkAddCount);
         }
 
         private void DrawCharacters()
         {
-            foreach (OuijaCharacter ouijaCharacter in _characterObjects.Keys.Select(character => _characterObjects[character]))
-            {
-                if (_currentWorld == WorldType.Human)
-                {
-                    ouijaCharacter._humanCharacter.gameObject.SetActive(true);
-                    ouijaCharacter._spiritCharacter.gameObject.SetActive(false);
-                }
-                else
-                {
-                    ouijaCharacter._humanCharacter.gameObject.SetActive(false);
-                    ouijaCharacter._spiritCharacter.gameObject.SetActive(true);
-                }
-            }
+            _ouijaBoard.DrawCharacters();
         }
         
-        public bool CheckAnswer(string answer)
+        public void OnConfirmAnswer(List<char> answer)
         {
-            return true;
+            if (CheckResult(answer))
+            {
+                OnGoodAnswerEvent.Invoke();
+            }
+            else
+            {
+                OnBadAnswerEvent.Invoke();
+            }
+        }
+
+        public bool CheckResult(List<char> answer)
+        {
+            bool result = answer.Count == _currentOuijaData._answerCharacters.Count;
+            for (int i = 0; i < answer.Count; i++)
+            {
+                if (answer[i] == _currentOuijaData._answerCharacters[i]) continue;
+                
+                result = false;
+                break;
+            }
+            
+            return result;
         }
         
         public void SetOuijaData(OuijaData ouijaData)
