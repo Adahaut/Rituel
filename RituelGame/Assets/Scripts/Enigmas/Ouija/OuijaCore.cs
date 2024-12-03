@@ -20,15 +20,11 @@ namespace Enigmas.Ouija
         private void Awake()
         {
             _ouijaCursor.SetOuijaCore(this);
-            _ouijaInputPanel.SetOuijaCore(this);
             DrawCharacters();
             if (_currentWorld == WorldType.Spirit)
             {
+                _ouijaInputPanel.SetOuijaCore(this);
                 _ouijaCursor.gameObject.SetActive(false);
-            }
-            else
-            {
-                _ouijaInputPanel.gameObject.SetActive(false);
             }
         }
 
