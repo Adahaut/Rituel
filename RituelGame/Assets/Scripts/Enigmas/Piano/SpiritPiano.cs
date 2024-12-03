@@ -11,6 +11,7 @@ public class SpiritPiano : MonoBehaviour
     private int index;
     
     private bool isRecording;
+    private bool enigmaSolved;
 
     private void Start()
     {
@@ -29,21 +30,26 @@ public class SpiritPiano : MonoBehaviour
 
     public void BeginRecord()
     {
-        isRecording = true;
+        if (!isRecording)
+        {
+            isRecording = true;
+        }
     }
     
     public void PlayNote(string Name)
     {
-        //FindObjectOfType<AudioManager>().PlaySound(name);
+        print(Name);
+        FindObjectOfType<AudioManager>().PlaySound(Name);
         if (!isRecording) return;
         keys.Add(Name);
+        if (partition.Count == keys.Count)
+        {
+            enigmaSolved = true;
+            Debug.Log("enigma solved");
+        }
         if (partition[index] != keys[index])
         {
             Debug.Log("wrong key");
-            if (partition.Count == keys.Count)
-            {
-                Debug.Log("enigma solved");
-            }
             ResetEnigma();
             return;
         }
@@ -53,10 +59,14 @@ public class SpiritPiano : MonoBehaviour
 
     private void ResetEnigma()
     {
-        Debug.Log("reset enigma");
+        
         isRecording = false;
         keys.Clear();
         timer = 0;
         index = 0;
+        if (!enigmaSolved)
+        {
+            Debug.Log("enigma lost");
+        }
     }
 }

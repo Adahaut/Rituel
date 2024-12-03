@@ -11,21 +11,18 @@ public class AudioManager : MonoBehaviour
         {
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
-            s.source.outputAudioMixerGroup = s.audioMixerGroup;
 
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+            s.source.playOnAwake = s.playOnAwake;
         }
     }
 
     public void PlaySound (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
-        if (!s.source.isPlaying)
-        {
-            s.source.Play();
-        }
+        s.source.Play();
     }
 
     public void StopSound(string name)
