@@ -49,7 +49,7 @@ namespace Enigmas.Ouija
 
         public void OnConfirmButtonClicked()
         {
-            ouijaCore.CheckAnswer(_currentInput);
+            ouijaCore.OnConfirmAnswer(_currentInput);
         }
 
         public void OnEraseButtonClicked()

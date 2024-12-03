@@ -60,6 +60,8 @@ MonoBehaviour:
   <_ouijaCursor>k__BackingField: {fileID: 8415004728797245223}
   <_ouijaInputPanel>k__BackingField: {fileID: 3397120545938239555}
   <_ouijaBoard>k__BackingField: {fileID: 5984470231315657054}
+  linkCore: {fileID: 0}
+  _linkRemoveCount: 5
 --- !u!223 &6188746182700107281
 Canvas:
   m_ObjectHideFlags: 0

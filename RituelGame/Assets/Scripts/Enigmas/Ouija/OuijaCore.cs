@@ -16,7 +16,13 @@ namespace Enigmas.Ouija
         [field:SerializeField] public OuijaCursor _ouijaCursor { get; private set; }
         [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
         [field:SerializeField] public OuijaBoard _ouijaBoard { get; private set; }
+        [SerializeField] private LinkCore linkCore;
 
+        public int _linkRemoveCount = 5;
+        
+        public Action OnGoodAnswerEvent;
+        public Action OnBadAnswerEvent;
+        
         private void Awake()
         {
             _ouijaCursor.SetOuijaCore(this);
@@ -27,6 +33,19 @@ namespace Enigmas.Ouija
                 _ouijaInputPanel.SetOuijaCore(this);
                 _ouijaCursor.gameObject.SetActive(false);
             }
+
+            OnGoodAnswerEvent += OnGoodAnswer;
+            OnBadAnswerEvent += OnBadAnswer;
+        }
+
+        private void OnBadAnswer()
+        {
+            linkCore.RemoveLink(_linkRemoveCount);
+        }
+
+        private void OnGoodAnswer()
+        {
+            
         }
 
         private void DrawCharacters()
@@ -34,15 +53,21 @@ namespace Enigmas.Ouija
             _ouijaBoard.DrawCharacters();
         }
         
-        public bool CheckAnswer(List<char> answer)
+        public void OnConfirmAnswer(List<char> answer)
         {
-            bool result = true;
-            if (answer.Count != _currentOuijaData._answerCharacters.Count)
+            if (CheckResult(answer))
             {
-                result = false;
-                Debug.Log($"The answer is {result}");
-                return result;
+                OnGoodAnswerEvent.Invoke();
             }
+            else
+            {
+                OnBadAnswerEvent.Invoke();
+            }
+        }
+
+        public bool CheckResult(List<char> answer)
+        {
+            bool result = answer.Count == _currentOuijaData._answerCharacters.Count;
             for (int i = 0; i < answer.Count; i++)
             {
                 if (answer[i] == _currentOuijaData._answerCharacters[i]) continue;
@@ -51,7 +76,6 @@ namespace Enigmas.Ouija
                 break;
             }
             
-            Debug.Log($"The answer is {result}");
             return result;
         }
         
