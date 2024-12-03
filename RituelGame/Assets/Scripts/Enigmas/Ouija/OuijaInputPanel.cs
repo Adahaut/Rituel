@@ -40,6 +40,26 @@ namespace Enigmas.Ouija
             _currentInput.Add(humanChar);
             RefreshScreen();
         }
+
+        public void OnConfirmButtonClicked()
+        {
+            string answer = "";
+            foreach (char humanChar in _currentInput)
+            {
+                answer += humanChar;
+            }
+            ouijaCore.CheckAnswer(answer);
+        }
+
+        public void OnEraseButtonClicked()
+        {
+            if (_currentInput.Count == 0)
+            {
+                return;
+            }
+            _currentInput.RemoveAt(_currentInput.Count - 1);
+            RefreshScreen();
+        }
         
         private void RefreshButtons()
         {

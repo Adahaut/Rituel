@@ -25,6 +25,10 @@ namespace Enigmas.Ouija
             {
                 _ouijaCursor.gameObject.SetActive(false);
             }
+            else
+            {
+                _ouijaInputPanel.gameObject.SetActive(false);
+            }
         }
 
         private void DrawCharacters()
@@ -46,7 +50,11 @@ namespace Enigmas.Ouija
         
         public bool CheckAnswer(string answer)
         {
-            return true;
+            bool result = true;
+            
+            
+            Debug.Log($"The answer is {result}");
+            return result;
         }
         
         public void SetOuijaData(OuijaData ouijaData)
