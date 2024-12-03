@@ -5,24 +5,15 @@ using UnityEngine;
 
 public class EnigmaMazeCoreHuman : MonoBehaviour
 {
+    public MazePaterns _mazePaterns;
+    
     public GameObject _mazeFramePrefab;
     public Transform _mazeFrameStartPosition;
-    
-    private int[,] mazeArray =
-    {
-        { 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1},
-        { 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1},
-        { 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1},
-        { 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1},
-        { 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1},
-        { 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 1, 1},
-        { 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1},
-        { 1, 1, 1, 0, 0, 0, 1, 0, 1, 0, 1, 1},
-        { 1, 0, 0, 0, 1, 0, 0, 1, 1, 0, 1, 1},
-        { 1, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 1},
-        { 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1},
-        { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
-    };
+
+    private int[,] mazeArray;
+
+    [SerializeField] private GameObject windRose;
+    [SerializeField] private float windScale;
 
     [SerializeField] private GameObject mazePawn;
     [SerializeField] private Vector2 spawnPawnPosition;
@@ -35,6 +26,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     
     private void Start()
     {
+        spawnPawnPosition = _mazePaterns.SetPawnBasePosition();
+        mazeArray = _mazePaterns.Paterns();
         DrawMaze();
     }
     private void DrawMaze()
@@ -47,9 +40,11 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
                     _mazeFrameStartPosition.position.x + i * frameScale,
                     _mazeFrameStartPosition.position.y + j * frameScale);
 
-                GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity);
+                GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity, _mazeFrameStartPosition); 
             }
         }
+        
+        windRose = Instantiate(windRose, new Vector2(gridLenght * windScale, gridLenght/windScale), Quaternion.identity);
         
         mazePawn = Instantiate(
             mazePawn,
@@ -88,7 +83,16 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     private void ResetMaze()
     {
-        mazePawn.transform.position = spawnPawnPosition;
+        foreach (Transform child in _mazeFrameStartPosition)
+        {
+            Destroy(child.gameObject);
+        }
+        
+        Destroy(mazePawn);
+        Destroy(windRose);
+        spawnPawnPosition = _mazePaterns.SetPawnBasePosition();
+        mazeArray = _mazePaterns.Paterns();
+        DrawMaze();
     }
 
     private void Lose()
