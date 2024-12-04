@@ -352,21 +352,8 @@ MonoBehaviour:
   - {fileID: 1556166883752142653, guid: f3008ff5b008d2a49bdb8c470973d01a, type: 3}
   - {fileID: 8192627521564071928, guid: c0b0638c34e4a914bac64dff24b0bd42, type: 3}
   - {fileID: 3195475755923812321, guid: f090b10bc6562e940b15ee2270e88c0f, type: 3}
-  onMazePatternLoaded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1483194863}
-        m_TargetAssemblyTypeName: EnigmaMazeCoreHuman, Assembly-CSharp
-        m_MethodName: GetStructsInfos
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  enigmaMazeCoreHuman: {fileID: 1483194863}
+  enigmaMazeCoreSpirit: {fileID: 0}
   _maxPaternNumber: 4
 --- !u!1 &1483194862
 GameObject:
@@ -398,9 +385,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mazePattern: {fileID: 1459404594}
+  _enigmaData: {fileID: 0}
   _mazeFramePrefab: {fileID: 6733794824524061442, guid: 5d4bbd53ca888ba40b413d141c3b06ca, type: 3}
   _mazeFrameStartPosition: {fileID: 140240300}
-  windScale: 1.1
+  windScale: 1.2
   windRose: {fileID: 4402541032056216698, guid: b160b388caaaa5d419a997d699aeac06, type: 3}
   mazePawn: {fileID: 2600705361194805992, guid: 3cbd2a6794920e741ba748035e729841, type: 3}
   frameScale: 1
@@ -430,7 +418,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1982239060}
-  - component: {fileID: 1982239064}
   - component: {fileID: 1982239063}
   - component: {fileID: 1982239062}
   - component: {fileID: 1982239061}
@@ -450,7 +437,7 @@ Transform:
   m_GameObject: {fileID: 1982239059}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 6, y: 6, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -559,19 +546,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &1982239064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1982239059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91969edc488c4e94186ba977573e5ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridLenght: 12
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

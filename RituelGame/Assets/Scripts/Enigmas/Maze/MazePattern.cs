@@ -11,11 +11,15 @@ public struct MazeStruct
     public Vector2 _mazePawnBasePosition;
     public float _mazeRotation;
     public GameObject _mazeWindRose;
+    public string _mazeLayer;
 }
 
 public class MazePattern : MonoBehaviour
 {
     public List<GameObject> _mazeWindRoses = new();
+
+    public EnigmaMazeCoreHuman enigmaMazeCoreHuman;
+    public EnigmaMazeCoreSpirit enigmaMazeCoreSpirit;
     
     public int[,] firstMazePattern =
     {
@@ -85,25 +89,33 @@ public class MazePattern : MonoBehaviour
     public MazeStruct secondMazeStruct = new();
     public MazeStruct thirdMazeStruct = new();
     public MazeStruct fourthMazeStruct = new();
-    
-    public UnityEvent<MazeStruct> onMazePatternLoaded = new();
 
     private void Start()
     {
-        InitStructMaze(firstMazeStruct, firstMazePattern, Vector2.one, 0.0f, _mazeWindRoses[0]);
-        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(10f, 1f), -90f, _mazeWindRoses[1]);
-        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(10f, 10f), 180f, _mazeWindRoses[2]);
-        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2(1f, 10f), 90f, _mazeWindRoses[3]);
+        InitStructMaze(firstMazeStruct, firstMazePattern, Vector2.one, 0.0f, _mazeWindRoses[0], "FirstMaze");
+        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(10f, 1f), -90f, _mazeWindRoses[1], "SecondMaze");
+        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(10f, 10f), 180f, _mazeWindRoses[2], "ThirdMaze");
+        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2(1f, 10f), 90f, _mazeWindRoses[3], "FourthMaze");
     }
 
-    private void InitStructMaze(MazeStruct mazeStruct, int[,] mazePattern, Vector2 mazePawnBasePosition, float mazeRotation, GameObject mazeWindRose)
+    private void InitStructMaze(MazeStruct mazeStruct, int[,] mazePattern, Vector2 mazePawnBasePosition, float mazeRotation, GameObject mazeWindRose, string mazeLayer)
     {
         mazeStruct._mazePattern = mazePattern;
         mazeStruct._mazePawnBasePosition = mazePawnBasePosition;
         mazeStruct._mazeRotation = mazeRotation;
         mazeStruct._mazeWindRose = mazeWindRose;
-        
-        onMazePatternLoaded.Invoke(mazeStruct);
+        mazeStruct._mazeLayer = mazeLayer;
+
+        if (enigmaMazeCoreHuman)
+        {
+            enigmaMazeCoreHuman._mazeStructures.Add(mazeStruct);
+            enigmaMazeCoreHuman.CheckIfFull();
+        }
+        else if (enigmaMazeCoreSpirit)
+        {
+            enigmaMazeCoreSpirit._mazeStructures.Add(mazeStruct);
+            enigmaMazeCoreSpirit.CheckIfFull();
+        }
     }
     public int _maxPaternNumber = 4;
 }

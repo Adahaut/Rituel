@@ -6,6 +6,7 @@ using UnityEngine;
 public class EnigmaMazeCoreHuman : MonoBehaviour
 {
     public MazePattern _mazePattern;
+    public EnigmaData _enigmaData;
     
     public List<MazeStruct> _mazeStructures = new();
     
@@ -24,10 +25,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     private int[,] mazeGrid;
     
-    public void GetStructsInfos(MazeStruct mazeStruct)
+    public void CheckIfFull()
     {
-        _mazeStructures.Add(mazeStruct);
-
         if (_mazeStructures.Count == _mazePattern._maxPaternNumber)
         {
             DrawMaze();
@@ -70,7 +69,9 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
             {
                 ResetMaze();
                 return;
-            } else if (mazeGrid[x, y] == 2)
+            } 
+            
+            if (mazeGrid[x, y] == 2)
             {
                 Win();
                 return;

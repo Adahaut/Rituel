@@ -20,11 +20,9 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
     [SerializeField] private int gridLenght = 12;
     [SerializeField] private Vector2 paternOffsetX;
     [SerializeField] private Vector2 paternOffsetY;
-
-    public void GetStructsInfos(MazeStruct mazeStruct)
+    
+    public void CheckIfFull()
     {
-        _mazeStructures.Add(mazeStruct);
-
         if (_mazeStructures.Count == _mazePatternScript._maxPaternNumber)
         {
             DrawMaze();
@@ -60,6 +58,8 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
 
                     GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity,
                         mazeStartPosition.transform);
+
+                    mazeFrame.layer = LayerMask.NameToLayer(mazeStruct._mazeLayer);
                     
                     if (mazeStruct._mazePattern[i, j] == 1)
                     {
@@ -68,10 +68,9 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
                 }
             }
 
-            mazeStartPosition.transform.position = new Vector3(
+            mazeStartPosition.transform.position = new Vector2(
                 mazeStartPosition.transform.position.x + gridLenght / 2,
-                mazeStartPosition.transform.position.y + gridLenght / 2,
-                0.0f);
+                mazeStartPosition.transform.position.y + gridLenght / 2);
             
             mazeStartPosition.transform.rotation = Quaternion.Euler(0, 0, mazeStruct._mazeRotation);
             
@@ -80,7 +79,8 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
             GameObject windRose = Instantiate(mazeStruct._mazeWindRose, new Vector2(
                     mazeStartPosition.transform.position.x + gridLenght * windScale - ReplaceMaze(mazeStruct._mazeRotation).x,
                     mazeStartPosition.transform.position.y + gridLenght / windScale - ReplaceMaze(mazeStruct._mazeRotation).y),
-                Quaternion.identity);
+                Quaternion.identity,
+                mazeStartPosition.transform);
         }
     }
 
