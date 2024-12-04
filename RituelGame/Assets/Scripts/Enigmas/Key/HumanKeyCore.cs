@@ -10,7 +10,7 @@ namespace Enigmas.Key
         [field:SerializeField] public KeyEnigmaData _keyEnigmaData { get; private set; }
         [field:SerializeField] public TurnableKey _turnableKey { get; private set; }
 
-        [SerializeField] private List<KeyTurnSide> currentTurns = new();
+        private List<KeyTurnSide> currentTurns = new();
         
         private void Awake()
         {
