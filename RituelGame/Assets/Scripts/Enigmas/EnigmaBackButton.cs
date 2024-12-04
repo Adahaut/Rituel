@@ -1,18 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class EnigmaBackButton : MonoBehaviour, IPointerClickHandler
+namespace Enigmas
 {
-    [SerializeField] private CanvasGroup enigmaCanvas;
-    [SerializeField] private float canvasFadeDuration = 0.5f;
-    
-    public void OnPointerClick(PointerEventData eventData)
+    public class EnigmaBackButton : MonoBehaviour, IPointerClickHandler
     {
-        enigmaCanvas.DOFade(0, canvasFadeDuration);
-        enigmaCanvas.interactable = false;
-        enigmaCanvas.blocksRaycasts = false;
+        [SerializeField] private CanvasGroup enigmaCanvas;
+        [SerializeField] private float canvasFadeDuration = 0.5f;
+
+        public Action OnButtonClickedEvent;
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            enigmaCanvas.DOFade(0, canvasFadeDuration);
+            enigmaCanvas.interactable = false;
+            enigmaCanvas.blocksRaycasts = false;
+            OnButtonClickedEvent?.Invoke();
+        }
     }
 }
