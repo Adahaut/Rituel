@@ -16,4 +16,7 @@ public class Sound
 
     [HideInInspector]
     public AudioSource source;
+    
+    //creer des fonctions a utiliser ici comme Init() par exemple pour faire ce que 
+    //tu fais dans ta boucle for dans ton audiomanager
 }

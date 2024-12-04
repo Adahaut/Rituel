@@ -9,6 +9,7 @@ public class AudioManager : MonoBehaviour
     {
         foreach (Sound s in sounds)
         {
+            //tu peux créer une fonction dans Sound pour ça
             s.source = gameObject.AddComponent<AudioSource>();
             s.source.clip = s.clip;
 
@@ -19,25 +20,27 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySound (string name)
+    public void PlaySound (string name) //pas utiliser
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Play();
     }
 
-    public void PlayOneShot(string name)
+    public void PlayOneShot(string name)//mauvais nom de fonction
     {
+        //chaque fois que tu veux jouer un son tu rechercher parmis toute ta list, pas fou comme system
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.PlayOneShot(s.source.clip, s.source.volume);
     }
 
-    public void StopSound(string name)
+    public void StopSound(string name)//pas utiliser
     {
+        //tu refais la même chose ici 
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.Stop();
     }
 
-    public void stopAllSounds()
+    public void stopAllSounds()// pas utiliser
     {
         foreach (Sound s in sounds)
         {
@@ -50,6 +53,7 @@ public class AudioManager : MonoBehaviour
 
     public void ChangePitch(string name, float pitch)
     {
+        //et encore ici
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.pitch = pitch;
     }

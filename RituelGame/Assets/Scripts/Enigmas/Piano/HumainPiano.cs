@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class HumainPiano : MonoBehaviour
 {
-    [SerializeField] private Partition scriptableObject;
+    [SerializeField] private Partition scriptableObject; //le nom pas assez explicit
     private List<string> partition;
     [SerializeField] private float minPitch;
     [SerializeField] private float maxPitch;
@@ -18,12 +18,13 @@ public class HumainPiano : MonoBehaviour
         partition = scriptableObject.partition;
         pitch = Random.Range(minPitch, maxPitch);
         FindObjectOfType<AudioManager>().ChangePitch("PianoMusic", pitch);
+        //passe l'audio manager par référence
     }
 
     public void PlayMusic()
     {
         count = 0;
-        StopAllCoroutines();
+        StopAllCoroutines(); //non, stop seulement la coroutine que tu veux stoper
         StartCoroutine(musicSequence());
     }
 
@@ -32,7 +33,8 @@ public class HumainPiano : MonoBehaviour
         foreach (string unused in partition)
         {
             FindObjectOfType<AudioManager>().PlayOneShot(partition[count]);
-            yield return new WaitForSeconds(0.5f);
+            //pareil pour l'audio manager 
+            yield return new WaitForSeconds(0.5f); //met une variable plutôt qu'une valeur direct
             count++;
         }
     }

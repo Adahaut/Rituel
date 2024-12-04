@@ -18,7 +18,7 @@ public class SpiritPiano : MonoBehaviour
         partition = scriptableObject.partition;
     }
     
-    public void BeginRecord()
+    public void BeginRecord() //mauvais nom de fonction au vu du code
     {
         isRecording = !isRecording;
         if (isRecording) {
@@ -30,10 +30,10 @@ public class SpiritPiano : MonoBehaviour
         }
     }
     
-    public void PlayNote(string Name)
+    public void PlayNote(string Name) //mauvais nom de fonction 
     {
         print(Name);
-        FindObjectOfType<AudioManager>().PlayOneShot(Name);
+        FindObjectOfType<AudioManager>().PlayOneShot(Name);//audio manager par référence
         if (!isRecording) return;
         keys.Add(Name);
         if (partition.Count == keys.Count)
@@ -42,6 +42,7 @@ public class SpiritPiano : MonoBehaviour
             Debug.Log("enigma solved");
             ResetEnigma();
         }
+        //pense à faire un "else if" sinon le programe va checker la condition même si la première est bonne
         if (partition.Count <= keys.Count && partition[index] != keys[index])
         {
             Debug.Log("wrong key");
