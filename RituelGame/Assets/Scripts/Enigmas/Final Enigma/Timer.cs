@@ -14,15 +14,15 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private float acceptanceInterval;
     
-    private float timer = 60.0f;
-    public float _timerCounter = 0;
+    private float maxTime = 60.0f;
+    public float _timer = 0;
 
     private int currentCandleNumber = 0;
     public int _finalCandleNumber;
 
     public void CheckClickTiming(float clickTime)
     {
-        if (Mathf.Abs(_timerCounter-clickTime) <= acceptanceInterval)
+        if (Mathf.Abs(_timer-clickTime) <= acceptanceInterval)
         {
             currentCandleNumber++;
         }
@@ -32,16 +32,17 @@ public class Timer : MonoBehaviour
     
     void Update()
     {
-        _timerCounter += Time.deltaTime;
-        if (((_timerCounter >= timer) && (currentCandleNumber >= _finalCandleNumber)))
+        _timer += Time.deltaTime;
+        if (_timer >= maxTime)
         {
-            Debug.Log("Win");
+            if (currentCandleNumber >= _finalCandleNumber)
+            {
+                Debug.Log("Win");
+            }
+            else
+                Loose();
         }
-        else if (_timerCounter >= timer)
-        {
-            Loose();
-        }
-        _timerText.text = _timerCounter.ToString();
+        _timerText.text = _timer.ToString();
 
     }
 
@@ -49,7 +50,7 @@ public class Timer : MonoBehaviour
     {
         currentCandleNumber = 0;
         //perte de liaison
-        _timerCounter = 0;
+        _timer = 0;
         startButton.SetActive(true);
         timeScript.SetActive(false);
         timeText.SetActive(false);
