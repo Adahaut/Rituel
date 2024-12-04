@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MazeController : MonoBehaviour
+public class MazeHumanController : MonoBehaviour
 {
     public EnigmaMazeCoreHuman maze;
     

@@ -162,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 729829968}
-  - component: {fileID: 729829967}
+  - component: {fileID: 729829969}
   m_Layer: 0
   m_Name: MazeController
   m_TagString: Untagged
@@ -170,19 +170,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &729829967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 729829966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e467ebfc8afa8347a4baef446f869aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maze: {fileID: 1483194863}
 --- !u!4 &729829968
 Transform:
   m_ObjectHideFlags: 0
@@ -198,6 +185,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 787417966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &729829969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729829966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d56e458fb853e24488cc100176424bb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maze: {fileID: 1483194863}
 --- !u!1 &787417965
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,8 +348,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstMazePawnBasePosition: {x: 1, y: 1}
+  firstMazeRotation: 0
+  firstMazeWindRose: {fileID: 0}
   secondMazePawnBasePosition: {x: 10, y: 1}
-  paternNumber: 0
+  secondMazeRotation: 0
+  secondMazeWindRose: {fileID: 0}
+  _paternNumber: 0
+  _maxPaternNumber: 2
 --- !u!1 &1483194862
 GameObject:
   m_ObjectHideFlags: 0

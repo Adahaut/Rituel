@@ -367,8 +367,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstMazePawnBasePosition: {x: 1, y: 1}
+  firstMazeRotation: 0
+  firstMazeWindRose: {fileID: 4402541032056216698, guid: b160b388caaaa5d419a997d699aeac06, type: 3}
   secondMazePawnBasePosition: {x: 10, y: 1}
-  paternNumber: 0
+  secondMazeRotation: -90
+  secondMazeWindRose: {fileID: 1556166883752142653, guid: f3008ff5b008d2a49bdb8c470973d01a, type: 3}
+  thirdMazePawnBasePosition: {x: 10, y: 10}
+  thirdMazeRotation: 180
+  thirdMazeWindRose: {fileID: 8192627521564071928, guid: c0b0638c34e4a914bac64dff24b0bd42, type: 3}
+  forthMazePawnBasePosition: {x: 1, y: 10}
+  forthMazeRotation: 90
+  forthMazeWindRose: {fileID: 3195475755923812321, guid: f090b10bc6562e940b15ee2270e88c0f, type: 3}
+  _paternNumber: 0
+  _maxPaternNumber: 4
 --- !u!1 &943205540
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,11 +411,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mazePaterns: {fileID: 630540997}
   _mazeFramePrefab: {fileID: 6733794824524061442, guid: 5d4bbd53ca888ba40b413d141c3b06ca, type: 3}
+  _mazes: {fileID: 2039726265}
   _mazeFrameStartPosition: {fileID: 1565696795}
   windRose: {fileID: 1556166883752142653, guid: f3008ff5b008d2a49bdb8c470973d01a, type: 3}
-  windScale: 1.1
+  windScale: 1.2
   frameScale: 1
   gridLenght: 12
+  paternOffsetX: {x: 20, y: 0}
+  paternOffsetY: {x: 0, y: 0}
 --- !u!4 &943205542
 Transform:
   m_ObjectHideFlags: 0
@@ -454,6 +468,8 @@ Transform:
   - {fileID: 1565696795}
   - {fileID: 630540996}
   - {fileID: 1206506835}
+  - {fileID: 2039726266}
+  - {fileID: 1713459944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206506834
@@ -567,7 +583,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1537619527}
-  - component: {fileID: 1537619529}
   - component: {fileID: 1537619526}
   - component: {fileID: 1537619525}
   - component: {fileID: 1537619528}
@@ -621,7 +636,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -646,7 +661,7 @@ Transform:
   m_GameObject: {fileID: 1537619524}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 18.77, y: 3.86, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -696,19 +711,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!114 &1537619529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537619524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91969edc488c4e94186ba977573e5ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gridLenght: 12
 --- !u!1 &1565696794
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +734,114 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1565696794}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 978898406}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1713459943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1713459944}
+  - component: {fileID: 1713459945}
+  m_Layer: 0
+  m_Name: MazeBorder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1713459944
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713459943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 978898406}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1713459945
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1713459943}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 25, y: 6}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 70, y: 30}
+  m_EdgeRadius: 0
+--- !u!1 &2039726265
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2039726266}
+  m_Layer: 0
+  m_Name: Mazes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2039726266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2039726265}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}

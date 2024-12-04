@@ -26,8 +26,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     
     private void Start()
     {
-        spawnPawnPosition = _mazePaterns.SetPawnBasePosition();
         mazeArray = _mazePaterns.Paterns();
+        spawnPawnPosition = _mazePaterns.SetPawnBasePosition();
         DrawMaze();
     }
     private void DrawMaze()
