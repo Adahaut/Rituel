@@ -3,103 +3,55 @@ using UnityEngine;
 
 public class Timer : MonoBehaviour
 {
-    
-    [SerializeField] private GameObject candle1;
-    [SerializeField] private GameObject candle2;
-    [SerializeField] private GameObject candle3;
     [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject timeScript;
     [SerializeField] private GameObject timeText;
+    [SerializeField] private GameObject candle;
     
     public TextMeshProUGUI _timerText;
 
-    private float timer = 60.0f;
-    public float _timerCounter = 0;
+    [SerializeField] private float acceptanceInterval;
+    
+    private float maxTime = 60.0f;
+    public float _timer = 0;
 
-    private int humanCandleNumber = 0;
-    private int spiritCandleNumber = 0;
+    private int currentCandleNumber = 0;
+    public int _finalCandleNumber;
 
-    public void SpiritCandleAdd1()
+    public void CheckClickTiming(float clickTime)
     {
-        if ((_timerCounter >= 10) && (_timerCounter <= 20))
+        if (Mathf.Abs(_timer-clickTime) <= acceptanceInterval)
         {
-            spiritCandleNumber++;
-            candle1.SetActive(false);
+            currentCandleNumber++;
         }
         else
             Loose();
     }
     
-    public void SpiritCandleAdd2()
-    {
-        if ((_timerCounter >= 30) && (_timerCounter <= 40))
-        {
-            spiritCandleNumber++;
-            candle2.SetActive(false);
-        }
-        else
-            Loose();
-    }
-    
-    public void SpiritCandleAdd3()
-    {
-        if ((_timerCounter >= 50) && (_timerCounter <= 60))
-        {
-            spiritCandleNumber++;
-            candle3.SetActive(false);
-        }
-        else
-            Loose();
-    }
-    
-    public void HumanCandleAdd1()
-    {
-        if ((_timerCounter >= 20) && (_timerCounter <= 30))
-        {
-            humanCandleNumber++;
-            candle1.SetActive(false);
-        }
-        else
-            Loose();
-    }
-    
-    public void HumanCandleAdd2()
-    {
-        if ((_timerCounter >= 40) && (_timerCounter <= 50))
-        {
-            humanCandleNumber++;
-            candle2.SetActive(false);
-        }
-        else
-            Loose();
-    }
-
     void Update()
     {
-        _timerCounter += Time.deltaTime;
-        if (((_timerCounter >= timer) && (spiritCandleNumber >= 3)) || ((_timerCounter >= timer) && (humanCandleNumber >= 2)))
+        _timer += Time.deltaTime;
+        if (_timer >= maxTime)
         {
-            Debug.Log("Win");
+            if (currentCandleNumber >= _finalCandleNumber)
+            {
+                Debug.Log("Win");
+            }
+            else
+                Loose();
         }
-        else if (_timerCounter >= timer)
-        {
-            Loose();
-        }
-        _timerText.text = _timerCounter.ToString();
+        _timerText.text = _timer.ToString();
 
     }
 
     void Loose()
     {
-        humanCandleNumber = 0;
-        spiritCandleNumber = 0;
+        currentCandleNumber = 0;
         //perte de liaison
-        _timerCounter = 0;
-        candle1.SetActive(false);
-        candle2.SetActive(false);
-        candle3.SetActive(false);
+        _timer = 0;
         startButton.SetActive(true);
         timeScript.SetActive(false);
         timeText.SetActive(false);
+        candle.SetActive(false);
     }
 }
