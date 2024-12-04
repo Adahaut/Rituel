@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Enum;
+using UnityEngine;
 
 namespace Enigmas.Key
 {
@@ -9,6 +10,11 @@ namespace Enigmas.Key
         public void SetEnigmaData(KeyEnigmaData enigmaData)
         {
             _KeyEnigmaData = enigmaData;
+        }
+
+        private void OnKeyTurned(KeyTurnSide side)
+        {
+            
         }
     }
 }
