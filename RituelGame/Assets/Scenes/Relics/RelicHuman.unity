@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sensibility: 0.5
-  maxThreshold: 89
+  loopThreshold: 180
 --- !u!1 &641780356
 GameObject:
   m_ObjectHideFlags: 0
@@ -638,7 +638,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5f47b8af4a342c998dd198002f19bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_KeyEnigmaData>k__BackingField: {fileID: 0}
+  <_keyEnigmaData>k__BackingField: {fileID: 11400000, guid: aea8df1ce5e6f874da5f1f2fa72428e2, type: 2}
+  <_turnableKey>k__BackingField: {fileID: 302604494}
+  currentTurns: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

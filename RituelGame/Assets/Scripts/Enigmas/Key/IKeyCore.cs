@@ -2,7 +2,7 @@
 {
     public interface IKeyCore
     {
-        public KeyEnigmaData _KeyEnigmaData { get; }
+        public KeyEnigmaData _keyEnigmaData { get; }
         
         public void SetEnigmaData(KeyEnigmaData enigmaData);
     }
