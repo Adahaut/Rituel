@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6188746182700107281}
   - component: {fileID: 7445148829695984394}
   - component: {fileID: 6804555680368026372}
+  - component: {fileID: -7380219371301437081}
   - component: {fileID: 2472013933216806211}
   m_Layer: 0
   m_Name: OuijaCoreSpirit
@@ -62,6 +63,7 @@ MonoBehaviour:
   <_ouijaBoard>k__BackingField: {fileID: 5984470231315657054}
   linkCore: {fileID: 0}
   _linkRemoveCount: 5
+  _linkAddCount: 5
 --- !u!223 &6188746182700107281
 Canvas:
   m_ObjectHideFlags: 0
@@ -125,6 +127,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &-7380219371301437081
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2743148535283048972}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &2472013933216806211
 MonoBehaviour:
   m_ObjectHideFlags: 0
