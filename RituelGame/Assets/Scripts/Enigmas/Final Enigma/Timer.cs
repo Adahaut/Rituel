@@ -5,47 +5,26 @@ using UnityEngine.UIElements;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private GameObject candle1;
-    [SerializeField] private GameObject candle2;
-    [SerializeField] private GameObject candle3;
     [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject timeScript;
     [SerializeField] private GameObject timeText;
+    [SerializeField] private GameObject candle;
     
     public TextMeshProUGUI _timerText;
 
+    [SerializeField] private float acceptanceInterval;
+    
     private float timer = 60.0f;
     public float _timerCounter = 0;
 
-    private int humanCandleNumber = 0;
-    private int spiritCandleNumber = 0;
+    private int currentCandleNumber = 0;
+    public int _finalCandleNumber;
 
-    public void CandleAdd(int i)
+    public void CheckClickTiming(float clickTime)
     {
-        if ((_timerCounter >= 10) && (_timerCounter <= 20) && i == 3)
+        if (Mathf.Abs(_timerCounter-clickTime) <= acceptanceInterval)
         {
-            spiritCandleNumber++; 
-            candle1.SetActive(false);
-        }
-        else if ((_timerCounter >= 30) && (_timerCounter <= 40) && i == 4)
-        {
-            spiritCandleNumber++;
-            candle2.SetActive(false);
-        }
-        else if ((_timerCounter >= 50) && (_timerCounter <= 60) && i == 5)
-        {
-            spiritCandleNumber++;
-            candle3.SetActive(false);
-        }
-        else if ((_timerCounter >= 20) && (_timerCounter <= 30) && i == 1)
-        {
-            humanCandleNumber++;
-            candle1.SetActive(false);
-        }
-        else if ((_timerCounter >= 40) && (_timerCounter <= 50) && i == 2)
-        {
-            humanCandleNumber++;
-            candle2.SetActive(false);
+            currentCandleNumber++;
         }
         else
             Loose();
@@ -54,7 +33,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         _timerCounter += Time.deltaTime;
-        if (((_timerCounter >= timer) && (spiritCandleNumber >= 3)) || ((_timerCounter >= timer) && (humanCandleNumber >= 2)))
+        if (((_timerCounter >= timer) && (currentCandleNumber >= _finalCandleNumber)))
         {
             Debug.Log("Win");
         }
@@ -68,15 +47,12 @@ public class Timer : MonoBehaviour
 
     void Loose()
     {
-        humanCandleNumber = 0;
-        spiritCandleNumber = 0;
+        currentCandleNumber = 0;
         //perte de liaison
         _timerCounter = 0;
-        candle1.SetActive(false);
-        candle2.SetActive(false);
-        candle3.SetActive(false);
         startButton.SetActive(true);
         timeScript.SetActive(false);
         timeText.SetActive(false);
+        candle.SetActive(false);
     }
 }
