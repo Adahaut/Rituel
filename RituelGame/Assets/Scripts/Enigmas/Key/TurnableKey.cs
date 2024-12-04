@@ -11,6 +11,7 @@ namespace Enigmas.Key
         private new Transform transform;
         [SerializeField] private float sensibility = 1f;
         [SerializeField] private float loopThreshold = 180f;
+        [SerializeField, Range(0, 1)] private float errorTreshold = 0.5f;
         private const float fullLoop = 360f;
         private float currentAngle = 0;
 
@@ -64,9 +65,19 @@ namespace Enigmas.Key
             {
                 return;
             }
+
+            Vector2 mouseDelta = eventData.delta;
             
-            float deltaX = eventData.delta.x;
-            currentAngle += -deltaX * sensibility;
+            Vector2 wantedDirection = new Vector2(Mathf.Cos(currentAngle * Mathf.Deg2Rad), Mathf.Sin(currentAngle * Mathf.Deg2Rad));
+            float dot = Vector2.Dot(wantedDirection, mouseDelta);
+            if (Mathf.Abs(dot) < errorTreshold)
+            {
+                OnKeyReleased();
+                mustReleaseToDrag = true;
+                return;
+            }
+            
+            currentAngle += -dot * sensibility;
             
             CheckReachedFullLoop();
             
@@ -92,6 +103,11 @@ namespace Enigmas.Key
         }
 
         public void OnEndDrag(PointerEventData eventData)
+        {
+            OnKeyReleased();
+        }
+
+        private void OnKeyReleased()
         {
             if (mustReleaseToDrag)
             {
