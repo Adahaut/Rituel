@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8829266842914158613}
+  - component: {fileID: 4646388274141894897}
   - component: {fileID: 8407799481762656853}
   - component: {fileID: 6689419749586676016}
-  - component: {fileID: 4646388274141894897}
   m_Layer: 0
   m_Name: EnigmaBackButton
   m_TagString: Untagged
@@ -38,6 +38,20 @@ RectTransform:
   m_AnchoredPosition: {x: 150, y: -931}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4646388274141894897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7291453190953839807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c99ec8c317551ed4183ed049e25dbd82, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enigmaCanvas: {fileID: 0}
+  canvasFadeDuration: 0.5
 --- !u!222 &8407799481762656853
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -76,17 +90,3 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4646388274141894897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7291453190953839807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c99ec8c317551ed4183ed049e25dbd82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enigmaCanvas: {fileID: 0}
-  canvasFadeDuration: 0.5
