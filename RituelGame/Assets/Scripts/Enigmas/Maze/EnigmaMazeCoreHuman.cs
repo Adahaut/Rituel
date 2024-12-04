@@ -7,6 +7,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 {
     public MazePattern _mazePattern;
     
+    public List<MazeStruct> _mazeStructures = new();
+    
     public GameObject _mazeFramePrefab;
     public Transform _mazeFrameStartPosition;
     
@@ -22,13 +24,19 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     private int[,] mazeGrid;
     
-    private void Start()
+    public void GetStructsInfos(MazeStruct mazeStruct)
     {
-        DrawMaze();
+        _mazeStructures.Add(mazeStruct);
+
+        if (_mazeStructures.Count == _mazePattern._maxPaternNumber)
+        {
+            DrawMaze();
+        }
     }
+    
     private void DrawMaze()
     {
-        MazeStruct mazeStruct = _mazePattern.GetRandomStruct();
+        MazeStruct mazeStruct = _mazeStructures[Random.Range(0, _mazeStructures.Count)];
         mazeGrid = mazeStruct._mazePattern;
         
         for (int i = 0; i < gridLenght; i++)
@@ -43,7 +51,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
             }
         }
         
-        windRose = Instantiate(mazeStruct._mazeWindRose, new Vector2(gridLenght * windScale, gridLenght/windScale), Quaternion.identity);
+        windRose = Instantiate(_mazeStructures[0]._mazeWindRose, new Vector2(gridLenght * windScale, gridLenght/windScale), Quaternion.identity);
         
         mazePawn = Instantiate(
             mazePawn,

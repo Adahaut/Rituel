@@ -88,7 +88,7 @@ public class MazePattern : MonoBehaviour
     
     public UnityEvent<MazeStruct> onMazePatternLoaded = new();
 
-    private void OnEnable()
+    private void Start()
     {
         InitStructMaze(firstMazeStruct, firstMazePattern, Vector2.one, 0.0f, _mazeWindRoses[0]);
         InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(10f, 1f), -90f, _mazeWindRoses[1]);
@@ -106,21 +106,4 @@ public class MazePattern : MonoBehaviour
         onMazePatternLoaded.Invoke(mazeStruct);
     }
     public int _maxPaternNumber = 4;
-
-    public MazeStruct GetRandomStruct()
-    {
-        switch (Random.Range(0, _maxPaternNumber))
-        {
-            case 0 :
-                return firstMazeStruct;
-            case 1 :
-                return secondMazeStruct;
-            case 2 :
-                return thirdMazeStruct;
-            case 3 :
-                return fourthMazeStruct;
-        }
-
-        return new MazeStruct();
-    }
 }

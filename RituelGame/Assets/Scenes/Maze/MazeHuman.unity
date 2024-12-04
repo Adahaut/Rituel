@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 1459404593}
   - component: {fileID: 1459404594}
   m_Layer: 0
-  m_Name: MazePaterns
+  m_Name: MazePattern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,17 +344,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 1459404592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5e4774839ff184a8b3155eb6d9421a, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c3f8f16a9ba48b4d9c2248d9f4c2d17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstMazePawnBasePosition: {x: 1, y: 1}
-  firstMazeRotation: 0
-  firstMazeWindRose: {fileID: 0}
-  secondMazePawnBasePosition: {x: 10, y: 1}
-  secondMazeRotation: 0
-  secondMazeWindRose: {fileID: 0}
-  _paternNumber: 0
-  _maxPaternNumber: 2
+  _mazeWindRoses:
+  - {fileID: 4402541032056216698, guid: b160b388caaaa5d419a997d699aeac06, type: 3}
+  - {fileID: 1556166883752142653, guid: f3008ff5b008d2a49bdb8c470973d01a, type: 3}
+  - {fileID: 8192627521564071928, guid: c0b0638c34e4a914bac64dff24b0bd42, type: 3}
+  - {fileID: 3195475755923812321, guid: f090b10bc6562e940b15ee2270e88c0f, type: 3}
+  onMazePatternLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1483194863}
+        m_TargetAssemblyTypeName: EnigmaMazeCoreHuman, Assembly-CSharp
+        m_MethodName: GetStructsInfos
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _maxPaternNumber: 4
 --- !u!1 &1483194862
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,13 +397,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0d925c245790764fbd72dfd235e9681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mazePaterns: {fileID: 1459404594}
+  _mazePattern: {fileID: 1459404594}
   _mazeFramePrefab: {fileID: 6733794824524061442, guid: 5d4bbd53ca888ba40b413d141c3b06ca, type: 3}
   _mazeFrameStartPosition: {fileID: 140240300}
-  windRose: {fileID: 4402541032056216698, guid: b160b388caaaa5d419a997d699aeac06, type: 3}
   windScale: 1.1
+  windRose: {fileID: 4402541032056216698, guid: b160b388caaaa5d419a997d699aeac06, type: 3}
   mazePawn: {fileID: 2600705361194805992, guid: 3cbd2a6794920e741ba748035e729841, type: 3}
-  spawnPawnPosition: {x: 1, y: 1}
   frameScale: 1
   gridLenght: 12
   connectionLoss: 10
