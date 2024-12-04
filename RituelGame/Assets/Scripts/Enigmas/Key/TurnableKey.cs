@@ -1,4 +1,5 @@
 ﻿using System;
+using DG.Tweening;
 using Enum;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +15,7 @@ namespace Enigmas.Key
         private float currentAngle = 0;
 
         private bool mustReleaseToDrag;
+        private bool isReturningToZero;
         
         public Action<KeyTurnSide> OnKeyFullLoopEvent;
         
@@ -25,9 +27,35 @@ namespace Enigmas.Key
             rotationVector = Vector3.zero;
         }
 
+        private void Update()
+        {
+            if (!isReturningToZero)
+            {
+                return;
+            }
+            
+            if (currentAngle == 0)
+            {
+                isReturningToZero = false;
+            }
+            
+            SetRotation();
+        }
+        
+        private void SetRotation()
+        {
+            rotationVector.Set(0, 0, currentAngle);
+            transform.eulerAngles = rotationVector;
+        }
+
         public void OnBeginDrag(PointerEventData eventData)
         {
-            
+            if (!isReturningToZero)
+            {
+                return;
+            }
+            DOTween.Kill(this, false);
+            isReturningToZero = false;
         }
 
         public void OnDrag(PointerEventData eventData)
@@ -42,8 +70,7 @@ namespace Enigmas.Key
             
             CheckReachedFullLoop();
             
-            rotationVector.Set(0, 0, currentAngle);
-            transform.eulerAngles = rotationVector;
+            SetRotation();
         }
 
         private void CheckReachedFullLoop()
@@ -59,7 +86,6 @@ namespace Enigmas.Key
         private void OnFullLoop()
         {
             float sign = Mathf.Sign(currentAngle);
-            Debug.Log(sign > 0 ? KeyTurnSide.Left.ToString() : KeyTurnSide.Right.ToString());
             OnKeyFullLoopEvent?.Invoke(sign > 0 ? KeyTurnSide.Left : KeyTurnSide.Right);
             currentAngle = 0;
             mustReleaseToDrag = true;
@@ -67,7 +93,27 @@ namespace Enigmas.Key
 
         public void OnEndDrag(PointerEventData eventData)
         {
-            mustReleaseToDrag = false;
+            if (mustReleaseToDrag)
+            {
+                mustReleaseToDrag = false;
+                return;
+            }
+            
+            isReturningToZero = true;
+
+            if (Mathf.Abs(currentAngle) > loopThreshold)
+            {
+                DOTween.To(() => currentAngle, x => currentAngle = x, (fullLoop + 1) * Mathf.Sign(currentAngle), 0.15f)
+                    .onComplete += () =>
+                {
+                    OnFullLoop();
+                    mustReleaseToDrag = false;
+                };
+            }
+            else
+            {
+                DOTween.To(() => currentAngle, x => currentAngle = x, 0, 0.15f);
+            }
         }
     }
 }
