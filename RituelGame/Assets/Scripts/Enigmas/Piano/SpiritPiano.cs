@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class SpiritPiano : MonoBehaviour
 {
-    [SerializeField] private Partition scriptableObject;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private Partition partitionSO;
     [SerializeField] private GameObject redDot;
     private List<string> partition;
     private List<string> keys = new List<string>();
@@ -15,10 +17,10 @@ public class SpiritPiano : MonoBehaviour
 
     private void Start()
     {
-        partition = scriptableObject.partition;
+        partition = partitionSO.partitionKeys;
     }
     
-    public void BeginRecord() //mauvais nom de fonction au vu du code
+    public void RecordButton()
     {
         isRecording = !isRecording;
         if (isRecording) {
@@ -30,20 +32,18 @@ public class SpiritPiano : MonoBehaviour
         }
     }
     
-    public void PlayNote(string Name) //mauvais nom de fonction 
+    public void EnigmaLogic(string Name)
     {
-        print(Name);
-        FindObjectOfType<AudioManager>().PlayOneShot(Name);//audio manager par référence
+        audioManager.PlayOverlap(Name);
         if (!isRecording) return;
         keys.Add(Name);
-        if (partition.Count == keys.Count)
+        if (partition.Count == keys.Count && partition[index] == keys[index])
         {
-            enigmaSolved = true;
             Debug.Log("enigma solved");
             ResetEnigma();
+            return;
         }
-        //pense à faire un "else if" sinon le programe va checker la condition même si la première est bonne
-        if (partition.Count <= keys.Count && partition[index] != keys[index])
+        else if (partition[index] != keys[index])
         {
             Debug.Log("wrong key");
             ResetEnigma();

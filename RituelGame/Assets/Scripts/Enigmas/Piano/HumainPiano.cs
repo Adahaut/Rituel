@@ -1,30 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class HumainPiano : MonoBehaviour
 {
-    [SerializeField] private Partition scriptableObject; //le nom pas assez explicit
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private Partition partitionSO;
     private List<string> partition;
     [SerializeField] private float minPitch;
     [SerializeField] private float maxPitch;
     private float pitch;
+    [SerializeField] private float timeBetweenNotes;
     private int count;
     
 
     private void Start()
     {
-        partition = scriptableObject.partition;
+        partition = partitionSO.partitionKeys;
         pitch = Random.Range(minPitch, maxPitch);
-        FindObjectOfType<AudioManager>().ChangePitch("PianoMusic", pitch);
-        //passe l'audio manager par référence
     }
 
     public void PlayMusic()
     {
         count = 0;
-        StopAllCoroutines(); //non, stop seulement la coroutine que tu veux stoper
+        StopCoroutine(musicSequence());
         StartCoroutine(musicSequence());
     }
 
@@ -32,9 +33,9 @@ public class HumainPiano : MonoBehaviour
     {
         foreach (string unused in partition)
         {
-            FindObjectOfType<AudioManager>().PlayOneShot(partition[count]);
-            //pareil pour l'audio manager 
-            yield return new WaitForSeconds(0.5f); //met une variable plutôt qu'une valeur direct
+            audioManager.PlayOverlap(partition[count]);
+            audioManager.ChangePitch(partition[count], pitch);
+            yield return new WaitForSeconds(timeBetweenNotes);
             count++;
         }
     }
