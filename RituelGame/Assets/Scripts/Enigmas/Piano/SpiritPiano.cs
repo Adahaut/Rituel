@@ -1,13 +1,13 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpiritPiano : MonoBehaviour
 {
     [SerializeField] private Partition scriptableObject;
-    [SerializeField] private float maxTime;
+    [SerializeField] private GameObject redDot;
     private List<string> partition;
     private List<string> keys = new List<string>();
-    private float timer;
     private int index;
     
     private bool isRecording;
@@ -17,22 +17,16 @@ public class SpiritPiano : MonoBehaviour
     {
         partition = scriptableObject.partition;
     }
-
-    private void Update()
-    {
-        if (!isRecording) return;
-        timer += Time.deltaTime;
-        if (timer > maxTime)
-        {
-            ResetEnigma();
-        }
-    }
-
+    
     public void BeginRecord()
     {
-        if (!isRecording)
-        {
-            isRecording = true;
+        isRecording = !isRecording;
+        if (isRecording) {
+            StartCoroutine(Flash());
+        }
+        else {
+            StopCoroutine(Flash());
+            redDot.SetActive(false);
         }
     }
     
@@ -46,8 +40,9 @@ public class SpiritPiano : MonoBehaviour
         {
             enigmaSolved = true;
             Debug.Log("enigma solved");
+            ResetEnigma();
         }
-        if (partition[index] != keys[index])
+        if (partition.Count <= keys.Count && partition[index] != keys[index])
         {
             Debug.Log("wrong key");
             ResetEnigma();
@@ -59,14 +54,23 @@ public class SpiritPiano : MonoBehaviour
 
     private void ResetEnigma()
     {
-        
         isRecording = false;
         keys.Clear();
-        timer = 0;
         index = 0;
         if (!enigmaSolved)
         {
             Debug.Log("enigma lost");
+        }
+    }
+
+    private IEnumerator Flash()
+    {
+        while (isRecording)
+        {
+            redDot.SetActive(true);
+            yield return new WaitForSeconds(0.8f);
+            redDot.SetActive(false);
+            yield return new WaitForSeconds(0.8f);
         }
     }
 }
