@@ -1,9 +1,10 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Timer : MonoBehaviour
 {
-    
     [SerializeField] private GameObject candle1;
     [SerializeField] private GameObject candle2;
     [SerializeField] private GameObject candle3;
@@ -19,53 +20,29 @@ public class Timer : MonoBehaviour
     private int humanCandleNumber = 0;
     private int spiritCandleNumber = 0;
 
-    public void SpiritCandleAdd1()
+    public void CandleAdd(int i)
     {
-        if ((_timerCounter >= 10) && (_timerCounter <= 20))
+        if ((_timerCounter >= 10) && (_timerCounter <= 20) && i == 3)
         {
-            spiritCandleNumber++;
+            spiritCandleNumber++; 
             candle1.SetActive(false);
         }
-        else
-            Loose();
-    }
-    
-    public void SpiritCandleAdd2()
-    {
-        if ((_timerCounter >= 30) && (_timerCounter <= 40))
+        else if ((_timerCounter >= 30) && (_timerCounter <= 40) && i == 4)
         {
             spiritCandleNumber++;
             candle2.SetActive(false);
         }
-        else
-            Loose();
-    }
-    
-    public void SpiritCandleAdd3()
-    {
-        if ((_timerCounter >= 50) && (_timerCounter <= 60))
+        else if ((_timerCounter >= 50) && (_timerCounter <= 60) && i == 5)
         {
             spiritCandleNumber++;
             candle3.SetActive(false);
         }
-        else
-            Loose();
-    }
-    
-    public void HumanCandleAdd1()
-    {
-        if ((_timerCounter >= 20) && (_timerCounter <= 30))
+        else if ((_timerCounter >= 20) && (_timerCounter <= 30) && i == 1)
         {
             humanCandleNumber++;
             candle1.SetActive(false);
         }
-        else
-            Loose();
-    }
-    
-    public void HumanCandleAdd2()
-    {
-        if ((_timerCounter >= 40) && (_timerCounter <= 50))
+        else if ((_timerCounter >= 40) && (_timerCounter <= 50) && i == 2)
         {
             humanCandleNumber++;
             candle2.SetActive(false);
@@ -73,7 +50,7 @@ public class Timer : MonoBehaviour
         else
             Loose();
     }
-
+    
     void Update()
     {
         _timerCounter += Time.deltaTime;

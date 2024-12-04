@@ -1741,7 +1741,7 @@ GameObject:
   - component: {fileID: 1562889325}
   - component: {fileID: 1562889324}
   m_Layer: 5
-  m_Name: Candle1
+  m_Name: HumanCandle1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1812,13 +1812,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1550456851}
-        m_TargetAssemblyTypeName: TimerSpirit, Assembly-CSharp
-        m_MethodName: HumanCandleAdd1
-        m_Mode: 1
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: CandleAdd
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1874,7 +1874,7 @@ GameObject:
   - component: {fileID: 1657527886}
   - component: {fileID: 1657527885}
   m_Layer: 5
-  m_Name: Candle2
+  m_Name: HumanCandle2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1945,13 +1945,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1550456851}
-        m_TargetAssemblyTypeName: TimerSpirit, Assembly-CSharp
-        m_MethodName: HumanCandleAdd2
-        m_Mode: 1
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: CandleAdd
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
