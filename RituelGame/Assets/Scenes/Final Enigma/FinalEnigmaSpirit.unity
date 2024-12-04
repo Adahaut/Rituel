@@ -1381,7 +1381,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1550456851}
         m_TargetAssemblyTypeName: TimerSpirit, Assembly-CSharp
-        m_MethodName: CandleAdd3
+        m_MethodName: SpiritCandleAdd3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1613,9 +1613,9 @@ MonoBehaviour:
   candle2: {fileID: 1657527883}
   candle3: {fileID: 817340217}
   startButton: {fileID: 425822537}
-  timeScript: {fileID: 1308800803}
+  timeScript: {fileID: 1550456848}
   timeText: {fileID: 1308800803}
-  timerText: {fileID: 415580193}
+  _timerText: {fileID: 415580193}
   _timerCounter: 0
 --- !u!1 &1562889322
 GameObject:
@@ -1702,7 +1702,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1550456851}
         m_TargetAssemblyTypeName: TimerSpirit, Assembly-CSharp
-        m_MethodName: CandleAdd1
+        m_MethodName: SpiritCandleAdd1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1835,7 +1835,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1550456851}
         m_TargetAssemblyTypeName: TimerSpirit, Assembly-CSharp
-        m_MethodName: CandleAdd2
+        m_MethodName: SpiritCandleAdd2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

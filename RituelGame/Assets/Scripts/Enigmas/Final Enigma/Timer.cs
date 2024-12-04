@@ -1,8 +1,7 @@
-using System;
 using TMPro;
 using UnityEngine;
 
-public class TimerSpirit : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     
     [SerializeField] private GameObject candle1;
@@ -12,70 +11,88 @@ public class TimerSpirit : MonoBehaviour
     [SerializeField] private GameObject timeScript;
     [SerializeField] private GameObject timeText;
     
-    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI _timerText;
 
     private float timer = 60.0f;
     public float _timerCounter = 0;
 
-    private int candleNumber = 0;
+    private int humanCandleNumber = 0;
+    private int spiritCandleNumber = 0;
 
-    public void CandleAdd1()
+    public void SpiritCandleAdd1()
     {
         if ((_timerCounter >= 10) && (_timerCounter <= 20))
         {
-            candleNumber++;
+            spiritCandleNumber++;
             candle1.SetActive(false);
         }
         else
-        {
             Loose();
-        }
     }
     
-    public void CandleAdd2()
+    public void SpiritCandleAdd2()
     {
         if ((_timerCounter >= 30) && (_timerCounter <= 40))
         {
-            candleNumber++;
+            spiritCandleNumber++;
             candle2.SetActive(false);
         }
         else
-        {
             Loose();
-        }
     }
     
-    public void CandleAdd3()
+    public void SpiritCandleAdd3()
     {
         if ((_timerCounter >= 50) && (_timerCounter <= 60))
         {
-            candleNumber++;
+            spiritCandleNumber++;
             candle3.SetActive(false);
         }
         else
-        {
             Loose();
+    }
+    
+    public void HumanCandleAdd1()
+    {
+        if ((_timerCounter >= 20) && (_timerCounter <= 30))
+        {
+            humanCandleNumber++;
+            candle1.SetActive(false);
         }
+        else
+            Loose();
+    }
+    
+    public void HumanCandleAdd2()
+    {
+        if ((_timerCounter >= 40) && (_timerCounter <= 50))
+        {
+            humanCandleNumber++;
+            candle2.SetActive(false);
+        }
+        else
+            Loose();
     }
 
     void Update()
     {
         _timerCounter += Time.deltaTime;
-        if ((_timerCounter >= timer) && (candleNumber >= 3))
+        if (((_timerCounter >= timer) && (spiritCandleNumber >= 3)) || ((_timerCounter >= timer) && (humanCandleNumber >= 2)))
         {
             Debug.Log("Win");
         }
-        else if ((_timerCounter >= timer) && (candleNumber < 3))
+        else if (_timerCounter >= timer)
         {
             Loose();
         }
-        timerText.text = _timerCounter.ToString();
+        _timerText.text = _timerCounter.ToString();
 
     }
 
     void Loose()
     {
-        candleNumber = 0;
+        humanCandleNumber = 0;
+        spiritCandleNumber = 0;
         //perte de liaison
         _timerCounter = 0;
         candle1.SetActive(false);
