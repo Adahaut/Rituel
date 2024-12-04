@@ -21,8 +21,7 @@ public class MazeHumanController : MonoBehaviour
         {
             if (hit)
             {
-                GameObject mazeFrame = hit.collider.gameObject;
-                maze.MovePawn(mazeFrame);
+                maze.MovePawn(hit.collider.gameObject);
             }
         }
     }

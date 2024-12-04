@@ -322,64 +322,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431992325}
   m_CullTransparentMesh: 1
---- !u!1 &630540995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 630540996}
-  - component: {fileID: 630540997}
-  m_Layer: 0
-  m_Name: MazePaterns
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &630540996
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630540995}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.846758, y: 5.324282, z: -0.04341607}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 978898406}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &630540997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 630540995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5e4774839ff184a8b3155eb6d9421a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firstMazePawnBasePosition: {x: 1, y: 1}
-  firstMazeRotation: 0
-  firstMazeWindRose: {fileID: 4402541032056216698, guid: b160b388caaaa5d419a997d699aeac06, type: 3}
-  secondMazePawnBasePosition: {x: 10, y: 1}
-  secondMazeRotation: -90
-  secondMazeWindRose: {fileID: 1556166883752142653, guid: f3008ff5b008d2a49bdb8c470973d01a, type: 3}
-  thirdMazePawnBasePosition: {x: 10, y: 10}
-  thirdMazeRotation: 180
-  thirdMazeWindRose: {fileID: 8192627521564071928, guid: c0b0638c34e4a914bac64dff24b0bd42, type: 3}
-  forthMazePawnBasePosition: {x: 1, y: 10}
-  forthMazeRotation: 90
-  forthMazeWindRose: {fileID: 3195475755923812321, guid: f090b10bc6562e940b15ee2270e88c0f, type: 3}
-  _paternNumber: 0
-  _maxPaternNumber: 4
 --- !u!1 &943205540
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,11 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32da029e5123c6147a7f0677e2762564, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _mazePaterns: {fileID: 630540997}
+  _mazePatternScript: {fileID: 1977529370}
   _mazeFramePrefab: {fileID: 6733794824524061442, guid: 5d4bbd53ca888ba40b413d141c3b06ca, type: 3}
   _mazes: {fileID: 2039726265}
   _mazeFrameStartPosition: {fileID: 1565696795}
-  windRose: {fileID: 1556166883752142653, guid: f3008ff5b008d2a49bdb8c470973d01a, type: 3}
   windScale: 1.2
   frameScale: 1
   gridLenght: 12
@@ -464,12 +405,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1537619527}
+  - {fileID: 1977529369}
   - {fileID: 943205542}
   - {fileID: 1565696795}
-  - {fileID: 630540996}
   - {fileID: 1206506835}
   - {fileID: 2039726266}
-  - {fileID: 1713459944}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1206506834
@@ -742,7 +682,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 978898406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1713459943
+--- !u!1 &1977529368
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -750,22 +690,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1713459944}
-  - component: {fileID: 1713459945}
+  - component: {fileID: 1977529369}
+  - component: {fileID: 1977529370}
   m_Layer: 0
-  m_Name: MazeBorder
+  m_Name: MazePattern
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1713459944
+--- !u!4 &1977529369
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713459943}
+  m_GameObject: {fileID: 1977529368}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -774,51 +714,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 978898406}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1713459945
-BoxCollider2D:
+--- !u!114 &1977529370
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1713459943}
+  m_GameObject: {fileID: 1977529368}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 25, y: 6}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 70, y: 30}
-  m_EdgeRadius: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c3f8f16a9ba48b4d9c2248d9f4c2d17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mazeWindRoses:
+  - {fileID: 4402541032056216698, guid: b160b388caaaa5d419a997d699aeac06, type: 3}
+  - {fileID: 1556166883752142653, guid: f3008ff5b008d2a49bdb8c470973d01a, type: 3}
+  - {fileID: 8192627521564071928, guid: c0b0638c34e4a914bac64dff24b0bd42, type: 3}
+  - {fileID: 3195475755923812321, guid: f090b10bc6562e940b15ee2270e88c0f, type: 3}
+  onMazePatternLoaded:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 943205541}
+        m_TargetAssemblyTypeName: EnigmaMazeCoreSpirit, Assembly-CSharp
+        m_MethodName: GetStructsInfos
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _maxPaternNumber: 4
 --- !u!1 &2039726265
 GameObject:
   m_ObjectHideFlags: 0

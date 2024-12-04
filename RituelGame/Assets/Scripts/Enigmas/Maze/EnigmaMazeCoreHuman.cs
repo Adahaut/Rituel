@@ -5,33 +5,32 @@ using UnityEngine;
 
 public class EnigmaMazeCoreHuman : MonoBehaviour
 {
-    public MazePaterns _mazePaterns;
+    public MazePattern _mazePattern;
     
     public GameObject _mazeFramePrefab;
     public Transform _mazeFrameStartPosition;
-
-    private int[,] mazeArray;
-
-    [SerializeField] private GameObject windRose;
+    
     [SerializeField] private float windScale;
 
+    [SerializeField] private GameObject windRose;
     [SerializeField] private GameObject mazePawn;
-    [SerializeField] private Vector2 spawnPawnPosition;
 
     [SerializeField] private int frameScale;
     [SerializeField] private int gridLenght = 12;
     
     [SerializeField] private int connectionLoss;
-    
+
+    private int[,] mazeGrid;
     
     private void Start()
     {
-        mazeArray = _mazePaterns.Paterns();
-        spawnPawnPosition = _mazePaterns.SetPawnBasePosition();
         DrawMaze();
     }
     private void DrawMaze()
     {
+        MazeStruct mazeStruct = _mazePattern.GetRandomStruct();
+        mazeGrid = mazeStruct._mazePattern;
+        
         for (int i = 0; i < gridLenght; i++)
         {
             for (int j = 0; j < gridLenght; j++)
@@ -44,11 +43,11 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
             }
         }
         
-        windRose = Instantiate(windRose, new Vector2(gridLenght * windScale, gridLenght/windScale), Quaternion.identity);
+        windRose = Instantiate(mazeStruct._mazeWindRose, new Vector2(gridLenght * windScale, gridLenght/windScale), Quaternion.identity);
         
         mazePawn = Instantiate(
             mazePawn,
-            (Vector2)_mazeFrameStartPosition.position + spawnPawnPosition * frameScale,
+            (Vector2)_mazeFrameStartPosition.position + mazeStruct._mazePawnBasePosition * frameScale,
             Quaternion.identity);
     }
 
@@ -59,12 +58,15 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
         if (CheckForPawnSurroundings(x, y))
         {
-            if (mazeArray[x, y] == 1)
+            if (mazeGrid[x, y] == 1)
             {
                 ResetMaze();
                 return;
-            } else if (mazeArray[x, y] == 2)
+            } else if (mazeGrid[x, y] == 2)
+            {
                 Win();
+                return;
+            }
                 
             mazePawn.transform.position = new Vector2(x * frameScale, y * frameScale);
         }
@@ -87,11 +89,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         {
             Destroy(child.gameObject);
         }
-        
         Destroy(mazePawn);
         Destroy(windRose);
-        spawnPawnPosition = _mazePaterns.SetPawnBasePosition();
-        mazeArray = _mazePaterns.Paterns();
         DrawMaze();
     }
 
