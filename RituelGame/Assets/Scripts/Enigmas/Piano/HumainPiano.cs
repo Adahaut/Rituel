@@ -31,7 +31,7 @@ public class HumainPiano : MonoBehaviour
     {
         foreach (string unused in partition)
         {
-            FindObjectOfType<AudioManager>().PlaySound(partition[count]);
+            FindObjectOfType<AudioManager>().PlayOneShot(partition[count]);
             yield return new WaitForSeconds(0.5f);
             count++;
         }

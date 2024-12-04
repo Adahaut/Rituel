@@ -39,7 +39,7 @@ public class SpiritPiano : MonoBehaviour
     public void PlayNote(string Name)
     {
         print(Name);
-        FindObjectOfType<AudioManager>().PlaySound(Name);
+        FindObjectOfType<AudioManager>().PlayOneShot(Name);
         if (!isRecording) return;
         keys.Add(Name);
         if (partition.Count == keys.Count)
