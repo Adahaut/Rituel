@@ -13,7 +13,7 @@ public class LinkCore : MonoBehaviour
     {
         linkCount = 40;
         linkUI = GetComponent<LinkUI>();
-        linkUI.OnLinkChanged.Invoke();
+        linkUI.OnLinkChanged?.Invoke();
     }
 
     public void AddLink(int linkToAdd)
@@ -23,7 +23,7 @@ public class LinkCore : MonoBehaviour
         {
             linkCount = _maxLinkCount;
         }
-        linkUI.OnLinkChanged.Invoke();
+        linkUI.OnLinkChanged?.Invoke();
     }
 
     public void RemoveLink(int LinkToRemove)
@@ -33,6 +33,6 @@ public class LinkCore : MonoBehaviour
         {
             linkCount = 0;
         }
-        linkUI.OnLinkChanged.Invoke();
+        linkUI.OnLinkChanged?.Invoke();
     }
 }

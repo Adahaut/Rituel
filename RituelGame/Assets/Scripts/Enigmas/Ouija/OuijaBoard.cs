@@ -1,14 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
 using Enigmas.Ouija;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class OuijaBoard : MonoBehaviour
+public class OuijaBoard : MonoBehaviour, IPointerClickHandler
 {
     private OuijaCore ouijaCore;
     [field:SerializeField] public SerializedDictionary<char, OuijaCharacter> _characterObjects { get; private set; }
+    public Action OnBoardClickedEvent;
 
     public void SetOuijaCore(OuijaCore newOuijaCore)
     {
@@ -30,5 +33,10 @@ public class OuijaBoard : MonoBehaviour
                 ouijaCharacter._spiritCharacter.gameObject.SetActive(true);
             }
         }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnBoardClickedEvent.Invoke();
     }
 }

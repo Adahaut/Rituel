@@ -8,7 +8,7 @@ using UnityEngine.Serialization;
 
 namespace Enigmas.Ouija
 {
-    public class OuijaCore : MonoBehaviour, IPointerClickHandler
+    public class OuijaCore : MonoBehaviour
     {
         [SerializeField] private EnigmaData enigmaData;
         [field:SerializeField] public WorldType _currentWorld { get; private set; }
@@ -28,6 +28,7 @@ namespace Enigmas.Ouija
         {
             _ouijaCursor.SetOuijaCore(this);
             _ouijaBoard.SetOuijaCore(this);
+            _ouijaBoard.OnBoardClickedEvent += OnBoardClicked;
             DrawCharacters();
             if (_currentWorld == WorldType.Spirit)
             {
@@ -86,7 +87,7 @@ namespace Enigmas.Ouija
             DrawCharacters();
         }
 
-        public void OnPointerClick(PointerEventData eventData)
+        public void OnBoardClicked()
         {
             _ouijaCursor.TryStartMovement();
         }
