@@ -9,5 +9,7 @@ public class EnigmaData : ScriptableObject
     public string description;
     public GameObject reward;
     public string success;
+    public int LinkToAddIfSuccess;
+    public int LinkToRemoveIfFail;
 
 }
