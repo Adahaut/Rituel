@@ -430,14 +430,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BodyEnigmaHuman
       objectReference: {fileID: 0}
-    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 250
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
