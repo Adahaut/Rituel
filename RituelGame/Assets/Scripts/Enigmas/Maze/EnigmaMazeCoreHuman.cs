@@ -13,10 +13,11 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     public GameObject _mazeFramePrefab;
     public Transform _mazeFrameStartPosition;
     
-    [SerializeField] private float windScale;
+    [SerializeField] private Vector2 windScale;
 
     [SerializeField] private GameObject windRose;
-    [SerializeField] private GameObject mazePawn;
+    [SerializeField] private GameObject mazePawnPrefab;
+    private GameObject mazePawn;
 
     [SerializeField] private int frameScale;
     [SerializeField] private int gridLenght = 12;
@@ -47,21 +48,25 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
                 //Instantiate the frame prefab at the position "mazeFramePos" and we put it in the gameObject "_mazeFrameStartPosition"
                 GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity, _mazeFrameStartPosition); 
+                mazeFrame.GetComponent<RectTransform>().sizeDelta = Vector2.one * frameScale;
             }
         }
         
-        windRose = Instantiate(_mazeStructures[0]._mazeWindRose, new Vector2(gridLenght * windScale, gridLenght/windScale), Quaternion.identity);
+        windRose = Instantiate(_mazeStructures[0]._mazeWindRose, Vector3.zero, Quaternion.identity);
+        windRose.transform.SetParent(transform);
+        windRose.transform.position = windScale * gridLenght;
         
         mazePawn = Instantiate(
-            mazePawn,
+            mazePawnPrefab,
             (Vector2)_mazeFrameStartPosition.position + mazeStruct._mazePawnBasePosition * frameScale,
             Quaternion.identity);
+        mazePawn.transform.SetParent(transform);
     }
 
     public void MovePawn(GameObject mazeFrame)
     {
-        int x = (int)mazeFrame.transform.position.x / frameScale;
-        int y = (int)mazeFrame.transform.position.y / frameScale;
+        int x = Mathf.RoundToInt((mazeFrame.transform.position.x - _mazeFrameStartPosition.position.x) / frameScale);
+        int y = Mathf.RoundToInt((mazeFrame.transform.position.y - _mazeFrameStartPosition.position.y) / frameScale);
 
         if (CheckForPawnSurroundings(x, y))
         {
@@ -77,16 +82,18 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
                 return;
             }
                 
-            mazePawn.transform.position = new Vector2(x * frameScale, y * frameScale);
+            mazePawn.transform.position = new Vector2(mazeFrame.transform.position.x, mazeFrame.transform.position.y);
         }
     }
 
     private bool CheckForPawnSurroundings(int x, int y)
     {
-        if (x == (int)mazePawn.transform.position.x && y == (int)mazePawn.transform.position.y + 1
-            || x == (int)mazePawn.transform.position.x && y == (int)mazePawn.transform.position.y - 1
-            || x == (int)mazePawn.transform.position.x - 1 && y == (int)mazePawn.transform.position.y
-            || x == (int)mazePawn.transform.position.x + 1 && y == (int)mazePawn.transform.position.y)
+        int positionX = Mathf.RoundToInt((mazePawn.transform.position.x - _mazeFrameStartPosition.position.x) / frameScale);
+        int positionY = Mathf.RoundToInt((mazePawn.transform.position.y - _mazeFrameStartPosition.position.y) / frameScale);
+        if (x == positionX && y == positionY + 1
+            || x == positionX && y == positionY - 1
+            || x == positionX - 1 && y == positionY
+            || x == positionX + 1 && y == positionY)
             return true;
 
         else return false;

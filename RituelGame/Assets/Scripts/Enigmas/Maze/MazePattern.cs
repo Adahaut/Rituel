@@ -92,10 +92,10 @@ public class MazePattern : MonoBehaviour
 
     private void Start()
     {
-        InitStructMaze(firstMazeStruct, firstMazePattern, Vector2.one, 0.0f, _mazeWindRoses[0], "FirstMaze");
-        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(10f, 1f), -90f, _mazeWindRoses[1], "SecondMaze");
-        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(10f, 10f), 180f, _mazeWindRoses[2], "ThirdMaze");
-        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2(1f, 10f), 90f, _mazeWindRoses[3], "FourthMaze");
+        InitStructMaze(firstMazeStruct, firstMazePattern, Vector2.one, 0.0f, _mazeWindRoses[0], "Maze");
+        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(10f, 1f), -90f, _mazeWindRoses[1], "Maze");
+        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(10f, 10f), 180f, _mazeWindRoses[2], "Maze");
+        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2(1f, 10f), 90f, _mazeWindRoses[3], "Maze");
     }
 
     private void InitStructMaze(MazeStruct mazeStruct, int[,] mazePattern, Vector2 mazePawnBasePosition, float mazeRotation, GameObject mazeWindRose, string mazeLayer)
