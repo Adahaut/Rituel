@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using Enum;
 using UnityEngine;
 
@@ -9,6 +10,9 @@ namespace Enigmas.Key
     {
         [field:SerializeField] public KeyEnigmaData _keyEnigmaData { get; private set; }
         [field:SerializeField] public TurnableKey _turnableKey { get; private set; }
+
+        [SerializeField] private CanvasGroup closedChest;
+        [SerializeField] private CanvasGroup openedChest;
 
         private List<KeyTurnSide> currentTurns = new();
         
@@ -46,7 +50,10 @@ namespace Enigmas.Key
 
         private void OnCorrectAnswer()
         {
-            Debug.Log("You won, yippeeeee!!!!!!!");
+            closedChest.SetCanvasGroupInteraction(false);
+            openedChest.SetCanvasGroupInteraction(true);
+            closedChest.DOFade(0, 0.5f);
+            openedChest.DOFade(1, 0.5f);
         }
 
         private void OnWrongTurn()

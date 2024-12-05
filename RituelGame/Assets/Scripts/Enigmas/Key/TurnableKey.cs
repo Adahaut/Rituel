@@ -99,7 +99,7 @@ namespace Enigmas.Key
             float sign = Mathf.Sign(currentAngle);
             OnKeyFullLoopEvent?.Invoke(sign > 0 ? KeyTurnSide.Left : KeyTurnSide.Right);
             currentAngle = 0;
-            mustReleaseToDrag = true;
+            //mustReleaseToDrag = true; //leave this commented if you want to drag after a full loop
         }
 
         public void OnEndDrag(PointerEventData eventData)

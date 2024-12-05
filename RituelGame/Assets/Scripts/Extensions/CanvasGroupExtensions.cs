@@ -5,14 +5,18 @@ public static class CanvasGroupExtensions
     public static void ActivateCanvasGroup(this CanvasGroup canvasGroup)
     {
         canvasGroup.alpha = 1;
-        canvasGroup.interactable = true;
-        canvasGroup.blocksRaycasts = true;
+        SetCanvasGroupInteraction(canvasGroup, true);
     }
 
     public static void DeactivateCanvasGroup(this CanvasGroup canvasGroup)
     {
         canvasGroup.alpha = 0;
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
+        SetCanvasGroupInteraction(canvasGroup, false);
+    }
+    
+    public static void SetCanvasGroupInteraction(this CanvasGroup canvasGroup, bool activated)
+    {
+        canvasGroup.interactable = activated;
+        canvasGroup.blocksRaycasts = activated;
     }
 }
