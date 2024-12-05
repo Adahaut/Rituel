@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using GameObject = UnityEngine.GameObject;
@@ -73,7 +74,7 @@ namespace Enigmas.Ouija
                     continue;
                 }
                 char charAtIndexI = ouijaChars.ElementAt(i);
-                ouijaButton.SetOuijaSprite(charAtIndexI, ouijaData._ouijaCharacters[charAtIndexI]);
+                ouijaButton.SetOuijaSprite(charAtIndexI, ouijaData._fontAsset);
             }
         }
         
@@ -88,7 +89,7 @@ namespace Enigmas.Ouija
                 char humanChar = _currentInput[i];
                 Sprite spiritChar = ouijaData._ouijaCharacters[humanChar];
                 
-                inputScreenObject.GetComponent<Image>().sprite = spiritChar;
+                inputScreenObject.GetComponent<TextMeshProUGUI>().text = humanChar.ToString();
             }
         }
 
