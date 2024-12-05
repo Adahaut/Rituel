@@ -109,12 +109,12 @@ public class MazePattern : MonoBehaviour
         if (enigmaMazeCoreHuman)
         {
             enigmaMazeCoreHuman._mazeStructures.Add(mazeStruct);
-            enigmaMazeCoreHuman.CheckIfFull();
+            enigmaMazeCoreHuman.DrawIfFull();
         }
         else if (enigmaMazeCoreSpirit)
         {
             enigmaMazeCoreSpirit._mazeStructures.Add(mazeStruct);
-            enigmaMazeCoreSpirit.CheckIfFull();
+            enigmaMazeCoreSpirit.DrawIfFull();
         }
     }
     public int _maxPaternNumber = 4;

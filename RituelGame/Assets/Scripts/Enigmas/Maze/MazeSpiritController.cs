@@ -5,7 +5,7 @@ using UnityEngine;
 public class MazeSpiritController : MonoBehaviour
 {
     private Camera cam;
-    public GameObject Panel;
+    public GameObject _panel;
     
     private GameObject maze;
     private Vector3 mazeBasePos;
@@ -25,26 +25,24 @@ public class MazeSpiritController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            if (hit)
+            if (hit) //up scaling the maze and placing it in the middle of the screen in order to choose which maze is the more suitable.
             {
                 maze = hit.collider.gameObject.transform.parent.gameObject;
                 if(zoomed  == false)
                     mazeBasePos = maze.transform.position;
                 
-                Debug.Log(mazeBasePos);
                 zoomed = true;
                 maze.transform.position = midPos;
                 maze.transform.localScale = new Vector3(2, 2, 2);
-                Debug.Log(hit.collider.gameObject.layer);
                 
                 maze.transform.position += ReplaceMaze(hit.collider.gameObject.layer);
-                Panel.SetActive(true);
+                _panel.SetActive(true);
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) //Replacing the maze in his original position
         {
-            Panel.SetActive(false);
+            _panel.SetActive(false);
             zoomed = false;
             maze.transform.position = mazeBasePos;
             
@@ -52,7 +50,7 @@ public class MazeSpiritController : MonoBehaviour
         }
     }
 
-    private Vector3 ReplaceMaze(LayerMask mazeLayer)
+    private Vector3 ReplaceMaze(LayerMask mazeLayer) //Replacing the maze after zooming in order to place it in the middle
     {
         if (mazeLayer == LayerMask.NameToLayer("FirstMaze"))
         {

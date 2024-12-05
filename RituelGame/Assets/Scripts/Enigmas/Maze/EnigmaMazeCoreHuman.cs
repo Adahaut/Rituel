@@ -20,12 +20,10 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     [SerializeField] private int frameScale;
     [SerializeField] private int gridLenght = 12;
-    
-    [SerializeField] private int connectionLoss;
 
     private int[,] mazeGrid;
     
-    public void CheckIfFull()
+    public void DrawIfFull()
     {
         if (_mazeStructures.Count == _mazePattern._maxPaternNumber)
         {
@@ -35,17 +33,19 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     
     private void DrawMaze()
     {
-        MazeStruct mazeStruct = _mazeStructures[Random.Range(0, _mazeStructures.Count)];
-        mazeGrid = mazeStruct._mazePattern;
+        MazeStruct mazeStruct = _mazeStructures[Random.Range(0, _mazeStructures.Count)]; //takes a random maze between four patterns
+        mazeGrid = mazeStruct._mazePattern; //gives to "mazeGrid" the list of int in mazeStruct
         
         for (int i = 0; i < gridLenght; i++)
         {
             for (int j = 0; j < gridLenght; j++)
             {
+                // Set the position of each squares in the maze
                 Vector2 mazeFramePos = new Vector2(
                     _mazeFrameStartPosition.position.x + i * frameScale,
                     _mazeFrameStartPosition.position.y + j * frameScale);
 
+                //Instantiate the frame prefab at the position "mazeFramePos" and we put it in the gameObject "_mazeFrameStartPosition"
                 GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity, _mazeFrameStartPosition); 
             }
         }
@@ -92,7 +92,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         else return false;
     }
 
-    private void ResetMaze()
+    private void ResetMaze() 
     {
         foreach (Transform child in _mazeFrameStartPosition)
         {
