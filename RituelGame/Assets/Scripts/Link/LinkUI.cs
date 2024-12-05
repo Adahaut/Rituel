@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -20,9 +21,9 @@ public class LinkUI : MonoBehaviour
         OnLinkChanged.AddListener(UpdateLinkSlider);
     }
 
-    private void UpdateLinkSlider()
+    public void UpdateLinkSlider()
     {
-        _linkSlider.value = linkCore.linkCount / linkCore._maxLinkCount;
+        _linkSlider.DOValue(linkCore.linkCount / linkCore._maxLinkCount, 1f);
         _linkText.text = linkCore.linkCount.ToString() + "%";
     }
 }
