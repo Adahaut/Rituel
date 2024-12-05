@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LinkAnimation : MonoBehaviour
 {
@@ -17,12 +18,16 @@ public class LinkAnimation : MonoBehaviour
     public Color _winColor;
     private LinkUI linkUI;
 
+    public Image _failBorderImage;
+
     private void Start()
     {
         linkUI = GetComponent<LinkUI>();
         initScale = _linkSlider.transform.localScale;
         initColor = Color.black;
         linkUI.UpdateLinkSlider();
+        
+        StartLinkAnimation(false);
     }
 
     public void StartLinkAnimation(bool isWin)
@@ -35,6 +40,7 @@ public class LinkAnimation : MonoBehaviour
 
     private IEnumerator AnimateLoseLink()
     {
+        LoseLinkFeedBack(); 
         float duration = 0.5f;
         _linkSlider.transform.DOScale(_linkScaleAnime, duration);
         yield return new WaitForSeconds(duration);
@@ -44,6 +50,13 @@ public class LinkAnimation : MonoBehaviour
         _linkText.DOColor(initColor, duration);
         yield return new WaitForSeconds(duration);
         _linkSlider.transform.DOScale(initScale, duration);
+    }
+
+    private void LoseLinkFeedBack()
+    {
+        float duration = 1f;
+        _failBorderImage.DOFade(1, duration).SetEase(Ease.OutQuint).onComplete += () => { _failBorderImage.DOFade(0, duration).SetEase(Ease.InQuint); };
+
     }
     
     private IEnumerator AnimateWinLink()
