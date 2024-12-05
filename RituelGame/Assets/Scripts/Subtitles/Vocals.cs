@@ -1,0 +1,37 @@
+using System.Collections;
+using UnityEngine;
+
+public class Vocals : MonoBehaviour
+{
+    private AudioSource source;
+    public static Vocals _instance;
+
+    private void Awake()
+    {
+        _instance = this;
+    }
+
+    private void Start()
+    {
+        source = gameObject.AddComponent<AudioSource>();
+    }
+
+    public void Say(Subtitles _audioClip)
+    {
+        if (source.isPlaying)
+            source.Stop();
+        
+        source.PlayOneShot(_audioClip._audioClip);
+        StartCoroutine(StartSubtitleCorroutine(_audioClip));
+    }
+
+    private IEnumerator StartSubtitleCorroutine(Subtitles _audioClip)
+    {
+        if (_audioClip._audioClip.length > 20)
+        foreach (var subtitle in _audioClip._subtitles)
+        {
+            SubtitleText._instance.SetSubtitle(subtitle.text);
+            yield return new WaitForSeconds(subtitle.time);
+        }
+    }
+}
