@@ -5,11 +5,20 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "EnigmaData", menuName = "Enigmas/EnigmaData")]
 public class EnigmaData : ScriptableObject
 {
-    public string enigmaName;
-    public string description;
-    public GameObject reward;
-    public string success;
-    public int LinkToAddIfSuccess;
-    public int LinkToRemoveIfFail;
+    [SerializeField] private string enigmaName;
+    public string EnigmaName => enigmaName;
+    [SerializeField] private string description;
+    public string Description => description;
+    [SerializeField] private GameObject reward;
+    [SerializeField] private string success;
+    public string Success => success;
+    [SerializeField] private int linkToAddIfSuccess;
+    public int LinkToAddIfSuccess => linkToAddIfSuccess;
+    [SerializeField] private int linkToRemoveIfFail;
+    public int LinkToRemoveIfFail => linkToRemoveIfFail;
 
+    public void GetReward()
+    {
+        if (reward) reward.SetActive(true);
+    }
 }
