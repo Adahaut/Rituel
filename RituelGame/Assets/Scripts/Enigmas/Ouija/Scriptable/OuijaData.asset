@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44e1244c9969421aad724706ad9be60f, type: 3}
   m_Name: OuijaData
   m_EditorClassIdentifier: 
+  _fontAsset: {fileID: 11400000, guid: 452c1555270e0914d8e5a8e9c712ec18, type: 2}
   <_answerCharacters>k__BackingField: 43004f00550043004f005500
   <_ouijaCharacters>k__BackingField:
     _serializedList:

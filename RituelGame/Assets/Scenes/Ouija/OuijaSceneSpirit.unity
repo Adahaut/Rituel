@@ -497,19 +497,19 @@ PrefabInstance:
       propertyPath: m_Name
       value: OuijaCoreSpirit
       objectReference: {fileID: 0}
-    - target: {fileID: 3217256186778391451, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3217256186778391451, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchorMin.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3217256186778391451, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
-    - target: {fileID: 3217256186778391451, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -75
       objectReference: {fileID: 0}
