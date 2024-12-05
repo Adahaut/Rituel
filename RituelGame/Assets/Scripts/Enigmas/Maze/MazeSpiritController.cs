@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MazeSpiritController : MonoBehaviour
 {
     private Camera cam;
+    public EnigmaMazeCoreSpirit _enigmaCoreSpirit;
     public GameObject _panel;
     
     private GameObject maze;
@@ -21,23 +23,43 @@ public class MazeSpiritController : MonoBehaviour
     
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        RaycastResult hit = results.Find(r => r.gameObject.GetComponent<CanvasRenderer>());
 
         if (Input.GetMouseButton(0))
         {
-            if (hit) //up scaling the maze and placing it in the middle of the screen in order to choose which maze is the more suitable.
+            if (!hit.gameObject) //up scaling the maze and placing it in the middle of the screen in order to choose which maze is the more suitable.
             {
-                maze = hit.collider.gameObject.transform.parent.gameObject;
-                if(zoomed  == false)
-                    mazeBasePos = maze.transform.position;
-                
-                zoomed = true;
-                maze.transform.position = midPos;
-                maze.transform.localScale = new Vector3(2, 2, 2);
-                
-                maze.transform.position += ReplaceMaze(hit.collider.gameObject.layer);
-                _panel.SetActive(true);
+                return;
             }
+            
+            if (hit.gameObject.layer != LayerMask.NameToLayer("Maze"))
+            {
+                return;
+            }
+
+            maze = hit.gameObject.transform.parent.gameObject;
+
+            Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
+            mazeCanvas.overrideSorting = true;
+            mazeCanvas.sortingOrder = 2;
+            
+            if (zoomed == false)
+                mazeBasePos = maze.transform.position;
+
+            zoomed = true;
+            maze.transform.position = transform.position;
+            maze.transform.localScale = new Vector3(2, 2, 2);
+
+            //maze.transform.position += ReplaceMaze(hit.gameObject.layer) * _enigmaCoreSpirit._frameScale;
+            _panel.SetActive(true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) //Replacing the maze in his original position
@@ -47,6 +69,10 @@ public class MazeSpiritController : MonoBehaviour
             maze.transform.position = mazeBasePos;
             
             maze.transform.localScale = Vector3.one;
+            
+            Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
+            mazeCanvas.overrideSorting = false;
+            mazeCanvas.sortingOrder = 0;
         }
     }
 

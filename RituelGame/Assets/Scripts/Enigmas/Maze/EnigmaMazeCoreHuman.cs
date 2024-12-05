@@ -48,6 +48,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
                 //Instantiate the frame prefab at the position "mazeFramePos" and we put it in the gameObject "_mazeFrameStartPosition"
                 GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity, _mazeFrameStartPosition); 
+                mazeFrame.GetComponent<RectTransform>().sizeDelta = Vector2.one * frameScale;
             }
         }
         

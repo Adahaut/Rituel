@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 public class EnigmaMazeCoreSpirit : MonoBehaviour
 {
@@ -14,9 +15,9 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
     public GameObject _mazes;
     public Transform _mazeFrameStartPosition;
     
-    [SerializeField] private float windScale;
+    [SerializeField] private Vector2 windScale;
     
-    [SerializeField] private int frameScale;
+    [FormerlySerializedAs("frameScale")] [SerializeField] public int _frameScale;
     [SerializeField] private int gridLenght = 12;
     [SerializeField] private Vector2 paternOffsetX;
     [SerializeField] private Vector2 paternOffsetY;
@@ -43,15 +44,22 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
             if (k >= _mazePatternScript._maxPaternNumber / 2)
             {
                 paternOffsetY.y = -16;
-                cicle = cicle - _mazePatternScript._maxPaternNumber / 2;
+                cicle -= _mazePatternScript._maxPaternNumber / 2;
             }
         //-----------------------------------------------------
             
         //creating the start position of the maze to create the maze in the right place.
             GameObject mazeStartPosition = Instantiate(new GameObject(),
-                (Vector2)_mazeFrameStartPosition.position + cicle * paternOffsetX + paternOffsetY,
+                (Vector2)_mazeFrameStartPosition.position + cicle * paternOffsetX * _frameScale + paternOffsetY * _frameScale,
                 Quaternion.identity,
                 _mazes.transform);
+            mazeStartPosition.AddComponent<Canvas>();
+            mazeStartPosition.AddComponent<GraphicRaycaster>();
+
+            GameObject pivotParent = new GameObject("parentPivot");
+            pivotParent.transform.SetParent(mazeStartPosition.transform, true);
+            pivotParent.transform.position = (Vector2)mazeStartPosition.transform.position +
+                Vector2.one * _frameScale * gridLenght / 2f - (Vector2.one * _frameScale / 2f);
             
             for (int i = 0; i < gridLenght; i++)
             {
@@ -59,45 +67,49 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
                 {
                     //Setting the position of the frame
                     Vector2 mazeFramePos = new Vector2(
-                        mazeStartPosition.transform.position.x + i * frameScale,
-                        mazeStartPosition.transform.position.y + j * frameScale);
+                        mazeStartPosition.transform.position.x + i * _frameScale,
+                        mazeStartPosition.transform.position.y + j * _frameScale);
 
                     //Instantiating the frame at "mazeFramePos", and placing it in "mazeStartPosition".
                     GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity,
                         mazeStartPosition.transform);
+                    mazeFrame.GetComponent<RectTransform>().sizeDelta = Vector2.one * _frameScale;
+                    mazeFrame.transform.SetParent(pivotParent.transform, true);
                     
                     //Ging the right layer to the maze in order to check wich maze we click on after.
                     mazeFrame.layer = LayerMask.NameToLayer(mazeStruct._mazeLayer);
                     
                     if (mazeStruct._mazePattern[i, j] == 1) //Setting th color of the frame according to if it's a wall or not.
                     {
-                        mazeFrame.GetComponent<SpriteRenderer>().color = Color.black;
+                        mazeFrame.GetComponent<Image>().color = Color.black;
                     }
                 }
             }
             
             //-----------------------------
             //Rotating the maze according to the rotation given in the struct
-            mazeStartPosition.transform.position = new Vector2(
-                mazeStartPosition.transform.position.x + gridLenght / 2,
-                mazeStartPosition.transform.position.y + gridLenght / 2);
+            pivotParent.transform.position = new Vector2(
+                mazeStartPosition.transform.position.x + _frameScale * gridLenght / 2f,
+                mazeStartPosition.transform.position.y + _frameScale * gridLenght / 2f);
             
-            mazeStartPosition.transform.rotation = Quaternion.Euler(0, 0, mazeStruct._mazeRotation);
+            pivotParent.transform.rotation = Quaternion.Euler(0, 0, mazeStruct._mazeRotation);
             
-            mazeStartPosition.transform.position += ReplaceMaze(mazeStruct._mazeRotation);
+            //mazeStartPosition.transform.position += ReplaceMaze(mazeStruct._mazeRotation);
             //------------------------------
             
             //placing the windRose with the rotation of the maze
             GameObject windRose = Instantiate(mazeStruct._mazeWindRose, new Vector2(
-                    mazeStartPosition.transform.position.x + gridLenght * windScale - ReplaceMaze(mazeStruct._mazeRotation).x,
-                    mazeStartPosition.transform.position.y + gridLenght / windScale - ReplaceMaze(mazeStruct._mazeRotation).y),
+                    mazeStartPosition.transform.position.x + gridLenght * windScale.x - ReplaceMaze(mazeStruct._mazeRotation).x,
+                    mazeStartPosition.transform.position.y + gridLenght * windScale.y - ReplaceMaze(mazeStruct._mazeRotation).y),
                 Quaternion.identity,
                 mazeStartPosition.transform);
+            windRose.transform.SetParent(pivotParent.transform);
         }
     }
 
     private Vector3 ReplaceMaze(float rotation) //after rotating, we replace the maze in his place.
     {
+        return Vector2.zero;
         switch (rotation)
         {
             case 90:
