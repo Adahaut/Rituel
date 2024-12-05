@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class MazeHumanController : MonoBehaviour
 {
@@ -15,13 +16,22 @@ public class MazeHumanController : MonoBehaviour
 
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(cam.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
+        PointerEventData pointerData = new PointerEventData(EventSystem.current)
+        {
+            position = Input.mousePosition
+        };
+
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData, results);
+
+        RaycastResult hit = results.Find(r => r.gameObject.GetComponent<CanvasRenderer>());
+        
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (hit)
+            if (hit.gameObject)
             {
-                maze.MovePawn(hit.collider.gameObject);
+                maze.MovePawn(hit.gameObject);
             }
         }
     }
