@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class RelicItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
 {
@@ -15,7 +16,7 @@ public class RelicItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     private void Start()
     {
         _symbole = _symboleInInspector;
-        GetComponent<SpriteRenderer>().sprite = _sprite;
+        GetComponent<Image>().sprite = _sprite;
     }
 
     public void OnPointerClick(PointerEventData eventData)
