@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6103b12c82149354089e45d766e7e995, type: 3}
+  m_Name: CryptexData
+  m_EditorClassIdentifier: 
+  enigmaName: Cryptex
+  description: rotate the numbers to unlock the cryptex
+  reward: {fileID: 2600705361194805992, guid: 3cbd2a6794920e741ba748035e729841, type: 3}
+  success: 
+  linkToAddIfSuccess: 15
+  linkToRemoveIfFail: 10
