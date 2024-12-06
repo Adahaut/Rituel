@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "EnigmaData", menuName = "Enigmas/EnigmaData")]
@@ -9,6 +10,8 @@ public class EnigmaData : ScriptableObject
     public string EnigmaName => enigmaName;
     [SerializeField] private string description;
     public string Description => description;
+    [SerializeField] private SerializedDictionary<WorldType, string> enigmaHint;
+    public SerializedDictionary<WorldType, string> EnigmaHint => enigmaHint;
     [SerializeField] private GameObject reward;
     [SerializeField] private string success;
     public string Success => success;

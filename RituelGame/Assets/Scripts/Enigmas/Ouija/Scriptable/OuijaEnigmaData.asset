@@ -14,5 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Table Ouija
   description: 
+  enigmaHint:
+    _serializedList:
+    - Key: 0
+      Value: En vrai la jsp clique sur la table
+    - Key: 1
+      Value: Euuuuh flemme
   reward: {fileID: 0}
   success: 
+  linkToAddIfSuccess: 0
+  linkToRemoveIfFail: 0
