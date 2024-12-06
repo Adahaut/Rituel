@@ -46,17 +46,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wordEnglishToLatin:
     _serializedList:
+    - Key: Potato
+      Value: Annuum
     - Key: Hello
       Value: Salve
     - Key: Goodbye
       Value: Vale
-    - Key: Potato
-      Value: Annum
   _phrases:
   - Hello potato goodbye
   _phraseToTranslate: {fileID: 5371662169042729545}
   wordsParent: {fileID: 7992024835160875161}
   _topLeftFirstButtonPos: {x: -700, y: -100}
+  enigmaCanvas: {fileID: 7099310445221946199}
+  canvasFadeDuration: 0.5
 --- !u!1 &3099419949574344426
 GameObject:
   m_ObjectHideFlags: 0
