@@ -13,18 +13,18 @@ public class Vocals : MonoBehaviour
         source = gameObject.AddComponent<AudioSource>();
     }
 
-    public void Say(Subtitles _audioClip)
+    public void Say(Subtitles _subtitle)
     {
         if (source.isPlaying)
             source.Stop();
         
-        source.PlayOneShot(_audioClip._audioClip);
-        StartCoroutine(StartSubtitleCorroutine(_audioClip));
+        source.PlayOneShot(_subtitle._audioClip);
+        StartCoroutine(StartSubtitleCorroutine(_subtitle));
     }
 
-    private IEnumerator StartSubtitleCorroutine(Subtitles _audioClip)
+    private IEnumerator StartSubtitleCorroutine(Subtitles _subtitle)
     {
-        foreach (var subtitle in _audioClip._subtitles)
+        foreach (var subtitle in _subtitle._subtitles)
         {
             subtitleText.text = subtitle.text;
             yield return new WaitForSeconds(subtitle.time);
