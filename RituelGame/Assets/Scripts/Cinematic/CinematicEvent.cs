@@ -17,6 +17,7 @@ namespace Cinematic
         
         [Header("Specific: ChangeBackground Event")]
         public Sprite _backgroundSprite;
+        public float _fadeDuration;
         
         [Header("Specific: ChangeScene Event")]
         public string _sceneName;

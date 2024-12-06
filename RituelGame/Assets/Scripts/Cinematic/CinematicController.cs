@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -13,6 +14,7 @@ namespace Cinematic
         private CinematicEvent currentEvent => cinematicEvents[cinematicIndex];
 
         [SerializeField] private Image backgroundImage;
+        [SerializeField] private Image oldBackgroundImage;
             
         private int cinematicIndex;
 
@@ -88,7 +90,11 @@ namespace Cinematic
 
         private void ChangeBackgroundEvent(CinematicEvent cinematicEvent)
         {
+            oldBackgroundImage.sprite = backgroundImage.sprite;
             backgroundImage.sprite = cinematicEvent._backgroundSprite;
+            backgroundImage.color = new Color() {r = 1, g = 1, b = 1, a = 0};
+            backgroundImage.DOKill(false);
+            backgroundImage.DOFade(1, cinematicEvent._fadeDuration);
         }
     }
 }
