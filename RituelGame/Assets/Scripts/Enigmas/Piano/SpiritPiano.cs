@@ -15,6 +15,9 @@ public class SpiritPiano : MonoBehaviour
     private bool isRecording;
     private bool enigmaSolved;
 
+    [SerializeField] private LinkCore linkCore;
+    [SerializeField] private EnigmaData enigmaData;
+
     private void Start()
     {
         partition = partitionSO.partitionKeys;
@@ -40,6 +43,7 @@ public class SpiritPiano : MonoBehaviour
         if (partition.Count == keys.Count && partition[index] == keys[index])
         {
             Debug.Log("enigma solved");
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             enigmaSolved = true;
             ResetEnigma();
             return;
@@ -47,6 +51,7 @@ public class SpiritPiano : MonoBehaviour
         else if (partition[index] != keys[index])
         {
             Debug.Log("wrong key");
+            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
             ResetEnigma();
             return;
         }
