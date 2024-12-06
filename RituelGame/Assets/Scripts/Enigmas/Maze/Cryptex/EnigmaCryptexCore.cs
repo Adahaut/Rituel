@@ -4,18 +4,50 @@ using UnityEngine;
 
 public class EnigmaCryptexCore : MonoBehaviour
 {
-    public EnigmaData cryptexData;
-
-    public CryptexStringChecker stringChecker;
+    public EnigmaData _cryptexData;
+    public CryptexDisplay _cryptexDisplay;
     
-    public void Win()
+    public GameObject _maze;
+    public GameObject _cryptex;
+    
+    public List<char> values = new();
+
+    public string _answer;
+    private string guess = "";
+
+    private void Start()
     {
-        Debug.Log("Win");
+        _cryptexDisplay.SettingInList();
+        _cryptexDisplay.DisplayingChars(values);
     }
 
-    public void Lose()
+    public void CheckIfStringIsCorrect(int value)
+    {
+        guess += values[value].ToString();
+
+        if (guess.Length == 5)
+        {
+            if (guess == _answer)
+            {
+                Win();
+            }
+            else
+            {
+                Lose();
+            }
+        }
+    }
+
+    private void Win()
+    {
+        Debug.Log("Win");
+        _cryptex.SetActive(false);
+        _maze.SetActive(true);
+    }
+
+    private void Lose()
     {
         Debug.Log("Lose");
-        stringChecker.isGood = true;
+        guess = "";
     }
 }

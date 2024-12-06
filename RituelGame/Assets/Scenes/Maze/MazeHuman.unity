@@ -373,8 +373,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -451,7 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 31696859}
   - component: {fileID: 31696862}
-  - component: {fileID: 31696861}
+  - component: {fileID: 31696863}
   m_Layer: 0
   m_Name: UpCollider
   m_TagString: Untagged
@@ -474,23 +474,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 45399121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &31696861
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31696858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 1266934366}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 2
-  _circleRotation: -30
 --- !u!61 &31696862
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -536,6 +519,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &31696863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31696858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 30
 --- !u!1 &43009968
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,6 +544,7 @@ GameObject:
   - component: {fileID: 43009972}
   - component: {fileID: 43009971}
   - component: {fileID: 43009970}
+  - component: {fileID: 43009973}
   m_Layer: 5
   m_Name: CheckWin
   m_TagString: Untagged
@@ -618,9 +615,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 489423351}
-        m_TargetAssemblyTypeName: CryptexStringChecker, Assembly-CSharp
-        m_MethodName: CheckCryptexString
+      - m_Target: {fileID: 43009973}
+        m_TargetAssemblyTypeName: CryptexButton, Assembly-CSharp
+        m_MethodName: GivingToCore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -668,6 +665,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43009968}
   m_CullTransparentMesh: 1
+--- !u!114 &43009973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43009968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15688aba536aaa147a4e0819966c306f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cryptexCore: {fileID: 1322894892}
+  _cryptexCircles:
+  - {fileID: 89649550}
+  - {fileID: 1706407117}
+  - {fileID: 45399122}
+  - {fileID: 998336531}
+  - {fileID: 1557088846}
 --- !u!1 &44605042
 GameObject:
   m_ObjectHideFlags: 0
@@ -734,8 +750,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -811,6 +827,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 45399121}
+  - component: {fileID: 45399122}
+  - component: {fileID: 45399123}
   m_Layer: 0
   m_Name: Third
   m_TagString: Untagged
@@ -835,6 +853,33 @@ Transform:
   - {fileID: 490391560}
   m_Father: {fileID: 1301024258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &45399122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45399120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813d3272b3e39b64aaa7b8450c070b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _indexInValues: 3
+--- !u!114 &45399123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45399120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12fa1b740fdd814ba839d2918f07c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cryptexCircle: {fileID: 45399122}
+  _cryptexRotation: {fileID: 1266934370}
 --- !u!1 &53890156
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,8 +946,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1035,8 +1080,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1195,6 +1240,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 89649549}
+  - component: {fileID: 89649550}
+  - component: {fileID: 89649551}
   m_Layer: 0
   m_Name: First
   m_TagString: Untagged
@@ -1219,6 +1266,33 @@ Transform:
   - {fileID: 1111806482}
   m_Father: {fileID: 1301024258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &89649550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89649548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813d3272b3e39b64aaa7b8450c070b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _indexInValues: 2
+--- !u!114 &89649551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89649548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12fa1b740fdd814ba839d2918f07c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cryptexCircle: {fileID: 89649550}
+  _cryptexRotation: {fileID: 814812953}
 --- !u!1 &89683724
 GameObject:
   m_ObjectHideFlags: 0
@@ -1285,8 +1359,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1462,8 +1536,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1729,8 +1803,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2297,8 +2371,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2533,8 +2607,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2704,8 +2778,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3495,8 +3569,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3832,8 +3906,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3966,8 +4040,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4095,12 +4169,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 376220015}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6, y: -6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 623796696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &378819556
 GameObject:
@@ -4761,8 +4835,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4997,8 +5071,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5065,53 +5139,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438804301}
   m_CullTransparentMesh: 1
---- !u!1 &489423350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 489423352}
-  - component: {fileID: 489423351}
-  m_Layer: 0
-  m_Name: CryptexStringChecker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &489423351
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489423350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c21f4c9b9064bb949b5e50256a5c0115, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enigmaCryptexCore: {fileID: 1322894890}
-  cryptexCodeWanted: 63006100630061007a00
-  isGood: 0
---- !u!4 &489423352
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 489423350}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 623796696}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &490391559
 GameObject:
   m_ObjectHideFlags: 0
@@ -5122,7 +5149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 490391560}
   - component: {fileID: 490391563}
-  - component: {fileID: 490391562}
+  - component: {fileID: 490391564}
   m_Layer: 0
   m_Name: DownCollider
   m_TagString: Untagged
@@ -5145,23 +5172,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 45399121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &490391562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490391559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 1266934366}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 2
-  _circleRotation: 30
 --- !u!61 &490391563
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5207,6 +5217,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &490391564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 490391559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: -30
 --- !u!1 &522228642
 GameObject:
   m_ObjectHideFlags: 0
@@ -5273,8 +5296,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5407,8 +5430,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5485,7 +5508,7 @@ GameObject:
   m_Component:
   - component: {fileID: 557626080}
   - component: {fileID: 557626083}
-  - component: {fileID: 557626082}
+  - component: {fileID: 557626084}
   m_Layer: 0
   m_Name: UpCollider
   m_TagString: Untagged
@@ -5508,23 +5531,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1557088845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &557626082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557626079}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 909770078}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 4
-  _circleRotation: -30
 --- !u!61 &557626083
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5570,6 +5576,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &557626084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557626079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 30
 --- !u!1 &596125819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5821,8 +5840,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5919,13 +5938,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 896933223}
-  - {fileID: 1020550851}
   - {fileID: 926304319}
-  - {fileID: 1857939498}
-  - {fileID: 1851097926}
-  - {fileID: 489423352}
   - {fileID: 1322894891}
+  - {fileID: 2060460597}
   - {fileID: 1861805294}
+  - {fileID: 376220018}
   m_Father: {fileID: 787417966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &632633799
@@ -5994,8 +6011,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6128,8 +6145,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6262,8 +6279,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6396,8 +6413,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6567,8 +6584,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6746,8 +6763,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6880,8 +6897,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7014,8 +7031,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7148,8 +7165,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7453,6 +7470,74 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &791196652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 791196653}
+  - component: {fileID: 791196655}
+  - component: {fileID: 791196654}
+  m_Layer: 0
+  m_Name: EventSystem (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &791196653
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791196652}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2061232204}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &791196654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791196652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &791196655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 791196652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
 --- !u!1 &794308599
 GameObject:
   m_ObjectHideFlags: 0
@@ -7519,8 +7604,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7599,7 +7684,6 @@ GameObject:
   - component: {fileID: 814812952}
   - component: {fileID: 814812951}
   - component: {fileID: 814812953}
-  - component: {fileID: 814812954}
   m_Layer: 0
   m_Name: firstRolling
   m_TagString: Untagged
@@ -7686,32 +7770,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959d6cd1e2696d24e9634b8ba210e651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &814812954
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814812948}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806c92a950514f4e9d55153e9ad9350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cryptexValue: {fileID: 1851097927}
-  texts:
-  - {fileID: 2035698557}
-  - {fileID: 1636033045}
-  - {fileID: 326483612}
-  - {fileID: 761020567}
-  - {fileID: 1070924599}
-  - {fileID: 81643370}
-  - {fileID: 1655221408}
-  - {fileID: 53890158}
-  - {fileID: 1613577814}
-  - {fileID: 1108396572}
-  - {fileID: 1448252259}
-  - {fileID: 1595870832}
+  _cryptexCircles: {fileID: 89649550}
+  _rotateAngle: 30
 --- !u!1 &826673751
 GameObject:
   m_ObjectHideFlags: 0
@@ -7888,7 +7948,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851811832}
   - component: {fileID: 851811835}
-  - component: {fileID: 851811834}
+  - component: {fileID: 851811836}
   m_Layer: 0
   m_Name: DownCollider
   m_TagString: Untagged
@@ -7911,23 +7971,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1706407116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &851811834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851811831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 1423867087}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 1
-  _circleRotation: 30
 --- !u!61 &851811835
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7973,6 +8016,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &851811836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851811831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: -30
 --- !u!1 &867501938
 GameObject:
   m_ObjectHideFlags: 0
@@ -8184,8 +8240,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8299,7 +8355,6 @@ GameObject:
   - component: {fileID: 909770081}
   - component: {fileID: 909770080}
   - component: {fileID: 909770082}
-  - component: {fileID: 909770083}
   m_Layer: 0
   m_Name: fifthRolling
   m_TagString: Untagged
@@ -8386,32 +8441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959d6cd1e2696d24e9634b8ba210e651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &909770083
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909770078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806c92a950514f4e9d55153e9ad9350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cryptexValue: {fileID: 1851097927}
-  texts:
-  - {fileID: 237563556}
-  - {fileID: 608386690}
-  - {fileID: 219262710}
-  - {fileID: 1883767150}
-  - {fileID: 751753574}
-  - {fileID: 632633801}
-  - {fileID: 424056425}
-  - {fileID: 691295401}
-  - {fileID: 1239124402}
-  - {fileID: 700226045}
-  - {fileID: 522228644}
-  - {fileID: 675947391}
+  _cryptexCircles: {fileID: 1557088846}
+  _rotateAngle: 30
 --- !u!1 &910978665
 GameObject:
   m_ObjectHideFlags: 0
@@ -9066,8 +9097,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9143,6 +9174,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 998336530}
+  - component: {fileID: 998336531}
+  - component: {fileID: 998336532}
   m_Layer: 0
   m_Name: Fourth
   m_TagString: Untagged
@@ -9167,6 +9200,33 @@ Transform:
   - {fileID: 1103864260}
   m_Father: {fileID: 1301024258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &998336531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998336529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813d3272b3e39b64aaa7b8450c070b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _indexInValues: 8
+--- !u!114 &998336532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998336529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12fa1b740fdd814ba839d2918f07c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cryptexCircle: {fileID: 998336531}
+  _cryptexRotation: {fileID: 1629214853}
 --- !u!1 &999025340
 GameObject:
   m_ObjectHideFlags: 0
@@ -9437,8 +9497,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9505,50 +9565,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1020246702}
   m_CullTransparentMesh: 1
---- !u!1 &1020550850
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1020550851}
-  - component: {fileID: 1020550852}
-  m_Layer: 0
-  m_Name: CryptexController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1020550851
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020550850}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 623796696}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1020550852
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1020550850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f12fa1b740fdd814ba839d2918f07c5e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1021620402
 GameObject:
   m_ObjectHideFlags: 0
@@ -9785,8 +9801,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9919,8 +9935,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10142,7 +10158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1103864260}
   - component: {fileID: 1103864263}
-  - component: {fileID: 1103864262}
+  - component: {fileID: 1103864264}
   m_Layer: 0
   m_Name: DownCollider
   m_TagString: Untagged
@@ -10165,23 +10181,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 998336530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1103864262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1103864259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 1629214849}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 3
-  _circleRotation: 30
 --- !u!61 &1103864263
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10227,6 +10226,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &1103864264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1103864259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: -30
 --- !u!1 &1108396570
 GameObject:
   m_ObjectHideFlags: 0
@@ -10293,8 +10305,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10371,7 +10383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1111806482}
   - component: {fileID: 1111806485}
-  - component: {fileID: 1111806484}
+  - component: {fileID: 1111806486}
   m_Layer: 0
   m_Name: DownCollider
   m_TagString: Untagged
@@ -10394,23 +10406,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 89649549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1111806484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111806481}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 814812948}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 0
-  _circleRotation: 30
 --- !u!61 &1111806485
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10456,6 +10451,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &1111806486
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111806481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: -30
 --- !u!1 &1116829845
 GameObject:
   m_ObjectHideFlags: 0
@@ -10568,7 +10576,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1124048056}
   - component: {fileID: 1124048059}
-  - component: {fileID: 1124048058}
+  - component: {fileID: 1124048060}
   m_Layer: 0
   m_Name: DownCollider
   m_TagString: Untagged
@@ -10591,23 +10599,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1557088845}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1124048058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1124048055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 909770078}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 4
-  _circleRotation: 30
 --- !u!61 &1124048059
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10653,6 +10644,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &1124048060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124048055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: -30
 --- !u!1 &1124426941
 GameObject:
   m_ObjectHideFlags: 0
@@ -12145,8 +12149,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12225,7 +12229,6 @@ GameObject:
   - component: {fileID: 1266934369}
   - component: {fileID: 1266934368}
   - component: {fileID: 1266934370}
-  - component: {fileID: 1266934371}
   m_Layer: 0
   m_Name: thirdRolling
   m_TagString: Untagged
@@ -12312,32 +12315,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959d6cd1e2696d24e9634b8ba210e651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1266934371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1266934366}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806c92a950514f4e9d55153e9ad9350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cryptexValue: {fileID: 1851097927}
-  texts:
-  - {fileID: 131060671}
-  - {fileID: 1848477575}
-  - {fileID: 173605209}
-  - {fileID: 1384717202}
-  - {fileID: 757604339}
-  - {fileID: 1447769577}
-  - {fileID: 214382672}
-  - {fileID: 438804303}
-  - {fileID: 1441973955}
-  - {fileID: 1436859447}
-  - {fileID: 1711187500}
-  - {fileID: 894928100}
+  _cryptexCircles: {fileID: 45399122}
+  _rotateAngle: 30
 --- !u!1 &1274428825
 GameObject:
   m_ObjectHideFlags: 0
@@ -12487,8 +12466,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -12683,7 +12662,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1322894891}
-  - component: {fileID: 1322894890}
+  - component: {fileID: 1322894892}
   m_Layer: 0
   m_Name: CryptexCore
   m_TagString: Untagged
@@ -12691,20 +12670,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1322894890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1322894889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1d48f8cd0d6703408413651185d8980, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cryptexData: {fileID: 0}
-  stringChecker: {fileID: 489423351}
 --- !u!4 &1322894891
 Transform:
   m_ObjectHideFlags: 0
@@ -12720,6 +12685,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 623796696}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1322894892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322894889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d48f8cd0d6703408413651185d8980, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cryptexData: {fileID: 11400000, guid: bd39e55e23afab64081c01f1f2fe034c, type: 2}
+  _cryptexDisplay: {fileID: 2060460596}
+  _maze: {fileID: 2061232203}
+  _cryptex: {fileID: 623796695}
+  values: 610063006500670064006b006f0070007100730072007a00
+  _answer: pedro
 --- !u!1 &1323646178
 GameObject:
   m_ObjectHideFlags: 0
@@ -13301,8 +13284,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13435,8 +13418,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13569,8 +13552,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13692,7 +13675,6 @@ GameObject:
   - component: {fileID: 1423867090}
   - component: {fileID: 1423867089}
   - component: {fileID: 1423867091}
-  - component: {fileID: 1423867092}
   m_Layer: 0
   m_Name: secondRolling
   m_TagString: Untagged
@@ -13779,32 +13761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959d6cd1e2696d24e9634b8ba210e651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1423867092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1423867087}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806c92a950514f4e9d55153e9ad9350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cryptexValue: {fileID: 1851097927}
-  texts:
-  - {fileID: 27173675}
-  - {fileID: 287290698}
-  - {fileID: 44605044}
-  - {fileID: 983151175}
-  - {fileID: 794308601}
-  - {fileID: 1593928135}
-  - {fileID: 1078933092}
-  - {fileID: 1943199040}
-  - {fileID: 1775067713}
-  - {fileID: 1380158201}
-  - {fileID: 764398731}
-  - {fileID: 553804178}
+  _cryptexCircles: {fileID: 1706407117}
+  _rotateAngle: 30
 --- !u!1 &1436859445
 GameObject:
   m_ObjectHideFlags: 0
@@ -13871,8 +13829,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14005,8 +13963,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14222,8 +14180,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14356,8 +14314,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14799,8 +14757,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14933,8 +14891,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15010,6 +14968,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1557088845}
+  - component: {fileID: 1557088846}
+  - component: {fileID: 1557088847}
   m_Layer: 0
   m_Name: Fifth
   m_TagString: Untagged
@@ -15034,6 +14994,33 @@ Transform:
   - {fileID: 1124048056}
   m_Father: {fileID: 1301024258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1557088846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557088844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813d3272b3e39b64aaa7b8450c070b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _indexInValues: 4
+--- !u!114 &1557088847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557088844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12fa1b740fdd814ba839d2918f07c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cryptexCircle: {fileID: 1557088846}
+  _cryptexRotation: {fileID: 909770082}
 --- !u!1 &1559283083
 GameObject:
   m_ObjectHideFlags: 0
@@ -15044,7 +15031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1559283084}
   - component: {fileID: 1559283087}
-  - component: {fileID: 1559283086}
+  - component: {fileID: 1559283088}
   m_Layer: 0
   m_Name: UpCollider
   m_TagString: Untagged
@@ -15067,23 +15054,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 89649549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1559283086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559283083}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 814812948}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 0
-  _circleRotation: -30
 --- !u!61 &1559283087
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -15129,6 +15099,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.75, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &1559283088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1559283083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 30
 --- !u!1 &1566767574
 GameObject:
   m_ObjectHideFlags: 0
@@ -15482,8 +15465,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15616,8 +15599,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15833,8 +15816,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15950,7 +15933,6 @@ GameObject:
   - component: {fileID: 1629214852}
   - component: {fileID: 1629214851}
   - component: {fileID: 1629214853}
-  - component: {fileID: 1629214854}
   m_Layer: 0
   m_Name: fourthRolling
   m_TagString: Untagged
@@ -16037,32 +16019,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 959d6cd1e2696d24e9634b8ba210e651, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1629214854
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629214849}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8806c92a950514f4e9d55153e9ad9350, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cryptexValue: {fileID: 1851097927}
-  texts:
-  - {fileID: 2088223171}
-  - {fileID: 1020246704}
-  - {fileID: 1526977852}
-  - {fileID: 2108492504}
-  - {fileID: 1839084087}
-  - {fileID: 89683726}
-  - {fileID: 1393180238}
-  - {fileID: 1748306927}
-  - {fileID: 358975700}
-  - {fileID: 1280906487}
-  - {fileID: 719322385}
-  - {fileID: 1527477332}
+  _cryptexCircles: {fileID: 998336531}
+  _rotateAngle: 30
 --- !u!1 &1636033043
 GameObject:
   m_ObjectHideFlags: 0
@@ -16129,8 +16087,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16263,8 +16221,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16442,6 +16400,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1706407116}
+  - component: {fileID: 1706407117}
+  - component: {fileID: 1706407118}
   m_Layer: 0
   m_Name: Second
   m_TagString: Untagged
@@ -16466,6 +16426,33 @@ Transform:
   - {fileID: 851811832}
   m_Father: {fileID: 1301024258}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1706407117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706407115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 813d3272b3e39b64aaa7b8450c070b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _indexInValues: 11
+--- !u!114 &1706407118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706407115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12fa1b740fdd814ba839d2918f07c5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cryptexCircle: {fileID: 1706407117}
+  _cryptexRotation: {fileID: 1423867091}
 --- !u!1 &1711187498
 GameObject:
   m_ObjectHideFlags: 0
@@ -16532,8 +16519,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16768,8 +16755,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16985,8 +16972,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -17610,8 +17597,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -17846,8 +17833,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -17914,261 +17901,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1848477573}
   m_CullTransparentMesh: 1
---- !u!1 &1851097925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1851097926}
-  - component: {fileID: 1851097927}
-  m_Layer: 0
-  m_Name: CryptexValue
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1851097926
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851097925}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 623796696}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1851097927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851097925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc754631037840d458e07eb8d82188b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circlesValues: 6300620061006400720065007a006b006c006a006e007000
-  _cryptexIncrement: {fileID: 1857939497}
-  onStructAdded:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1857939497}
-        m_TargetAssemblyTypeName: CryptexIncrement, Assembly-CSharp
-        m_MethodName: CheckIfFull
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 489423351}
-        m_TargetAssemblyTypeName: CryptexStringChecker, Assembly-CSharp
-        m_MethodName: CheckIfFull
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!1 &1857939496
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1857939498}
-  - component: {fileID: 1857939497}
-  m_Layer: 0
-  m_Name: CryptexIncrement
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1857939497
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857939496}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d011744475e9fe449bdf55e2c3b462e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onCryptexStructsFull:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1559283086}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1111806484}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2046034267}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 851811834}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 31696861}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 490391562}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2138019692}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1103864262}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 557626082}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1124048058}
-        m_TargetAssemblyTypeName: CryptexLinkedCollider, Assembly-CSharp
-        m_MethodName: GetCryptexList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onCryptextChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 489423351}
-        m_TargetAssemblyTypeName: CryptexStringChecker, Assembly-CSharp
-        m_MethodName: ChangingStructList
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!4 &1857939498
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1857939496}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 623796696}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1861805293
 GameObject:
   m_ObjectHideFlags: 0
@@ -18237,10 +17969,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -18541,8 +18273,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -18860,8 +18592,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -19750,8 +19482,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -19828,7 +19560,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2046034265}
   - component: {fileID: 2046034268}
-  - component: {fileID: 2046034267}
+  - component: {fileID: 2046034269}
   m_Layer: 0
   m_Name: UpCollider
   m_TagString: Untagged
@@ -19851,23 +19583,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1706407116}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2046034267
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046034264}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 1423867087}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 1
-  _circleRotation: -30
 --- !u!61 &2046034268
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -19913,6 +19628,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &2046034269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046034264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 30
 --- !u!1 &2059066540
 GameObject:
   m_ObjectHideFlags: 0
@@ -19950,6 +19678,178 @@ Transform:
   - {fileID: 1976653468}
   m_Father: {fileID: 1266934367}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2060460595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2060460597}
+  - component: {fileID: 2060460596}
+  m_Layer: 0
+  m_Name: CryptexDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2060460596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060460595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ddd46aeb36ab14c9768e2188646fc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firstTextDisplay:
+  - {fileID: 2035698557}
+  - {fileID: 1636033045}
+  - {fileID: 326483612}
+  - {fileID: 761020567}
+  - {fileID: 1070924599}
+  - {fileID: 81643370}
+  - {fileID: 1655221408}
+  - {fileID: 53890158}
+  - {fileID: 1613577814}
+  - {fileID: 1108396572}
+  - {fileID: 1448252259}
+  - {fileID: 1595870832}
+  secondTextDisplay:
+  - {fileID: 27173675}
+  - {fileID: 287290698}
+  - {fileID: 44605044}
+  - {fileID: 983151175}
+  - {fileID: 794308601}
+  - {fileID: 1593928135}
+  - {fileID: 1078933092}
+  - {fileID: 1943199040}
+  - {fileID: 1775067713}
+  - {fileID: 1380158201}
+  - {fileID: 764398731}
+  - {fileID: 553804178}
+  thirdTextDisplay:
+  - {fileID: 131060671}
+  - {fileID: 1848477575}
+  - {fileID: 173605209}
+  - {fileID: 1384717202}
+  - {fileID: 757604339}
+  - {fileID: 1447769577}
+  - {fileID: 214382672}
+  - {fileID: 438804303}
+  - {fileID: 1441973955}
+  - {fileID: 1436859447}
+  - {fileID: 1711187500}
+  - {fileID: 894928100}
+  fourthTextDisplay:
+  - {fileID: 2088223171}
+  - {fileID: 1020246704}
+  - {fileID: 1526977852}
+  - {fileID: 2108492504}
+  - {fileID: 1839084087}
+  - {fileID: 89683726}
+  - {fileID: 1393180238}
+  - {fileID: 1748306927}
+  - {fileID: 358975700}
+  - {fileID: 1280906487}
+  - {fileID: 719322385}
+  - {fileID: 1527477332}
+  fifthTextDisplay:
+  - {fileID: 237563556}
+  - {fileID: 608386690}
+  - {fileID: 219262710}
+  - {fileID: 1883767150}
+  - {fileID: 751753574}
+  - {fileID: 632633801}
+  - {fileID: 424056425}
+  - {fileID: 691295401}
+  - {fileID: 1239124402}
+  - {fileID: 700226045}
+  - {fileID: 522228644}
+  - {fileID: 675947391}
+  OnDisplay:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 814812953}
+        m_TargetAssemblyTypeName: CryptexRotation, Assembly-CSharp
+        m_MethodName: Rotating
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1423867091}
+        m_TargetAssemblyTypeName: CryptexRotation, Assembly-CSharp
+        m_MethodName: Rotating
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1266934370}
+        m_TargetAssemblyTypeName: CryptexRotation, Assembly-CSharp
+        m_MethodName: Rotating
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1629214853}
+        m_TargetAssemblyTypeName: CryptexRotation, Assembly-CSharp
+        m_MethodName: Rotating
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 909770082}
+        m_TargetAssemblyTypeName: CryptexRotation, Assembly-CSharp
+        m_MethodName: Rotating
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &2060460597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060460595}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 623796696}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2061232203
 GameObject:
   m_ObjectHideFlags: 0
@@ -19985,6 +19885,7 @@ Transform:
   - {fileID: 1021620405}
   - {fileID: 1982239060}
   - {fileID: 1459404593}
+  - {fileID: 791196653}
   m_Father: {fileID: 787417966}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2067191224
@@ -20238,8 +20139,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20372,8 +20273,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20450,7 +20351,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2138019690}
   - component: {fileID: 2138019693}
-  - component: {fileID: 2138019692}
+  - component: {fileID: 2138019694}
   m_Layer: 0
   m_Name: UpCollider
   m_TagString: Untagged
@@ -20473,23 +20374,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 998336530}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2138019692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138019689}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkedCircle: {fileID: 1629214849}
-  _cryptexRotation: {fileID: 0}
-  _cryptexIncrement: {fileID: 1857939497}
-  _cryptexNumber: 3
-  _circleRotation: -30
 --- !u!61 &2138019693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20535,9 +20419,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.85, y: 3}
   m_EdgeRadius: 0
+--- !u!114 &2138019694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138019689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b5c2b0ec95e13045916985667ab5909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  direction: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 787417966}
-  - {fileID: 376220018}

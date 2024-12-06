@@ -1,11 +1,19 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.UI;
 
 public class CryptexRotation : MonoBehaviour
 {
-    public void Rotating(float angle)
+    public CryptexCircles _cryptexCircles;
+
+    public float _rotateAngle;
+
+    private Vector3 circleRot;
+    
+    public void Rotating()
     {
-        transform.Rotate(new Vector3(0f, 1f, 0f), angle, Space.Self);
+        transform.rotation = Quaternion.Euler(new Vector3(_rotateAngle * _cryptexCircles._indexInValues -7.5f, 0.0f, 90f));
     }
 }
