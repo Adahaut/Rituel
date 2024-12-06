@@ -27,7 +27,6 @@ public class Vocals : MonoBehaviour
 
     private IEnumerator StartSubtitleCorroutine(Subtitles _audioClip)
     {
-        if (_audioClip._audioClip.length > 20)
         foreach (var subtitle in _audioClip._subtitles)
         {
             SubtitleText._instance.SetSubtitle(subtitle.text);
