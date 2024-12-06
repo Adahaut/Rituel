@@ -17,8 +17,25 @@ public class EnigmaData : ScriptableObject
     [SerializeField] private int linkToRemoveIfFail;
     public int LinkToRemoveIfFail => linkToRemoveIfFail;
 
+    public EnigmaType _enigmaTypeToUnlock;
+ 
     public void GetReward()
     {
-        if (reward) reward.SetActive(true);
+        MonoBehaviour[] allScripts = FindObjectsOfType<MonoBehaviour>();
+        List<AllInterafce.IEnigmaCore> allEnigmaCores = new List<AllInterafce.IEnigmaCore>();
+        
+        for (int i = 0; i < allScripts.Length; i++)
+        {
+            if(allScripts[i] is AllInterafce.IEnigmaCore)
+                allEnigmaCores.Add(allScripts[i] as AllInterafce.IEnigmaCore);
+        }
+
+        foreach (var enigmaCore in allEnigmaCores)
+        {
+            if (enigmaCore._enigmaType == _enigmaTypeToUnlock)
+            {
+                enigmaCore.UnlockNextEnigme();
+            }
+        }
     }
 }

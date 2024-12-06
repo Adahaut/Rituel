@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class MazeHumanController : MonoBehaviour
+public class MazeHumanController : MonoBehaviour, AllInterafce.IEnigmaCore
 {
     public EnigmaMazeCoreHuman maze;
     
@@ -33,6 +33,18 @@ public class MazeHumanController : MonoBehaviour
             {
                 maze.MovePawn(hit.gameObject);
             }
+        }
+    }
+
+    [field:SerializeField]
+    public EnigmaType _enigmaType { get; set; }
+    [field:SerializeField]
+    public GameObject _unlockButtonThisEnigma { get; set; }
+    public void UnlockNextEnigme()
+    {
+        if (_unlockButtonThisEnigma)
+        {
+            _unlockButtonThisEnigma.SetActive(true);   
         }
     }
 }

@@ -1938,6 +1938,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: TraductionEnigmaHuman
       objectReference: {fileID: 0}
+    - target: {fileID: 44546009457975560, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: <_enigmaType>k__BackingField
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: <_unlockButtonThisEnigma>k__BackingField
+      value: 
+      objectReference: {fileID: 880424006}
     - target: {fileID: 3568813180956829977, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -2274,6 +2286,7 @@ MonoBehaviour:
   _timeOfAnimation: 1
   _loseColor: {r: 1, g: 0, b: 0, a: 1}
   _winColor: {r: 0.078233, g: 1, b: 0, a: 1}
+  _failBorderImage: {fileID: 0}
 --- !u!114 &1168647790 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
@@ -2655,17 +2668,6 @@ Transform:
   - {fileID: 20058187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2004937112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
-  m_PrefabInstance: {fileID: 1168647786}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2696036e92899b4086a576a7ddaa709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2030010828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2701,7 +2703,7 @@ PrefabInstance:
     - target: {fileID: 1208591355784884037, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: linkCore
       value: 
-      objectReference: {fileID: 2004937112}
+      objectReference: {fileID: 0}
     - target: {fileID: 1914360310597706021, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -3606,10 +3608,30 @@ PrefabInstance:
       propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2775162104710490214, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: <_enigmaType>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775162104710490214, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: <_unlockButtonNextEnigma>k__BackingField
+      value: 
+      objectReference: {fileID: 880424006}
+    - target: {fileID: 2775162104710490214, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: <_unlockButtonThisEnigma>k__BackingField
+      value: 
+      objectReference: {fileID: 160961249}
+    - target: {fileID: 4081122194387047731, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 8081364191945328302, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_Name
       value: MazeEnigmaHuman
       objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _enigmaData
+      value: 
+      objectReference: {fileID: 11400000, guid: 8a17ff5a5e6b7e545b15311aa9249c19, type: 2}
     - target: {fileID: 8473013917410775666, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
