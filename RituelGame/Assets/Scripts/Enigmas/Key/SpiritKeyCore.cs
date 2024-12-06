@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Enum;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,13 +41,22 @@ namespace Enigmas.Key
                 sideAmount += 1;
             }
             AddInfo(currentSide, sideAmount);
+            StartCoroutine(RebuildLayout());
+        }
+
+        private IEnumerator RebuildLayout()
+        {
+            yield return null;
+            turnInfoParent.GetComponent<HorizontalLayoutGroup>().childScaleWidth = false;
+            yield return null;
+            turnInfoParent.GetComponent<HorizontalLayoutGroup>().childScaleWidth = true;
         }
 
         private void AddInfo(KeyTurnSide turnSide, int sideAmount)
         {
             KeyInputInfo newInfo = Instantiate(turnInfoPrefab, turnInfoParent);
             newInfo.SetInfo(turnSide, sideAmount);
-            LayoutRebuilder.ForceRebuildLayoutImmediate(turnInfoParent.GetComponent<RectTransform>());
+            //LayoutRebuilder.ForceRebuildLayoutImmediate(turnInfoParent.GetComponent<RectTransform>());
         }
     }
 }
