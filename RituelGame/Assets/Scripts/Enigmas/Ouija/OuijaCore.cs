@@ -17,9 +17,7 @@ namespace Enigmas.Ouija
         [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
         [field:SerializeField] public OuijaBoard _ouijaBoard { get; private set; }
         [SerializeField] private LinkCore linkCore;
-
-        public int _linkRemoveCount = 5;
-        public int _linkAddCount = 5;
+        
         
         public Action OnGoodAnswerEvent;
         public Action OnBadAnswerEvent;
@@ -42,12 +40,12 @@ namespace Enigmas.Ouija
 
         private void OnBadAnswer()
         {
-            linkCore.RemoveLink(_linkRemoveCount);
+            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
         }
 
         private void OnGoodAnswer()
         {
-            linkCore.AddLink(_linkAddCount);
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
         }
 
         private void DrawCharacters()

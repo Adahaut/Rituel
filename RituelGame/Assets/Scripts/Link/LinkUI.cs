@@ -18,7 +18,6 @@ public class LinkUI : MonoBehaviour
     {
         linkCore = GetComponent<LinkCore>();
         OnLinkChanged = new UnityEvent();
-        OnLinkChanged.AddListener(UpdateLinkSlider);
     }
 
     public void UpdateLinkSlider()

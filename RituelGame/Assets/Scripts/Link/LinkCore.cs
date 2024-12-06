@@ -33,7 +33,6 @@ public class LinkCore : MonoBehaviour
         {
             linkCount = 0;
         }
-
         linkAnimation.StartLinkAnimation(false);
     }
 }
