@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EnigmaMazeCoreHuman : MonoBehaviour
@@ -17,7 +18,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     [SerializeField] private GameObject mazePawnPrefab;
     private GameObject mazePawn;
 
-    [SerializeField] private int frameScale;
+    [SerializeField] private float frameScale;
     [SerializeField] private int gridLenght = 12;
     [SerializeField] private LinkCore linkCore;
 
@@ -42,8 +43,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
             {
                 // Set the position of each squares in the maze
                 Vector2 mazeFramePos = new Vector2(
-                    _mazeFrameStartPosition.position.x + i * frameScale,
-                    _mazeFrameStartPosition.position.y + j * frameScale);
+                    (i * frameScale) + (Screen.width / 2 - gridLenght / 2 * frameScale),
+                    ((j * frameScale) + (Screen.height / 2 - gridLenght / 2 * frameScale)));
 
                 //Instantiate the frame prefab at the position "mazeFramePos" and we put it in the gameObject "_mazeFrameStartPosition"
                 GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity, _mazeFrameStartPosition); 
@@ -53,11 +54,12 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         
         windRose = Instantiate(_mazeStructures[0]._mazeWindRose, Vector3.zero, Quaternion.identity);
         windRose.transform.SetParent(transform);
-        windRose.transform.position = windScale * gridLenght;
+        windRose.transform.position = new Vector2((Screen.width / 2) + (gridLenght * frameScale / 2 + windScale.x) , 
+            Screen.height / 2);
         
         mazePawn = Instantiate(
             mazePawnPrefab,
-            (Vector2)_mazeFrameStartPosition.position + mazeStruct._mazePawnBasePosition * frameScale,
+            (Vector2)mazeStruct._mazePawnBasePosition * frameScale,
             Quaternion.identity);
         mazePawn.transform.SetParent(transform);
     }

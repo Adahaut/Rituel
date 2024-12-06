@@ -20,7 +20,6 @@ public class HumanBodyEnigma : MonoBehaviour
 
         _bodyImage.sprite = _bodyData.ElementAt(bodyIndex).Value;
         
-        Debug.Log(_bodyData.ElementAt(bodyIndex).Key);
     }
 
     public void SubmitAnswer(string bodyName)
