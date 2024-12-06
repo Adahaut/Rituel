@@ -3,9 +3,9 @@ using UnityEngine;
 public class TestStartSubtitle : MonoBehaviour
 {
     public Subtitles _subtitlesToPlay;
-    
+    public Vocals _vocal;
     public void Start()
     {
-        Vocals._instance.Say(_subtitlesToPlay);
+        _vocal.Say(_subtitlesToPlay);
     }
 }

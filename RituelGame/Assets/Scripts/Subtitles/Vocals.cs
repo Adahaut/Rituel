@@ -1,14 +1,15 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 public class Vocals : MonoBehaviour
 {
     private AudioSource source;
-    public static Vocals _instance;
 
+    [SerializeField] TextMeshProUGUI subtitleText = default;
+    
     private void Awake()
     {
-        _instance = this;
         source = gameObject.AddComponent<AudioSource>();
     }
 
@@ -25,7 +26,7 @@ public class Vocals : MonoBehaviour
     {
         foreach (var subtitle in _audioClip._subtitles)
         {
-            SubtitleText._instance.SetSubtitle(subtitle.text);
+            subtitleText.text = subtitle.text;
             yield return new WaitForSeconds(subtitle.time);
         }
     }

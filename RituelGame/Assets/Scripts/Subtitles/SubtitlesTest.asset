@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: SubtitlesTest
   m_EditorClassIdentifier: 
   _subtitles:
-  - time: 3
+  - time: 2
     text: test0
   - time: 1
     text: test1
-  - time: 2
+  - time: 3
     text: test2
-  - time: 1
+  - time: 2
     text: test3
   - time: 1
     text: 
