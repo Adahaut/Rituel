@@ -114,11 +114,12 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     private void Lose()
     {
         Debug.Log("Lose");
-    }
+        }
 
-    private void Win()
+    public void Win()
     {
         this.enabled = false;
+        _enigmaData.GetReward();
         Debug.Log("Win");
     }
 }

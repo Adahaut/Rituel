@@ -6,8 +6,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
-public class TraductionEnigmaSpirit : MonoBehaviour
+public class TraductionEnigmaSpirit : MonoBehaviour, AllInterafce.IEnigmaCore
 {
+    
+    public EnigmaData _enigmaData;
+    
     public SerializedDictionary<string, string> _wordEnglishToLatin = new SerializedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
     public List<string> _phrases;
@@ -78,11 +81,24 @@ public class TraductionEnigmaSpirit : MonoBehaviour
             if (wordCompletionIndex == words.Length)
             {
                 Debug.Log("Success! Phrase complete.");
+                _enigmaData.GetReward();
             }
         }
         else
         {
             Debug.Log("Failed, wrong word selected.");
+        }
+    }
+
+    [field:SerializeField]
+    public EnigmaType _enigmaType { get; set; }
+    [field:SerializeField]
+    public GameObject _unlockButtonThisEnigma { get; set; }
+    public void UnlockNextEnigme()
+    {
+        if (_unlockButtonThisEnigma)
+        {
+            _unlockButtonThisEnigma.SetActive(true);   
         }
     }
 }
