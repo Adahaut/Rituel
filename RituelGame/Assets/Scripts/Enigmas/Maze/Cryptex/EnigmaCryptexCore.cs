@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnigmaCryptexCore : MonoBehaviour
+public class EnigmaCryptexCore : MonoBehaviour, AllInterafce.IEnigmaCore
 {
     public EnigmaData _cryptexData;
 
@@ -31,11 +31,23 @@ public class EnigmaCryptexCore : MonoBehaviour
 
     public void Win()
     {
-        Debug.Log("Win");
+        _cryptexData.GetReward();
     }
     
     public void Lose()
     {
         Debug.Log("Lose");
+    }
+
+    [field:SerializeField]
+    public EnigmaType _enigmaType { get; set; }
+    [field:SerializeField]
+    public GameObject _unlockButtonThisEnigma { get; set; }
+    public void UnlockNextEnigme()
+    {
+        if (_unlockButtonThisEnigma)
+        {
+            _unlockButtonThisEnigma.SetActive(true);   
+        }
     }
 }
