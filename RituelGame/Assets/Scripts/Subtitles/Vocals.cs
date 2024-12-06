@@ -6,7 +6,7 @@ public class Vocals : MonoBehaviour
 {
     private AudioSource source;
 
-    [SerializeField] TextMeshProUGUI subtitleText = default;
+    [SerializeField] TextMeshProUGUI subtitleText;
     
     private void Awake()
     {

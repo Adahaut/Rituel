@@ -609,6 +609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _subtitlesToPlay: {fileID: 11400000, guid: 93a3521f1191aff40b375e43fde97123, type: 2}
+  _vocalsScript: {fileID: 2096890393}
 --- !u!114 &2096890393
 MonoBehaviour:
   m_ObjectHideFlags: 0
