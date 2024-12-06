@@ -11,8 +11,9 @@ public class LinkCore : MonoBehaviour
 
     private void Start()
     {
-        linkCount = 40;
+        linkCount = 0;
         linkAnimation = GetComponent<LinkAnimation>();
+        linkAnimation.StartLinkAnimation(true);
     }
 
     public void AddLink(int linkToAdd)

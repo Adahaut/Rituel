@@ -22,6 +22,8 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
     [SerializeField] private Vector2 paternOffsetX;
     [SerializeField] private Vector2 paternOffsetY;
     
+    [SerializeField] private LinkCore linkCore;
+    
     public void DrawIfFull()
     {
         if (_mazeStructures.Count == _mazePatternScript._maxPaternNumber)

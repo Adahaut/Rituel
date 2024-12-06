@@ -11,7 +11,9 @@ public class HumanBodyEnigma : MonoBehaviour
 
     public Image _bodyImage;
     public SerializedDictionary<string, Sprite> _bodyData = new SerializedDictionary<string, Sprite>(10);
-
+    [SerializeField] private LinkCore linkCore;
+    [SerializeField] private EnigmaData enigmaData;
+    
     private void Start()
     {
         bodyIndex = Random.Range(0, _bodyData.Count);
@@ -25,7 +27,11 @@ public class HumanBodyEnigma : MonoBehaviour
     {
         if (string.Equals(_bodyData.ElementAt(bodyIndex).Key, bodyName, StringComparison.OrdinalIgnoreCase))
         {
-            Debug.Log("Sucess");
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+        }
+        else
+        {
+            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
         }
     }
 }

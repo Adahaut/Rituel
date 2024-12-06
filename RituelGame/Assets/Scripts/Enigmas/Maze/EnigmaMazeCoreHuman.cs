@@ -19,6 +19,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     [SerializeField] private int frameScale;
     [SerializeField] private int gridLenght = 12;
+    [SerializeField] private LinkCore linkCore;
 
     private int[,] mazeGrid;
     
@@ -71,12 +72,14 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
             if (mazeGrid[x, y] == 1)
             {
                 ResetMaze();
+                linkCore.RemoveLink(_enigmaData.LinkToRemoveIfFail);
                 return;
             } 
             
             if (mazeGrid[x, y] == 2)
             {
                 Win();
+                linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
                 return;
             }
                 

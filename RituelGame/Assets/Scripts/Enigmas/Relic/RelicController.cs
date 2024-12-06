@@ -10,6 +10,8 @@ public class RelicController : MonoBehaviour
     private int symbole;
     public List<RelicItem> _relics = new(3);
     public TextMeshProUGUI _symboleText;
+    [SerializeField] private LinkCore linkCore;
+    [SerializeField] private EnigmaData enigmaData;
 
     private void Start()
     {
@@ -26,7 +28,12 @@ public class RelicController : MonoBehaviour
     {
         if (relic._symbole != symbole)
         {
+            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
             Destroy(relic.gameObject);
+        }
+        else
+        {
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
         }
     }
 }

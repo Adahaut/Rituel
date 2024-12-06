@@ -9,10 +9,12 @@ namespace Enigmas.Key
     public class HumanKeyCore : MonoBehaviour, IKeyCore
     {
         [field:SerializeField] public KeyEnigmaData _keyEnigmaData { get; private set; }
+        [SerializeField] private EnigmaData enigmaData;
         [field:SerializeField] public TurnableKey _turnableKey { get; private set; }
 
         [SerializeField] private CanvasGroup closedChest;
         [SerializeField] private CanvasGroup openedChest;
+        [SerializeField] private LinkCore linkCore;
 
         private List<KeyTurnSide> currentTurns = new();
         
@@ -50,6 +52,7 @@ namespace Enigmas.Key
 
         private void OnCorrectAnswer()
         {
+            linkCore.RemoveLink(enigmaData.LinkToAddIfSuccess);
             closedChest.SetCanvasGroupInteraction(false);
             openedChest.SetCanvasGroupInteraction(true);
             closedChest.DOFade(0, 0.5f);
@@ -58,6 +61,7 @@ namespace Enigmas.Key
 
         private void OnWrongTurn()
         {
+            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
             currentTurns.Clear();
         }
 
