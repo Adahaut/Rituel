@@ -57,9 +57,9 @@ MonoBehaviour:
   turnSideSprites:
     _serializedList:
     - Key: 0
-      Value: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
+      Value: {fileID: 21300000, guid: 0ee151f50b9dc424bb2c5ae326e9aeef, type: 3}
     - Key: 1
-      Value: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+      Value: {fileID: 21300000, guid: 38a8b970a1352634baa4efbbc47b410c, type: 3}
 --- !u!114 &3479563693534244935
 MonoBehaviour:
   m_ObjectHideFlags: 0
