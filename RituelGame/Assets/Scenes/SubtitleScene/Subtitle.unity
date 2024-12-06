@@ -541,8 +541,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2096890391}
-  - component: {fileID: 2096890393}
   - component: {fileID: 2096890392}
+  - component: {fileID: 2096890393}
   m_Layer: 0
   m_Name: TestSubtitleManager
   m_TagString: Untagged
