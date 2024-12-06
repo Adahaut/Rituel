@@ -316,6 +316,17 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
+--- !u!114 &1215468701 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2120332882117685060, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+  m_PrefabInstance: {fileID: 991039740804479633}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6744de1b75eb3c46ade14668944b41f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1421117073
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,15 +436,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3395885675099921856, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3395885675099921856, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3395885675099921856, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3395885675099921856, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -450,6 +461,14 @@ PrefabInstance:
     - target: {fileID: 5803427132455617054, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: m_Name
       value: HumainPianoCore
+      objectReference: {fileID: 0}
+    - target: {fileID: 6734650600464542592, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1215468701}
+    - target: {fileID: 6734650600464542592, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayMusic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

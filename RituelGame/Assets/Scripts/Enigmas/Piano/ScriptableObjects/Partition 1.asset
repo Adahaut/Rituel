@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ffc523ffea0944596ba5475939a2b1, type: 3}
   m_Name: Partition 1
   m_EditorClassIdentifier: 
-  partition:
+  partitionKeys:
   - Do
   - "R\xE9"
   - Mi

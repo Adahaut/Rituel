@@ -40,6 +40,7 @@ public class SpiritPiano : MonoBehaviour
         if (partition.Count == keys.Count && partition[index] == keys[index])
         {
             Debug.Log("enigma solved");
+            enigmaSolved = true;
             ResetEnigma();
             return;
         }
