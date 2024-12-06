@@ -27,10 +27,13 @@ public class CameraZoomFollow : MonoBehaviour
         Vector2 mousePos = Input.mousePosition;
         mousePos.x = (mousePos.x / Screen.width) * 2 - 1;
         mousePos.y = (mousePos.y / Screen.height) * 2 - 1;
+        mousePos.Set(Mathf.Clamp(mousePos.x, -1, 1), Mathf.Clamp(mousePos.y, -1, 1));
+        
+        float aspect = Screen.width / (float)Screen.height;
+        
+        Vector3 direction = new Vector3(mousePos.x * aspect, mousePos.y, 0);
 
-        Vector3 direction = new Vector3(mousePos.x, mousePos.y, 0);
-
-        Vector3 target = originalPosition + direction * (camera.orthographicSize * zoomPercentage);
+        Vector3 target = originalPosition + direction * (originalZoom * zoomPercentage);
 
         transform.position = Vector3.Lerp(transform.position, target, moveSpeed * Time.deltaTime);
     }
