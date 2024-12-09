@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -9,8 +10,9 @@ public class HumanBodyEnigma : MonoBehaviour
 {
     private int bodyIndex;
 
-    public Image _bodyImage;
-    public SerializedDictionary<string, Sprite> _bodyData = new SerializedDictionary<string, Sprite>(10);
+    public GameObject _bodyParent;
+    
+    public SerializedDictionary<string, GameObject> _bodyData = new SerializedDictionary<string, GameObject>(10);
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
     
@@ -18,7 +20,10 @@ public class HumanBodyEnigma : MonoBehaviour
     {
         bodyIndex = Random.Range(0, _bodyData.Count);
 
-        _bodyImage.sprite = _bodyData.ElementAt(bodyIndex).Value;
+        GameObject body = Instantiate(_bodyData.ElementAt(bodyIndex).Value, _bodyParent.transform, true);
+        body.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        body.transform.localPosition = new Vector3(-940f, -330f, 0);
+        body.transform.localRotation = Quaternion.Euler(0, 0, 0);
         
         Debug.Log(_bodyData.ElementAt(bodyIndex).Key);
     }

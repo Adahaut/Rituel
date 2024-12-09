@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class SpiritBodyEnigma : MonoBehaviour
 {
     public GameObject AllBodyParent;
-    public SerializedDictionary<string, Sprite> _bodyData = new SerializedDictionary<string, Sprite>();
+    public SerializedDictionary<string, GameObject> _bodyData = new SerializedDictionary<string, GameObject>();
     
     private void Start()
     {
@@ -16,13 +16,11 @@ public class SpiritBodyEnigma : MonoBehaviour
 
     private void Initialise()
     {
-        for (int i = 0; i < AllBodyParent.transform.childCount; i++)
+        for (int i = 0; i < _bodyData.Count; i++)
         {
-            GameObject child = null;
-            child = AllBodyParent.transform.GetChild(i).gameObject;
-
-            child.transform.GetChild(0).GetComponent<Image>().sprite = _bodyData.ElementAt(i).Value;
-            child.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = _bodyData.ElementAt(i).Key;
+            GameObject child = Instantiate(_bodyData.ElementAt(i).Value, AllBodyParent.transform, true);
+            child.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            child.transform.GetComponentInChildren<TextMeshProUGUI>().text = _bodyData.ElementAt(i).Key;
         }
     }
 }
