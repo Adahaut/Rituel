@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnigmaMazeCoreHuman : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     [SerializeField] private float frameScale;
     [SerializeField] private int gridLenght = 12;
     [SerializeField] private LinkCore linkCore;
+    public Canvas _canvasParent;
+    public GameObject _buttonToAccessEnigma;
 
     private int[,] mazeGrid;
 
@@ -124,6 +127,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     public void Win()
     {
+        _canvasParent.gameObject.SetActive(false);
+        _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
         this.enabled = false;
         _enigmaData.GetReward();
         Debug.Log("Win");

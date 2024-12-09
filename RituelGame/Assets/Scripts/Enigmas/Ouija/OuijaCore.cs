@@ -5,6 +5,7 @@ using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 
 namespace Enigmas.Ouija
 {
@@ -17,6 +18,8 @@ namespace Enigmas.Ouija
         [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
         [field:SerializeField] public OuijaBoard _ouijaBoard { get; private set; }
         [SerializeField] private LinkCore linkCore;
+        public Canvas _canvasParent;
+        public GameObject _buttonToAccessEnigma;
         
         
         public Action OnGoodAnswerEvent;
@@ -58,6 +61,8 @@ namespace Enigmas.Ouija
             if (CheckResult(answer))
             {
                 OnGoodAnswerEvent.Invoke();
+                _canvasParent.gameObject.SetActive(false);
+                _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             }
             else
             {

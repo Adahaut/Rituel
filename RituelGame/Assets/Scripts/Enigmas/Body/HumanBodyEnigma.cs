@@ -15,6 +15,8 @@ public class HumanBodyEnigma : MonoBehaviour
     public SerializedDictionary<string, GameObject> _bodyData = new SerializedDictionary<string, GameObject>(10);
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
+    public Canvas _canvasParent;
+    public GameObject _buttonToAccessEnigma;
     
     private void Start()
     {
@@ -31,6 +33,8 @@ public class HumanBodyEnigma : MonoBehaviour
     {
         if (string.Equals(_bodyData.ElementAt(bodyIndex).Key, bodyName, StringComparison.OrdinalIgnoreCase))
         {
+            _canvasParent.gameObject.SetActive(false);
+            _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
         }
         else
