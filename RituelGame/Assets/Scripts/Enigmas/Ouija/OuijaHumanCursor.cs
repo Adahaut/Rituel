@@ -4,13 +4,14 @@ using UnityEngine;
 
 namespace Enigmas.Ouija
 {
-    public class OuijaCursor : MonoBehaviour
+    public class OuijaHumanCursor : MonoBehaviour
     {
         private RectTransform rectTransform;
         private OuijaCore ouijaCore;
         private OuijaData ouijaData;
         
         [field:SerializeField] public Transform _baseCursorPosition { get; private set; }
+        private OuijaBoard currentBoard;
         [field:SerializeField] public float _timeToNextPosition { get; private set; }
         [SerializeField] private Ease moveEase = Ease.InOutQuint;
         
@@ -55,7 +56,7 @@ namespace Enigmas.Ouija
             }
 
             char currentChar = ouijaData._answerCharacters[_currentCharIndex];
-            OuijaCharacter currentCharacter = ouijaCore._ouijaBoard._characterObjects[currentChar];
+            OuijaCharacter currentCharacter = currentBoard._characterObjects[currentChar];
             rectTransform.DOMove(currentCharacter._rectTransform.position, _timeToNextPosition).
                 SetEase(moveEase).onComplete += OnMovementCompleted;
         }

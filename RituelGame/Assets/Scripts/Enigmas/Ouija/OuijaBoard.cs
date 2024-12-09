@@ -10,14 +10,14 @@ using Random = UnityEngine.Random;
 
 public class OuijaBoard : MonoBehaviour, IPointerClickHandler
 {
-    private OuijaCore ouijaCore;
+    private IOuijaCore ouijaCore;
 
     [SerializeField] private Transform ouijaCharacterParent;
     [SerializeField] private OuijaCharacter ouijaCharacterPrefab;
     [field: SerializeField] public SerializedDictionary<char, OuijaCharacter> _characterObjects { get; private set; } = new();
-    public Action OnBoardClickedEvent;
+    public Action<OuijaBoard> OnBoardClickedEvent;
 
-    public void SetOuijaCore(OuijaCore newOuijaCore)
+    public void SetOuijaCore(IOuijaCore newOuijaCore)
     {
         ouijaCore = newOuijaCore;
     }
@@ -50,6 +50,6 @@ public class OuijaBoard : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        OnBoardClickedEvent.Invoke();
+        OnBoardClickedEvent.Invoke(this);
     }
 }
