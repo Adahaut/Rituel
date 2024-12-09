@@ -60,7 +60,6 @@ public class Timer : MonoBehaviour
         {
             if (currentCandleNumber >= _finalCandleNumber)
             {
-                Debug.Log("Win");
             }
             else
                 Loose();
