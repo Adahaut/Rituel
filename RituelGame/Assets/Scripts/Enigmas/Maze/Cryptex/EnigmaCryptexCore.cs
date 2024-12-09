@@ -6,6 +6,8 @@ public class EnigmaCryptexCore : MonoBehaviour, AllInterafce.IEnigmaCore
 {
     public EnigmaData _cryptexData;
 
+    public LinkCore linkCore;
+
     public List<char> values = new();
 
     public string _answer;
@@ -31,12 +33,13 @@ public class EnigmaCryptexCore : MonoBehaviour, AllInterafce.IEnigmaCore
 
     public void Win()
     {
+        linkCore.AddLink(_cryptexData.LinkToAddIfSuccess);
         _cryptexData.GetReward();
     }
     
     public void Lose()
     {
-        Debug.Log("Lose");
+        linkCore.RemoveLink(_cryptexData.LinkToRemoveIfFail);
     }
 
     [field:SerializeField]

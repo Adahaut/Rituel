@@ -1332,7 +1332,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d48f8cd0d6703408413651185d8980, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cryptexData: {fileID: 0}
+  _cryptexData: {fileID: 11400000, guid: bd39e55e23afab64081c01f1f2fe034c, type: 2}
+  linkCore: {fileID: 0}
   values: 610063006500670064006b006f0070007100730072007a00
   _answer: pedro
   <_enigmaType>k__BackingField: 0
@@ -3713,7 +3714,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &669154481527810160
 MonoBehaviour:
