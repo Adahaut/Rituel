@@ -51,17 +51,20 @@ public class MazeSpiritController : MonoBehaviour
             Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
             mazeCanvas.overrideSorting = true;
             mazeCanvas.sortingOrder = 2;
-            
+
             if (zoomed == false)
+            {
                 mazeBasePos = maze.transform.position;
+                initScale = maze.transform.localScale;
+            }
 
             zoomed = true;
             maze.transform.position = transform.position;
-            initScale = maze.transform.localScale;
             maze.transform.localScale = new Vector3(2, 2, 2);
 
             //maze.transform.position += ReplaceMaze(hit.gameObject.layer) * _enigmaCoreSpirit._frameScale;
             _panel.SetActive(true);
+            Debug.Log(initScale);
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) //Replacing the maze in his original position
