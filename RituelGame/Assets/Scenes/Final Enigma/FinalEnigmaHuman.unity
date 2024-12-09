@@ -1481,7 +1481,8 @@ MonoBehaviour:
   candle: {fileID: 2060914049}
   _timerText: {fileID: 1979411303}
   acceptanceInterval: 2
-  _timerCounter: 0
+  maxTime: 60
+  _timer: 0
   _finalCandleNumber: 2
 --- !u!1 &1562889322
 GameObject:
