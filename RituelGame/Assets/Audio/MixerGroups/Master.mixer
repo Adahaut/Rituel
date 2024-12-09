@@ -20,11 +20,10 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestSFX
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 312ca4ec65dc9e842900d5f04709c820
-  m_Children:
-  - {fileID: 2059429202999951111}
+  m_Children: []
   m_Volume: 7ce00776e99cbcd4b8f69cc0f4eab5e2
   m_Pitch: 63ced79df878dd5459492dd10952e68d
   m_Send: 00000000000000000000000000000000
@@ -40,7 +39,7 @@ AudioMixerController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestAUdioMixer
+  m_Name: Master
   m_OutputGroup: {fileID: 0}
   m_MasterGroup: {fileID: 24300002}
   m_Snapshots:
@@ -74,6 +73,7 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 6319a488522fa0c44bbc1697f4b92c9e
   m_Children:
+  - {fileID: 2059429202999951111}
   - {fileID: -5073549719074095387}
   m_Volume: c1bfebb348a66ea4685990c51b5b2bae
   m_Pitch: b2119b53ff0f34d4b8d21a716f788146
@@ -115,7 +115,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TestVoice
+  m_Name: Music
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: c9170f555bc1dfa4d9c171ebe3b2a619
   m_Children: []
