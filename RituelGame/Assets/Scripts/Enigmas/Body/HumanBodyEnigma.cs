@@ -25,8 +25,7 @@ public class HumanBodyEnigma : MonoBehaviour
         GameObject body = Instantiate(_bodyData.ElementAt(bodyIndex).Value, _bodyParent.transform, true);
         body.GetComponentInChildren<TextMeshProUGUI>().text = "";
         body.transform.localPosition = Vector3.zero;
-        body.transform.localRotation = Quaternion.Euler(0, 0, 0);
-        
+        body.transform.localScale = Vector3.one;
     }
 
     public void SubmitAnswer(string bodyName)

@@ -970,11 +970,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!1 &1419701595 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1180392551181810595, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-  m_PrefabInstance: {fileID: 2073032058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429113928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2279,92 +2274,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1168647790}
     - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: enigmaData
-      value: 
-      objectReference: {fileID: 11400000, guid: af62c091b81cb2d4ca5579e923de20cd, type: 2}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyParent
-      value: 
-      objectReference: {fileID: 1419701595}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _canvasParent
-      value: 
-      objectReference: {fileID: 2073032061}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
       objectReference: {fileID: 6004865555073932092}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[0].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: 58bde25b18617b142b12bda59e6ee9a0, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[1].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: dc1af9034d92a094baed271fee1c1480, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[2].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: bb2ea816ce36b764b8050deedd5cc884, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[3].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: 0dc0c828cd612364b9ef1d55b5c92455, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[4].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: 0746594501068b84e805685a011c20f7, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[5].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: 07d914556d7a40c44aa2b41ffd744f71, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[6].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: 33b526857026abe498ad89b7649d6e8a, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[7].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: bd5b046c06a54b94eaac1818f7579e66, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[8].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: 1e1316c2b3a0c6d4ba0ea0a706f229b5, type: 3}
-    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _bodyData._serializedList.Array.data[9].Value
-      value: 
-      objectReference: {fileID: 3520689629658359313, guid: e6dfde6b51015a449b85db69529232ac, type: 3}
-    - target: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3477005977230773130, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: m_Name
       value: BodyEnigmaHuman
       objectReference: {fileID: 0}
-    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 90
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6935843050124880977, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-    - {fileID: 6461324765567921233, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2377,11 +2294,6 @@ RectTransform:
 --- !u!225 &2073032060 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-  m_PrefabInstance: {fileID: 2073032058}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &2073032061 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 7796690445404578545, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
   m_PrefabInstance: {fileID: 2073032058}
   m_PrefabAsset: {fileID: 0}
 --- !u!225 &2090223440 stripped
