@@ -8,6 +8,8 @@ public class CryptexCircles : MonoBehaviour
     public CryptexDisplayingText _cryptexDisplay;
     
     public int _indexInValues;
+    
+    private int minList = 0;
 
     private void Start()
     {
