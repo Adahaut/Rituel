@@ -21,6 +21,9 @@ namespace Cinematic
         
         [Header("Specific: ChangeScene Event")]
         public string _sceneName;
+        
+        [Header("Specific: Play sound Event")]
+        public string _audioName;
     }
     
 }

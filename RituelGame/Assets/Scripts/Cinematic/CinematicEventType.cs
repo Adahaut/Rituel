@@ -4,5 +4,6 @@
     {
         ChangeBackground = 0,
         ChangeScene = 1,
+        PlaySound = 2,
     }
 }

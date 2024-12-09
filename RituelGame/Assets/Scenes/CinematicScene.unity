@@ -395,6 +395,7 @@ MonoBehaviour:
     _backgroundSprite: {fileID: 21300000, guid: 829ddf7267eba1c49927b44679872698, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
+    _audioName: 
   - _eventType: 0
     _canBeClickedToPass: 1
     _passAutomatically: 0
@@ -402,6 +403,7 @@ MonoBehaviour:
     _backgroundSprite: {fileID: 21300000, guid: d77c508e3b5cab14c936db4c3253d576, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
+    _audioName: 
   - _eventType: 0
     _canBeClickedToPass: 1
     _passAutomatically: 0
@@ -409,6 +411,7 @@ MonoBehaviour:
     _backgroundSprite: {fileID: 21300000, guid: a5e06d6926146f7488bded503d8070dd, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
+    _audioName: 
   - _eventType: 0
     _canBeClickedToPass: 1
     _passAutomatically: 0
@@ -416,6 +419,7 @@ MonoBehaviour:
     _backgroundSprite: {fileID: 21300000, guid: 0ec2bb0ccd8902646ab3511776da4fd5, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
+    _audioName: 
   - _eventType: 0
     _canBeClickedToPass: 1
     _passAutomatically: 0
@@ -423,6 +427,7 @@ MonoBehaviour:
     _backgroundSprite: {fileID: 21300000, guid: 7de93795ce92fe343a83e9a75b74d0dc, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
+    _audioName: 
   - _eventType: 1
     _canBeClickedToPass: 0
     _passAutomatically: 0
@@ -430,6 +435,7 @@ MonoBehaviour:
     _backgroundSprite: {fileID: 21300000, guid: 7de93795ce92fe343a83e9a75b74d0dc, type: 3}
     _fadeDuration: 0.5
     _sceneName: MainMenuScene
+    _audioName: 
   backgroundImage: {fileID: 177407524}
   oldBackgroundImage: {fileID: 723386495}
 --- !u!1 &1588709704
