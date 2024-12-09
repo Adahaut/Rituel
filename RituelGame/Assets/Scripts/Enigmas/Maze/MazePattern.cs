@@ -90,12 +90,15 @@ public class MazePattern : MonoBehaviour
     public MazeStruct thirdMazeStruct = new();
     public MazeStruct fourthMazeStruct = new();
 
+    private int gridLenght = 12;
+    private float frameScale = 80;
+
     private void Start()
     {
-        InitStructMaze(firstMazeStruct, firstMazePattern, Vector2.one, 0.0f, _mazeWindRoses[0], "Maze");
-        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(10f, 1f), -90f, _mazeWindRoses[1], "Maze");
-        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(10f, 10f), 180f, _mazeWindRoses[2], "Maze");
-        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2(1f, 10f), 90f, _mazeWindRoses[3], "Maze");
+        InitStructMaze(firstMazeStruct, firstMazePattern, new Vector2(Screen.width /2 - gridLenght / 2 * frameScale, Screen.height / 2- gridLenght / 2 * frameScale) + Vector2.one * frameScale, 0.0f, _mazeWindRoses[0], "Maze");
+        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(Screen.width / 2 + gridLenght / 2 * frameScale, Screen.height / 2- gridLenght / 2 * frameScale) + new Vector2(-2f * frameScale, frameScale), -90f, _mazeWindRoses[1], "Maze");
+        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(Screen.width / 2 + gridLenght / 2 * frameScale, Screen.height / 2 + gridLenght / 2 * frameScale) + -Vector2.one * 2 * frameScale, 180f, _mazeWindRoses[2], "Maze");
+        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2(Screen.width / 2 - gridLenght / 2 * frameScale, Screen.height / 2 + gridLenght / 2 * frameScale) + new Vector2(frameScale, -frameScale * 2), 90f, _mazeWindRoses[3], "Maze");
     }
 
     private void InitStructMaze(MazeStruct mazeStruct, int[,] mazePattern, Vector2 mazePawnBasePosition, float mazeRotation, GameObject mazeWindRose, string mazeLayer)

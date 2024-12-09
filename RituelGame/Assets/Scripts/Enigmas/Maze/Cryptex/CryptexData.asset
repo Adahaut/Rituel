@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Cryptex
   description: rotate the numbers to unlock the cryptex
+  enigmaHint:
+    _serializedList: []
   reward: {fileID: 2600705361194805992, guid: 3cbd2a6794920e741ba748035e729841, type: 3}
   success: 
-  linkToAddIfSuccess: 15
+  linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 1

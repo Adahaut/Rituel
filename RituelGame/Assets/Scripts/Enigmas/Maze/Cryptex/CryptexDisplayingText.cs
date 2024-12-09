@@ -6,15 +6,31 @@ using UnityEngine;
 
 public class CryptexDisplayingText : MonoBehaviour
 {
-    public CryptexValue cryptexValue;
+    public EnigmaCryptexCore _cryptexCore;
     
-    public List<TextMeshProUGUI> texts = new();
+    public List<char> texts = new();
+    public List<TextMeshProUGUI> _textsDisplay = new();
+    
+    private int minList = 0;
+    private int maxList = 11;
 
-    private void Start()
+    void Start()
     {
-        for (int i = 0; i < cryptexValue.circlesValues.Count; i++)
-        {
-            texts[i].text = cryptexValue.circlesValues[i].ToString();
-        }
+        texts = _cryptexCore.values;
+    }
+
+    public void DisplayingText(int textIndex)
+    {
+        if(textIndex == minList)
+            _textsDisplay[0].text = texts[maxList].ToString();
+        else 
+            _textsDisplay[0].text = texts[textIndex - 1].ToString();
+        
+        _textsDisplay[1].text = texts[textIndex].ToString();
+        
+        if(textIndex == maxList)
+            _textsDisplay[2].text = texts[minList].ToString();
+        else
+            _textsDisplay[2].text = texts[textIndex + 1].ToString();
     }
 }

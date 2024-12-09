@@ -42,7 +42,7 @@ public class SpiritPiano : MonoBehaviour
         keys.Add(Name);
         if (partition.Count == keys.Count && partition[index] == keys[index])
         {
-            Debug.Log("enigma solved");
+            //if enigma solved
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             enigmaSolved = true;
             ResetEnigma();
@@ -50,13 +50,13 @@ public class SpiritPiano : MonoBehaviour
         }
         else if (partition[index] != keys[index])
         {
-            Debug.Log("wrong key");
+            //if wrong key 
             linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
             ResetEnigma();
             return;
         }
         index++;
-        Debug.Log("good key");
+        //if good key
     }
 
     private void ResetEnigma()
@@ -66,7 +66,7 @@ public class SpiritPiano : MonoBehaviour
         index = 0;
         if (!enigmaSolved)
         {
-            Debug.Log("enigma lost");
+            //enigma lost
         }
     }
 
