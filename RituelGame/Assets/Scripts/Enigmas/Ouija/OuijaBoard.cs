@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
@@ -7,37 +6,45 @@ using Enigmas.Ouija;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class OuijaBoard : MonoBehaviour, IPointerClickHandler
 {
     private OuijaCore ouijaCore;
-    [field:SerializeField] public SerializedDictionary<char, OuijaCharacter> _characterObjects { get; private set; }
+
+    [SerializeField] private Transform ouijaCharacterParent;
+    [SerializeField] private OuijaCharacter ouijaCharacterPrefab;
+    [field: SerializeField] public SerializedDictionary<char, OuijaCharacter> _characterObjects { get; private set; } = new();
     public Action OnBoardClickedEvent;
-    public TMP_FontAsset _humanFont;
-    public TMP_FontAsset _spiritFont;
 
     public void SetOuijaCore(OuijaCore newOuijaCore)
     {
         ouijaCore = newOuijaCore;
     }
     
-    public void DrawCharacters()
+    public void DrawCharacters(TMP_FontAsset fontAsset)
     {
-        foreach (OuijaCharacter ouijaCharacter in _characterObjects.Keys.Select(character => _characterObjects[character]))
+        EraseCharacters();
+        _characterObjects = new SerializedDictionary<char, OuijaCharacter>();
+        
+        OuijaData ouijaData = ouijaCore._ouijaData;
+        List<char> charactersToPlace = ouijaData._charsToDisplay.ToList();
+        while (charactersToPlace.Count > 0)
         {
-            if (ouijaCore._currentWorld == WorldType.Human)
-            {
-                ouijaCharacter._humanCharacter.gameObject.SetActive(true);
-                ouijaCharacter._humanCharacter.font = _humanFont;
-                ouijaCharacter._spiritCharacter.gameObject.SetActive(false);
-            }
-            else
-            {
-                ouijaCharacter._humanCharacter.gameObject.SetActive(true);
-                ouijaCharacter._humanCharacter.font = _spiritFont;
-                ouijaCharacter._spiritCharacter.gameObject.SetActive(false);
-            }
+            OuijaCharacter newOuijaChar = Instantiate(ouijaCharacterPrefab, ouijaCharacterParent);
+            int randomIndex = Random.Range(0, charactersToPlace.Count);
+            char placingChar = charactersToPlace[randomIndex];
+            newOuijaChar._textMeshPro.text = placingChar.ToString();
+            _characterObjects.Add(placingChar, newOuijaChar);
+            charactersToPlace.Remove(placingChar);
+        }
+    }
+
+    private void EraseCharacters()
+    {
+        foreach (Transform child in ouijaCharacterParent)
+        {
+            Destroy(child.gameObject);
         }
     }
 

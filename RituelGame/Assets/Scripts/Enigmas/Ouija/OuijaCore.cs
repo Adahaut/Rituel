@@ -12,9 +12,8 @@ namespace Enigmas.Ouija
     {
         [SerializeField] private EnigmaData enigmaData;
         [field:SerializeField] public WorldType _currentWorld { get; private set; }
-        [field:SerializeField] public OuijaData _currentOuijaData { get; private set; }
+        [field:SerializeField] public OuijaData _ouijaData { get; private set; }
         [field:SerializeField] public OuijaCursor _ouijaCursor { get; private set; }
-        [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
         [field:SerializeField] public OuijaBoard _ouijaBoard { get; private set; }
         [SerializeField] private LinkCore linkCore;
         
@@ -30,7 +29,6 @@ namespace Enigmas.Ouija
             DrawCharacters();
             if (_currentWorld == WorldType.Spirit)
             {
-                _ouijaInputPanel.SetOuijaCore(this);
                 _ouijaCursor.gameObject.SetActive(false);
             }
 
@@ -50,7 +48,7 @@ namespace Enigmas.Ouija
 
         private void DrawCharacters()
         {
-            _ouijaBoard.DrawCharacters();
+            _ouijaBoard.DrawCharacters(_ouijaData._correctFontAsset);
         }
         
         public void OnConfirmAnswer(List<char> answer)
@@ -67,10 +65,10 @@ namespace Enigmas.Ouija
 
         public bool CheckResult(List<char> answer)
         {
-            bool result = answer.Count == _currentOuijaData._answerCharacters.Count;
+            bool result = answer.Count == _ouijaData._answerCharacters.Count;
             for (int i = 0; i < answer.Count; i++)
             {
-                if (answer[i] == _currentOuijaData._answerCharacters[i]) continue;
+                if (answer[i] == _ouijaData._answerCharacters[i]) continue;
                 
                 result = false;
                 break;
@@ -81,7 +79,7 @@ namespace Enigmas.Ouija
         
         public void SetOuijaData(OuijaData ouijaData)
         {
-            _currentOuijaData = ouijaData;
+            _ouijaData = ouijaData;
             DrawCharacters();
         }
 

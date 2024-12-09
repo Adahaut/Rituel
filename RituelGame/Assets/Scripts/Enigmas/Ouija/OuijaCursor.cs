@@ -25,7 +25,7 @@ namespace Enigmas.Ouija
         public void SetOuijaCore(OuijaCore newOuijaCore)
         {
             ouijaCore = newOuijaCore;
-            ouijaData = ouijaCore._currentOuijaData;
+            ouijaData = ouijaCore._ouijaData;
         }
 
         public void TryStartMovement()
