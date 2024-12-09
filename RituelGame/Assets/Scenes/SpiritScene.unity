@@ -4773,6 +4773,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpiritPianoCore
       objectReference: {fileID: 0}
+    - target: {fileID: 8272230950931691649, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
