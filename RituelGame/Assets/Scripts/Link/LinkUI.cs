@@ -14,7 +14,7 @@ public class LinkUI : MonoBehaviour
     public TextMeshProUGUI _linkText;
     private LinkCore linkCore;
     
-    private void Start()
+    private void Awake()
     {
         linkCore = GetComponent<LinkCore>();
         OnLinkChanged = new UnityEvent();
