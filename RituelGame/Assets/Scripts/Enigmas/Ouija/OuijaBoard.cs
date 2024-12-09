@@ -35,6 +35,7 @@ public class OuijaBoard : MonoBehaviour, IPointerClickHandler
             int randomIndex = Random.Range(0, charactersToPlace.Count);
             char placingChar = charactersToPlace[randomIndex];
             newOuijaChar._textMeshPro.text = placingChar.ToString();
+            newOuijaChar._textMeshPro.font = fontAsset;
             _characterObjects.Add(placingChar, newOuijaChar);
             charactersToPlace.Remove(placingChar);
         }

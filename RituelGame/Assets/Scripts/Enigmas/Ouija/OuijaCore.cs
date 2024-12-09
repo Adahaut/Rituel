@@ -12,10 +12,12 @@ namespace Enigmas.Ouija
 {
     public class OuijaCore : MonoBehaviour, IOuijaCore
     {
-        [SerializeField] private EnigmaData enigmaData;
         [field:SerializeField] public WorldType _currentWorld { get; private set; }
+        [SerializeField] private EnigmaData enigmaData;
         [field:SerializeField] public OuijaData _ouijaData { get; private set; }
         [SerializeField] private LinkCore linkCore;
+
+        [SerializeField] private OuijaHumanCursor humanCursor;
 
         [SerializeField] private OuijaBoard ouijaBoardPrefab;
         [SerializeField] private Transform ouijaBoardParent;
@@ -28,6 +30,8 @@ namespace Enigmas.Ouija
         {
             SpawnAllOuijaBoards();
             DrawOuijaBoards();
+            
+            humanCursor.SetOuijaCore(this);
 
             OnGoodAnswerEvent += OnGoodAnswer;
             OnBadAnswerEvent += OnBadAnswer;
@@ -107,7 +111,7 @@ namespace Enigmas.Ouija
 
         public void OnBoardClicked(OuijaBoard ouijaBoardClicked)
         {
-            
+            humanCursor.TryStartMovement(ouijaBoardClicked);
         }
     }
 }

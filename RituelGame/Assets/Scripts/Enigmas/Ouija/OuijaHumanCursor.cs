@@ -29,13 +29,14 @@ namespace Enigmas.Ouija
             ouijaData = ouijaCore._ouijaData;
         }
 
-        public void TryStartMovement()
+        public void TryStartMovement(OuijaBoard ouijaBoard)
         {
             if (_currentCharIndex != -1)
             {
                 return;
             }
-            
+
+            currentBoard = ouijaBoard;
             StartMovement();
         }
 
