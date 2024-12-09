@@ -64,7 +64,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 56
   m_TargetDisplay: 0
 --- !u!114 &7398329112730012206
 MonoBehaviour:
@@ -167,9 +167,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Padding:
-    m_Left: -300
+    m_Left: 100
     m_Right: 0
-    m_Top: -500
+    m_Top: -800
     m_Bottom: 0
   m_ChildAlignment: 4
   m_Spacing: 75
