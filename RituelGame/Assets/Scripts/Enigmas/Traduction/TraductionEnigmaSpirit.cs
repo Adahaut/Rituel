@@ -10,6 +10,8 @@ using Random = UnityEngine.Random;
 
 public class TraductionEnigmaSpirit : MonoBehaviour
 {
+    [SerializeField] private LinkCore linkCore;
+    
     public SerializedDictionary<string, string> _wordEnglishToLatin = new SerializedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
 
     public List<string> _phrases;
@@ -92,6 +94,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
             button.GetComponent<Button>().interactable = true;
             index++;
         }
+        linkCore.RemoveLink(10);
     }
 
     private void CompleteEnigma()
@@ -106,6 +109,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         enigmaCanvas.blocksRaycasts = false;
         _canvasParent.gameObject.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+        linkCore.AddLink(10);
     }
     
     private void ChooseAnswer(string word, GameObject button)

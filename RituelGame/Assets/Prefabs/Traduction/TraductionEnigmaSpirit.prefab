@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1365b3e42e2aadd4aa4103c8da74265e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  linkCore: {fileID: 0}
   _wordEnglishToLatin:
     _serializedList:
     - Key: Potato
@@ -59,6 +60,8 @@ MonoBehaviour:
   _topLeftFirstButtonPos: {x: -700, y: -100}
   enigmaCanvas: {fileID: 7099310445221946199}
   canvasFadeDuration: 0.5
+  _canvasParent: {fileID: 290298713780924930}
+  _buttonToAccessEnigma: {fileID: 0}
 --- !u!1 &3099419949574344426
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 1}
+  m_Color: {r: 0.4811321, g: 0.4811321, b: 0.4811321, a: 0.4627451}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -383,9 +386,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5449860787085544197}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &7992024835160875161
 GameObject:

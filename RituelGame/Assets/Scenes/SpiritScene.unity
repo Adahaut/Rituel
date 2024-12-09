@@ -3403,17 +3403,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 295681295}
     m_Modifications:
     - target: {fileID: 1318317222958807156, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: CanvasParent
+      propertyPath: linkCore
       value: 
-      objectReference: {fileID: 1042661828}
-    - target: {fileID: 1318317222958807156, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: _canvasParent
-      value: 
-      objectReference: {fileID: 1042661828}
-    - target: {fileID: 1318317222958807156, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: ButtonToAccessEnigma
-      value: 
-      objectReference: {fileID: 1971660852}
+      objectReference: {fileID: 1623962172}
     - target: {fileID: 1318317222958807156, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
@@ -3421,18 +3413,6 @@ PrefabInstance:
     - target: {fileID: 5449860787085544197, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_Name
       value: TraductionEnigmaSpirit
-      objectReference: {fileID: 0}
-    - target: {fileID: 7099310445221946199, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7099310445221946199, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: m_Interactable
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7099310445221946199, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: m_BlocksRaycasts
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7397575343713773402, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_Pivot.x
@@ -3527,11 +3507,6 @@ RectTransform:
 --- !u!225 &1042661825 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 7099310445221946199, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-  m_PrefabInstance: {fileID: 1042661823}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &1042661828 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 290298713780924930, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
   m_PrefabInstance: {fileID: 1042661823}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1220498523

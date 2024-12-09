@@ -52,7 +52,7 @@ namespace Enigmas.Key
 
         private void OnCorrectAnswer()
         {
-            linkCore.RemoveLink(enigmaData.LinkToAddIfSuccess);
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             closedChest.SetCanvasGroupInteraction(false);
             openedChest.SetCanvasGroupInteraction(true);
             closedChest.DOFade(0, 0.5f);
