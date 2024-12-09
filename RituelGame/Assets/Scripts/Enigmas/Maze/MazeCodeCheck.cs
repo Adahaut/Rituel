@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MazeCodeCheck : MonoBehaviour
 {
@@ -15,16 +16,17 @@ public class MazeCodeCheck : MonoBehaviour
     public string _answer;
     
     public GameObject _mazeCanvas;
+    public GameObject _maze;
     public GameObject _checkCode;
-    public GameObject _mazeButton;
+    public GameObject _buttonToAccessEnigma;
 
     public void Confirm()
     {
         if (String.Compare(_inputField.text.ToLower(), _answer.ToLower()) == 1)
         {
             _linkCore.AddLink(_mazeData.LinkToAddIfSuccess);
-            _checkCode.SetActive(false);
-            _mazeButton.SetActive(false);
+            _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+            _mazeCanvas.SetActive(false);
         }
         else
         {
@@ -37,5 +39,6 @@ public class MazeCodeCheck : MonoBehaviour
     {
         _checkCode.SetActive(false);
         _mazeCanvas.SetActive(true);
+        _maze.SetActive(true);
     }
 }

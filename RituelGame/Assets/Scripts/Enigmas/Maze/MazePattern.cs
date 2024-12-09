@@ -94,7 +94,17 @@ public class MazePattern : MonoBehaviour
 
     private void Start()
     {
-        float frameScale = enigmaMazeCoreHuman._frameScale;
+        float frameScale = 0;
+        
+        if (enigmaMazeCoreHuman)
+        {
+            frameScale = enigmaMazeCoreHuman._frameScale;
+        }
+        else if (enigmaMazeCoreSpirit)
+        {
+            frameScale = enigmaMazeCoreSpirit._frameScale;
+        }
+        
         InitStructMaze(firstMazeStruct, firstMazePattern, new Vector2(Screen.width /2 - gridLenght / 2 * frameScale, Screen.height / 2- gridLenght / 2 * frameScale) + Vector2.one * frameScale, 0.0f, _mazeWindRoses[0], "Maze");
         InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(Screen.width / 2 + gridLenght / 2 * frameScale, Screen.height / 2- gridLenght / 2 * frameScale) + new Vector2(-2f * frameScale, frameScale), -90f, _mazeWindRoses[1], "Maze");
         InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(Screen.width / 2 + gridLenght / 2 * frameScale, Screen.height / 2 + gridLenght / 2 * frameScale) + -Vector2.one * 2 * frameScale, 180f, _mazeWindRoses[2], "Maze");
@@ -117,8 +127,7 @@ public class MazePattern : MonoBehaviour
         else if (enigmaMazeCoreSpirit)
         {
             enigmaMazeCoreSpirit._mazeStructures.Add(mazeStruct);
-            enigmaMazeCoreSpirit.
-                DrawIfFull();
+            enigmaMazeCoreSpirit.DrawIfFull();
         }
     }
     public int _maxPaternNumber = 4;
