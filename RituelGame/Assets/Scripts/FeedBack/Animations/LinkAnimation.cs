@@ -26,8 +26,6 @@ public class LinkAnimation : MonoBehaviour
         initScale = _linkSlider.transform.localScale;
         initColor = Color.black;
         linkUI.UpdateLinkSlider();
-        
-        StartLinkAnimation(false);
     }
 
     public void StartLinkAnimation(bool isWin)
