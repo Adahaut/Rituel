@@ -122,6 +122,46 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &86279897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 86279898}
+  m_Layer: 0
+  m_Name: OuijaBoardZoomed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &86279898
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 86279897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1817887277}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &467313356 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8363042540885037917, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+  m_PrefabInstance: {fileID: 5469505864476563723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &896389653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -469,6 +509,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1660318723 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 520944644729146743, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+  m_PrefabInstance: {fileID: 5469505864476563723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1660318727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660318723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f18c981d83aecf4abce5e5bffe61c16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnPointerEnterEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnPointerClickEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1817887276}
+        m_TargetAssemblyTypeName: Enigmas.Ouija.OuijaCore, Assembly-CSharp
+        m_MethodName: OnBackgroundClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnPointerExitEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1702546689
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,6 +615,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1817887276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1208591355784884037, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+  m_PrefabInstance: {fileID: 5469505864476563723}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea68fc7713510ce4e87aa5fb7e017a4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!224 &1817887277 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6681764599429692893, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+  m_PrefabInstance: {fileID: 5469505864476563723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1965541897 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
@@ -560,6 +654,14 @@ PrefabInstance:
       propertyPath: linkCore
       value: 
       objectReference: {fileID: 1965541897}
+    - target: {fileID: 1208591355784884037, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: ouijaBoardLayoutParent
+      value: 
+      objectReference: {fileID: 5469505864476563724}
+    - target: {fileID: 1208591355784884037, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: ouijaBoardZoomedParent
+      value: 
+      objectReference: {fileID: 86279898}
     - target: {fileID: 4613848541635175727, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: m_Name
       value: OuijaCoreHuman
@@ -656,11 +758,85 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6839588269094160530, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839588269094160530, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839588269094160530, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6839588269094160530, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363042540885037917, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: m_Name
+      value: OuijaBoardsLayout
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5140462417379695860, guid: 87d45281303173446be2be28ac3621e2, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6681764599429692893, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 86279898}
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 520944644729146743, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1660318727}
+    - targetCorrespondingSourceObject: {fileID: 8363042540885037917, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 5469505864476563727}
+    - targetCorrespondingSourceObject: {fileID: 8363042540885037917, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 5469505864476563728}
   m_SourcePrefab: {fileID: 100100000, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+--- !u!224 &5469505864476563724 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6839588269094160530, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+  m_PrefabInstance: {fileID: 5469505864476563723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5469505864476563727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467313356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 700, y: 600}
+  m_Spacing: {x: 50, y: 50}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!225 &5469505864476563728
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467313356}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
