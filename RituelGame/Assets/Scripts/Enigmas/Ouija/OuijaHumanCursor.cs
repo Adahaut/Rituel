@@ -7,7 +7,7 @@ namespace Enigmas.Ouija
     public class OuijaHumanCursor : MonoBehaviour
     {
         private RectTransform rectTransform;
-        private OuijaCore ouijaCore;
+        private HumanOuijaCore _humanOuijaCore;
         private OuijaData ouijaData;
         
         [field:SerializeField] public Transform _baseCursorPosition { get; private set; }
@@ -23,10 +23,10 @@ namespace Enigmas.Ouija
             rectTransform.position = _baseCursorPosition.position;
         }
 
-        public void SetOuijaCore(OuijaCore newOuijaCore)
+        public void SetOuijaCore(HumanOuijaCore newHumanOuijaCore)
         {
-            ouijaCore = newOuijaCore;
-            ouijaData = ouijaCore._ouijaData;
+            _humanOuijaCore = newHumanOuijaCore;
+            ouijaData = _humanOuijaCore._ouijaData;
         }
 
         public void TryStartMovement(OuijaBoard ouijaBoard)
