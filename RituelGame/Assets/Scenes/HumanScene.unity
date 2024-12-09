@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3518368 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5879630681279943065, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+  m_PrefabInstance: {fileID: 1854227616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &20058186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -378,6 +383,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a551f9558acee246980fe4e46688a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &503912925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1603416535448960026, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,14 +543,6 @@ PrefabInstance:
       propertyPath: enigmaData
       value: 
       objectReference: {fileID: 11400000, guid: 12ec3b74f9d667b4ab699fc613c09cca, type: 2}
-    - target: {fileID: 1839343587074301840, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
-      propertyPath: _canvasParent
-      value: 
-      objectReference: {fileID: 755279163}
-    - target: {fileID: 1839343587074301840, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
-      propertyPath: _buttonToAccessEnigma
-      value: 
-      objectReference: {fileID: 6004865555073932091}
     - target: {fileID: 8028732745144841119, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -672,10 +674,10 @@ CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8031638271869726551, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
   m_PrefabInstance: {fileID: 755279160}
   m_PrefabAsset: {fileID: 0}
---- !u!223 &755279163 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 4980400129239275504, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
-  m_PrefabInstance: {fileID: 755279160}
+--- !u!1 &823444087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6937879631279227479, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+  m_PrefabInstance: {fileID: 1854227616}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &842596377 stripped
 MonoBehaviour:
@@ -891,6 +893,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2696036e92899b4086a576a7ddaa709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1183423680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5905188393116024002, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1289864243
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +977,16 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
+--- !u!1 &1322929749 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 286445364900114078, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+  m_PrefabInstance: {fileID: 1854227616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1419701595 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1180392551181810595, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+  m_PrefabInstance: {fileID: 2073032058}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1429113928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1288,37 +1305,97 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1663224234}
     m_Modifications:
+    - target: {fileID: 841285183480386787, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_text
+      value: cryptex
+      objectReference: {fileID: 0}
     - target: {fileID: 6937879631279227479, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_Name
       value: CryptexEnigmaHuman
-      objectReference: {fileID: 0}
-    - target: {fileID: 6937879631279227479, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7345903103417161376, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _cryptex
+      value: 
+      objectReference: {fileID: 3518368}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: linkCore
       value: 
       objectReference: {fileID: 1168647790}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _codePanel
+      value: 
+      objectReference: {fileID: 1322929749}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptexData
       value: 
       objectReference: {fileID: 11400000, guid: bd39e55e23afab64081c01f1f2fe034c, type: 2}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
-      propertyPath: _canvasParent
+      propertyPath: _cryptexButton
       value: 
-      objectReference: {fileID: 1854227617}
+      objectReference: {fileID: 503912925}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
-      propertyPath: _buttonToAccessEnigma
+      propertyPath: _cryptexCanvas
       value: 
-      objectReference: {fileID: 6004865555073932090}
+      objectReference: {fileID: 823444087}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: <_unlockButtonThisEnigma>k__BackingField
       value: 
+      objectReference: {fileID: 1183423680}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 823444087}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 503912925}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8473153466061924772, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_Pivot.x
@@ -1405,11 +1482,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
---- !u!223 &1854227617 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 7345903103417161376, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
-  m_PrefabInstance: {fileID: 1854227616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2030010828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2274,14 +2346,84 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1168647790}
     - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-      propertyPath: _buttonToAccessEnigma
+      propertyPath: enigmaData
       value: 
-      objectReference: {fileID: 6004865555073932092}
+      objectReference: {fileID: 11400000, guid: af62c091b81cb2d4ca5579e923de20cd, type: 2}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyParent
+      value: 
+      objectReference: {fileID: 1419701595}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[0].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: 58bde25b18617b142b12bda59e6ee9a0, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[1].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: dc1af9034d92a094baed271fee1c1480, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[2].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: bb2ea816ce36b764b8050deedd5cc884, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[3].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: 0dc0c828cd612364b9ef1d55b5c92455, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[4].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: 0746594501068b84e805685a011c20f7, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[5].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: 07d914556d7a40c44aa2b41ffd744f71, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[6].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: 33b526857026abe498ad89b7649d6e8a, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[7].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: bd5b046c06a54b94eaac1818f7579e66, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[8].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: 1e1316c2b3a0c6d4ba0ea0a706f229b5, type: 3}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[9].Value
+      value: 
+      objectReference: {fileID: 3520689629658359313, guid: e6dfde6b51015a449b85db69529232ac, type: 3}
+    - target: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3477005977230773130, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: m_Name
       value: BodyEnigmaHuman
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 6883514075373908851, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6935843050124880977, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+    - {fileID: 6461324765567921233, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -2334,6 +2476,14 @@ PrefabInstance:
       propertyPath: <_unlockButtonThisEnigma>k__BackingField
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1183423680}
+    - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 8081364191945328302, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_Name
       value: MazeEnigmaHuman
@@ -2343,25 +2493,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1168647790}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
-      propertyPath: frameScale
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _enigmaData
       value: 
       objectReference: {fileID: 11400000, guid: 502ae491542f1e04582fb71d55783ae4, type: 2}
-    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
-      propertyPath: _frameScale
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
-      propertyPath: _canvasParent
-      value: 
-      objectReference: {fileID: 2123735613}
-    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
-      propertyPath: _buttonToAccessEnigma
-      value: 
-      objectReference: {fileID: 6004865555073932089}
     - target: {fileID: 8473013917410775666, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2443,8 +2577,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 3036418568876203731, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
@@ -2456,11 +2589,6 @@ RectTransform:
 --- !u!225 &2123735612 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 1844157779563578083, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
-  m_PrefabInstance: {fileID: 2123735610}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &2123735613 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 4081122194387047731, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
   m_PrefabInstance: {fileID: 2123735610}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &559769818522269504
@@ -2553,14 +2681,6 @@ PrefabInstance:
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 755279162}
-    - target: {fileID: 1334893008420182845, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Final
-      objectReference: {fileID: 0}
-    - target: {fileID: 1603416535448960026, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Cryptex
-      objectReference: {fileID: 0}
     - target: {fileID: 2159827851434135009, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
@@ -2569,26 +2689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackGround/Object Canvas HUMAN
       objectReference: {fileID: 0}
-    - target: {fileID: 2409040863310290482, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Piano
-      objectReference: {fileID: 0}
     - target: {fileID: 3273138364799154859, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 2123735612}
-    - target: {fileID: 3574708049308889739, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Traduction
-      objectReference: {fileID: 0}
-    - target: {fileID: 3608389494848516030, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Relics
-      objectReference: {fileID: 0}
-    - target: {fileID: 3803176692174614597, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Ouija
-      objectReference: {fileID: 0}
     - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
@@ -2597,14 +2701,6 @@ PrefabInstance:
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 20058188}
-    - target: {fileID: 5739113287111686078, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Corps
-      objectReference: {fileID: 0}
-    - target: {fileID: 5905188393116024002, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Name
-      value: Maze
-      objectReference: {fileID: 0}
     - target: {fileID: 6813355193548916289, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -2710,26 +2806,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
---- !u!1 &6004865555073932089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5905188393116024002, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6004865555073932090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1603416535448960026, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6004865555073932091 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3608389494848516030, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &6004865555073932092 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5739113287111686078, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

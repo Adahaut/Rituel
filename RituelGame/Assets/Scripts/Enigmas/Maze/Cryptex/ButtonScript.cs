@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class ButtonScript : MonoBehaviour
 {
+    public GameObject _cryptex;
+    public GameObject _codePanel;
+    
     public EnigmaCryptexCore _enigmaCryptexCore;
 
     public List<CryptexCircles> _circles = new();
@@ -14,5 +17,11 @@ public class ButtonScript : MonoBehaviour
         {
             _enigmaCryptexCore.CheckingIfStringIsCorrect(_circles[i].SendingValues());
         }
+    }
+
+    public void ConfirmEnigma()
+    {
+        _cryptex.SetActive(false);
+        _codePanel.SetActive(true);
     }
 }

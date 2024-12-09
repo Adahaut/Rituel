@@ -7,8 +7,12 @@ using UnityEngine.UI;
 
 public class EnigmaMazeCoreHuman : MonoBehaviour
 {
+    public GameObject _maze;
+    public GameObject _code;
+    
     public MazePattern _mazePattern;
     public EnigmaData _enigmaData;
+    public LinkCore _linkCore;
 
     public List<MazeStruct> _mazeStructures = new();
 
@@ -123,15 +127,18 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     private void Lose()
     {
-        Debug.Log("Lose");
-        }
+        _linkCore.RemoveLink(_enigmaData.LinkToRemoveIfFail);
+    }
 
     public void Win()
     {
+
         _canvasParent.gameObject.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
-        this.enabled = false;
+
+        _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
         _enigmaData.GetReward();
-        Debug.Log("Win");
+        _maze.SetActive(false);
+        _code.SetActive(true);
     }
 }

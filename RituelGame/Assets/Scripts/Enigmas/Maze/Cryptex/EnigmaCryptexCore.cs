@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnigmaCryptexCore : MonoBehaviour, AllInterafce.IEnigmaCore
+public class EnigmaCryptexCore : MonoBehaviour
 {
+    public GameObject _cryptex;
+    public GameObject _codePanel;
+    
     public EnigmaData _cryptexData;
 
     public LinkCore linkCore;
@@ -41,22 +44,13 @@ public class EnigmaCryptexCore : MonoBehaviour, AllInterafce.IEnigmaCore
         _buttonToAccessEnigma.SetActive(false);
         linkCore.AddLink(_cryptexData.LinkToAddIfSuccess);
         _cryptexData.GetReward();
+        
+        _cryptex.SetActive(false);
+        _codePanel.SetActive(true);
     }
     
     public void Lose()
     {
         linkCore.RemoveLink(_cryptexData.LinkToRemoveIfFail);
-    }
-
-    [field:SerializeField]
-    public EnigmaType _enigmaType { get; set; }
-    [field:SerializeField]
-    public GameObject _unlockButtonThisEnigma { get; set; }
-    public void UnlockNextEnigme()
-    {
-        if (_unlockButtonThisEnigma)
-        {
-            _unlockButtonThisEnigma.SetActive(true);   
-        }
     }
 }
