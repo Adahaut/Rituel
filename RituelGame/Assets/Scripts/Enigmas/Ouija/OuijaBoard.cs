@@ -51,6 +51,6 @@ public class OuijaBoard : MonoBehaviour, IPointerClickHandler
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        OnBoardClickedEvent.Invoke(this);
+        OnBoardClickedEvent?.Invoke(this);
     }
 }

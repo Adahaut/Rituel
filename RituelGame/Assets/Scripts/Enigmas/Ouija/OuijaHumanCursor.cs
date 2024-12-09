@@ -46,6 +46,13 @@ namespace Enigmas.Ouija
             MoveToNextPosition();
         }
 
+        public void StopMovement()
+        {
+            transform.DOKill();
+            _currentCharIndex = -1;
+            rectTransform.DOMove(_baseCursorPosition.position, _timeToNextPosition).SetEase(moveEase);
+        }
+
         private void MoveToNextPosition()
         {
             _currentCharIndex += 1;

@@ -26,12 +26,16 @@ namespace Enigmas.Ouija
         private Vector3 zoomedBoardOriginalScale;
         private OuijaBoard zoomedOuijaBoard;
 
+        public Action OnUnzoomOuijaBoardEvent;
+        public Action OnZoomOuijaBoardEvent;
+
         private void Awake()
         {
             SpawnAllOuijaBoards();
             DrawOuijaBoards();
             
             humanCursor.SetOuijaCore(this);
+            OnUnzoomOuijaBoardEvent += humanCursor.StopMovement;
 
             OnGoodAnswerEvent += OnGoodAnswer;
             OnBadAnswerEvent += OnBadAnswer;
@@ -110,6 +114,8 @@ namespace Enigmas.Ouija
                 CanvasGroup layoutCanvasGroup = ouijaBoardLayoutParent.GetComponent<CanvasGroup>();
                 layoutCanvasGroup.DOFade(0, 1f);
                 layoutCanvasGroup.SetCanvasGroupInteraction(false);
+                
+                OnZoomOuijaBoardEvent.Invoke();
             }
         }
 
@@ -130,6 +136,8 @@ namespace Enigmas.Ouija
             zoomedOuijaBoard.transform.DOScale(Vector3.one * 0.5f, 1).SetEase(Ease.InOutQuint);
             zoomedOuijaBoard.transform.DOMove(ouijaBoardLayoutParent.GetChild(zoomedBoardLayoutIndex).position, 1f)
                 .SetEase(Ease.InOutQuint).onComplete += OnUnzoomFinished;
+            
+            OnUnzoomOuijaBoardEvent.Invoke();
         }
 
         public void OnUnzoomFinished()
