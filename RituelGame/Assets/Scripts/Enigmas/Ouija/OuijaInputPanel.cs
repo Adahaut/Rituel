@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Enigmas.Ouija;
 using UnityEngine;
@@ -6,8 +8,9 @@ using OuijaCharacter = Enigmas.Ouija.OuijaCharacter;
 
 public class OuijaInputPanel : MonoBehaviour
 {
+    [SerializeField] private SpiritOuijaCore spiritOuijaCore;
     [SerializeField] private OuijaCharacter charInputPrefab;
-    
+
     [SerializeField] private OuijaSpiritCursor spiritCursor;
     
     [SerializeField] private Transform charInputParentLayout;
@@ -22,7 +25,9 @@ public class OuijaInputPanel : MonoBehaviour
 
     [SerializeField] private int maxInputCount = 7;
     
-    private GameObject layoutObjectPlaceholder;
+    private List<char> charList = new List<char>();
+
+    private bool isInAnimation = false;
     
     private void Awake()
     {
@@ -37,9 +42,9 @@ public class OuijaInputPanel : MonoBehaviour
         }
         
         char ouijaChar = ouijaCharacter._textMeshPro.text[0];
+        charList.Add(ouijaChar);
         
-        GameObject placeHolderObject = layoutObjectPlaceholder = 
-            new GameObject("layoutPlaceholder", typeof(RectTransform));
+        GameObject placeHolderObject = new GameObject("layoutPlaceholder", typeof(RectTransform));
         placeHolderObject.transform.SetParent(charInputParentLayout);
         placeHolderObject.transform.localScale = Vector3.one * inputCharScale;
         
@@ -54,22 +59,35 @@ public class OuijaInputPanel : MonoBehaviour
         newOuijaObj._textMeshPro.font = ouijaCharacter._textMeshPro.font;
         newOuijaObj._canvasGroup.SetCanvasGroupInteraction(false);
 
+        isInAnimation = true;
+
         newOuijaTransform.DOScale(inputCharScale, scaleDuration)
             .SetEase(scaleEase).onComplete += () =>
         {
-            var followTransform = newOuijaObj.gameObject.AddComponent<FollowTransform>();
+            FollowTransform followTransform = newOuijaObj.gameObject.AddComponent<FollowTransform>();
             followTransform.SetTarget(placeHolderObject.transform);
             followTransform.floatAmount = 0.05f;
+
+            OuijaCharacterButton newOuijaCharacterButton = newOuijaObj.gameObject.GetComponent<OuijaCharacterButton>();
+            newOuijaCharacterButton.Init(this);
+            
             newOuijaObj._canvasGroup.SetCanvasGroupInteraction(true);
-            /*newOuijaTransform.DOMove(placeHolderObject.transform.position, moveDuration).SetUpdate(true)
-                .SetEase(moveEase).onComplete += () =>
-            {
-                int siblingIndex = placeHolderObject.transform.GetSiblingIndex();
-                Destroy(placeHolderObject);
-                newOuijaTransform.SetParent(charInputParentLayout);
-                newOuijaTransform.SetSiblingIndex(siblingIndex);
-                
-            };*/
+
+            isInAnimation = false;
         };
+    }
+
+    public void RemoveChar(GameObject charObject)
+    {
+        char charToRemove = charObject.GetComponent<OuijaCharacter>()._textMeshPro.text[0];
+        int siblingIndex = charObject.transform.GetSiblingIndex();
+        charList.RemoveAt(siblingIndex);
+        Destroy(charInputParentLayout.GetChild(siblingIndex).gameObject);
+        Destroy(charObject);
+    }
+
+    public void ConfirmInput()
+    {
+        spiritOuijaCore.OnConfirmAnswer(charList.ToList());
     }
 }

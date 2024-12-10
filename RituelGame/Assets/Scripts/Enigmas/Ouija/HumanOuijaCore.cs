@@ -96,6 +96,11 @@ namespace Enigmas.Ouija
             }
             else
             {
+                if (!canZoom)
+                {
+                    return;
+                }
+                
                 isZoomed = true;
                 zoomedOuijaBoard = ouijaBoardClicked;
 
@@ -115,7 +120,7 @@ namespace Enigmas.Ouija
                 layoutCanvasGroup.DOFade(0, 1f);
                 layoutCanvasGroup.SetCanvasGroupInteraction(false);
                 
-                OnZoomOuijaBoardEvent.Invoke();
+                OnZoomOuijaBoardEvent?.Invoke();
             }
         }
 
@@ -137,7 +142,7 @@ namespace Enigmas.Ouija
             zoomedOuijaBoard.transform.DOMove(ouijaBoardLayoutParent.GetChild(zoomedBoardLayoutIndex).position, 1f)
                 .SetEase(Ease.InOutQuint).onComplete += OnUnzoomFinished;
             
-            OnUnzoomOuijaBoardEvent.Invoke();
+            OnUnzoomOuijaBoardEvent?.Invoke();
         }
 
         public void OnUnzoomFinished()
