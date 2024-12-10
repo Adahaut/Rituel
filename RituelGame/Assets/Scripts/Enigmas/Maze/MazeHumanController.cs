@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ public class MazeHumanController : MonoBehaviour, AllInterafce.IEnigmaCore
 
     void Update()
     {
+        //maze._canvasParent.renderMode = RenderMode.ScreenSpaceOverlay;
+        return;
         PointerEventData pointerData = new PointerEventData(EventSystem.current)
         {
             position = Input.mousePosition
@@ -27,7 +30,7 @@ public class MazeHumanController : MonoBehaviour, AllInterafce.IEnigmaCore
         RaycastResult hit = results.Find(r => r.gameObject.GetComponent<CanvasRenderer>());
         
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             if (hit.gameObject)
             {
