@@ -1,68 +1,25 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using AYellowpaper.SerializedCollections;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace Enigmas.Ouija
 {
-    public class OuijaCore : MonoBehaviour
+    public abstract class OuijaCore: MonoBehaviour, IOuijaCore
     {
-        [SerializeField] private EnigmaData enigmaData;
-        [field:SerializeField] public WorldType _currentWorld { get; private set; }
-        [field:SerializeField] public OuijaData _currentOuijaData { get; private set; }
-        [field:SerializeField] public OuijaCursor _ouijaCursor { get; private set; }
-        [field:SerializeField] public OuijaInputPanel _ouijaInputPanel { get; private set; }
-        [field:SerializeField] public OuijaBoard _ouijaBoard { get; private set; }
-        [SerializeField] private LinkCore linkCore;
-        public Canvas _canvasParent;
-        public GameObject _buttonToAccessEnigma;
+        [SerializeField] protected EnigmaData enigmaData;
+        [field:SerializeField] public OuijaData _ouijaData { get; protected set; }
+        [SerializeField] protected LinkCore linkCore;
         
+        [SerializeField] protected OuijaBoard ouijaBoardPrefab;
         
         public Action OnGoodAnswerEvent;
         public Action OnBadAnswerEvent;
-        
-        private void Awake()
-        {
-            _ouijaCursor.SetOuijaCore(this);
-            _ouijaBoard.SetOuijaCore(this);
-            _ouijaBoard.OnBoardClickedEvent += OnBoardClicked;
-            DrawCharacters();
-            if (_currentWorld == WorldType.Spirit)
-            {
-                _ouijaInputPanel.SetOuijaCore(this);
-                _ouijaCursor.gameObject.SetActive(false);
-            }
-
-            OnGoodAnswerEvent += OnGoodAnswer;
-            OnBadAnswerEvent += OnBadAnswer;
-        }
-
-        private void OnBadAnswer()
-        {
-            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
-        }
-
-        private void OnGoodAnswer()
-        {
-            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
-        }
-
-        private void DrawCharacters()
-        {
-            _ouijaBoard.DrawCharacters();
-        }
         
         public void OnConfirmAnswer(List<char> answer)
         {
             if (CheckResult(answer))
             {
                 OnGoodAnswerEvent.Invoke();
-                _canvasParent.gameObject.SetActive(false);
-                _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             }
             else
             {
@@ -72,10 +29,10 @@ namespace Enigmas.Ouija
 
         public bool CheckResult(List<char> answer)
         {
-            bool result = answer.Count == _currentOuijaData._answerCharacters.Count;
+            bool result = answer.Count == _ouijaData._answerCharacters.Count;
             for (int i = 0; i < answer.Count; i++)
             {
-                if (answer[i] == _currentOuijaData._answerCharacters[i]) continue;
+                if (answer[i] == _ouijaData._answerCharacters[i]) continue;
                 
                 result = false;
                 break;
@@ -84,16 +41,7 @@ namespace Enigmas.Ouija
             return result;
         }
         
-        public void SetOuijaData(OuijaData ouijaData)
-        {
-            _currentOuijaData = ouijaData;
-            DrawCharacters();
-        }
-
-        public void OnBoardClicked()
-        {
-            _ouijaCursor.TryStartMovement();
-        }
-
+        protected abstract void OnGoodAnswer();
+        protected abstract void OnBadAnswer();
     }
 }

@@ -133,6 +133,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &984012789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1038020495256037666, guid: 94b00de06d17b5246bb75dec44a1c40f, type: 3}
+  m_PrefabInstance: {fileID: 1801311662}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1148082704 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3772345276458469930, guid: 94b00de06d17b5246bb75dec44a1c40f, type: 3}
+  m_PrefabInstance: {fileID: 1801311662}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1423553629
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +253,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LinkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 2547261459091387542, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: _linkText
+      value: 
+      objectReference: {fileID: 391011998}
+    - target: {fileID: 2547261459091387542, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: _linkSlider
+      value: 
+      objectReference: {fileID: 984012789}
+    - target: {fileID: 2547261459091387542, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: _failBorderImage
+      value: 
+      objectReference: {fileID: 1148082704}
     - target: {fileID: 4619015163423015686, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -277,6 +305,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7533212478614044513, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: _linkText
+      value: 
+      objectReference: {fileID: 391011998}
+    - target: {fileID: 7533212478614044513, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: _linkSlider
+      value: 
+      objectReference: {fileID: 984012789}
+    - target: {fileID: 7533212478614044513, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: _failBorderImage
+      value: 
+      objectReference: {fileID: 1148082704}
     - target: {fileID: 8732045461453760965, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
       propertyPath: _linkText
       value: 
@@ -475,7 +515,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 527410174720410547, guid: 94b00de06d17b5246bb75dec44a1c40f, type: 3}
   m_PrefabInstance: {fileID: 1801311662}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 984012789}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
@@ -489,37 +529,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2070381968812557687, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
-      propertyPath: linkCore
-      value: 
-      objectReference: {fileID: 1629359668}
     - target: {fileID: 2743148535283048972, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_Name
       value: OuijaCoreSpirit
       objectReference: {fileID: 0}
-    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5519657015780712133, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -75
-      objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchorMax.x
@@ -539,11 +559,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1920
       objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_LocalPosition.x
@@ -555,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6142067761229623625, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_LocalRotation.w
@@ -593,6 +613,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6188746182700107281, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1423553631}
+    - target: {fileID: 7681482104277756405, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+      propertyPath: linkCore
+      value: 
+      objectReference: {fileID: 1629359668}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
