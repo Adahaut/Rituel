@@ -543,6 +543,14 @@ PrefabInstance:
       propertyPath: enigmaData
       value: 
       objectReference: {fileID: 11400000, guid: 12ec3b74f9d667b4ab699fc613c09cca, type: 2}
+    - target: {fileID: 1839343587074301840, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _canvasParent
+      value: 
+      objectReference: {fileID: 755279163}
+    - target: {fileID: 1839343587074301840, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 6004865555073932089}
     - target: {fileID: 8028732745144841119, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -672,6 +680,11 @@ RectTransform:
 --- !u!225 &755279162 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 8031638271869726551, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+  m_PrefabInstance: {fileID: 755279160}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &755279163 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4980400129239275504, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
   m_PrefabInstance: {fileID: 755279160}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &823444087 stripped
@@ -1430,6 +1443,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: bd39e55e23afab64081c01f1f2fe034c, type: 2}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _canvasParent
+      value: 
+      objectReference: {fileID: 1854227617}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptexButton
       value: 
       objectReference: {fileID: 503912925}
@@ -1437,6 +1454,10 @@ PrefabInstance:
       propertyPath: _cryptexCanvas
       value: 
       objectReference: {fileID: 823444087}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 503912925}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: <_unlockButtonThisEnigma>k__BackingField
       value: 
@@ -1578,6 +1599,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+--- !u!223 &1854227617 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7345903103417161376, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+  m_PrefabInstance: {fileID: 1854227616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2030010828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1618,6 +1644,14 @@ PrefabInstance:
       propertyPath: enigmaData
       value: 
       objectReference: {fileID: 11400000, guid: ef045cffc9827b145bbe4855d8f49b22, type: 2}
+    - target: {fileID: 1208591355784884037, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: _canvasParent
+      value: 
+      objectReference: {fileID: 2030010829}
+    - target: {fileID: 1208591355784884037, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 6004865555073932091}
     - target: {fileID: 1914360310597706021, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2339,6 +2373,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+--- !u!223 &2030010829 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 5166637735065300763, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+  m_PrefabInstance: {fileID: 2030010828}
+  m_PrefabAsset: {fileID: 0}
 --- !u!225 &2030010830 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 3080561566012236471, guid: 87d45281303173446be2be28ac3621e2, type: 3}
@@ -2449,6 +2488,10 @@ PrefabInstance:
       propertyPath: _bodyParent
       value: 
       objectReference: {fileID: 1419701595}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 6004865555073932090}
     - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _bodyData._serializedList.Array.data[0].Value
       value: 
@@ -2592,6 +2635,18 @@ PrefabInstance:
       propertyPath: _enigmaData
       value: 
       objectReference: {fileID: 11400000, guid: 502ae491542f1e04582fb71d55783ae4, type: 2}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _frameScale
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _canvasParent
+      value: 
+      objectReference: {fileID: 2123735613}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 1183423680}
     - target: {fileID: 8473013917410775666, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2685,6 +2740,11 @@ RectTransform:
 --- !u!225 &2123735612 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 1844157779563578083, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+  m_PrefabInstance: {fileID: 2123735610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &2123735613 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4081122194387047731, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
   m_PrefabInstance: {fileID: 2123735610}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &559769818522269504
@@ -2938,6 +2998,21 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+--- !u!1 &6004865555073932089 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3608389494848516030, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6004865555073932090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5739113287111686078, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6004865555073932091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3803176692174614597, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

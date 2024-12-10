@@ -4088,6 +4088,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1623962172}
     - target: {fileID: 7919976840736397606, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
+      propertyPath: _maze
+      value: 
+      objectReference: {fileID: 285403484}
+    - target: {fileID: 7919976840736397606, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: _linkCore
       value: 
       objectReference: {fileID: 1623962172}
@@ -4099,6 +4103,10 @@ PrefabInstance:
       propertyPath: _mazeCanvas
       value: 
       objectReference: {fileID: 600287713}
+    - target: {fileID: 7919976840736397606, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 1502939277}
     - target: {fileID: 8443335474121980750, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
