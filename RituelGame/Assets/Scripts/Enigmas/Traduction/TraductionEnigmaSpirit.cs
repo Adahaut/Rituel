@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
 using DG.Tweening;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -27,6 +28,8 @@ public class TraductionEnigmaSpirit : MonoBehaviour
     private int wordCompletionIndex;
     private int posIndex = 0;
     private List<GameObject> buttonListe = new List<GameObject>();
+    public Canvas _canvasParent;
+    public GameObject _buttonToAccessEnigma;
 
     private void Start()
     {
@@ -101,6 +104,8 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         enigmaCanvas.DOFade(0, canvasFadeDuration);
         enigmaCanvas.interactable = false;
         enigmaCanvas.blocksRaycasts = false;
+        _canvasParent.gameObject.SetActive(false);
+        _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
     }
     
     private void ChooseAnswer(string word, GameObject button)

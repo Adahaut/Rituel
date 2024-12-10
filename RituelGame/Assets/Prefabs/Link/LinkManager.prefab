@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4619015163423015686}
   - component: {fileID: 4952846295559224696}
   - component: {fileID: 8732045461453760965}
-  - component: {fileID: 2547261459091387542}
   - component: {fileID: 7533212478614044513}
   m_Layer: 0
   m_Name: LinkManager
@@ -62,25 +61,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _linkSlider: {fileID: 0}
   _linkText: {fileID: 0}
---- !u!114 &2547261459091387542
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 169371369611830748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5b09642c3487e54f85145dfbbf235e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _linkSlider: {fileID: 0}
-  _linkText: {fileID: 0}
-  _linkScaleAnime: {x: 0, y: 0}
-  _timeOfAnimation: 0.2
-  _loseColor: {r: 1, g: 0, b: 0, a: 1}
-  _winColor: {r: 0.06132126, g: 1, b: 0, a: 1}
-  _failBorderImage: {fileID: 0}
 --- !u!114 &7533212478614044513
 MonoBehaviour:
   m_ObjectHideFlags: 0

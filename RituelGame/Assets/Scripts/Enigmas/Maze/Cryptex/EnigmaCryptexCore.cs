@@ -1,15 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EnigmaCryptexCore : MonoBehaviour, AllInterafce.IEnigmaCore
 {
     public EnigmaData _cryptexData;
 
+    public LinkCore linkCore;
+
     public List<char> values = new();
 
     public string _answer;
     private string guess = "";
+    
+    public Canvas _canvasParent;
+    public GameObject _buttonToAccessEnigma;
 
     public void CheckingIfStringIsCorrect(int value)
     {
@@ -31,12 +37,15 @@ public class EnigmaCryptexCore : MonoBehaviour, AllInterafce.IEnigmaCore
 
     public void Win()
     {
+        _canvasParent.gameObject.SetActive(false);
+        _buttonToAccessEnigma.SetActive(false);
+        linkCore.AddLink(_cryptexData.LinkToAddIfSuccess);
         _cryptexData.GetReward();
     }
     
     public void Lose()
     {
-        Debug.Log("Lose");
+        linkCore.RemoveLink(_cryptexData.LinkToRemoveIfFail);
     }
 
     [field:SerializeField]

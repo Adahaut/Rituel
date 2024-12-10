@@ -8,6 +8,9 @@ public class CryptexCircles : MonoBehaviour
     public CryptexDisplayingText _cryptexDisplay;
     
     public int _indexInValues;
+    
+    private int minList = 0;
+    private int maxList = 11;
 
     private void Start()
     {
@@ -16,9 +19,9 @@ public class CryptexCircles : MonoBehaviour
 
     public void IncrementValue()
     {
-        if (_indexInValues == 11)
+        if (_indexInValues == maxList)
         {
-            _indexInValues = 0;
+            _indexInValues = minList;
             return;
         }
         
@@ -27,9 +30,9 @@ public class CryptexCircles : MonoBehaviour
     
     public void DecrementValue()
     {
-        if (_indexInValues == 0)
+        if (_indexInValues == minList)
         {
-            _indexInValues = 11;
+            _indexInValues = maxList;
             return;
         }
         
