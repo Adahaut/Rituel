@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Body
   description: 
+  enigmaHint:
+    _serializedList: []
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 0
