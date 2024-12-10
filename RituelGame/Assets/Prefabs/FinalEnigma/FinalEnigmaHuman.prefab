@@ -48,6 +48,7 @@ MonoBehaviour:
   timeScript: {fileID: 381218461933664120}
   timeText: {fileID: 6637006969788721919}
   candle: {fileID: 0}
+  backButton: {fileID: 4006236064184002702}
   texts: []
   values: 
   _timerText: {fileID: 80835555057243324}
@@ -853,7 +854,6 @@ RectTransform:
   - {fileID: 4780210988055320017}
   - {fileID: 8937555162491118908}
   - {fileID: 4418124069562635771}
-  - {fileID: 2895439733976120356}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1683,6 +1683,7 @@ RectTransform:
   m_Children:
   - {fileID: 6907353795107441728}
   - {fileID: 5302563353870571055}
+  - {fileID: 2895439733976120356}
   m_Father: {fileID: 3292171073826296466}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1796,6 +1797,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 5094031489957111508}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 5771417331878622368}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1832,13 +1845,37 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 4691079303312403241}
+        m_TargetAssemblyTypeName: Timer, Assembly-CSharp
+        m_MethodName: ResetTimer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4006236064184002702}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &5956415621049271345
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 3292171073826296466}
+    m_TransformParent: {fileID: 4780210988055320017}
     m_Modifications:
     - target: {fileID: 4646388274141894897, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: enigmaCanvas
@@ -1881,6 +1918,14 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1898,23 +1943,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 150
+      value: -325
       objectReference: {fileID: 0}
     - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -931
+      value: -210.5
       objectReference: {fileID: 0}
     - target: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1936,5 +1981,10 @@ PrefabInstance:
 --- !u!224 &2895439733976120356 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8829266842914158613, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
+  m_PrefabInstance: {fileID: 5956415621049271345}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4006236064184002702 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7291453190953839807, guid: 2dcf1342dd0600840afa0d2e6be42a54, type: 3}
   m_PrefabInstance: {fileID: 5956415621049271345}
   m_PrefabAsset: {fileID: 0}

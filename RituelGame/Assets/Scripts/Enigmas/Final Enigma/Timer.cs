@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject timeScript;
     [SerializeField] private GameObject timeText;
     [SerializeField] private GameObject candle;
+    [SerializeField] private GameObject backButton;
     [SerializeField] private List<TextMeshProUGUI> texts;
     [SerializeField] private List<int> values;
     
@@ -89,5 +90,6 @@ public class Timer : MonoBehaviour
         timeScript.SetActive(false);
         timeText.SetActive(false);
         candle.SetActive(false);
+        backButton.SetActive(true);
     }
 }
