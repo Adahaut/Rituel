@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Pendulum : MonoBehaviour
@@ -15,18 +16,32 @@ public class Pendulum : MonoBehaviour
 
     private float rotationToApply = 15f;
     private float maxRotation = 14.5f;
+    private float delayToMoveHandClock = 0.5f;
+    private float currentBigClockRotation = 90;
+    private float currentSmallClockRotation = 90;
 
     private void Start()
     {
         ActivatePendulumRotation();
     }
-    
-    private void 
+
+    private IEnumerator MoveHandClock()
+    {
+        yield return new WaitForSeconds(delayToMoveHandClock);
+        Quaternion targetRotation = Quaternion.Euler(0, 0, currentBigClockRotation -= 360 / 60);
+        bigClockHand.rotation = targetRotation;
+        if ((int)bigClockHand.localEulerAngles.z == 90)
+        {
+            smallClockHand.rotation = Quaternion.Euler(0,0, currentSmallClockRotation -= 360/12);
+            audioManager.PlayOverlap("Pendulum");
+        }
+        audioManager.PlayOverlap("tickclock");
+    }
 
     private void ActivatePendulumRotation(bool left = false)
     {
         pendulumBalance.DORotateQuaternion(Quaternion.Euler(0, 0, left ? -rotationToApply : rotationToApply), 2f);
-        audioManager.PlayDelay("tickclock", 0.5f);
+        StartCoroutine(MoveHandClock());
     }
 
     private void Update()
