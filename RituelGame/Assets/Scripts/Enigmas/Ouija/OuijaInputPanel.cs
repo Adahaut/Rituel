@@ -57,7 +57,9 @@ public class OuijaInputPanel : MonoBehaviour
         newOuijaTransform.DOScale(inputCharScale, scaleDuration)
             .SetEase(scaleEase).onComplete += () =>
         {
-            newOuijaObj.gameObject.AddComponent<FollowTransform>().SetTarget(placeHolderObject.transform);
+            var followTransform = newOuijaObj.gameObject.AddComponent<FollowTransform>();
+            followTransform.SetTarget(placeHolderObject.transform);
+            followTransform.floatAmount = 0.05f;
             newOuijaObj._canvasGroup.SetCanvasGroupInteraction(true);
             /*newOuijaTransform.DOMove(placeHolderObject.transform.position, moveDuration).SetUpdate(true)
                 .SetEase(moveEase).onComplete += () =>
