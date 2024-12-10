@@ -101,27 +101,11 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
             
             //placing the windRose with the rotation of the maze
             GameObject windRose = Instantiate(mazeStruct._mazeWindRose, new Vector2(
-                    mazeStartPosition.transform.position.x + gridLenght * windScale.x - ReplaceMaze(mazeStruct._mazeRotation).x,
-                    mazeStartPosition.transform.position.y + gridLenght * windScale.y - ReplaceMaze(mazeStruct._mazeRotation).y),
+                    mazeStartPosition.transform.position.x + gridLenght * windScale.x,
+                    mazeStartPosition.transform.position.y + gridLenght * windScale.y),
                 Quaternion.identity,
                 mazeStartPosition.transform);
             windRose.transform.SetParent(pivotParent.transform);
         }
-    }
-
-    private Vector3 ReplaceMaze(float rotation) //after rotating, we replace the maze in his place.
-    {
-        return Vector2.zero;
-        switch (rotation)
-        {
-            case 90:
-                return Vector2.right * (gridLenght - 1);
-            case 180:
-                return new Vector2((gridLenght - 1), (gridLenght - 1));
-            case -90:
-                return Vector2.up * (gridLenght - 1);
-        }
-        
-        return Vector2.zero;
     }
 }
