@@ -3463,6 +3463,10 @@ PrefabInstance:
       propertyPath: _buttonToAccessEnigma
       value: 
       objectReference: {fileID: 100777895}
+    - target: {fileID: 4207866252938973541, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
+      propertyPath: m_text
+      value: translation
+      objectReference: {fileID: 0}
     - target: {fileID: 5449860787085544197, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_Name
       value: TraductionEnigmaSpirit
@@ -3584,7 +3588,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 958149132542232221, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
   m_PrefabInstance: {fileID: 1430379360}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1205853781 stripped
+--- !u!114 &1205853783 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7919976840736397606, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
   m_PrefabInstance: {fileID: 1430379360}
@@ -3593,6 +3597,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d6ca76461e530642806688dd6777738, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1214621016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7738924584437577377, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+  m_PrefabInstance: {fileID: 1969643942}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1214621018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8211494745671949805, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+  m_PrefabInstance: {fileID: 1969643942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214621016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7416e76422f88d41b31e3e29cdfb0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1220498523
@@ -4058,7 +4078,7 @@ PrefabInstance:
     - target: {fileID: 5790466761584659351, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1205853781}
+      objectReference: {fileID: 1205853783}
     - target: {fileID: 5790466761584659351, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Confirm
@@ -4074,7 +4094,7 @@ PrefabInstance:
     - target: {fileID: 7425240000268603540, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1205853781}
+      objectReference: {fileID: 1205853783}
     - target: {fileID: 7425240000268603540, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Cancel
@@ -4211,6 +4231,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5905188393116024002, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
   m_PrefabInstance: {fileID: 2000160018}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1585862895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5303406107082483565, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+  m_PrefabInstance: {fileID: 1969643942}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1593150236
 GameObject:
@@ -4447,6 +4472,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1649739041 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3608389494848516030, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 2000160018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1704111830
 GameObject:
   m_ObjectHideFlags: 0
@@ -5041,6 +5071,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpiritPianoCore
       objectReference: {fileID: 0}
+    - target: {fileID: 7092511678380246090, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
+      propertyPath: m_text
+      value: piano
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5170,6 +5204,78 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key&RelicSpiritEnigma
       objectReference: {fileID: 0}
+    - target: {fileID: 7256214331076104772, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256214331076104772, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1214621018}
+    - target: {fileID: 7256214331076104772, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Confirm
+      objectReference: {fileID: 0}
+    - target: {fileID: 7256214331076104772, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CheckCodes, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1214621016}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1585862895}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8041802433836653749, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8211494745671949805, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: _linkCore
+      value: 
+      objectReference: {fileID: 1623962172}
+    - target: {fileID: 8211494745671949805, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 1649739041}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

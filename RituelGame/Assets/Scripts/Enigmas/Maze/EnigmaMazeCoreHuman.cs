@@ -27,7 +27,6 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     public float _frameScale;
     [SerializeField] private int gridLenght = 12;
-    [SerializeField] private LinkCore linkCore;
     public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
 
@@ -132,8 +131,6 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     public void Win()
     {
-
-        _canvasParent.gameObject.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
 
         _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);

@@ -179,7 +179,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &4309495478417681209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,6 +337,11 @@ MonoBehaviour:
   - {fileID: 4050050505553185500}
   - {fileID: 309818605878492139}
   _symboleText: {fileID: 4935926938709213606}
+  linkCore: {fileID: 0}
+  enigmaData: {fileID: 0}
+  _buttonToAccessEnigma: {fileID: 0}
+  _codePanel: {fileID: 0}
+  _enigma: {fileID: 2175982222306116614}
 --- !u!1 &7351789987416106015
 GameObject:
   m_ObjectHideFlags: 0

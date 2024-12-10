@@ -40,7 +40,6 @@ public class EnigmaCryptexCore : MonoBehaviour
 
     public void Win()
     {
-        _canvasParent.gameObject.SetActive(false);
         _buttonToAccessEnigma.SetActive(false);
         linkCore.AddLink(_cryptexData.LinkToAddIfSuccess);
         _cryptexData.GetReward();

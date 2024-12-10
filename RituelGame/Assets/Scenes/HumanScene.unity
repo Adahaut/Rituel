@@ -179,9 +179,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _linkCore
+      value: 
+      objectReference: {fileID: 1168647790}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 1370073790}
     - target: {fileID: 4453366032320231239, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 5363120607134710096, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 552216924}
+    - target: {fileID: 5363120607134710096, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 5803427132455617054, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: m_Name
@@ -213,6 +229,11 @@ RectTransform:
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 7441918086883076699, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
   m_PrefabInstance: {fileID: 20058186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &225110884 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3574708049308889739, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &308935859 stripped
 MonoBehaviour:
@@ -388,6 +409,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1603416535448960026, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
   m_PrefabInstance: {fileID: 6004865555073932088}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &552216924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3605057013931967762, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+  m_PrefabInstance: {fileID: 20058186}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,6 +577,18 @@ PrefabInstance:
       propertyPath: _buttonToAccessEnigma
       value: 
       objectReference: {fileID: 6004865555073932089}
+    - target: {fileID: 2545667453648615898, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: m_text
+      value: key & relic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211018086623490286, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1124516544}
+    - target: {fileID: 6211018086623490286, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 8028732745144841119, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -715,6 +753,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TraductionEnigmaHuman
       objectReference: {fileID: 0}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _linkCore
+      value: 
+      objectReference: {fileID: 1168647790}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 225110884}
     - target: {fileID: 3568813180956829977, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -821,6 +867,11 @@ RectTransform:
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 3568813180956829977, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
   m_PrefabInstance: {fileID: 884827210}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1124516544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8293516299823737194, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+  m_PrefabInstance: {fileID: 755279160}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1168647786
 PrefabInstance:
@@ -994,6 +1045,11 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 286445364900114078, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
   m_PrefabInstance: {fileID: 1854227616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1370073790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2409040863310290482, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1419701595 stripped
 GameObject:
@@ -2615,10 +2671,26 @@ PrefabInstance:
       propertyPath: <_unlockButtonThisEnigma>k__BackingField
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 3954053376490732261, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: m_text
+      value: maze
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1183423680}
     - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1183423680}
+    - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
     - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: SetActive
@@ -2629,6 +2701,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: linkCore
+      value: 
+      objectReference: {fileID: 1168647790}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _linkCore
       value: 
       objectReference: {fileID: 1168647790}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}

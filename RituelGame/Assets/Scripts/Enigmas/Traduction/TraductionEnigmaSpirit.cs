@@ -28,8 +28,10 @@ public class TraductionEnigmaSpirit : MonoBehaviour
     private int wordCompletionIndex;
     private int posIndex = 0;
     private List<GameObject> buttonListe = new List<GameObject>();
-    public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
+
+    public GameObject _codePanel;
+    public GameObject _enigma;
 
     private void Start()
     {
@@ -101,10 +103,11 @@ public class TraductionEnigmaSpirit : MonoBehaviour
             button.GetComponent<Button>().interactable = false;
         }
         
-        enigmaCanvas.DOFade(0, canvasFadeDuration);
-        enigmaCanvas.interactable = false;
-        enigmaCanvas.blocksRaycasts = false;
-        _canvasParent.gameObject.SetActive(false);
+        // enigmaCanvas.DOFade(0, canvasFadeDuration);
+        // enigmaCanvas.interactable = false;
+        // enigmaCanvas.blocksRaycasts = false;
+        _codePanel.SetActive(true);
+        _enigma.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
     }
     
