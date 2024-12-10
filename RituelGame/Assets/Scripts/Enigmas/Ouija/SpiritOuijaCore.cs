@@ -33,6 +33,7 @@ namespace Enigmas.Ouija
             _codePanel.SetActive(true);
             _enigma.SetActive(false);
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+            _onEnigmaCompleted.Invoke();
         }
 
         protected override void OnBadAnswer()
