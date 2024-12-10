@@ -29,12 +29,12 @@ namespace Enigmas.Ouija
         {
             _codePanel.SetActive(true);
             _enigma.SetActive(false);
-            Debug.Log("good");
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
         }
 
         protected override void OnBadAnswer()
         {
-            Debug.Log("Bad");
+            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
         }
     }
 }

@@ -224,6 +224,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8415192083218318686, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
+      propertyPath: linkCore
+      value: 
+      objectReference: {fileID: 1623962172}
+    - target: {fileID: 8415192083218318686, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
+      propertyPath: _buttonImage
+      value: 
+      objectReference: {fileID: 376034823}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1600,6 +1608,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6188746182700107281, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 435498510}
+    - target: {fileID: 6188746182700107281, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 7.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6191088550689312956, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1623,6 +1639,10 @@ PrefabInstance:
     - target: {fileID: 6191088550689312956, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6228838603721253870, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+      propertyPath: m_text
+      value: ouija
       objectReference: {fileID: 0}
     - target: {fileID: 6266097513498931725, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2032,6 +2052,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7681482104277756405, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+      propertyPath: linkCore
+      value: 
+      objectReference: {fileID: 1623962172}
     - target: {fileID: 7806909408331591308, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2582,6 +2606,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 1430379362}
   canvasFadeDuration: 0.5
+--- !u!114 &376034823 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2469820094308115435, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 2000160018}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &379644833 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2992311742803169969, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
@@ -3147,6 +3182,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CryptexEnigmaSpirit
       objectReference: {fileID: 0}
+    - target: {fileID: 2221245867455821964, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: _linkCore
+      value: 
+      objectReference: {fileID: 1623962172}
+    - target: {fileID: 2221245867455821964, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: _cryptexButton
+      value: 
+      objectReference: {fileID: 545859142}
     - target: {fileID: 2308347013400585526, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3239,7 +3282,16 @@ PrefabInstance:
       propertyPath: _cryptexButton
       value: 
       objectReference: {fileID: 545859142}
-    m_RemovedComponents: []
+    - target: {fileID: 6765467703487143284, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: _linkCore
+      value: 
+      objectReference: {fileID: 1623962172}
+    - target: {fileID: 6765467703487143284, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 545859142}
+    m_RemovedComponents:
+    - {fileID: 6765467703487143284, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -3496,6 +3548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TraductionEnigmaSpirit
       objectReference: {fileID: 0}
+    - target: {fileID: 5449860787085544197, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7099310445221946199, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -3613,15 +3669,15 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 958149132542232221, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
   m_PrefabInstance: {fileID: 1430379360}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1205853783 stripped
+--- !u!114 &1205853785 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7919976840736397606, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
+  m_CorrespondingSourceObject: {fileID: 9173917132568705536, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
   m_PrefabInstance: {fileID: 1430379360}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205853779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d6ca76461e530642806688dd6777738, type: 3}
+  m_Script: {fileID: 11500000, guid: c7416e76422f88d41b31e3e29cdfb0b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1214621016 stripped
@@ -4103,14 +4159,14 @@ PrefabInstance:
     - target: {fileID: 5790466761584659351, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1205853783}
+      objectReference: {fileID: 1205853785}
     - target: {fileID: 5790466761584659351, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Confirm
       objectReference: {fileID: 0}
     - target: {fileID: 5790466761584659351, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazeCodeCheck, Assembly-CSharp
+      value: CheckCodes, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7202038194684546565, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_Name
@@ -4119,14 +4175,14 @@ PrefabInstance:
     - target: {fileID: 7425240000268603540, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1205853783}
+      objectReference: {fileID: 1205853779}
     - target: {fileID: 7425240000268603540, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Cancel
+      value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 7425240000268603540, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MazeCodeCheck, Assembly-CSharp
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 7704925885975564909, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: linkCore
@@ -4232,6 +4288,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9173917132568705536, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
+      propertyPath: _linkCore
+      value: 
+      objectReference: {fileID: 1623962172}
+    - target: {fileID: 9173917132568705536, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 1502939277}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4975,6 +5039,10 @@ PrefabInstance:
     - target: {fileID: 4072111715030143075, guid: 58787996b6d7fe04b8cd5249de0eeee1, type: 3}
       propertyPath: m_Name
       value: Pendulum
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072111715030143075, guid: 58787996b6d7fe04b8cd5249de0eeee1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6530845778537215803, guid: 58787996b6d7fe04b8cd5249de0eeee1, type: 3}
       propertyPath: m_LocalPosition.x
