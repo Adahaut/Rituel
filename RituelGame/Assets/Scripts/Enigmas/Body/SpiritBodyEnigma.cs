@@ -12,10 +12,12 @@ public class SpiritBodyEnigma : MonoBehaviour
     public SerializedDictionary<string, GameObject> _bodyData = new SerializedDictionary<string, GameObject>();
     public List<String> _lastName;
     public List<int> _ages;
-    public GameObject _bodyCanvas;
     public Image _buttonImage;
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
+
+    public GameObject _enigma;
+    public GameObject _codePanel;
     
     private void Start()
     {
@@ -38,8 +40,9 @@ public class SpiritBodyEnigma : MonoBehaviour
         if (_ages.Contains(int.Parse(answer)))
         {
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
-            _bodyCanvas.SetActive(false);
-            _buttonImage.color = Color.gray;
+            _enigma.SetActive(false);
+            _codePanel.SetActive(true);
+            _buttonImage.color = new Color(1f, 1f, 1f, 0.5f);
         }
         else
         {
