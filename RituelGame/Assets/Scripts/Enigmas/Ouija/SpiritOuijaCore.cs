@@ -18,6 +18,8 @@ namespace Enigmas.Ouija
         private void SpawnOuijaBoard()
         {
             OuijaBoard newOuijaBoard = Instantiate(ouijaBoardPrefab, ouijaBoardParent);
+            newOuijaBoard.SetOuijaCore(this);
+            newOuijaBoard.DrawCharacters(_ouijaData._correctFontAsset);
         }
 
         protected override void OnGoodAnswer()
