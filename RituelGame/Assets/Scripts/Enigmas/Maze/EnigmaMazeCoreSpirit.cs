@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class EnigmaMazeCoreSpirit : MonoBehaviour
 {
+    [SerializeField] private Canvas canvas;
+    
     public MazePattern _mazePatternScript;
 
     public List<MazeStruct> _mazeStructures = new();
@@ -28,12 +30,15 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
     {
         if (_mazeStructures.Count == _mazePatternScript._maxPaternNumber)
         {
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             DrawMaze();
+            canvas.renderMode = RenderMode.ScreenSpaceCamera;
         }
     }
 
     private void DrawMaze()
     {
+        
         for (int k = 0; k < _mazePatternScript._maxPaternNumber; k++)
         {
             MazeStruct mazeStruct = _mazeStructures[k]; //taking each structures in the list _mazeStructures
