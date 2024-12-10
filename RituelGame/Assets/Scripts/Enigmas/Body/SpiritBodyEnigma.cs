@@ -4,6 +4,7 @@ using System.Linq;
 using AYellowpaper.SerializedCollections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class SpiritBodyEnigma : MonoBehaviour
@@ -18,6 +19,8 @@ public class SpiritBodyEnigma : MonoBehaviour
 
     public GameObject _enigma;
     public GameObject _codePanel;
+
+    public UnityEvent _onEnigmaCompleted;
     
     private void Start()
     {
@@ -43,6 +46,7 @@ public class SpiritBodyEnigma : MonoBehaviour
             _enigma.SetActive(false);
             _codePanel.SetActive(true);
             _buttonImage.color = new Color(1f, 1f, 1f, 0.5f);
+            _onEnigmaCompleted.Invoke();
         }
         else
         {

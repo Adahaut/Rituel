@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Enigmas.Ouija
 {
@@ -9,6 +10,8 @@ namespace Enigmas.Ouija
 
         public GameObject _codePanel;
         public GameObject _enigma;
+
+        public UnityEvent _onEnigmaCompleted;
         
         private void Awake()
         {
@@ -30,6 +33,7 @@ namespace Enigmas.Ouija
             _codePanel.SetActive(true);
             _enigma.SetActive(false);
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+            _onEnigmaCompleted.Invoke();
         }
 
         protected override void OnBadAnswer()
