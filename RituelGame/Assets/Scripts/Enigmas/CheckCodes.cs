@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enigmas;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,6 +29,7 @@ public class CheckCodes : MonoBehaviour
             _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             _enigmaCanvas.SetActive(false);
+            _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
         }
         else
         {

@@ -9,6 +9,7 @@ namespace Enigmas.Ouija
 
         public GameObject _codePanel;
         public GameObject _enigma;
+        public GameObject _buttonToAccessEnigma;
         
         private void Awake()
         {
@@ -30,6 +31,7 @@ namespace Enigmas.Ouija
             _codePanel.SetActive(true);
             _enigma.SetActive(false);
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+            _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
         }
 
         protected override void OnBadAnswer()

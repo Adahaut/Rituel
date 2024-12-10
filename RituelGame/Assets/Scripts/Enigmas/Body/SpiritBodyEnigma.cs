@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AYellowpaper.SerializedCollections;
+using Enigmas;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,7 +13,7 @@ public class SpiritBodyEnigma : MonoBehaviour
     public SerializedDictionary<string, GameObject> _bodyData = new SerializedDictionary<string, GameObject>();
     public List<String> _lastName;
     public List<int> _ages;
-    public Image _buttonImage;
+    public GameObject _buttonToAccessEnigma;
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
 
@@ -42,7 +43,8 @@ public class SpiritBodyEnigma : MonoBehaviour
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             _enigma.SetActive(false);
             _codePanel.SetActive(true);
-            _buttonImage.color = new Color(1f, 1f, 1f, 0.5f);
+            _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+            _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
         }
         else
         {

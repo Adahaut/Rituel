@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using Enigmas;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -31,6 +32,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     public GameObject _buttonToAccessEnigma;
 
     private int[,] mazeGrid;
+    
 
     public void DrawIfFull()
     {
@@ -132,7 +134,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     public void Win()
     {
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
-
+        _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
         _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
         _enigmaData.GetReward();
         _maze.SetActive(false);

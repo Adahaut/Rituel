@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
 using DG.Tweening;
+using Enigmas;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -109,6 +110,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         _codePanel.SetActive(true);
         _enigma.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+        _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
     }
     
     private void ChooseAnswer(string word, GameObject button)

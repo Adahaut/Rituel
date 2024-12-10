@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,6 +9,8 @@ namespace Enigmas
     {
         [SerializeField] private CanvasGroup enigmaCanvas;
         [SerializeField] private float canvasFadeDuration = 0.5f;
+
+        public bool _enigmaFinish = false;
         
         public Action OnButtonClickedEvent;
         
