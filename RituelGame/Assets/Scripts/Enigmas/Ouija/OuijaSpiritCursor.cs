@@ -12,7 +12,7 @@ using UnityEngine.UI;
 public class OuijaSpiritCursor : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, 
     IDragHandler, IBeginDragHandler, IEndDragHandler
 {
-    private new Transform transform;
+    private new RectTransform transform;
     [SerializeField] private Transform startPositionTransform;
 
     [SerializeField] private Image cursorImage;
@@ -27,11 +27,16 @@ public class OuijaSpiritCursor : MonoBehaviour, IPointerDownHandler, IPointerUpH
 
     private void Awake()
     {
-        transform = GetComponent<Transform>();
+        transform = GetComponent<RectTransform>();
         transform.position = startPositionTransform.position;
         transform.localScale = Vector3.one * droppedScale;
     }
-    
+
+    private void Update()
+    {
+        transform.position = new Vector3(transform.position.x, transform.position.y, -2); //-2 idk why but it doesn't work without it
+    }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         transform.DOKill();
@@ -55,7 +60,8 @@ public class OuijaSpiritCursor : MonoBehaviour, IPointerDownHandler, IPointerUpH
     
     public void OnDrag(PointerEventData eventData)
     {
-        Vector2 mousePosition = GetMousePosition();
+        Vector3 mousePosition = GetMousePosition();
+        mousePosition.z = 0;
         transform.position = mousePosition;
     }
 
@@ -79,10 +85,11 @@ public class OuijaSpiritCursor : MonoBehaviour, IPointerDownHandler, IPointerUpH
         }
     }
 
-    private static Vector2 GetMousePosition()
+    private static Vector3 GetMousePosition()
     {
         Camera camera = Camera.main;
-        Vector2 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 mousePosition = camera.ScreenToWorldPoint(Input.mousePosition);
+        mousePosition.z = 0;
         return mousePosition;
     }
 }
