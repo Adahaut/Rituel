@@ -5,6 +5,7 @@ using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -32,6 +33,8 @@ public class TraductionEnigmaSpirit : MonoBehaviour
 
     public GameObject _codePanel;
     public GameObject _enigma;
+    
+    public UnityEvent _onEnigmaComplete;
 
     private void Start()
     {
@@ -109,6 +112,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         _codePanel.SetActive(true);
         _enigma.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+        _onEnigmaComplete.Invoke();
     }
     
     private void ChooseAnswer(string word, GameObject button)

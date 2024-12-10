@@ -21,10 +21,13 @@ namespace Enigmas
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            enigmaCanvas.DOFade(1, 0.5f);
-            enigmaCanvas.interactable = true;
-            enigmaCanvas.blocksRaycasts = true;
-            OnButtonClickedEvent?.Invoke();
+            if (_canBeClicked)
+            {
+                enigmaCanvas.DOFade(1, 0.5f);
+                enigmaCanvas.interactable = true;
+                enigmaCanvas.blocksRaycasts = true;
+                OnButtonClickedEvent?.Invoke();
+            }
         }
 
         public void ActivateEnigma()
