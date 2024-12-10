@@ -1,5 +1,7 @@
 using UnityEngine;
 using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
@@ -29,6 +31,17 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.PlayOneShot(s.source.clip, s.source.volume);
+    }
+
+    public void PlayDelay(string name,float delay)
+    {
+        StartCoroutine(PlayDelayCoroutine(delay, name));
+    }
+
+    private IEnumerator PlayDelayCoroutine(float delay, string name)
+    {
+        yield return new WaitForSeconds(delay);
+        PlayOverlap(name);
     }
 
     public void StopSound(string name)//pas utilisé

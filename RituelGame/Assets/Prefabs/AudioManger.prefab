@@ -94,3 +94,17 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: tickclock
+    clip: {fileID: 8300000, guid: 731aad90fc791254086220d9f6069697, type: 3}
+    volume: 0.645
+    pitch: 0.65
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Pendulum
+    clip: {fileID: 8300000, guid: 0f88015b8fc762d48a616550be9ca0b9, type: 3}
+    volume: 0.645
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
