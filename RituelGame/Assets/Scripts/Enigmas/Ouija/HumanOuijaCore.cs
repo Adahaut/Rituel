@@ -96,6 +96,11 @@ namespace Enigmas.Ouija
             }
             else
             {
+                if (!canZoom)
+                {
+                    return;
+                }
+                
                 isZoomed = true;
                 zoomedOuijaBoard = ouijaBoardClicked;
 
