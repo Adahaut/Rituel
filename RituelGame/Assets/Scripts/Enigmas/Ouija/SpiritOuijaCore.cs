@@ -6,6 +6,9 @@ namespace Enigmas.Ouija
     public class SpiritOuijaCore: OuijaCore
     {
         [SerializeField] private Transform ouijaBoardParent;
+
+        public GameObject _codePanel;
+        public GameObject _enigma;
         
         private void Awake()
         {
@@ -24,7 +27,8 @@ namespace Enigmas.Ouija
 
         protected override void OnGoodAnswer()
         {
-            
+            _codePanel.SetActive(true);
+            _enigma.SetActive(false);
         }
 
         protected override void OnBadAnswer()
