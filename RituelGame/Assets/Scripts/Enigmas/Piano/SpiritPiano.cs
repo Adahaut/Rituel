@@ -19,8 +19,9 @@ public class SpiritPiano : MonoBehaviour
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
 
-    public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
+    public GameObject _codePanel;
+    public GameObject _pianoObject;
     private void Start()
     {
         partition = partitionSO.partitionKeys;
@@ -49,8 +50,9 @@ public class SpiritPiano : MonoBehaviour
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             enigmaSolved = true;
             ResetEnigma();
-            _canvasParent.gameObject.SetActive(false);
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+            _pianoObject.SetActive(false);
+            _codePanel.SetActive(true);
             return;
         }
         else if (partition[index] != keys[index])
