@@ -20,7 +20,10 @@ public class CheckCodes : MonoBehaviour
 
     public void Confirm()
     {
-        if (String.Compare(_inputField.text.ToLower(), _answer.ToLower()) == 1)
+        string inputText = _inputField.text.ToLower();
+        inputText = inputText.Remove(inputText.Length - 1);
+        
+        if (inputText.Equals(_answer.ToLower())) 
         {
             _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
