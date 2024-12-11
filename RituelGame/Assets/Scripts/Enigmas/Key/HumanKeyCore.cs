@@ -28,6 +28,11 @@ namespace Enigmas.Key
             _turnableKey.OnKeyFullLoopEvent += OnKeyTurned;
         }
 
+        public void Initialize()
+        {
+            currentTurns.Clear();
+        }
+        
         public void SetEnigmaData(KeyEnigmaData enigmaData)
         {
             _keyEnigmaData = enigmaData;
