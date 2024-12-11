@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,27 @@ public class MainMenu : MonoBehaviour
     private GameObject lastCanvasOpen;
     private GameObject actualCanvas;
 
+    [SerializeField]
+    private GameObject light;
+    private Camera cam;
+    Vector3 mousePosition;
+
+    private void Start()
+    {
+        cam = Camera.main;
+    }
+
+    private void Update()
+    {
+        FollowCursorLight();
+    }
+
+    private void FollowCursorLight()
+    {
+        mousePosition = Input.mousePosition;
+        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
+        light.transform.position = new Vector3(mousePosition.x, mousePosition.y, 1);
+    }
     public void StartGame()
     {
         _startCanvas.SetActive(false);
