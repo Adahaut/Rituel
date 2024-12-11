@@ -8,6 +8,7 @@ public class RelicSpiritCore : MonoBehaviour
     [SerializeField] private CanvasGroup openedChest;
     [SerializeField] private float chestInteractionCooldown;
     private float chestCooldownTimer;
+    [SerializeField] private AudioManager audioManager;
 
     private void Update()
     {
@@ -26,6 +27,7 @@ public class RelicSpiritCore : MonoBehaviour
 
     public void OpenChest()
     {
+        audioManager.PlayOverlap("OpenChest");
         if (chestCooldownTimer > 0)
         {
             return;
@@ -37,6 +39,7 @@ public class RelicSpiritCore : MonoBehaviour
 
     public void CloseChest()
     {
+        audioManager.PlayOverlap("CloseChest");
         if (chestCooldownTimer > 0)
         {
             return;

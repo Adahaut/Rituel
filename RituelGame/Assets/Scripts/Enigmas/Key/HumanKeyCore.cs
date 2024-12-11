@@ -18,6 +18,9 @@ namespace Enigmas.Key
 
         private List<KeyTurnSide> currentTurns = new();
         
+        [SerializeField] private AudioManager audioManager;
+
+        
         private void Awake()
         {
             _turnableKey.OnKeyFullLoopEvent += OnKeyTurned;
@@ -31,6 +34,7 @@ namespace Enigmas.Key
         private void OnKeyTurned(KeyTurnSide side)
         {
             currentTurns.Add(side);
+            audioManager.PlaySound("KeyTwist");
             List<KeyTurnSide> sideTurnList = _keyEnigmaData._sideTurnList;
             if (currentTurns.Count > sideTurnList.Count)
             {

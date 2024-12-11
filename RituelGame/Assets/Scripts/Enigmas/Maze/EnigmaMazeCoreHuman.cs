@@ -36,6 +36,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     private Dictionary<Vector2Int, GameObject> mazeFrames = new();
     private Vector2Int pawnPos;
     
+    [SerializeField] private AudioManager audioManager;
+    
     public void DrawIfFull()
     {
         if (_mazeStructures.Count == _mazePattern._maxPaternNumber)
@@ -105,6 +107,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         {
             mazePawn.transform.position = new Vector2(clickedObject.transform.position.x, clickedObject.transform.position.y);
             pawnPos = mazeArrayPos;
+            audioManager.PlayOverlap("MazeMove");
         }
     }
 
