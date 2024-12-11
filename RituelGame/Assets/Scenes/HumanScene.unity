@@ -3153,7 +3153,7 @@ PrefabInstance:
     - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1183423680}
+      objectReference: {fileID: 2123735614}
     - target: {fileID: 6958643336532312622, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -3348,6 +3348,11 @@ CanvasGroup:
 --- !u!223 &2123735613 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 4081122194387047731, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+  m_PrefabInstance: {fileID: 2123735610}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2123735614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8081364191945328302, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
   m_PrefabInstance: {fileID: 2123735610}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &559769818522269504
