@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Enum;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Enigmas.Key
 {
@@ -20,6 +21,7 @@ namespace Enigmas.Key
         
         [SerializeField] private AudioManager audioManager;
 
+        public UnityEvent _onEnigmaFinished;
         
         private void Awake()
         {
@@ -56,7 +58,8 @@ namespace Enigmas.Key
 
         private void OnCorrectAnswer()
         {
-            linkCore.RemoveLink(enigmaData.LinkToAddIfSuccess);
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+            _onEnigmaFinished.Invoke();
             closedChest.SetCanvasGroupInteraction(false);
             openedChest.SetCanvasGroupInteraction(true);
             closedChest.DOFade(0, 0.5f);
