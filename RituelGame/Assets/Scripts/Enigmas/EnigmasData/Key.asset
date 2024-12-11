@@ -14,7 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Key
   description: 
+  enigmaHint:
+    _serializedList:
+    - Key: 0
+      Value: "L\u2019esprit indiquer le sens de rotation \xE0 l\u2019humain"
+    - Key: 1
+      Value: "L\u2019esprit indiquer le sens de rotation \xE0 l\u2019humain"
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 0

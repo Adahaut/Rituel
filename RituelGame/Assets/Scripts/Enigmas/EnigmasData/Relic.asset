@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Relic
   description: 
+  enigmaHint:
+    _serializedList:
+    - Key: 0
+      Value: "L\u2019esprit doit dire \xE0 l\u2019humain de d\xE9truire la relique
+        qui \xE0 le m\xEAme symbole que la relique de l\u2019humain"
+    - Key: 1
+      Value: "L\u2019esprit doit dire \xE0 l\u2019humain de d\xE9truire la relique
+        qui \xE0 le m\xEAme symbole que la relique de l\u2019humain"
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 0

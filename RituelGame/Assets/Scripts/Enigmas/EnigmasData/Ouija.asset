@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Ouija
   description: 
+  enigmaHint:
+    _serializedList:
+    - Key: 0
+      Value: "L\u2019humain doit donner \xE0 l'esprit le mot montr\xE9 par la planchette
+        de ouija "
+    - Key: 1
+      Value: "L\u2019humain doit donner \xE0 l'esprit le mot montr\xE9 par la planchette
+        de ouija "
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 0

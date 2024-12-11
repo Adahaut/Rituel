@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6103b12c82149354089e45d766e7e995, type: 3}
-  m_Name: Final
+  m_Name: Cryptex
   m_EditorClassIdentifier: 
-  enigmaName: Final
-  description: 
+  enigmaName: Cryptex
+  description: rotate the numbers to unlock the cryptex
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "Vous devez indiquer \xE0 votre \xE9quipier sur quel timing et quel
-        position il doit allumer les bougies"
+      Value: "L\u2019humain doit entrer les lettres qu\u2019il a en commun avec l\u2019esprit
+        pour chaque colonne."
     - Key: 1
-      Value: "Vous devez indiquer \xE0 votre \xE9quipier sur quel timing et quel
-        position il doit allumer les bougies"
-  reward: {fileID: 0}
+      Value: "L\u2019humain doit entrer les lettres qu\u2019il a en commun avec l\u2019esprit
+        pour chaque colonne."
+  reward: {fileID: 2600705361194805992, guid: 3cbd2a6794920e741ba748035e729841, type: 3}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
-  _enigmaTypeToUnlock: 0
+  _enigmaTypeToUnlock: 1
