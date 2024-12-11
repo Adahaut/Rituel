@@ -164,3 +164,17 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: CryptexUp
+    clip: {fileID: 8300000, guid: 089f0aa59fb83c8478a5802ca2223296, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: CryptexDown
+    clip: {fileID: 8300000, guid: a6e5a14f5a88be04ab37f7bd795552f5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}

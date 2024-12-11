@@ -3534,6 +3534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CryptexEnigmaSpirit
       objectReference: {fileID: 0}
+    - target: {fileID: 1373279979016730828, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: m_text
+      value: y
+      objectReference: {fileID: 0}
     - target: {fileID: 2221245867455821964, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
       propertyPath: _linkCore
       value: 
@@ -3634,6 +3638,10 @@ PrefabInstance:
       propertyPath: _cryptexButton
       value: 
       objectReference: {fileID: 545859142}
+    - target: {fileID: 6677268021930561603, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: m_text
+      value: t
+      objectReference: {fileID: 0}
     - target: {fileID: 6765467703487143284, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
       propertyPath: _linkCore
       value: 
