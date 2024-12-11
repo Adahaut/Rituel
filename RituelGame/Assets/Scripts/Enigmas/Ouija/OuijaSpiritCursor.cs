@@ -75,6 +75,19 @@ public class OuijaSpiritCursor : MonoBehaviour, IPointerDownHandler, IPointerUpH
         List<RaycastResult> raycastResults = new List<RaycastResult>();
         EventSystem.current.RaycastAll(eventData, raycastResults);
 
+        foreach (RaycastResult result in raycastResults.ToArray())
+        {
+            if (!result.gameObject.GetComponentInParent<OuijaCharacter>())
+            {
+                raycastResults.Remove(result);
+            }
+        }
+
+        if (raycastResults.Count <= 0)
+        {
+            return;
+        }
+        
         RaycastResult raycastResult = raycastResults[0];
         
         GameObject resultGameObject = raycastResult.gameObject;
