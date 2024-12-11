@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
 using DG.Tweening;
+using Enigmas;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -28,8 +30,12 @@ public class TraductionEnigmaSpirit : MonoBehaviour
     private int wordCompletionIndex;
     private int posIndex = 0;
     private List<GameObject> buttonListe = new List<GameObject>();
-    public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
+
+    public GameObject _codePanel;
+    public GameObject _enigma;
+    
+    public UnityEvent _onEnigmaComplete;
 
     private void Start()
     {
@@ -101,11 +107,16 @@ public class TraductionEnigmaSpirit : MonoBehaviour
             button.GetComponent<Button>().interactable = false;
         }
         
-        enigmaCanvas.DOFade(0, canvasFadeDuration);
-        enigmaCanvas.interactable = false;
-        enigmaCanvas.blocksRaycasts = false;
-        _canvasParent.gameObject.SetActive(false);
+        // enigmaCanvas.DOFade(0, canvasFadeDuration);
+        // enigmaCanvas.interactable = false;
+        // enigmaCanvas.blocksRaycasts = false;
+        _codePanel.SetActive(true);
+        _enigma.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+
+        _onEnigmaComplete.Invoke();
+
+        _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
     }
     
     private void ChooseAnswer(string word, GameObject button)
@@ -115,15 +126,14 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         
         if (string.Equals(wordLower, wordsActualLower))
         {
-            Debug.Log($"Correct: {word}");
             wordCompletionIndex++;
 
             button.GetComponent<Button>().interactable = false;
             
-            Vector3 wordPosition = GetWordPosition(wordCompletionIndex - 1);
-            Vector3 targetPosition = new Vector3(wordPosition.x, wordPosition.y - 50, 0);
+            Vector3 wordPosition = GetWordLocalPosition(wordCompletionIndex - 1);
+            Vector3 targetPosition = new Vector3(wordPosition.x, wordPosition.y - 25, 0);
             
-            button.transform.DOMove(new Vector3(targetPosition.x, 300, 0), 1f);
+            button.transform.DOLocalMove(new Vector3(targetPosition.x, targetPosition.y, 0), 1f);
 
             posIndex++;
             
@@ -138,22 +148,18 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         }
     }
     
-    private Vector3 GetWordPosition(int wordIndex)
+    private Vector3 GetWordLocalPosition(int wordIndex)
     {
         TMP_TextInfo textInfo = _phraseToTranslate.textInfo;
-        
+
         TMP_WordInfo wordInfo = textInfo.wordInfo[wordIndex];
 
-        Vector3 firstCharPosition = _phraseToTranslate.transform.TransformPoint(
-            textInfo.characterInfo[wordInfo.firstCharacterIndex].bottomLeft
-        );
+        Vector3 firstCharLocalPosition = textInfo.characterInfo[wordInfo.firstCharacterIndex].bottomLeft;
+        Vector3 lastCharLocalPosition = textInfo.characterInfo[wordInfo.lastCharacterIndex].topRight;
 
-        Vector3 lastCharPosition = _phraseToTranslate.transform.TransformPoint(
-            textInfo.characterInfo[wordInfo.lastCharacterIndex].topRight
-        );
+        Vector3 wordLocalPosition = (firstCharLocalPosition + lastCharLocalPosition) / 2f;
 
-        Vector3 wordPosition = (firstCharPosition + lastCharPosition) / 2f;
-
-        return wordPosition;
+        return wordLocalPosition;
     }
+
 }

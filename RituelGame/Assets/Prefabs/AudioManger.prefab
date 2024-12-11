@@ -94,3 +94,87 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
+  - name: tickclock
+    clip: {fileID: 8300000, guid: 731aad90fc791254086220d9f6069697, type: 3}
+    volume: 0.645
+    pitch: 0.65
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Pendulum
+    clip: {fileID: 8300000, guid: 0f88015b8fc762d48a616550be9ca0b9, type: 3}
+    volume: 0.645
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: BreakRelic
+    clip: {fileID: 8300000, guid: ac32a12a734452b44b883f6a7384fc2f, type: 3}
+    volume: 0.645
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: AddLink
+    clip: {fileID: 8300000, guid: 8c492105cea273141bcb2403c534b9c5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: LoseLink
+    clip: {fileID: 8300000, guid: 4b5f69cdd49029647b2534e3f5ee7389, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: KeyTwist
+    clip: {fileID: 8300000, guid: 5436b4d455b128643a82beee4e5eebae, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: MazeMove
+    clip: {fileID: 8300000, guid: 2e476091ee8e20c46b4e9e4daa7ba71b, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: OpenChest
+    clip: {fileID: 8300000, guid: 0211b8d61ddb4164da52be238085a8c6, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: CloseChest
+    clip: {fileID: 8300000, guid: 813603bf24b4d0a41b9a06e4c5ad96c7, type: 3}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: StartRitual
+    clip: {fileID: 8300000, guid: 543cda2e90dd12644bb71ea4b2d9f65e, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: CryptexUp
+    clip: {fileID: 8300000, guid: 089f0aa59fb83c8478a5802ca2223296, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: CryptexDown
+    clip: {fileID: 8300000, guid: a6e5a14f5a88be04ab37f7bd795552f5, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}

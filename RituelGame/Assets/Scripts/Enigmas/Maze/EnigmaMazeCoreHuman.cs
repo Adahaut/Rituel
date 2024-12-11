@@ -1,7 +1,14 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.CompilerServices;
+
+using Enigmas.Maze;
+
+using Enigmas;
+
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -27,17 +34,27 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     public float _frameScale;
     [SerializeField] private int gridLenght = 12;
-    [SerializeField] private LinkCore linkCore;
     public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
 
     private int[,] mazeGrid;
 
+    private Dictionary<Vector2Int, GameObject> mazeFrames = new();
+    private Vector2Int pawnPos;
+    
+    [SerializeField] private AudioManager audioManager;
+    
+    public UnityEvent _onEnigmaFinished;
+    
+
+
     public void DrawIfFull()
     {
         if (_mazeStructures.Count == _mazePattern._maxPaternNumber)
         {
+            _canvasParent.renderMode = RenderMode.ScreenSpaceOverlay;
             DrawMaze();
+            _canvasParent.renderMode = RenderMode.ScreenSpaceCamera;
         }
     }
 
@@ -48,6 +65,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
                 _mazeStructures[Random.Range(0, _mazeStructures.Count)]; //takes a random maze between four patterns
         mazeGrid = mazeStruct._mazePattern; //gives to "mazeGrid" the list of int in mazeStruct
 
+        mazeFrames.Clear();
         for (int i = 0; i < gridLenght; i++)
         {
             for (int j = 0; j < gridLenght; j++)
@@ -61,6 +79,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
                 GameObject mazeFrame = Instantiate(_mazeFramePrefab, mazeFramePos, Quaternion.identity,
                     _mazeFrameStartPosition);
                 mazeFrame.GetComponent<RectTransform>().sizeDelta = Vector2.one * _frameScale;
+                mazeFrame.GetComponent<MazeTile>().OnTileClickedEvent += MovePawn;
+                mazeFrames.Add(new Vector2Int(i, j), mazeFrame);
             }
         }
 
@@ -71,29 +91,40 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
         mazePawn = Instantiate(
             mazePawnPrefab,
-            (Vector2)mazeStruct._mazePawnBasePosition,
+            mazeFrames[mazeStruct._mazePawnBasePosition].transform.position,
             Quaternion.identity);
         mazePawn.transform.SetParent(transform);
+        pawnPos = mazeStruct._mazePawnBasePosition;
     }
 
-    public void MovePawn(GameObject mazeFrame)
+    public void MovePawn(GameObject clickedObject)
     {
-        int x = Mathf.RoundToInt((mazeFrame.transform.position.x - (Screen.width / 2 - gridLenght / 2 * _frameScale)) /
-                                 _frameScale);
-        int y = Mathf.RoundToInt((mazeFrame.transform.position.y - (Screen.height / 2 - gridLenght / 2 * _frameScale)) /
-                                 _frameScale);
-
-
-        if (CheckForPawnSurroundings(x, y, mazeFrame.transform))
+        List<GameObject> mazeFramesValues = mazeFrames.Values.ToList();
+        if (!mazeFramesValues.Contains(clickedObject))
         {
-            mazePawn.transform.position = new Vector2(mazeFrame.transform.position.x, mazeFrame.transform.position.y);
+            return;
+        }
+        int indexFrame = mazeFramesValues.IndexOf(clickedObject);
+        Vector2Int mazeArrayPos = mazeFrames.Keys.ToList()[indexFrame];
+        
+        int x = Mathf.RoundToInt((clickedObject.transform.position.x - (Screen.width / 2 - gridLenght / 2 * _frameScale)) /
+                                 _frameScale);
+        int y = Mathf.RoundToInt((clickedObject.transform.position.y - (Screen.height / 2 - gridLenght / 2 * _frameScale)) /
+                                 _frameScale);
+
+        
+        if (CheckForPawnSurroundings(mazeArrayPos.x, mazeArrayPos.y, clickedObject.transform))
+        {
+            mazePawn.transform.position = new Vector2(clickedObject.transform.position.x, clickedObject.transform.position.y);
+            pawnPos = mazeArrayPos;
+            audioManager.PlayOverlap("MazeMove");
         }
     }
 
     private bool CheckForPawnSurroundings(int x, int y, Transform mazeFrame)
     {
         Vector2 casePos = new Vector2(x, y);
-        if (Vector2.Distance(mazeFrame.position, mazePawn.transform.position) <= _frameScale)
+        if (Vector2.Distance(casePos, pawnPos) <= 1)
         {
             if (mazeGrid[x, y] == 0)
             {
@@ -122,7 +153,11 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
         Destroy(mazePawn);
         Destroy(windRose);
+        _canvasParent.renderMode = RenderMode.ScreenSpaceOverlay;
         DrawMaze();
+        _canvasParent.renderMode = RenderMode.ScreenSpaceCamera;
+
+        Lose();
     }
 
     private void Lose()
@@ -132,12 +167,11 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     public void Win()
     {
-
-        _canvasParent.gameObject.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
-
+        _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
         _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
         _enigmaData.GetReward();
+        _onEnigmaFinished.Invoke();
         _maze.SetActive(false);
         _code.SetActive(true);
     }

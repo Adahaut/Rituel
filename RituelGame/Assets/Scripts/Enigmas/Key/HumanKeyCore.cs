@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using DG.Tweening;
 using Enum;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Enigmas.Key
 {
@@ -18,6 +19,10 @@ namespace Enigmas.Key
 
         private List<KeyTurnSide> currentTurns = new();
         
+        [SerializeField] private AudioManager audioManager;
+
+        public UnityEvent _onEnigmaFinished;
+        
         private void Awake()
         {
             _turnableKey.OnKeyFullLoopEvent += OnKeyTurned;
@@ -31,6 +36,7 @@ namespace Enigmas.Key
         private void OnKeyTurned(KeyTurnSide side)
         {
             currentTurns.Add(side);
+            audioManager.PlaySound("KeyTwist");
             List<KeyTurnSide> sideTurnList = _keyEnigmaData._sideTurnList;
             if (currentTurns.Count > sideTurnList.Count)
             {
@@ -52,7 +58,8 @@ namespace Enigmas.Key
 
         private void OnCorrectAnswer()
         {
-            linkCore.RemoveLink(enigmaData.LinkToAddIfSuccess);
+            linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+            _onEnigmaFinished.Invoke();
             closedChest.SetCanvasGroupInteraction(false);
             openedChest.SetCanvasGroupInteraction(true);
             closedChest.DOFade(0, 0.5f);

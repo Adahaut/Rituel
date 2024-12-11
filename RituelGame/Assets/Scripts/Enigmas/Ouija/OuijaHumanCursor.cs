@@ -4,13 +4,14 @@ using UnityEngine;
 
 namespace Enigmas.Ouija
 {
-    public class OuijaCursor : MonoBehaviour
+    public class OuijaHumanCursor : MonoBehaviour
     {
         private RectTransform rectTransform;
-        private OuijaCore ouijaCore;
+        private HumanOuijaCore _humanOuijaCore;
         private OuijaData ouijaData;
         
         [field:SerializeField] public Transform _baseCursorPosition { get; private set; }
+        private OuijaBoard currentBoard;
         [field:SerializeField] public float _timeToNextPosition { get; private set; }
         [SerializeField] private Ease moveEase = Ease.InOutQuint;
         
@@ -22,19 +23,20 @@ namespace Enigmas.Ouija
             rectTransform.position = _baseCursorPosition.position;
         }
 
-        public void SetOuijaCore(OuijaCore newOuijaCore)
+        public void SetOuijaCore(HumanOuijaCore newHumanOuijaCore)
         {
-            ouijaCore = newOuijaCore;
-            ouijaData = ouijaCore._currentOuijaData;
+            _humanOuijaCore = newHumanOuijaCore;
+            ouijaData = _humanOuijaCore._ouijaData;
         }
 
-        public void TryStartMovement()
+        public void TryStartMovement(OuijaBoard ouijaBoard)
         {
             if (_currentCharIndex != -1)
             {
                 return;
             }
-            
+
+            currentBoard = ouijaBoard;
             StartMovement();
         }
 
@@ -42,6 +44,13 @@ namespace Enigmas.Ouija
         {
             _currentCharIndex = -1;
             MoveToNextPosition();
+        }
+
+        public void StopMovement()
+        {
+            transform.DOKill();
+            _currentCharIndex = -1;
+            rectTransform.DOMove(_baseCursorPosition.position, _timeToNextPosition).SetEase(moveEase);
         }
 
         private void MoveToNextPosition()
@@ -55,7 +64,7 @@ namespace Enigmas.Ouija
             }
 
             char currentChar = ouijaData._answerCharacters[_currentCharIndex];
-            OuijaCharacter currentCharacter = ouijaCore._ouijaBoard._characterObjects[currentChar];
+            OuijaCharacter currentCharacter = currentBoard._characterObjects[currentChar];
             rectTransform.DOMove(currentCharacter._rectTransform.position, _timeToNextPosition).
                 SetEase(moveEase).onComplete += OnMovementCompleted;
         }

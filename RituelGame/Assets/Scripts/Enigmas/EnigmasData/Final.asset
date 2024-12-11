@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Final
   description: 
+  enigmaHint:
+    _serializedList:
+    - Key: 0
+      Value: "Vous devez indiquer \xE0 votre \xE9quipier sur quel timing et quel
+        position il doit allumer les bougies"
+    - Key: 1
+      Value: "Vous devez indiquer \xE0 votre \xE9quipier sur quel timing et quel
+        position il doit allumer les bougies"
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 0

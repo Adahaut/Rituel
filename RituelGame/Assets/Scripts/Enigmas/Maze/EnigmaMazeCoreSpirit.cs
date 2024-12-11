@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class EnigmaMazeCoreSpirit : MonoBehaviour
 {
+    [SerializeField] private Canvas canvas;
+    
     public MazePattern _mazePatternScript;
 
     public List<MazeStruct> _mazeStructures = new();
@@ -28,12 +30,15 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
     {
         if (_mazeStructures.Count == _mazePatternScript._maxPaternNumber)
         {
+            canvas.renderMode = RenderMode.ScreenSpaceOverlay;
             DrawMaze();
+            canvas.renderMode = RenderMode.ScreenSpaceCamera;
         }
     }
 
     private void DrawMaze()
     {
+        
         for (int k = 0; k < _mazePatternScript._maxPaternNumber; k++)
         {
             MazeStruct mazeStruct = _mazeStructures[k]; //taking each structures in the list _mazeStructures
@@ -84,6 +89,9 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
                     if (mazeStruct._mazePattern[i, j] == 1) //Setting th color of the frame according to if it's a wall or not.
                     {
                         mazeFrame.GetComponent<Image>().color = Color.black;
+                    } else if (mazeStruct._mazePattern[i, j] == 3)
+                    {
+                        mazeFrame.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
@@ -101,27 +109,11 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
             
             //placing the windRose with the rotation of the maze
             GameObject windRose = Instantiate(mazeStruct._mazeWindRose, new Vector2(
-                    mazeStartPosition.transform.position.x + gridLenght * windScale.x - ReplaceMaze(mazeStruct._mazeRotation).x,
-                    mazeStartPosition.transform.position.y + gridLenght * windScale.y - ReplaceMaze(mazeStruct._mazeRotation).y),
+                    mazeStartPosition.transform.position.x + gridLenght * windScale.x,
+                    mazeStartPosition.transform.position.y + gridLenght * windScale.y),
                 Quaternion.identity,
                 mazeStartPosition.transform);
             windRose.transform.SetParent(pivotParent.transform);
         }
-    }
-
-    private Vector3 ReplaceMaze(float rotation) //after rotating, we replace the maze in his place.
-    {
-        return Vector2.zero;
-        switch (rotation)
-        {
-            case 90:
-                return Vector2.right * (gridLenght - 1);
-            case 180:
-                return new Vector2((gridLenght - 1), (gridLenght - 1));
-            case -90:
-                return Vector2.up * (gridLenght - 1);
-        }
-        
-        return Vector2.zero;
     }
 }

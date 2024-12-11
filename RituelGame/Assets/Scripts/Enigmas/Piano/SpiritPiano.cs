@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enigmas;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -19,8 +21,11 @@ public class SpiritPiano : MonoBehaviour
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
 
-    public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
+    public GameObject _codePanel;
+    public GameObject _pianoObject;
+
+    public UnityEvent _onEnigmaSolved;
     private void Start()
     {
         partition = partitionSO.partitionKeys;
@@ -49,8 +54,11 @@ public class SpiritPiano : MonoBehaviour
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             enigmaSolved = true;
             ResetEnigma();
-            _canvasParent.gameObject.SetActive(false);
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+            _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
+            _pianoObject.SetActive(false);
+            _codePanel.SetActive(true);
+            _onEnigmaSolved.Invoke();
             return;
         }
         else if (partition[index] != keys[index])

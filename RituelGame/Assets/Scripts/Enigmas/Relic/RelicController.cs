@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enigmas;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,8 +14,11 @@ public class RelicController : MonoBehaviour
     public TextMeshProUGUI _symboleText;
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
-    public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
+    public GameObject _codePanel;
+    public GameObject _enigma;
+    
+    [SerializeField] private AudioManager audioManager;
 
     private void Start()
     {
@@ -30,14 +34,17 @@ public class RelicController : MonoBehaviour
     public void CheckRelicSymbole(RelicItem relic)
     {
         Destroy(relic.gameObject);
+        audioManager.PlayOverlap("BreakRelic");
         if (relic._symbole != symbole)
         {
             linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
         }
         else
         {
-            _canvasParent.gameObject.SetActive(false);
+            _codePanel.SetActive(true);
+            _enigma.SetActive(false);
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+            _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
         }
     }

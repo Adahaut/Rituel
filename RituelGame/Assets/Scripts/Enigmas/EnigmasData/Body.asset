@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Body
   description: 
+  enigmaHint:
+    _serializedList:
+    - Key: 0
+      Value: "Vous devez donner \xE0 l\u2019esprit l'\xE2ge du cadavre avec le m\xEAme
+        nom de famille que celui de l\u2019humain. "
+    - Key: 1
+      Value: "Vous devez donner \xE0 l\u2019humain le pr\xE9nom du cadavre correspondant
+        \xE0 la description."
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 0

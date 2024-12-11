@@ -12,6 +12,8 @@ public class CryptexCircles : MonoBehaviour
     private int minList = 0;
     private int maxList = 11;
 
+    [SerializeField] private AudioManager audioManager;
+
     private void Start()
     {
         _cryptexDisplay.DisplayingText(_indexInValues);
@@ -19,6 +21,7 @@ public class CryptexCircles : MonoBehaviour
 
     public void IncrementValue()
     {
+        audioManager.PlayOverlap("CryptexUp");
         if (_indexInValues == maxList)
         {
             _indexInValues = minList;
@@ -30,6 +33,7 @@ public class CryptexCircles : MonoBehaviour
     
     public void DecrementValue()
     {
+        audioManager.PlayOverlap("CryptexDown");
         if (_indexInValues == minList)
         {
             _indexInValues = maxList;

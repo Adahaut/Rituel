@@ -76,8 +76,9 @@ namespace Enigmas.Key
                 mustReleaseToDrag = true;
                 return;
             }
-            
-            currentAngle += -dot * sensibility;
+
+            float distance = Vector2.Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
+            currentAngle += -dot * sensibility / distance;
             
             CheckReachedFullLoop();
             

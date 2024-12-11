@@ -1,132 +1,93 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using TMPro;
+using DG.Tweening;
+using Enigmas.Ouija;
 using UnityEngine;
-using UnityEngine.UI;
-using GameObject = UnityEngine.GameObject;
+using OuijaCharacter = Enigmas.Ouija.OuijaCharacter;
 
-namespace Enigmas.Ouija
+public class OuijaInputPanel : MonoBehaviour
 {
-    public class OuijaInputPanel : MonoBehaviour
+    [SerializeField] private SpiritOuijaCore spiritOuijaCore;
+    [SerializeField] private OuijaCharacter charInputPrefab;
+
+    [SerializeField] private OuijaSpiritCursor spiritCursor;
+    
+    [SerializeField] private Transform charInputParentLayout;
+    [SerializeField] private Transform charAnimationParent;
+    
+    [SerializeField] private float scaleDuration = 0.5f; 
+    [SerializeField] private float inputCharScale = 1.25f;
+    [SerializeField] private Ease scaleEase = Ease.InOutQuint;
+    
+    [SerializeField] private float moveDuration = 1;
+    [SerializeField] private Ease moveEase = Ease.OutQuint;
+
+    [SerializeField] private int maxInputCount = 7;
+    
+    private List<char> charList = new List<char>();
+
+    private bool isInAnimation = false;
+    
+    private void Awake()
     {
-        [SerializeField] private GameObject screenObjectPrefab;
-        [field:SerializeField] private Transform inputScreen;
-        [field:SerializeField] private Transform buttonHolder;
-        private OuijaCore ouijaCore;
-        private OuijaData ouijaData;
+        spiritCursor.OnOuijaCharacterSelectedEvent += OnOuijaCharacterSelected;
+    }
 
-        [field: SerializeField] private int maxCharInput = 5;
-        public List<char> _currentInput;
-        
-        private void Awake()
+    private void OnOuijaCharacterSelected(OuijaCharacter ouijaCharacter)
+    {
+        if (charInputParentLayout.childCount >= maxInputCount)
         {
-            CreateInputList();
-            ScreenSetup();
-            AttachButtonListener();
-        }
-
-        private void CreateInputList()
-        {
-            _currentInput = new List<char>(maxCharInput);
-        }
-
-        public void SetOuijaCore(OuijaCore newOuijaCore)
-        {
-            ouijaCore = newOuijaCore;
-            ouijaData = ouijaCore._currentOuijaData;
-            RefreshButtons();
-        }
-
-        private void OnOuijaButtonClicked(char humanChar)
-        {
-            if (_currentInput.Count >= maxCharInput)
-            {
-                return;
-            }
-            _currentInput.Add(humanChar);
-            RefreshScreen();
-        }
-
-        public void OnConfirmButtonClicked()
-        {
-            ouijaCore.OnConfirmAnswer(_currentInput);
-        }
-
-        public void OnEraseButtonClicked()
-        {
-            if (_currentInput.Count == 0)
-            {
-                return;
-            }
-            _currentInput.RemoveAt(_currentInput.Count - 1);
-            RefreshScreen();
+            return;
         }
         
-        private void RefreshButtons()
-        {
-            var ouijaChars = ouijaData._ouijaCharacters.Keys;
-            for (int i = 0; i < buttonHolder.childCount; i++)
-            {
-                OuijaButton ouijaButton = buttonHolder.GetChild(i).GetComponent<OuijaButton>();
-                if (!ouijaButton)
-                {
-                    continue;
-                }
-                char charAtIndexI = ouijaChars.ElementAt(i);
-                ouijaButton.SetOuijaSprite(charAtIndexI, ouijaData._fontAsset);
-            }
-        }
+        char ouijaChar = ouijaCharacter._textMeshPro.text[0];
+        charList.Add(ouijaChar);
         
-        private void RefreshScreen()
-        {
-            ResetScreen();
-            for (int i = 0; i < _currentInput.Count; i++)
-            {
-                Transform inputScreenObject = inputScreen.GetChild(i);
-                inputScreenObject.gameObject.SetActive(true);
-                
-                char humanChar = _currentInput[i];
-                Sprite spiritChar = ouijaData._ouijaCharacters[humanChar];
-                
-                inputScreenObject.GetComponent<TextMeshProUGUI>().text = humanChar.ToString();
-            }
-        }
+        GameObject placeHolderObject = new GameObject("layoutPlaceholder", typeof(RectTransform));
+        placeHolderObject.transform.SetParent(charInputParentLayout);
+        placeHolderObject.transform.localScale = Vector3.one * inputCharScale;
+        
+        OuijaCharacter newOuijaObj = Instantiate(charInputPrefab, charAnimationParent);
+        RectTransform newOuijaTransform = newOuijaObj._rectTransform;
+        newOuijaTransform.position = ouijaCharacter.transform.position;
+        newOuijaTransform.sizeDelta = ouijaCharacter._rectTransform.sizeDelta;
+        newOuijaTransform.localScale = ouijaCharacter.transform.localScale;
+        
+        newOuijaObj._textMeshPro.text = ouijaChar.ToString();
+        newOuijaObj._textMeshPro.fontSize = ouijaCharacter._textMeshPro.fontSize;
+        newOuijaObj._textMeshPro.font = ouijaCharacter._textMeshPro.font;
+        newOuijaObj._canvasGroup.SetCanvasGroupInteraction(false);
 
-        private void ResetScreen()
-        {
-            foreach (Transform child in inputScreen)
-            {
-                child.gameObject.SetActive(false);
-            }
-        }
-        
-        private void AttachButtonListener()
-        {
-            for (int i = 0; i < buttonHolder.childCount; i++)
-            {
-                OuijaButton ouijaButton = buttonHolder.GetChild(i).GetComponent<OuijaButton>();
-                if (!ouijaButton)
-                {
-                    continue;
-                }
+        isInAnimation = true;
 
-                ouijaButton.OnOuijaButtonClicked += OnOuijaButtonClicked;
-            }
-        }
-        
-        private void ScreenSetup()
+        newOuijaTransform.DOScale(inputCharScale, scaleDuration)
+            .SetEase(scaleEase).onComplete += () =>
         {
-            foreach (Transform child in inputScreen)
-            {
-                Destroy(child.gameObject);
-            }
+            FollowTransform followTransform = newOuijaObj.gameObject.AddComponent<FollowTransform>();
+            followTransform.SetTarget(placeHolderObject.transform);
+            followTransform.floatAmount = 0.05f;
+
+            OuijaCharacterButton newOuijaCharacterButton = newOuijaObj.gameObject.GetComponent<OuijaCharacterButton>();
+            newOuijaCharacterButton.Init(this);
             
-            for (int i = 0; i < maxCharInput; i++)
-            {
-                GameObject screenObject = Instantiate(screenObjectPrefab, inputScreen);
-                screenObject.SetActive(false);
-            }
-        }
+            newOuijaObj._canvasGroup.SetCanvasGroupInteraction(true);
+
+            isInAnimation = false;
+        };
+    }
+
+    public void RemoveChar(GameObject charObject)
+    {
+        char charToRemove = charObject.GetComponent<OuijaCharacter>()._textMeshPro.text[0];
+        int siblingIndex = charObject.transform.GetSiblingIndex();
+        charList.RemoveAt(siblingIndex);
+        Destroy(charInputParentLayout.GetChild(siblingIndex).gameObject);
+        Destroy(charObject);
+    }
+
+    public void ConfirmInput()
+    {
+        spiritOuijaCore.OnConfirmAnswer(charList.ToList());
     }
 }

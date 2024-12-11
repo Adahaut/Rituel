@@ -8,7 +8,7 @@ using Random = UnityEngine.Random;
 public struct MazeStruct
 {
     public int[,] _mazePattern;
-    public Vector2 _mazePawnBasePosition;
+    public Vector2Int _mazePawnBasePosition;
     public float _mazeRotation;
     public GameObject _mazeWindRose;
     public string _mazeLayer;
@@ -24,7 +24,7 @@ public class MazePattern : MonoBehaviour
     public int[,] firstMazePattern =
     {
         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1 },
-        { 1, 0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1 },
+        { 1, 3, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1 },
         { 1, 0, 0, 1, 0, 0, 0, 0, 1, 1, 0, 1 },
         { 1, 1, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1 },
         { 1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 1, 1 },
@@ -49,7 +49,7 @@ public class MazePattern : MonoBehaviour
         { 1, 1, 0, 0, 0, 0, 0, 1, 0, 0, 1, 1 },
         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1 },
         { 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 1 },
-        { 1, 0, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1 },
+        { 1, 3, 0, 0, 0, 1, 1, 0, 0, 0, 1, 1 },
         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
     };
     
@@ -65,14 +65,14 @@ public class MazePattern : MonoBehaviour
         { 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 },
         { 1, 0, 1, 0, 1, 1, 1, 0, 1, 1, 0, 1 },
         { 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1 },
-        { 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1 },
+        { 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 3, 1 },
         { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 }
     };
     
     public int[,] fourthMazePattern =
     {
         { 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
-        { 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1 },
+        { 1, 1, 0, 1, 1, 0, 0, 0, 1, 0, 3, 1 },
         { 1, 1, 0, 1, 0, 0, 1, 0, 1, 0, 0, 1 },
         { 1, 0, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1 },
         { 1, 0, 1, 1, 0, 1, 0, 1, 1, 0, 0, 1 },
@@ -105,13 +105,13 @@ public class MazePattern : MonoBehaviour
             frameScale = enigmaMazeCoreSpirit._frameScale;
         }
         
-        InitStructMaze(firstMazeStruct, firstMazePattern, new Vector2(Screen.width /2 - gridLenght / 2 * frameScale, Screen.height / 2- gridLenght / 2 * frameScale) + Vector2.one * frameScale, 0.0f, _mazeWindRoses[0], "Maze");
-        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2(Screen.width / 2 + gridLenght / 2 * frameScale, Screen.height / 2- gridLenght / 2 * frameScale) + new Vector2(-2f * frameScale, frameScale), -90f, _mazeWindRoses[1], "Maze");
-        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2(Screen.width / 2 + gridLenght / 2 * frameScale, Screen.height / 2 + gridLenght / 2 * frameScale) + -Vector2.one * 2 * frameScale, 180f, _mazeWindRoses[2], "Maze");
-        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2(Screen.width / 2 - gridLenght / 2 * frameScale, Screen.height / 2 + gridLenght / 2 * frameScale) + new Vector2(frameScale, -frameScale * 2), 90f, _mazeWindRoses[3], "Maze");
+        InitStructMaze(firstMazeStruct, firstMazePattern, new Vector2Int(1, 1), 0.0f, _mazeWindRoses[0], "Maze");
+        InitStructMaze(secondMazeStruct, secondMazePattern, new Vector2Int(10, 1), -90f, _mazeWindRoses[1], "Maze");
+        InitStructMaze(thirdMazeStruct, thirdMazePattern, new Vector2Int(10, 10), 180f, _mazeWindRoses[2], "Maze");
+        InitStructMaze(fourthMazeStruct, fourthMazePattern, new Vector2Int(1, 10), 90f, _mazeWindRoses[3], "Maze");
     }
 
-    private void InitStructMaze(MazeStruct mazeStruct, int[,] mazePattern, Vector2 mazePawnBasePosition, float mazeRotation, GameObject mazeWindRose, string mazeLayer)
+    private void InitStructMaze(MazeStruct mazeStruct, int[,] mazePattern, Vector2Int mazePawnBasePosition, float mazeRotation, GameObject mazeWindRose, string mazeLayer)
     {
         mazeStruct._mazePattern = mazePattern;
         mazeStruct._mazePawnBasePosition = mazePawnBasePosition;

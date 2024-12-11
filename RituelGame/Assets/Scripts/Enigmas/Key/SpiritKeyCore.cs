@@ -28,12 +28,12 @@ namespace Enigmas.Key
             List<KeyTurnSide> sideTurnList = _keyEnigmaData._sideTurnList;
             
             KeyTurnSide currentSide = sideTurnList[0];
-            int sideAmount = 1;
+            int sideAmount = 0;
             foreach (KeyTurnSide turnSide in sideTurnList)
             {
                 if (turnSide != currentSide)
                 {
-                    AddInfo(currentSide, sideAmount);
+                    AddInfo(currentSide, Mathf.Max(sideAmount, 1));
                     sideAmount = 1;
                     currentSide = turnSide;
                     continue;

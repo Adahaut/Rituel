@@ -9,15 +9,16 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject timeScript;
     [SerializeField] private GameObject timeText;
     [SerializeField] private GameObject candle;
+    [SerializeField] private GameObject backButton;
     [SerializeField] private List<TextMeshProUGUI> texts;
     [SerializeField] private List<int> values;
     
     
     public TextMeshProUGUI _timerText;
 
+    [SerializeField] private float maxTime; 
     [SerializeField] private float acceptanceInterval;
     
-    private float maxTime = 60.0f;
     public float _timer = 0;
 
     private int currentCandleNumber = 0;
@@ -60,6 +61,7 @@ public class Timer : MonoBehaviour
         {
             if (currentCandleNumber >= _finalCandleNumber)
             {
+                Win();
             }
             else
                 Loose();
@@ -72,10 +74,22 @@ public class Timer : MonoBehaviour
     {
         currentCandleNumber = 0;
         //perte de liaison
-        _timer = 0;
         startButton.SetActive(true);
+        Restart();
+    }
+
+    void Win()
+    {
+        //gain de liaison
+        Restart();
+    }
+
+    void Restart()
+    {
+        _timer = 0;
         timeScript.SetActive(false);
         timeText.SetActive(false);
         candle.SetActive(false);
+        backButton.SetActive(true);
     }
 }
