@@ -53,6 +53,8 @@ MonoBehaviour:
   _symboleInInspector: 1
   _sprite: {fileID: 21300000, guid: a8b2c604225aff744ae61dd2643acba5, type: 3}
   _relicController: {fileID: 2117225975504272101}
+  _hammerSprite: {fileID: 2800000, guid: c0a3231b6048c234c92e5e24f2190b49, type: 3}
+  _baseSprite: {fileID: 2800000, guid: 0abc38d5db82359449cc5e588c0889eb, type: 3}
 --- !u!222 &4236481040764742897
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -248,6 +250,8 @@ MonoBehaviour:
   _symboleInInspector: 0
   _sprite: {fileID: 21300000, guid: 3fa878f112c686349896fd78dcb868fd, type: 3}
   _relicController: {fileID: 2117225975504272101}
+  _hammerSprite: {fileID: 2800000, guid: c0a3231b6048c234c92e5e24f2190b49, type: 3}
+  _baseSprite: {fileID: 2800000, guid: 0abc38d5db82359449cc5e588c0889eb, type: 3}
 --- !u!114 &191453922065989567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,6 +463,8 @@ MonoBehaviour:
   _symboleInInspector: 2
   _sprite: {fileID: 21300000, guid: 2a10e4b98965a524f8374dfb8c6af93f, type: 3}
   _relicController: {fileID: 2117225975504272101}
+  _hammerSprite: {fileID: 2800000, guid: c0a3231b6048c234c92e5e24f2190b49, type: 3}
+  _baseSprite: {fileID: 2800000, guid: 0abc38d5db82359449cc5e588c0889eb, type: 3}
 --- !u!222 &2913323914476243151
 CanvasRenderer:
   m_ObjectHideFlags: 0

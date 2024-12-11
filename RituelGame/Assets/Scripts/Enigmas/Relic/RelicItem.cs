@@ -5,13 +5,15 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class RelicItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler
+public class RelicItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandler, IPointerExitHandler
 {
     public int _symboleInInspector;
     public int _symbole { get; private set;} 
     
     public Sprite _sprite;
     public RelicController _relicController;
+
+    public Texture2D _hammerSprite;
 
     private void Start()
     {
@@ -26,6 +28,11 @@ public class RelicItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("enter");
+        Cursor.SetCursor(_hammerSprite, Vector2.zero, CursorMode.ForceSoftware);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.ForceSoftware);
     }
 }
