@@ -7031,6 +7031,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Piano
       objectReference: {fileID: 0}
+    - target: {fileID: 2586867414015639262, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a8ab004f040a15c40b5dd002cccd639f, type: 3}
     - target: {fileID: 3273138364799154859, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
@@ -7164,8 +7168,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 435498510}
     - target: {fileID: 8409287419148028860, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409287419148028860, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409287419148028860, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.64246494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409287419148028860, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.64246494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409287419148028860, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.64246494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409287419148028860, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -487.7
+      value: -534
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
