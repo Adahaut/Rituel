@@ -8,6 +8,7 @@ using Enigmas;
 
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
 
@@ -42,6 +43,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     private Vector2Int pawnPos;
     
     [SerializeField] private AudioManager audioManager;
+    
+    public UnityEvent _onEnigmaFinished;
     
 
 
@@ -153,6 +156,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         _canvasParent.renderMode = RenderMode.ScreenSpaceOverlay;
         DrawMaze();
         _canvasParent.renderMode = RenderMode.ScreenSpaceCamera;
+
+        Lose();
     }
 
     private void Lose()
@@ -166,6 +171,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
         _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
         _enigmaData.GetReward();
+        _onEnigmaFinished.Invoke();
         _maze.SetActive(false);
         _code.SetActive(true);
     }
