@@ -1,6 +1,6 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Enigmas.Ouija
 {
@@ -40,6 +40,7 @@ namespace Enigmas.Ouija
 
             _onEnigmaCompleted.Invoke();
 
+            _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
 
         }
