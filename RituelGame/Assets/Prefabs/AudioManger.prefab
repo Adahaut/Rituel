@@ -117,14 +117,14 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: AddLink
     clip: {fileID: 8300000, guid: 8c492105cea273141bcb2403c534b9c5, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: LoseLink
     clip: {fileID: 8300000, guid: 4b5f69cdd49029647b2534e3f5ee7389, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: StartRitual
     clip: {fileID: 8300000, guid: 543cda2e90dd12644bb71ea4b2d9f65e, type: 3}
-    volume: 0.5
+    volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -176,5 +176,19 @@ MonoBehaviour:
     volume: 0.5
     pitch: 1
     loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: CracklingCandle
+    clip: {fileID: 8300000, guid: 07459d538e9677c4e87d80ed237bce8e, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: LightACandle
+    clip: {fileID: 8300000, guid: ea6e640e57fff61438fa61b3ecf47f95, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
     playOnAwake: 0
     source: {fileID: 0}

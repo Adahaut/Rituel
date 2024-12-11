@@ -45,8 +45,6 @@ namespace Enigmas
             {
                 _canBeClicked = true;
             }
-            
-            Debug.Log(_enigmaCounter);
         }
     }
 }

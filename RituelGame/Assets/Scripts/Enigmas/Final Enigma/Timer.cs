@@ -26,6 +26,7 @@ public class Timer : MonoBehaviour
 
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
+    [SerializeField] private AudioManager audioManager;
 
     private void Start()
     {
@@ -39,6 +40,7 @@ public class Timer : MonoBehaviour
     {
         if (Mathf.Abs(_timer-clickTime) <= acceptanceInterval)
         {
+            audioManager.PlayOverlap("LightACandle");
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             currentCandleNumber++;
         }
@@ -91,5 +93,6 @@ public class Timer : MonoBehaviour
         timeText.SetActive(false);
         candle.SetActive(false);
         backButton.SetActive(true);
+        audioManager.StopSound("CracklingCandle");
     }
 }

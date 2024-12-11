@@ -18,7 +18,6 @@ public class CursorChangedOnHover : MonoBehaviour, IPointerEnterHandler, IPointe
     {
         if (!eventData.pointerEnter.GetComponent<EnigmaButton>()._enigmaFinish)
         {
-            Debug.Log(cursorTexture);
             ActivateCursor();   
         }
     }
