@@ -22,7 +22,10 @@ public class CryptexCheckCodeScript : MonoBehaviour
 
     public void Confirm()
     {
-        if (String.Compare(_inputField.text.ToLower(), _answer.ToLower()) == 1)
+        string inputText = _inputField.text.ToLower();
+        inputText = inputText.Remove(inputText.Length - 1);
+        
+        if (inputText.Equals(_answer.ToLower()))
         {
             _linkCore.AddLink(_cryptexData.LinkToAddIfSuccess);
             _checkCode.SetActive(false);
