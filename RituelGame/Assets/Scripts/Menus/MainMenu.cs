@@ -30,7 +30,7 @@ public class MainMenu : MonoBehaviour
     {
         mousePosition = Input.mousePosition;
         mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        light.transform.position = new Vector3(mousePosition.x, mousePosition.y, 1);
+        light.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
     }
     public void StartGame()
     {
