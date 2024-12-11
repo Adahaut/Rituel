@@ -267,6 +267,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 376034823}
     - target: {fileID: 8415192083218318686, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 688860278}
+    - target: {fileID: 8415192083218318686, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
       propertyPath: _onEnigmaCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -2698,12 +2702,13 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!114 &376034823 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2469820094308115435, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
   m_PrefabInstance: {fileID: 2000160018}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 688860278}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -3089,6 +3094,7 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!223 &542546401 stripped
 Canvas:
   m_CorrespondingSourceObject: {fileID: 6188746182700107281, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
@@ -3262,6 +3268,12 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
+--- !u!1 &688860278 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5739113287111686078, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 2000160018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &843754898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3634,6 +3646,7 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!1001 &1042661823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3993,6 +4006,7 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!1 &1226271784
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,6 +4154,7 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!1001 &1358784947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4493,7 +4508,7 @@ PrefabInstance:
     - target: {fileID: 9173917132568705536, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 100777897}
+      objectReference: {fileID: 128498496}
     - target: {fileID: 9173917132568705536, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -4708,6 +4723,7 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!114 &1623962172 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
@@ -4950,6 +4966,7 @@ MonoBehaviour:
   canvasFadeDuration: 0.5
   _enigmaNumber: 0
   _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!1001 &1704501180
 PrefabInstance:
   m_ObjectHideFlags: 0

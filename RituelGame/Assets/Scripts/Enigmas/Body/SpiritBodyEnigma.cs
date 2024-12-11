@@ -47,7 +47,7 @@ public class SpiritBodyEnigma : MonoBehaviour
             _enigma.SetActive(false);
             _codePanel.SetActive(true);
 
-            _buttonImage.color = new Color(1f, 1f, 1f, 0.5f);
+            _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             _onEnigmaCompleted.Invoke();
 
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
