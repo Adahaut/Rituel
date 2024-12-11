@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enigmas;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -54,6 +55,7 @@ public class SpiritPiano : MonoBehaviour
             enigmaSolved = true;
             ResetEnigma();
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+            _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
             _pianoObject.SetActive(false);
             _codePanel.SetActive(true);
             _onEnigmaSolved.Invoke();

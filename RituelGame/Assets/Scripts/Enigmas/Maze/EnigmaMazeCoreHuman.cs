@@ -1,7 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+
 using Enigmas.Maze;
+
+using Enigmas;
+
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -33,11 +37,14 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     public GameObject _buttonToAccessEnigma;
 
     private int[,] mazeGrid;
+
     private Dictionary<Vector2Int, GameObject> mazeFrames = new();
     private Vector2Int pawnPos;
     
     [SerializeField] private AudioManager audioManager;
     
+
+
     public void DrawIfFull()
     {
         if (_mazeStructures.Count == _mazePattern._maxPaternNumber)
@@ -156,7 +163,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
     public void Win()
     {
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
-
+        _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
         _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
         _enigmaData.GetReward();
         _maze.SetActive(false);

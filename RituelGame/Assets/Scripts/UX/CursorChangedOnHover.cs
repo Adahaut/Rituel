@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enigmas;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -15,8 +16,11 @@ public class CursorChangedOnHover : MonoBehaviour, IPointerEnterHandler, IPointe
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log(cursorTexture);
-        ActivateCursor();
+        if (!eventData.pointerEnter.GetComponent<EnigmaButton>()._enigmaFinish)
+        {
+            Debug.Log(cursorTexture);
+            ActivateCursor();   
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)

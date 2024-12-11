@@ -8,6 +8,7 @@ public class TraductionEnigmasHuman : MonoBehaviour, AllInterafce.IEnigmaCore
     public GameObject _latinParent;
     public GameObject _englishParent;
     public SerializedDictionary<string, string> _wordEnglishToLatin;
+    public GameObject _buttonToAccessEnigma;
 
     private void Start()
     {
