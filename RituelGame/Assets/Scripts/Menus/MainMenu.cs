@@ -13,12 +13,14 @@ public class MainMenu : MonoBehaviour
 
     [SerializeField]
     private GameObject light;
+
     private Camera cam;
-    Vector3 mousePosition;
 
     private void Start()
     {
         cam = Camera.main;
+        Texture2D candleCursor = Resources.Load<Texture2D>("CandleCursor");
+        Cursor.SetCursor(candleCursor, Vector2.zero, CursorMode.Auto);
     }
 
     private void Update()
@@ -28,9 +30,11 @@ public class MainMenu : MonoBehaviour
 
     private void FollowCursorLight()
     {
-        mousePosition = Input.mousePosition;
-        mousePosition = cam.ScreenToWorldPoint(Input.mousePosition);
-        light.transform.position = new Vector3(mousePosition.x, mousePosition.y, 0);
+        Vector3 mousePos = Input.mousePosition; 
+        mousePos.z = 10f;
+        Vector3 worldPos = cam.ScreenToWorldPoint(mousePos);
+        worldPos.z = 0;
+        light.transform.position = worldPos;
     }
     public void StartGame()
     {
