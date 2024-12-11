@@ -15,7 +15,13 @@ MonoBehaviour:
   enigmaName: Maze
   description: 
   enigmaHint:
-    _serializedList: []
+    _serializedList:
+    - Key: 0
+      Value: "L\u2019esprit doit diriger le joueur avec les directions nord, est,
+        ouest et sud par rapport \xE0 son point de d\xE9part"
+    - Key: 1
+      Value: "L\u2019esprit doit diriger le joueur avec les directions nord, est,
+        ouest et sud par rapport \xE0 son point de d\xE9part"
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10

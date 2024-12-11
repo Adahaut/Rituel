@@ -14,7 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaName: Piano
   description: 
+  enigmaHint:
+    _serializedList:
+    - Key: 0
+      Value: "L\u2019humain doit d\xE9crire la m\xE9lodie qu\u2019il entend \xE0
+        l\u2019esprit."
+    - Key: 1
+      Value: "L\u2019humain doit d\xE9crire la m\xE9lodie qu\u2019il entend \xE0
+        l\u2019esprit."
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
   linkToRemoveIfFail: 10
+  _enigmaTypeToUnlock: 0

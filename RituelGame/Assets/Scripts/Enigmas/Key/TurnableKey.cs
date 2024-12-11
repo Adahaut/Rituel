@@ -78,7 +78,6 @@ namespace Enigmas.Key
             }
 
             float distance = Vector2.Distance(Camera.main.ScreenToWorldPoint(Input.mousePosition), transform.position);
-            Debug.Log(distance);
             currentAngle += -dot * sensibility / distance;
             
             CheckReachedFullLoop();
