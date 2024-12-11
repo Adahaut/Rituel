@@ -4,6 +4,7 @@ using System.Linq;
 using AYellowpaper.SerializedCollections;
 using Enigmas;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -17,6 +18,10 @@ public class SpiritBodyEnigma : MonoBehaviour
     public GameObject _buttonToAccessEnigma;
     [SerializeField] private LinkCore linkCore;
     [SerializeField] private EnigmaData enigmaData;
+    private GameObject child;
+    private int corpseIndex;
+    private int maxIndex = 9;
+    private int minIndex = 0;
 
     public GameObject _enigma;
     public GameObject _codePanel;
@@ -32,7 +37,7 @@ public class SpiritBodyEnigma : MonoBehaviour
     {
         for (int i = 0; i < _bodyData.Count; i++)
         {
-            GameObject child = Instantiate(_bodyData.ElementAt(i).Value, AllBodyParent.transform, true);
+            child = Instantiate(_bodyData.ElementAt(i).Value, AllBodyParent.transform);
             child.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
             child.transform.GetComponentInChildren<TextMeshProUGUI>().text = _bodyData.ElementAt(i).Key;
             child.transform.GetComponentInChildren<TextMeshProUGUI>().text += " " + _lastName[i];
