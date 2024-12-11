@@ -2921,10 +2921,26 @@ PrefabInstance:
       propertyPath: m_text
       value: cryptex
       objectReference: {fileID: 0}
+    - target: {fileID: 1114581543517595464, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 842596377}
+    - target: {fileID: 2820663399105249246, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 842596377}
     - target: {fileID: 3677711441532894091, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_Alpha
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3954252401810025552, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 842596377}
+    - target: {fileID: 6757546086414997573, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 842596377}
     - target: {fileID: 6937879631279227479, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_Name
       value: CryptexEnigmaHuman
@@ -2945,6 +2961,10 @@ PrefabInstance:
       propertyPath: m_PlaneDistance
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7438638137731542326, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 842596377}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptex
       value: 
