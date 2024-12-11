@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,31 @@ public class MainMenu : MonoBehaviour
     private GameObject lastCanvasOpen;
     private GameObject actualCanvas;
 
+    [SerializeField]
+    private GameObject light;
+
+    private Camera cam;
+
+    private void Start()
+    {
+        cam = Camera.main;
+        Texture2D candleCursor = Resources.Load<Texture2D>("CandleCursor");
+        Cursor.SetCursor(candleCursor, Vector2.zero, CursorMode.Auto);
+    }
+
+    private void Update()
+    {
+        FollowCursorLight();
+    }
+
+    private void FollowCursorLight()
+    {
+        Vector3 mousePos = Input.mousePosition; 
+        mousePos.z = 10f;
+        Vector3 worldPos = cam.ScreenToWorldPoint(mousePos);
+        worldPos.z = 0;
+        light.transform.position = worldPos;
+    }
     public void StartGame()
     {
         _startCanvas.SetActive(false);
