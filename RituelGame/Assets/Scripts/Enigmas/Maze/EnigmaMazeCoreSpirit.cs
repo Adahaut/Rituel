@@ -89,6 +89,9 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
                     if (mazeStruct._mazePattern[i, j] == 1) //Setting th color of the frame according to if it's a wall or not.
                     {
                         mazeFrame.GetComponent<Image>().color = Color.black;
+                    } else if (mazeStruct._mazePattern[i, j] == 3)
+                    {
+                        mazeFrame.GetComponent<Image>().color = Color.green;
                     }
                 }
             }
