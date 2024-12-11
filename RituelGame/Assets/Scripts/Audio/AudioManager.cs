@@ -66,6 +66,12 @@ public class AudioManager : MonoBehaviour
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.pitch = pitch;
     }
+    
+    public void ChangeVolume(string name, float volume)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        s.source.volume = volume;
+    }
 
     //placer dans nimporte quel scrypt avec le bon nom dans les "" pour jouer un son
     //FindObjectOfType<AudioManager>().X("");
