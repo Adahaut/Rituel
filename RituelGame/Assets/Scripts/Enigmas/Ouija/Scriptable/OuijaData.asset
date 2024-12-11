@@ -15,5 +15,5 @@ MonoBehaviour:
   <_correctFontAsset>k__BackingField: {fileID: 11400000, guid: 452c1555270e0914d8e5a8e9c712ec18, type: 2}
   <_falseFontAssets>k__BackingField:
   - {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  <_answerCharacters>k__BackingField: 43004f00550043004f005500
+  <_answerCharacters>k__BackingField: 53004100560045004d004500
   <_charsToDisplay>k__BackingField: 4100420043004400450046004700480049004a004b004c004d004e004f0050005100520053005400550056005700580059005a00

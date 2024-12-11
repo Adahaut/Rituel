@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4436915845284301786}
   - component: {fileID: 5824049656516551103}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -455.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6461887164747449432
@@ -91,6 +91,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 6
+  _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!114 &5824049656516551103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +120,7 @@ GameObject:
   - component: {fileID: 568067370624701019}
   - component: {fileID: 1980547437546719438}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Cryptex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -194,6 +197,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 0
+  _canBeClicked: 1
+  _enigmaFinish: 0
 --- !u!114 &1980547437546719438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,7 +296,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &8169631590368275268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +328,7 @@ GameObject:
   - component: {fileID: 4719099986760319525}
   - component: {fileID: 4778585221116422980}
   m_Layer: 5
-  m_Name: Image (5)
+  m_Name: Piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -399,6 +405,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 0
+  _canBeClicked: 1
+  _enigmaFinish: 0
 --- !u!114 &4778585221116422980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -425,7 +434,7 @@ GameObject:
   - component: {fileID: 2159827851434135009}
   - component: {fileID: 3503207262803612820}
   m_Layer: 5
-  m_Name: Image (2)
+  m_Name: Translation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -502,6 +511,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 0
+  _canBeClicked: 0
+  _enigmaFinish: 0
 --- !u!114 &3503207262803612820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -528,7 +540,7 @@ GameObject:
   - component: {fileID: 1295782039012310884}
   - component: {fileID: 2044881804803666089}
   m_Layer: 5
-  m_Name: Image (3)
+  m_Name: Relic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,14 +555,14 @@ RectTransform:
   m_GameObject: {fileID: 3608389494848516030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7187242813370081210}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 488.9, y: 160.6}
+  m_AnchoredPosition: {x: 355, y: 41}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6707385032835215525
@@ -574,14 +586,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.9690397, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 29b51a6a2dca49e4e8319364d044a3f5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -605,6 +617,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 0
+  _canBeClicked: 1
+  _enigmaFinish: 0
 --- !u!114 &2044881804803666089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,7 +646,7 @@ GameObject:
   - component: {fileID: 1285558539352541738}
   - component: {fileID: 89448546173361740}
   m_Layer: 5
-  m_Name: Image (6)
+  m_Name: Ouija
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -708,6 +723,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 0
+  _canBeClicked: 1
+  _enigmaFinish: 0
 --- !u!114 &89448546173361740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -817,7 +835,7 @@ GameObject:
   - component: {fileID: 272111802556717525}
   - component: {fileID: 1268532313743889208}
   m_Layer: 5
-  m_Name: Image (4)
+  m_Name: Corps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -894,6 +912,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 0
+  _canBeClicked: 1
+  _enigmaFinish: 0
 --- !u!114 &1268532313743889208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,7 +941,7 @@ GameObject:
   - component: {fileID: 3273138364799154859}
   - component: {fileID: 2709351797484284596}
   m_Layer: 5
-  m_Name: Image (7)
+  m_Name: Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -997,6 +1018,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _enigmaNumber: 0
+  _canBeClicked: 1
+  _enigmaFinish: 0
 --- !u!114 &2709351797484284596
 MonoBehaviour:
   m_ObjectHideFlags: 0
