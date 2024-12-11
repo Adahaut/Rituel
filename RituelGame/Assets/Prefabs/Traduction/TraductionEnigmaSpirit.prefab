@@ -570,12 +570,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _wordEnglishToLatin:
     _serializedList:
-    - Key: Potato
-      Value: Annuum
+    - Key: Corpse
+      Value: cadaver
+    - Key: There
+      Value: ibi
     - Key: Hello
-      Value: Salve
-    - Key: Goodbye
-      Value: Vale
+      Value: salve
+    - Key: Injury
+      Value: injuria
+    - Key: Blossom
+      Value: florere
+    - Key: Spirit
+      Value: spiritus
+    - Key: Boolean
+      Value: boolean
+    - Key: Invocation
+      Value: invocatio
+    - Key: Alright
+      Value: licuit
+    - Key: Bubble
+      Value: bulla
+    - Key: GoodBye
+      Value: vale
+    - Key: Potato
+      Value: annuum
   _phrases:
   - Hello potato goodbye
   _phraseToTranslate: {fileID: 5371662169042729545}
@@ -586,6 +604,9 @@ MonoBehaviour:
   _buttonToAccessEnigma: {fileID: 0}
   _codePanel: {fileID: 7153582803462482558}
   _enigma: {fileID: 6812972658822901633}
+  _onEnigmaComplete:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3099419949574344426
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +1039,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -162.08081, y: 120.23508}
+  m_AnchoredPosition: {x: -162.08081, y: 17}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8389884872259077908

@@ -58,6 +58,13 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         {
             if (!string.IsNullOrWhiteSpace(word.Key))
             {
+                if (index == _wordEnglishToLatin.Count / 2)
+                {
+                    _topLeftFirstButtonPos.y -= 150f;
+                    index -= _wordEnglishToLatin.Count / 2;
+                }
+                    
+                
                 GameObject obj = new GameObject(word.Key);
                 obj.transform.SetParent(wordsParent.transform);
 
@@ -76,7 +83,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
 
                 button.onClick.AddListener(() => ChooseAnswer(word.Key, obj));
 
-                obj.transform.localPosition = new Vector3(_topLeftFirstButtonPos.x + (150 * index), _topLeftFirstButtonPos.y, -0f);
+                obj.transform.localPosition = new Vector3(_topLeftFirstButtonPos.x + 350 + (150 * index), _topLeftFirstButtonPos.y, -0f);
                 obj.transform.localScale = Vector3.one;
                 
                 buttonListe.Add(obj);
@@ -131,7 +138,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
             button.GetComponent<Button>().interactable = false;
             
             Vector3 wordPosition = GetWordLocalPosition(wordCompletionIndex - 1);
-            Vector3 targetPosition = new Vector3(wordPosition.x, wordPosition.y - 25, 0);
+            Vector3 targetPosition = new Vector3(wordPosition.x, wordPosition.y + 100, 0);
             
             button.transform.DOLocalMove(new Vector3(targetPosition.x, targetPosition.y, 0), 1f);
 

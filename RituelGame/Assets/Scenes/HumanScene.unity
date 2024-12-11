@@ -1360,6 +1360,46 @@ PrefabInstance:
       propertyPath: m_PlaneDistance
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[2].Key
+      value: Hello
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[1].Value
+      value: SalvelycopersiciSusceptibility
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[2].Value
+      value: Salve
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[3].Value
+      value: injuria
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[4].Value
+      value: florere
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[5].Value
+      value: spiritus
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[6].Value
+      value: pentagram
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[7].Value
+      value: invocatio
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[10].Value
+      value: vale
+      objectReference: {fileID: 0}
+    - target: {fileID: 2001699633124048538, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _wordEnglishToLatin._serializedList.Array.data[11].Value
+      value: annuum
+      objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _linkCore
       value: 
@@ -4732,6 +4772,10 @@ PrefabInstance:
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 884827212}
+    - target: {fileID: 2159827851434135009, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _canBeClicked
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2222749282516921839, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Name
       value: BackGround/Object Canvas HUMAN
