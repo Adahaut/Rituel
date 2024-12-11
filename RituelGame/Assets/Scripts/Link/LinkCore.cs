@@ -8,6 +8,7 @@ public class LinkCore : MonoBehaviour
     public float linkCount { get; private set;}
     public float _maxLinkCount;
     private LinkAnimation linkAnimation;
+    [SerializeField] private AudioManager audioManager;
 
     private void Start()
     {
@@ -19,6 +20,7 @@ public class LinkCore : MonoBehaviour
     public void AddLink(int linkToAdd)
     {
         linkCount += linkToAdd;
+        audioManager.PlaySound("AddLink");
         if (linkCount >= _maxLinkCount)
         {
             linkCount = _maxLinkCount;
@@ -29,6 +31,7 @@ public class LinkCore : MonoBehaviour
     public void RemoveLink(int LinkToRemove)
     {
         linkCount -= LinkToRemove;
+        audioManager.PlaySound("LoseLink");
         if (linkCount <= 0)
         {
             linkCount = 0;

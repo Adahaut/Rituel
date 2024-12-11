@@ -16,6 +16,8 @@ public class RelicController : MonoBehaviour
     public GameObject _buttonToAccessEnigma;
     public GameObject _codePanel;
     public GameObject _enigma;
+    
+    [SerializeField] private AudioManager audioManager;
 
     private void Start()
     {
@@ -31,6 +33,7 @@ public class RelicController : MonoBehaviour
     public void CheckRelicSymbole(RelicItem relic)
     {
         Destroy(relic.gameObject);
+        audioManager.PlayOverlap("BreakRelic");
         if (relic._symbole != symbole)
         {
             linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
