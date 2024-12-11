@@ -2123,6 +2123,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1623962172}
     - target: {fileID: 7681482104277756405, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
+      propertyPath: _buttonToAccessEnigma
+      value: 
+      objectReference: {fileID: 955345425}
+    - target: {fileID: 7681482104277756405, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: _onEnigmaCompleted.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
