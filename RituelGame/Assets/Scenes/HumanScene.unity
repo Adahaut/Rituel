@@ -4813,7 +4813,7 @@ PrefabInstance:
       objectReference: {fileID: 1429113930}
     - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: _canBeClicked
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4719099986760319525, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
