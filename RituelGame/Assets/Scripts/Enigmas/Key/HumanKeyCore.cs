@@ -41,7 +41,7 @@ namespace Enigmas.Key
         private void OnKeyTurned(KeyTurnSide side)
         {
             currentTurns.Add(side);
-            audioManager.PlaySound("KeyTwist");
+            audioManager.PlayOverlap("KeyTwist");
             List<KeyTurnSide> sideTurnList = _keyEnigmaData._sideTurnList;
             if (currentTurns.Count > sideTurnList.Count)
             {
