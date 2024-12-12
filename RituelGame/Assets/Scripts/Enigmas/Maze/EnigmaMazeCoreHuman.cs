@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
-
+using DG.Tweening;
 using Enigmas.Maze;
 
 using Enigmas;
@@ -115,7 +115,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         
         if (CheckForPawnSurroundings(mazeArrayPos.x, mazeArrayPos.y, clickedObject.transform))
         {
-            mazePawn.transform.position = new Vector2(clickedObject.transform.position.x, clickedObject.transform.position.y);
+            mazePawn.transform.DOMove(new Vector2(clickedObject.transform.position.x, clickedObject.transform.position.y), 0.5f);
             pawnPos = mazeArrayPos;
             audioManager.PlayOverlap("MazeMove");
         }
@@ -126,7 +126,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         Vector2 casePos = new Vector2(x, y);
         if (Vector2.Distance(casePos, pawnPos) <= 1)
         {
-            if (mazeGrid[x, y] == 0)
+            if (mazeGrid[x, y] == 0 || mazeGrid[x, y] == 3)
             {
                 return true;
             }
