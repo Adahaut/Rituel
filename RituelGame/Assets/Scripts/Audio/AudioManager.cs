@@ -1,11 +1,11 @@
 using UnityEngine;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
+    private float timeBetweenMusics;
 
     void Awake()
     {
@@ -19,6 +19,20 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
             s.source.playOnAwake = s.playOnAwake;
+        }
+    }
+
+    private void Start()
+    {
+        PlaySound("Music");
+    }
+
+    private void Update()
+    {
+        timeBetweenMusics += Time.deltaTime;
+        if (timeBetweenMusics >= GetLength("Music"))
+        {
+            PlaySound("Music");
         }
     }
 
@@ -72,6 +86,21 @@ public class AudioManager : MonoBehaviour
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         s.source.volume = volume;
+    }
+
+    public float GetLength(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        return s.source.clip.length;
+    }
+
+    public void FadeOut(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        for (float i = 0; s.source.volume <= 0; i++)
+        {
+            s.source.volume -= Time.deltaTime / 2;
+        }
     }
 
     //placer dans nimporte quel scrypt avec le bon nom dans les "" pour jouer un son
