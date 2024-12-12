@@ -51,11 +51,13 @@ public class MainMenu : MonoBehaviour
     public void StartAsHuman(string firstSceneHuman)
     {
         SceneManager.LoadScene(firstSceneHuman);
+        PlayerPrefs.SetInt("Human", 0);
     }
     
     public void StartAsSpirit(string firstSceneSpirit)
     {
         SceneManager.LoadScene(firstSceneSpirit);
+        PlayerPrefs.SetInt("Human", 1);
     }
     
     public void Option()

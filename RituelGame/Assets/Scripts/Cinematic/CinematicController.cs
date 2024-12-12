@@ -10,6 +10,9 @@ namespace Cinematic
 {
     public class CinematicController : MonoBehaviour, IPointerClickHandler
     {
+        public string _humanScene;
+        public string _spiritScene;
+        
         [SerializeField] private List<CinematicEvent> cinematicEvents;
         private CinematicEvent currentEvent => cinematicEvents[cinematicIndex];
 
@@ -85,7 +88,7 @@ namespace Cinematic
 
         private void ChangeSceneEvent(CinematicEvent applyEvent)
         {
-            SceneManager.LoadScene(applyEvent._sceneName);
+            SceneManager.LoadScene(PlayerPrefs.GetInt("Human") == 0 ? _humanScene : _spiritScene);
         }
 
         private void ChangeBackgroundEvent(CinematicEvent cinematicEvent)
