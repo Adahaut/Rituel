@@ -15,6 +15,8 @@ namespace Enigmas.Ouija
         [field:SerializeField] public float _timeToNextPosition { get; private set; }
         [SerializeField] private Ease moveEase = Ease.InOutQuint;
         
+        [SerializeField] private AudioManager audioManager;
+        
         public int _currentCharIndex { get; private set; } = -1;
 
         private void Awake()
@@ -58,6 +60,7 @@ namespace Enigmas.Ouija
             _currentCharIndex += 1;
             if (_currentCharIndex >= ouijaData._answerCharacters.Count)
             {
+                audioManager.PlayOverlap("OuijaSlide");
                 _currentCharIndex = -1;
                 rectTransform.DOMove(_baseCursorPosition.position, _timeToNextPosition).SetEase(moveEase);
                 return;
@@ -65,6 +68,7 @@ namespace Enigmas.Ouija
 
             char currentChar = ouijaData._answerCharacters[_currentCharIndex];
             OuijaCharacter currentCharacter = currentBoard._characterObjects[currentChar];
+            audioManager.PlayOverlap("OuijaSlide");
             rectTransform.DOMove(currentCharacter._rectTransform.position, _timeToNextPosition).
                 SetEase(moveEase).onComplete += OnMovementCompleted;
         }
