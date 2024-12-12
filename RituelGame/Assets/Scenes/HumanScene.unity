@@ -3773,6 +3773,10 @@ PrefabInstance:
       value: -339.0955
       objectReference: {fileID: 0}
     - target: {fileID: 2052224536471881148, guid: 87d45281303173446be2be28ac3621e2, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 842596377}
+    - target: {fileID: 2052224536471881148, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: <_timeToNextPosition>k__BackingField
       value: 1.5
       objectReference: {fileID: 0}

@@ -5020,6 +5020,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: light1
+      value: 
+      objectReference: {fileID: 486513530}
+    - target: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: light2
+      value: 
+      objectReference: {fileID: 1530190688}
+    - target: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 901274477}
