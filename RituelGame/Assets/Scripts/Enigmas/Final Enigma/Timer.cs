@@ -30,6 +30,8 @@ public class Timer : MonoBehaviour
 
     private int addedLink = 0;
 
+    public Action OnEnigmaReset;
+
     private void Start()
     {
         for (int i = 0; i < values.Count; i++)
@@ -98,5 +100,6 @@ public class Timer : MonoBehaviour
         candle.SetActive(false);
         backButton.SetActive(true);
         audioManager.StopSound("CracklingCandle");
+        OnEnigmaReset?.Invoke();
     }
 }
