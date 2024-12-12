@@ -5236,6 +5236,10 @@ PrefabInstance:
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 2073032060}
+    - target: {fileID: 480137895955041539, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: enigmaCanvas
+      value: 
+      objectReference: {fileID: 2073032060}
     - target: {fileID: 568067370624701019, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
