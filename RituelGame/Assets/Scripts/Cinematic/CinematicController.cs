@@ -88,7 +88,7 @@ namespace Cinematic
 
         private void ChangeSceneEvent(CinematicEvent applyEvent)
         {
-            SceneManager.LoadScene(PlayerPrefs.GetInt("Human") == 0 ? _humanScene : _spiritScene);
+            SceneManager.LoadScene(applyEvent._sceneName);
         }
 
         private void ChangeBackgroundEvent(CinematicEvent cinematicEvent)
