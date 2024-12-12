@@ -19,6 +19,7 @@ public class LinkCore : MonoBehaviour
     public float minInterval = 0.1f; 
     public float maxInterval = 1.0f; 
     public float minIntensity = 0.0f;
+    public int flickerNumber = 7;
 
     private bool isBlinking = false;
 
@@ -85,7 +86,7 @@ public class LinkCore : MonoBehaviour
     {
         if (isBlinking == false)
         {
-            StartCoroutine(FlickerLights(7));
+            StartCoroutine(FlickerLights(flickerNumber));
         }
     }
 }
