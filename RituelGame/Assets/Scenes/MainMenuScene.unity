@@ -3587,6 +3587,7 @@ MonoBehaviour:
   _optionCanvas: {fileID: 1132542264}
   _selectCharacterCanvas: {fileID: 1502934214}
   light: {fileID: 830948849}
+  _cinematicScene: CinematicScene
 --- !u!114 &1171454145
 MonoBehaviour:
   m_ObjectHideFlags: 0

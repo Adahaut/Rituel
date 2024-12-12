@@ -10,6 +10,9 @@ namespace Cinematic
 {
     public class CinematicController : MonoBehaviour, IPointerClickHandler
     {
+        public string _humanScene;
+        public string _spiritScene;
+        
         [SerializeField] private List<CinematicEvent> cinematicEvents;
         private CinematicEvent currentEvent => cinematicEvents[cinematicIndex];
 

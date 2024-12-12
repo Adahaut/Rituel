@@ -3877,13 +3877,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851922817}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1991560663}
-  m_Father: {fileID: 2000160019}
+  m_Father: {fileID: 1433569890}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5440,6 +5440,11 @@ RectTransform:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 6651458329258255509, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
   m_PrefabInstance: {fileID: 1430379360}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1433569890 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7187242813370081210, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 2000160018}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1435057288 stripped
 GameObject:
@@ -8064,9 +8069,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -8121,6 +8126,14 @@ PrefabInstance:
     - target: {fileID: 2222749282516921839, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Name
       value: BackGround_Object Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301251491190636915, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_RaycastPadding.w
+      value: 19.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 2301251491190636915, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_RaycastPadding.y
+      value: 20.23
       objectReference: {fileID: 0}
     - target: {fileID: 3273138364799154859, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
@@ -8235,16 +8248,11 @@ PrefabInstance:
     - {fileID: 7532355684632337923, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     - {fileID: 7039490163520269020, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 6813355193548916289, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 7187242813370081210, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 851922818}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
---- !u!224 &2000160019 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 6813355193548916289, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 2000160018}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2076627019
 GameObject:
   m_ObjectHideFlags: 0

@@ -387,6 +387,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 649fc51bf5121944480442ec37dd845e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _humanScene: HumanScene
+  _spiritScene: SpiritScene
   cinematicEvents:
   - _eventType: 0
     _canBeClickedToPass: 1

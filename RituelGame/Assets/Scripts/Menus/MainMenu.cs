@@ -16,18 +16,25 @@ public class MainMenu : MonoBehaviour
 
     private Camera cam;
 
+    public string _cinematicScene;
+    
     private void Start()
     {
         cam = Camera.main;
         Texture2D candleCursor = Resources.Load<Texture2D>("CandleCursor");
         Cursor.SetCursor(candleCursor, Vector2.zero, CursorMode.Auto);
+        
+        if (PlayerPrefs.GetInt("CinematicDone") == 1)
+        {
+            StartGame();
+        }
     }
 
     private void Update()
     {
         if (light)
         {
-         FollowCursorLight();   
+            FollowCursorLight();   
         }
     }
 
@@ -41,20 +48,30 @@ public class MainMenu : MonoBehaviour
     }
     public void StartGame()
     {
-        _startCanvas.SetActive(false);
-        _selectCharacterCanvas.SetActive(true);
+        if (PlayerPrefs.GetInt("CinematicDone") == 1)
+        {
+            _startCanvas.SetActive(false);
+            _selectCharacterCanvas.SetActive(true);
 
-        actualCanvas = _selectCharacterCanvas;
-        lastCanvasOpen = _startCanvas;
+            actualCanvas = _selectCharacterCanvas;
+            lastCanvasOpen = _startCanvas;
+        }
+        else
+        {
+            PlayerPrefs.SetInt("CinematicDone", 1);
+            SceneManager.LoadScene(_cinematicScene);
+        }
     }
 
     public void StartAsHuman(string firstSceneHuman)
     {
+        PlayerPrefs.SetInt("CinematicDone", 0);
         SceneManager.LoadScene(firstSceneHuman);
     }
     
     public void StartAsSpirit(string firstSceneSpirit)
     {
+        PlayerPrefs.SetInt("CinematicDone", 0);
         SceneManager.LoadScene(firstSceneSpirit);
     }
     
