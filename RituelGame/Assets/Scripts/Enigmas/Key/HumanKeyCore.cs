@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using Enigmas.EnigmaHint;
 using Enum;
 using UnityEngine;
 using UnityEngine.Events;
@@ -22,6 +23,9 @@ namespace Enigmas.Key
         [SerializeField] private AudioManager audioManager;
 
         public UnityEvent _onEnigmaFinished;
+
+        public GameObject _hint;
+        public GameObject _button;
         
         private void Awake()
         {
@@ -69,6 +73,8 @@ namespace Enigmas.Key
             openedChest.SetCanvasGroupInteraction(true);
             closedChest.DOFade(0, 0.5f);
             openedChest.DOFade(1, 0.5f);
+            _hint.SetActive(true);
+            _button.GetComponent<EnigmaButton>()._onButtonClicked.AddListener(_hint.GetComponent<EnigmaHintButton>().Activate);
         }
 
         private void OnWrongTurn()
