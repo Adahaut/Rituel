@@ -16,7 +16,7 @@ public class CursorChangedOnHover : MonoBehaviour, IPointerEnterHandler, IPointe
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (!eventData.pointerEnter.GetComponent<EnigmaButton>()._enigmaFinish)
+        if (!eventData.pointerEnter.GetComponent<EnigmaButton>()._enigmaFinish && eventData.pointerEnter.GetComponent<EnigmaButton>()._canBeClicked)
         {
             ActivateCursor();   
         }
