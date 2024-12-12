@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Timer : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject timeText;
     [SerializeField] private GameObject candle;
     [SerializeField] private GameObject backButton;
-    [SerializeField] private List<TextMeshProUGUI> texts;
+    [SerializeField] private List<FinalClock> timeClocks;
     [SerializeField] private List<int> values;
     
     
@@ -30,11 +31,13 @@ public class Timer : MonoBehaviour
 
     private int addedLink = 0;
 
+    public Action OnEnigmaReset;
+
     private void Start()
     {
         for (int i = 0; i < values.Count; i++)
         {
-            texts[i].text = values[i].ToString();
+            timeClocks[i].UpdateClock(values[i]);
         }
     }
 
@@ -98,5 +101,6 @@ public class Timer : MonoBehaviour
         candle.SetActive(false);
         backButton.SetActive(true);
         audioManager.StopSound("CracklingCandle");
+        OnEnigmaReset?.Invoke();
     }
 }
