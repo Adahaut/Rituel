@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
@@ -197,6 +198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 6
   _canBeClicked: 0
   _enigmaFinish: 0
@@ -303,6 +305,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
@@ -513,6 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
@@ -694,6 +698,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
@@ -800,6 +805,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
@@ -1010,6 +1016,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
@@ -1335,6 +1342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaCanvas: {fileID: 0}
   canvasFadeDuration: 0.5
+  _unlockedSprite: {fileID: 0}
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
