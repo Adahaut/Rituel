@@ -13,7 +13,9 @@ using Random = UnityEngine.Random;
 public class TraductionEnigmaSpirit : MonoBehaviour
 {
     public SerializedDictionary<string, string> _wordEnglishToLatin = new SerializedDictionary<string, string>(StringComparer.OrdinalIgnoreCase);
-
+    public List<string> _wordLatin = new();
+    public List<string> _answer = new();
+    
     public List<string> _phrases;
     public TextMeshProUGUI _phraseToTranslate;
 
@@ -29,8 +31,12 @@ public class TraductionEnigmaSpirit : MonoBehaviour
     private string[] words;
     private int wordCompletionIndex;
     private int posIndex = 0;
-    private List<GameObject> buttonListe = new List<GameObject>();
+    private List<GameObject> buttonListe = new();
+    private int indexInList = 0;
     public GameObject _buttonToAccessEnigma;
+    public Transform _buttonsTargetPosition;
+
+    private int nbWords;
 
     public GameObject _codePanel;
     public GameObject _enigma;
@@ -43,16 +49,23 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         actualPhrase = _phrases[phraseIndex];
         words = actualPhrase.Split(' ');
         wordCompletionIndex = 0;
-        _phraseToTranslate.text = actualPhrase;
+        indexInList = 0;
+        _phraseToTranslate.text = actualPhrase.Replace(" ", "\n");
 
-        Debug.Log($"Phrase: {actualPhrase}");
-
+        foreach (string word in _wordEnglishToLatin.Values)
+        {
+            _wordLatin.Add(word);
+        }
+        
         Initialise();
     }
 
     private void Initialise()
     {
+        _buttonsTargetPosition.position += new Vector3(0, 1f, 0) * nbWords;
         int index = 0;
+        indexInList = 0;
+        nbWords = 0;
         
         foreach (var word in _wordEnglishToLatin)
         {
@@ -64,47 +77,53 @@ public class TraductionEnigmaSpirit : MonoBehaviour
                     index -= _wordEnglishToLatin.Count / 2;
                 }
                     
-                
-                GameObject obj = new GameObject(word.Key);
-                obj.transform.SetParent(wordsParent.transform);
+                GameObject parentButton = new GameObject(word.Key);
+                parentButton.transform.SetParent(wordsParent.transform);
+                GameObject objButton = new GameObject("button");
+                objButton.transform.SetParent(parentButton.transform);
 
                 GameObject text = new GameObject("Text");
-                text.transform.SetParent(obj.transform);
+                text.transform.SetParent(parentButton.transform);
                 TextMeshProUGUI textMesh = text.AddComponent<TextMeshProUGUI>();
+                textMesh.raycastTarget = false;
                 textMesh.text = _wordEnglishToLatin[word.Key];
                 textMesh.fontSize = 24;
                 textMesh.horizontalAlignment = HorizontalAlignmentOptions.Center;
                 textMesh.verticalAlignment = VerticalAlignmentOptions.Middle;
 
-                Button button = obj.AddComponent<Button>();
-                Image image = obj.AddComponent<Image>();
+                Image image = objButton.AddComponent<Image>();
                 image.color = Color.black;
+                Button button = objButton.AddComponent<Button>();
                 button.image = image;
-
-                button.onClick.AddListener(() => ChooseAnswer(word.Key, obj));
-
-                obj.transform.localPosition = new Vector3(_topLeftFirstButtonPos.x + 350 + (150 * index), _topLeftFirstButtonPos.y, -0f);
-                obj.transform.localScale = Vector3.one;
                 
-                buttonListe.Add(obj);
+                int buttonIndex = indexInList;
+
+                button.onClick.AddListener(() => ChooseAnswer(word.Key, objButton, buttonIndex));
+                Debug.Log(word.Key + " " + objButton + " " + indexInList);
+
+                parentButton.transform.localPosition = new Vector3(_topLeftFirstButtonPos.x + 350 + (150 * index), _topLeftFirstButtonPos.y, -0f);
+                parentButton.transform.localScale = Vector3.one;
+
+                buttonListe.Add(objButton);
+                indexInList++;
 
                 index++;
             }
         }
+        _topLeftFirstButtonPos.y += 150f;
     }
 
-    private void ResetButton()
+    public void ResetButton()
     {
-        posIndex = 0;
-        wordCompletionIndex = 0;
-        int index = 0;
-        foreach (GameObject button in buttonListe)
+        foreach (Transform child in wordsParent.transform)
         {
-            button.transform.DOLocalMove(
-                new Vector3(_topLeftFirstButtonPos.x + (150 * index), _topLeftFirstButtonPos.y, -0f), 1f);
-            button.GetComponent<Button>().interactable = true;
-            index++;
+            Destroy(child.gameObject);
         }
+        
+        _answer.Clear();
+        buttonListe.Clear();
+        
+        Initialise();
     }
 
     private void CompleteEnigma()
@@ -114,9 +133,6 @@ public class TraductionEnigmaSpirit : MonoBehaviour
             button.GetComponent<Button>().interactable = false;
         }
         
-        // enigmaCanvas.DOFade(0, canvasFadeDuration);
-        // enigmaCanvas.interactable = false;
-        // enigmaCanvas.blocksRaycasts = false;
         _codePanel.SetActive(true);
         _enigma.SetActive(false);
         _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
@@ -126,47 +142,56 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
     }
     
-    private void ChooseAnswer(string word, GameObject button)
+    private void ChooseAnswer(string word, GameObject button, int index)
     {
-        string wordLower = word.ToLower();
-        string wordsActualLower = words[wordCompletionIndex].ToLower();
+        _answer.Add(word.ToLower());
         
-        if (string.Equals(wordLower, wordsActualLower))
+        button.GetComponent<Button>().interactable = false;
+        
+        Vector3 targetPosition = _buttonsTargetPosition.position;
+        
+        button.transform.parent.DOMove(targetPosition, 1f);
+        _buttonsTargetPosition.position -= new Vector3(0, 1f, 0);
+        button.GetComponent<Button>().transform.DOScale(new Vector3(4f, 1f, 1f), 1f);
+        button.transform.parent.GetComponentInChildren<TextMeshProUGUI>().transform.DOScale(new Vector3(3.5f, 3.5f, 1f), 1f);
+        
+        posIndex++;
+        wordCompletionIndex++;
+        
+        onWordChoosen();
+    }
+
+    public void CheckWin()
+    {
+        bool won = true;
+        
+        for (int i = 0; i < words.Length; i++)
         {
-            wordCompletionIndex++;
-
-            button.GetComponent<Button>().interactable = false;
-            
-            Vector3 wordPosition = GetWordLocalPosition(wordCompletionIndex - 1);
-            Vector3 targetPosition = new Vector3(wordPosition.x, wordPosition.y + 100, 0);
-            
-            button.transform.DOLocalMove(new Vector3(targetPosition.x, targetPosition.y, 0), 1f);
-
-            posIndex++;
-            
-            if (wordCompletionIndex == words.Length)
+            if (_answer[i] != words[i].ToLower())
             {
-                CompleteEnigma();
+                won = false;
             }
+        }
+
+        if (won)
+        {
+            CompleteEnigma();
         }
         else
         {
             ResetButton();
         }
     }
-    
-    private Vector3 GetWordLocalPosition(int wordIndex)
+
+    private void onWordChoosen()
     {
-        TMP_TextInfo textInfo = _phraseToTranslate.textInfo;
-
-        TMP_WordInfo wordInfo = textInfo.wordInfo[wordIndex];
-
-        Vector3 firstCharLocalPosition = textInfo.characterInfo[wordInfo.firstCharacterIndex].bottomLeft;
-        Vector3 lastCharLocalPosition = textInfo.characterInfo[wordInfo.lastCharacterIndex].topRight;
-
-        Vector3 wordLocalPosition = (firstCharLocalPosition + lastCharLocalPosition) / 2f;
-
-        return wordLocalPosition;
+        if (nbWords == words.Length)
+        {
+            nbWords += 1;
+            ResetButton();
+            return;
+        }
+        
+        nbWords += 1;
     }
-
 }
