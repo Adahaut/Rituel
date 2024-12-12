@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 namespace Enigmas
 {
@@ -10,6 +11,7 @@ namespace Enigmas
         [SerializeField] private CanvasGroup enigmaCanvas;
         [SerializeField] private float canvasFadeDuration = 0.5f;
 
+        public Sprite _unlockedSprite;
 
         private int _enigmaCounter;
         public int _enigmaNumber;
@@ -34,6 +36,10 @@ namespace Enigmas
 
         public void ActivateEnigma()
         {
+            if (_unlockedSprite)
+            {
+                gameObject.GetComponent<Image>().sprite = _unlockedSprite;
+            }
             _canBeClicked = true;
         }
 
