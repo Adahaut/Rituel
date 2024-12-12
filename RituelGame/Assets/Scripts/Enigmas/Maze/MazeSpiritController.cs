@@ -14,6 +14,8 @@ public class MazeSpiritController : MonoBehaviour
     private Vector2 initScale;
 
     private bool zoomed;
+    [SerializeField] private Transform zoomedMazeParent;
+    [SerializeField] private Transform normalMazeParent;
     
     Vector3 midPos = new Vector2(18f, 3.75f);
     
@@ -48,19 +50,20 @@ public class MazeSpiritController : MonoBehaviour
 
             maze = hit.gameObject.transform.parent.gameObject;
 
-            Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
-            mazeCanvas.overrideSorting = true;
-            mazeCanvas.sortingOrder = 2;
+            //Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
+            //mazeCanvas.overrideSorting = true;
+            //mazeCanvas.sortingOrder = 2;
 
             if (zoomed == false)
             {
-                mazeBasePos = maze.transform.position;
+                mazeBasePos = maze.transform.localPosition;
                 initScale = maze.transform.localScale;
             }
 
             zoomed = true;
             maze.transform.position = transform.position;
             maze.transform.localScale = new Vector3(2, 2, 2);
+            maze.transform.parent.SetParent(zoomedMazeParent, true);
 
             //maze.transform.position += ReplaceMaze(hit.gameObject.layer) * _enigmaCoreSpirit._frameScale;
             _panel.SetActive(true);
@@ -71,13 +74,14 @@ public class MazeSpiritController : MonoBehaviour
         {
             _panel.SetActive(false);
             zoomed = false;
-            maze.transform.position = mazeBasePos;
+            maze.transform.parent.SetParent(normalMazeParent, true);
+            maze.transform.localPosition = mazeBasePos;
             
             maze.transform.localScale = initScale;
             
-            Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
-            mazeCanvas.overrideSorting = false;
-            mazeCanvas.sortingOrder = 0;
+            //Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
+            //mazeCanvas.overrideSorting = false;
+            //mazeCanvas.sortingOrder = 0;
         }
     }
 
