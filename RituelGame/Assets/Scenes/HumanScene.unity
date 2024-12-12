@@ -4829,11 +4829,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 13595997522465189, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
   m_PrefabInstance: {fileID: 2073032058}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &2073032060 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 2711160404027343295, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
-  m_PrefabInstance: {fileID: 2073032058}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2073032061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1304000927856066189, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
@@ -5191,18 +5186,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 272111802556717525, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: enigmaCanvas
-      value: 
-      objectReference: {fileID: 2073032060}
     - target: {fileID: 568067370624701019, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 2090223440}
-    - target: {fileID: 591216591579684164, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
     - target: {fileID: 1285558539352541738, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
@@ -5211,50 +5198,18 @@ PrefabInstance:
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 755279162}
-    - target: {fileID: 1955635651383952978, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
     - target: {fileID: 2159827851434135009, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 884827212}
-    - target: {fileID: 2159827851434135009, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: _pedestalBook
-      value: 
-      objectReference: {fileID: 21300000, guid: 9f08c9e57c139e74b96f9c6b33eb2b4f, type: 3}
-    - target: {fileID: 2159827851434135009, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: _unlockedSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9f08c9e57c139e74b96f9c6b33eb2b4f, type: 3}
     - target: {fileID: 2222749282516921839, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Name
       value: BackGround/Object Canvas HUMAN
       objectReference: {fileID: 0}
-    - target: {fileID: 2301251491190636915, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
-    - target: {fileID: 2469820094308115435, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
-    - target: {fileID: 2586867414015639262, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
-    - target: {fileID: 2739039507171483333, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
     - target: {fileID: 3273138364799154859, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 2123735612}
-    - target: {fileID: 4250600235958707196, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
     - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
@@ -5263,46 +5218,6 @@ PrefabInstance:
       propertyPath: enigmaCanvas
       value: 
       objectReference: {fileID: 20058188}
-    - target: {fileID: 5542947408788367493, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
-    - target: {fileID: 6051245638910034153, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 6051245638910034153, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 6051245638910034153, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -179
-      objectReference: {fileID: 0}
-    - target: {fileID: 6051245638910034153, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -298
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617937523247442566, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 71876b7033aeebd40a9af350b2919d29, type: 3}
-    - target: {fileID: 6617937523247442566, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617937523247442566, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617937523247442566, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6617937523247442566, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
     - target: {fileID: 6813355193548916289, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
