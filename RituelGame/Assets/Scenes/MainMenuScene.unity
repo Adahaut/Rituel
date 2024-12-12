@@ -1182,6 +1182,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4556034733031669588, guid: 6a3ff6f7a3a2e164096eeb0d05b7d657, type: 3}
+      propertyPath: sounds.Array.data[19].volume
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 5297107729604492259, guid: 6a3ff6f7a3a2e164096eeb0d05b7d657, type: 3}
       propertyPath: m_Name
       value: AudioManger
@@ -3611,9 +3615,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de730a372ff149489f12322ade5e7d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  brightnessSlider: {fileID: 2099356277}
   toggleFullScreen: {fileID: 1641431104}
-  postProcessingVolume: {fileID: 788266838}
 --- !u!1 &1178649608
 GameObject:
   m_ObjectHideFlags: 0

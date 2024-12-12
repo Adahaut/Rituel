@@ -20,7 +20,7 @@ public class LinkCore : MonoBehaviour
     public void AddLink(int linkToAdd)
     {
         linkCount += linkToAdd;
-        audioManager.PlaySound("AddLink");
+        audioManager.PlayOverlap("AddLink");
         if (linkCount >= _maxLinkCount)
         {
             linkCount = _maxLinkCount;
@@ -31,7 +31,7 @@ public class LinkCore : MonoBehaviour
     public void RemoveLink(int LinkToRemove)
     {
         linkCount -= LinkToRemove;
-        audioManager.PlaySound("LoseLink");
+        audioManager.PlayOverlap("LoseLink");
         if (linkCount <= 0)
         {
             linkCount = 0;
