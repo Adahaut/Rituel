@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Enigmas;
+using Particles;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,10 @@ public class RelicController : MonoBehaviour
     public GameObject _enigma;
     
     [SerializeField] private AudioManager audioManager;
+    
+    [SerializeField] private GameObject correctBreakParticles;
+    [SerializeField] private GameObject wrongBreakParticles;
+    [SerializeField] private GameObject breakRelicParticles;
 
     private void Start()
     {
@@ -31,13 +36,17 @@ public class RelicController : MonoBehaviour
         _symboleText.text = symbole.ToString();
     }
 
-    public void CheckRelicSymbole(RelicItem relic)
+    public bool CheckRelicSymbole(RelicItem relic)
     {
-        Destroy(relic.gameObject);
         audioManager.PlayOverlap("BreakRelic");
+        Vector3 particlePos = relic.transform.position;
+        particlePos.z = ParticlesConst.ParticleZSpawn;
+        Instantiate(breakRelicParticles, transform).transform.position = particlePos;
         if (relic._symbole != symbole)
         {
             linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
+            _codePanel.SetActive(false);
+            Instantiate(wrongBreakParticles, transform).transform.position = particlePos;
         }
         else
         {
@@ -46,6 +55,9 @@ public class RelicController : MonoBehaviour
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             _buttonToAccessEnigma.GetComponent<EnigmaButton>()._enigmaFinish = true;
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+            Instantiate(correctBreakParticles, transform).transform.position = particlePos;
         }
+
+        return relic._symbole == symbole;
     }
 }

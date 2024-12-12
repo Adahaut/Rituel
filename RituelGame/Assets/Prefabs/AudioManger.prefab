@@ -47,6 +47,7 @@ MonoBehaviour:
   sounds:
   - name: Do
     clip: {fileID: 8300000, guid: 88f4ad35f06c9a942b556c46edfffe75, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -54,6 +55,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: "R\xE9"
     clip: {fileID: 8300000, guid: 8752e8e0af9058141924d982d128ac43, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -61,6 +63,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Mi
     clip: {fileID: 8300000, guid: 6dca408a4f73a574ea57523d994bec39, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -68,6 +71,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Fa
     clip: {fileID: 8300000, guid: 1313fc228b815c645a6d164aedd57925, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -75,6 +79,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Sol
     clip: {fileID: 8300000, guid: b5b0ca8b76ae2514dac969bd7b6292ed, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -82,6 +87,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: La
     clip: {fileID: 8300000, guid: d07b733dd232e80479f83ead7f587e36, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -89,6 +95,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Si
     clip: {fileID: 8300000, guid: 1bdae087beb90c64d81335f63cb801d0, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.2
     pitch: 1
     loop: 0
@@ -96,6 +103,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: tickclock
     clip: {fileID: 8300000, guid: 731aad90fc791254086220d9f6069697, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.645
     pitch: 0.65
     loop: 0
@@ -103,41 +111,47 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: Pendulum
     clip: {fileID: 8300000, guid: 0f88015b8fc762d48a616550be9ca0b9, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.645
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: BreakRelic
-    clip: {fileID: 8300000, guid: ac32a12a734452b44b883f6a7384fc2f, type: 3}
-    volume: 0.645
+    clip: {fileID: 8300000, guid: c21a7f6d46fa85f44a6df644f26a952b, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
+    volume: 0.6
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: AddLink
     clip: {fileID: 8300000, guid: 8c492105cea273141bcb2403c534b9c5, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: LoseLink
-    clip: {fileID: 8300000, guid: 4b5f69cdd49029647b2534e3f5ee7389, type: 3}
+    clip: {fileID: 8300000, guid: 5cb8f7c2be8ccd244ab91f2f34e3d0bb, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.4
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: KeyTwist
-    clip: {fileID: 8300000, guid: 5436b4d455b128643a82beee4e5eebae, type: 3}
-    volume: 0.5
+    clip: {fileID: 8300000, guid: 579eda562308bce44a7c322f65199f3c, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
+    volume: 0.75
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: MazeMove
-    clip: {fileID: 8300000, guid: 2e476091ee8e20c46b4e9e4daa7ba71b, type: 3}
+    clip: {fileID: 8300000, guid: d4bd8d1caf30cef4f9b6e691d7f2b802, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.5
     pitch: 1
     loop: 0
@@ -145,6 +159,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: OpenChest
     clip: {fileID: 8300000, guid: 0211b8d61ddb4164da52be238085a8c6, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.6
     pitch: 1
     loop: 0
@@ -152,13 +167,15 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CloseChest
     clip: {fileID: 8300000, guid: 813603bf24b4d0a41b9a06e4c5ad96c7, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.6
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: StartRitual
-    clip: {fileID: 8300000, guid: 543cda2e90dd12644bb71ea4b2d9f65e, type: 3}
+    clip: {fileID: 8300000, guid: b068ac174933bdb40ab71b6bdc951e4b, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.4
     pitch: 1
     loop: 0
@@ -166,6 +183,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CryptexUp
     clip: {fileID: 8300000, guid: 089f0aa59fb83c8478a5802ca2223296, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.5
     pitch: 1
     loop: 0
@@ -173,22 +191,41 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: CryptexDown
     clip: {fileID: 8300000, guid: a6e5a14f5a88be04ab37f7bd795552f5, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.5
     pitch: 1
     loop: 0
     playOnAwake: 0
     source: {fileID: 0}
   - name: CracklingCandle
-    clip: {fileID: 8300000, guid: 07459d538e9677c4e87d80ed237bce8e, type: 3}
-    volume: 0.3
+    clip: {fileID: 8300000, guid: 4798dd8618f56f9438e61abbea5389d9, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
+    volume: 0.6
     pitch: 1
     loop: 1
     playOnAwake: 0
     source: {fileID: 0}
   - name: LightACandle
-    clip: {fileID: 8300000, guid: ea6e640e57fff61438fa61b3ecf47f95, type: 3}
+    clip: {fileID: 8300000, guid: 3b26f6e8cd034194f9d4258bf46d63c8, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
+    volume: 0.6
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: RoomChange
+    clip: {fileID: 8300000, guid: ec5b9af221a736941b7fdc5a8212406d, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
+    volume: 0.4
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: OuijaSlide
+    clip: {fileID: 8300000, guid: 35922c7f4b0c9434cb172e87dbfea9a1, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.3
     pitch: 1
-    loop: 1
+    loop: 0
     playOnAwake: 0
     source: {fileID: 0}
