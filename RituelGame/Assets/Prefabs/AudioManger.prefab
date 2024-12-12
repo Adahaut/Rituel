@@ -120,7 +120,7 @@ MonoBehaviour:
   - name: BreakRelic
     clip: {fileID: 8300000, guid: c21a7f6d46fa85f44a6df644f26a952b, type: 3}
     audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
-    volume: 0.6
+    volume: 0.75
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   - name: LoseLink
     clip: {fileID: 8300000, guid: 5cb8f7c2be8ccd244ab91f2f34e3d0bb, type: 3}
     audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
-    volume: 0.4
+    volume: 0.75
     pitch: 1
     loop: 0
     playOnAwake: 0
@@ -225,6 +225,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 35922c7f4b0c9434cb172e87dbfea9a1, type: 3}
     audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Flickering
+    clip: {fileID: 8300000, guid: cfea15c5e0a1d8d49b75c7fa73739ebc, type: 3}
+    audioMixerGroup: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
+    volume: 1
     pitch: 1
     loop: 0
     playOnAwake: 0
