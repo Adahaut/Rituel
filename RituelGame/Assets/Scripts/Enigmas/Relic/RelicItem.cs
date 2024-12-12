@@ -14,7 +14,6 @@ public class RelicItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     public RelicController _relicController;
 
     public Texture2D _hammerSprite;
-
     private void Start()
     {
         _symbole = _symboleInInspector;
@@ -24,6 +23,8 @@ public class RelicItem : MonoBehaviour, IPointerClickHandler, IPointerEnterHandl
     public void OnPointerClick(PointerEventData eventData)
     {
         _relicController.CheckRelicSymbole(this);
+        
+        Destroy(gameObject);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

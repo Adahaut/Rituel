@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class CanvasTools
 {
-    public static int GetOrderInLayer(Transform transform)
+    public static int GetOrderInLayer(this Transform transform)
     {
         var canvasComponent = transform.GetComponentInParent<Canvas>();
         if (canvasComponent.isRootCanvas || canvasComponent.overrideSorting)
