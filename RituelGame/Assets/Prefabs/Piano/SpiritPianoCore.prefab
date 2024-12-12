@@ -1229,6 +1229,9 @@ MonoBehaviour:
   _buttonToAccessEnigma: {fileID: 0}
   _codePanel: {fileID: 8414985118843808177}
   _pianoObject: {fileID: 2666275844768953149}
+  _onEnigmaSolved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!225 &3784633552328133349
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -2466,7 +2469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &971503877475924826
 RectTransform:
   m_ObjectHideFlags: 0
