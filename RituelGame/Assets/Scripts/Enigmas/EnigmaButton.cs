@@ -1,6 +1,7 @@
 using System;
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -23,6 +24,8 @@ namespace Enigmas
         
         public Action OnButtonClickedEvent;
         
+        public UnityEvent OnButtonClicked;
+        
         public void OnPointerClick(PointerEventData eventData)
         {
             if (_canBeClicked)
@@ -31,6 +34,7 @@ namespace Enigmas
                 enigmaCanvas.interactable = true;
                 enigmaCanvas.blocksRaycasts = true;
                 OnButtonClickedEvent?.Invoke();
+                OnButtonClicked.Invoke();
             }
         }
 
