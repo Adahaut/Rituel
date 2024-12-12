@@ -28,6 +28,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private EnigmaData enigmaData;
     [SerializeField] private AudioManager audioManager;
 
+    private int addedLink = 0;
+
     private void Start()
     {
         for (int i = 0; i < values.Count; i++)
@@ -43,10 +45,11 @@ public class Timer : MonoBehaviour
             audioManager.PlayOverlap("LightACandle");
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
             currentCandleNumber++;
+            addedLink += enigmaData.LinkToAddIfSuccess;
         }
         else
         {
-            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail);
+            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail + addedLink);
             Loose();
         }
     }
@@ -75,6 +78,7 @@ public class Timer : MonoBehaviour
     void Loose()
     {
         currentCandleNumber = 0;
+        addedLink = 0;
         //perte de liaison
         startButton.SetActive(true);
         Restart();
