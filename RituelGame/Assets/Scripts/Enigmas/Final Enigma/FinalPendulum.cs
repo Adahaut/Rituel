@@ -6,13 +6,12 @@ using UnityEngine;
 public class FinalPendulum : MonoBehaviour
 {
     [SerializeField] private Timer finalTimer;
-    
-    [SerializeField] private Transform minutesClockHand;
-    [SerializeField] private Transform hoursClockHand;
+
+    [SerializeField] private FinalClock finalClock;
 
     private void Update()
     {
-        if (!minutesClockHand || !hoursClockHand)
+        if (!finalClock)
         {
             return;
         }
@@ -20,12 +19,8 @@ public class FinalPendulum : MonoBehaviour
         UpdatePendulum(finalTimer._timer);
     }
 
-    public void UpdatePendulum(float time)
+    private void UpdatePendulum(float time)
     {
-        float minutesAngle = Mathf.Lerp(0, -360, (time % 60) / 60f);
-        float hoursAngle = Mathf.Lerp(0, -360, (time % 3600) / 3600f);
-
-        minutesClockHand.localRotation = Quaternion.Euler(0, 0, minutesAngle);
-        hoursClockHand.localRotation = Quaternion.Euler(0, 0, hoursAngle);
+        finalClock.UpdateClock(time);
     }
 }
