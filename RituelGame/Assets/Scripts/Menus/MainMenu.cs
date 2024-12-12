@@ -25,7 +25,10 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        FollowCursorLight();
+        if (light)
+        {
+         FollowCursorLight();   
+        }
     }
 
     private void FollowCursorLight()
