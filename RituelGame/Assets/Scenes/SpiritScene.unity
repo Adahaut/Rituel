@@ -2875,7 +2875,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &376034823 stripped
@@ -3356,7 +3356,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!223 &542546401 stripped
@@ -3529,7 +3529,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &743008162
@@ -4381,7 +4381,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1042661823
@@ -4768,7 +4768,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1224146516
@@ -5017,7 +5017,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1320855878
@@ -5954,7 +5954,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &1623962172 stripped
@@ -6201,7 +6201,7 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
-  OnButtonClicked:
+  _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1001 &1704501180

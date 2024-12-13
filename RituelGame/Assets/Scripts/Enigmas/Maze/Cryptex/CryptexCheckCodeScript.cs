@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enigmas;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class CryptexCheckCodeScript : MonoBehaviour
@@ -20,6 +22,8 @@ public class CryptexCheckCodeScript : MonoBehaviour
     public GameObject _checkCode;
     public GameObject _cryptexButton;
 
+    public UnityEvent _onEngimaFinished;
+
     public void Confirm()
     {
         string inputText = _inputField.text.ToLower();
@@ -29,7 +33,9 @@ public class CryptexCheckCodeScript : MonoBehaviour
         {
             _linkCore.AddLink(_cryptexData.LinkToAddIfSuccess);
             _checkCode.SetActive(false);
-            _cryptexButton.SetActive(false);
+            _cryptexButton.GetComponent<EnigmaButton>()._canBeClicked = false;
+            _cryptexButton.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
+            _onEngimaFinished.Invoke();
         }
         else
         {
