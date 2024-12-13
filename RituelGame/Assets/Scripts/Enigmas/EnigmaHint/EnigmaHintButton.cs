@@ -45,10 +45,5 @@ namespace Enigmas.EnigmaHint
         {
             OnHintButtonClicked.Invoke(enigmaData, currentWorldType);
         }
-
-        public void Activate()
-        {
-            gameObject.SetActive(true);
-        }
     }
 }
