@@ -1243,8 +1243,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You will have to go forward by communicate, one as the spirit, one as the
-    human. Be sure to don't make the same choice.
+  m_text: You must move forward together, one as the human, the other as the spirit.
+    Make sure not to choose the same role.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
