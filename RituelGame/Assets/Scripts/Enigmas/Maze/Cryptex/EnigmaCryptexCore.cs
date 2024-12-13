@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Enigmas;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -21,6 +22,8 @@ public class EnigmaCryptexCore : MonoBehaviour
     
     public Canvas _canvasParent;
     public GameObject _buttonToAccessEnigma;
+
+    public GameObject _mazeButton;
 
     public void CheckingIfStringIsCorrect(int value)
     {
@@ -48,6 +51,8 @@ public class EnigmaCryptexCore : MonoBehaviour
         
         _cryptexBackGround.GetComponent<Image>().sprite = _cryptexOpen;
         StartCoroutine(PanelCode());
+        
+        _mazeButton.GetComponent<EnigmaButton>().ActivateEnigma();
     }
     
     public void Lose()
