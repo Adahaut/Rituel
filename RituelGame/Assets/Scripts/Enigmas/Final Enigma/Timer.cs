@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class Timer : MonoBehaviour
@@ -32,6 +33,7 @@ public class Timer : MonoBehaviour
     private int addedLink = 0;
 
     public Action OnEnigmaReset;
+
 
     private void Start()
     {
