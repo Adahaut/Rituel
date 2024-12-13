@@ -25,7 +25,7 @@ public class LinkCore : MonoBehaviour
 
     private void Start()
     {
-        linkCount = 0;
+        linkCount = 30;
         linkAnimation = GetComponent<LinkAnimation>();
         linkAnimation.StartLinkAnimation(true);
         light1.intensity = currentIntensity;
