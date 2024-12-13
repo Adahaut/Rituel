@@ -25,12 +25,21 @@ public class LinkCore : MonoBehaviour
 
     private void Start()
     {
-        linkCount = 30;
+        linkCount = 10;
         linkAnimation = GetComponent<LinkAnimation>();
         linkAnimation.StartLinkAnimation(true);
         light1.intensity = currentIntensity;
         light2.intensity = currentIntensity;
         ManageLights();
+    }
+
+    public void SetLinkCount(int link)
+    {
+        linkCount = link;
+        linkAnimation.StartLinkAnimation(true);
+        ManageLights();
+        
+        Debug.Log("Link Count: " + linkCount);
     }
 
     public void AddLink(int linkToAdd)

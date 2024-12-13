@@ -5270,6 +5270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LinkManager
       objectReference: {fileID: 0}
+    - target: {fileID: 169371369611830748, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
+      propertyPath: m_TagString
+      value: LinkManager
+      objectReference: {fileID: 0}
     - target: {fileID: 2547261459091387542, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
       propertyPath: _linkText
       value: 
