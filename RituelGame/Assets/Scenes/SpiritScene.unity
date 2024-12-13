@@ -233,7 +233,7 @@ PrefabInstance:
     - target: {fileID: 7605658382586876290, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 7605658382586876290, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
       propertyPath: m_RenderMode
       value: 1
@@ -1945,7 +1945,7 @@ PrefabInstance:
     - target: {fileID: 6188746182700107281, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 6188746182700107281, guid: 7abcc3d4ce144bc40b7456150ae404be, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -3142,14 +3142,6 @@ PrefabInstance:
     - target: {fileID: 4302112067561472932, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
       propertyPath: m_Name
       value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 5617430303701725797, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236177838887111490, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
-      propertyPath: zoomPercentage
-      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6924224629535951336, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4374,7 +4366,7 @@ PrefabInstance:
     - target: {fileID: 7956109880284646227, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 7956109880284646227, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
       propertyPath: m_RenderMode
       value: 1
@@ -4815,7 +4807,7 @@ PrefabInstance:
     - target: {fileID: 290298713780924930, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 290298713780924930, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_RenderMode
       value: 1
@@ -5686,7 +5678,7 @@ PrefabInstance:
     - target: {fileID: 6651458329258255509, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 7202038194684546565, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_Name
       value: MazeEnigmaSpirit
@@ -6735,7 +6727,7 @@ PrefabInstance:
     - target: {fileID: 4447459174905041970, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 4447459174905041970, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
       propertyPath: m_RenderMode
       value: 1
@@ -7324,7 +7316,7 @@ PrefabInstance:
     - target: {fileID: 2593270525146767038, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 2593270525146767038, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
       propertyPath: m_RenderMode
       value: 1
@@ -8390,7 +8382,7 @@ PrefabInstance:
     - target: {fileID: 7374798642831270443, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
       propertyPath: m_Camera
       value: 
-      objectReference: {fileID: 435498510}
+      objectReference: {fileID: 7881742771541686686}
     - target: {fileID: 7374798642831270443, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
       propertyPath: m_RenderMode
       value: 1
@@ -9431,6 +9423,11 @@ RectTransform:
 Canvas:
   m_CorrespondingSourceObject: {fileID: 290298713780924930, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
   m_PrefabInstance: {fileID: 1042661823}
+  m_PrefabAsset: {fileID: 0}
+--- !u!20 &7881742771541686686 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 6273957068537615041, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
+  m_PrefabInstance: {fileID: 435498509}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

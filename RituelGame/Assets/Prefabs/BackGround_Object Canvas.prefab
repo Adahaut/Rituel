@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5658722617291767731}
   - component: {fileID: 480137895955041539}
   - component: {fileID: 3169595666682614236}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Corps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 4436915845284301786}
   - component: {fileID: 5824049656516551103}
   - component: {fileID: 673606931631504655}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Final
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -250,7 +250,7 @@ GameObject:
   - component: {fileID: 568067370624701019}
   - component: {fileID: 1980547437546719438}
   - component: {fileID: 6287175607224508042}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Cryptex
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 8096931894905265369}
   - component: {fileID: 564086985641946474}
   - component: {fileID: 8169631590368275268}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: BackGround_Object Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -482,7 +482,7 @@ GameObject:
   - component: {fileID: 4719099986760319525}
   - component: {fileID: 4778585221116422980}
   - component: {fileID: 3543721526210167830}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Piano
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   - component: {fileID: 2727055877907239270}
   - component: {fileID: 6573198350771424819}
   - component: {fileID: 4162119471545934244}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Image (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -680,7 +680,7 @@ GameObject:
   - component: {fileID: 3335200724801096731}
   - component: {fileID: 715605617354297630}
   - component: {fileID: 1952618111858169215}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Black
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +758,7 @@ GameObject:
   - component: {fileID: 2159827851434135009}
   - component: {fileID: 3503207262803612820}
   - component: {fileID: 3710173708632100351}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Translation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -884,7 +884,7 @@ GameObject:
   - component: {fileID: 1295782039012310884}
   - component: {fileID: 2044881804803666089}
   - component: {fileID: 8750318737519465096}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Relics
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1009,7 +1009,7 @@ GameObject:
   - component: {fileID: 6603606391499106378}
   - component: {fileID: 6067071919317569407}
   - component: {fileID: 8050510637954650752}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: SecondRoom-BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1114,7 +1114,7 @@ GameObject:
   - component: {fileID: 1285558539352541738}
   - component: {fileID: 89448546173361740}
   - component: {fileID: 4549055586561173002}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Ouija
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1239,7 +1239,7 @@ GameObject:
   - component: {fileID: 3487450659032628054}
   - component: {fileID: 1955635651383952978}
   - component: {fileID: 8404640358510203686}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: FirstRoom-BackGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1349,7 +1349,7 @@ GameObject:
   - component: {fileID: 2469820094308115435}
   - component: {fileID: 5070053998603349353}
   - component: {fileID: 1123438077713865090}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Corps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1475,7 +1475,7 @@ GameObject:
   - component: {fileID: 3273138364799154859}
   - component: {fileID: 2709351797484284596}
   - component: {fileID: 5967488295800091732}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Maze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1600,7 +1600,7 @@ GameObject:
   - component: {fileID: 8288578391843737368}
   - component: {fileID: 5603911559142819053}
   - component: {fileID: 4780818266254328533}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Corps-Porte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6573152108721721936}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1757,7 +1757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7065689861572426391}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: Decoration
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1795,7 +1795,7 @@ GameObject:
   - component: {fileID: 1896627558055359400}
   - component: {fileID: 4636947184022380345}
   - component: {fileID: 8852513528282122406}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: ChestShelf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
