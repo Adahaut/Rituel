@@ -13,6 +13,7 @@ public class HumanBodyEnigma : MonoBehaviour
     private int bodyIndex;
 
     public GameObject _bodyParent;
+    [SerializeField] private float bodyScale;
     
     public SerializedDictionary<string, GameObject> _bodyData = new SerializedDictionary<string, GameObject>(10);
     public List<int> _age;
@@ -32,7 +33,7 @@ public class HumanBodyEnigma : MonoBehaviour
         body = Instantiate(_bodyData.ElementAt(bodyIndex).Value, _bodyParent.transform, true);
         body.GetComponentInChildren<TextMeshProUGUI>().text = "";
         body.transform.localPosition = Vector3.zero;
-        body.transform.localScale = Vector3.one;
+        body.transform.localScale = Vector3.one * bodyScale;
     }
 
     public void SubmitAnswer(string bodyName)

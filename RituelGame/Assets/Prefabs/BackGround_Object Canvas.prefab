@@ -95,6 +95,9 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3169595666682614236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,6 +123,7 @@ GameObject:
   - component: {fileID: 2586867414015639262}
   - component: {fileID: 4436915845284301786}
   - component: {fileID: 5824049656516551103}
+  - component: {fileID: 673606931631504655}
   m_Layer: 5
   m_Name: Final
   m_TagString: Untagged
@@ -202,6 +206,9 @@ MonoBehaviour:
   _enigmaNumber: 6
   _canBeClicked: 0
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5824049656516551103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,6 +221,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7766edb83043e4192d6319c67db710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &673606931631504655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334893008420182845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &1603416535448960026
 GameObject:
   m_ObjectHideFlags: 0
@@ -227,6 +249,7 @@ GameObject:
   - component: {fileID: 591216591579684164}
   - component: {fileID: 568067370624701019}
   - component: {fileID: 1980547437546719438}
+  - component: {fileID: 6287175607224508042}
   m_Layer: 5
   m_Name: Cryptex
   m_TagString: Untagged
@@ -309,6 +332,9 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1980547437546719438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +347,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7766edb83043e4192d6319c67db710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6287175607224508042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1603416535448960026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &2222749282516921839
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,6 +481,7 @@ GameObject:
   - component: {fileID: 4250600235958707196}
   - component: {fileID: 4719099986760319525}
   - component: {fileID: 4778585221116422980}
+  - component: {fileID: 3543721526210167830}
   m_Layer: 5
   m_Name: Piano
   m_TagString: Untagged
@@ -522,6 +564,9 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &4778585221116422980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,6 +579,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7766edb83043e4192d6319c67db710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3543721526210167830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2409040863310290482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &2699188673643532852
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +757,7 @@ GameObject:
   - component: {fileID: 6617937523247442566}
   - component: {fileID: 2159827851434135009}
   - component: {fileID: 3503207262803612820}
+  - component: {fileID: 3710173708632100351}
   m_Layer: 5
   m_Name: Translation
   m_TagString: Untagged
@@ -779,6 +840,9 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 0
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3503207262803612820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,6 +855,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7766edb83043e4192d6319c67db710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3710173708632100351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3574708049308889739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &3608389494848516030
 GameObject:
   m_ObjectHideFlags: 0
@@ -804,6 +883,7 @@ GameObject:
   - component: {fileID: 2301251491190636915}
   - component: {fileID: 1295782039012310884}
   - component: {fileID: 2044881804803666089}
+  - component: {fileID: 8750318737519465096}
   m_Layer: 5
   m_Name: Relics
   m_TagString: Untagged
@@ -886,6 +966,9 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2044881804803666089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -898,6 +981,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7766edb83043e4192d6319c67db710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8750318737519465096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3608389494848516030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &3801017843887782021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1015,6 +1113,7 @@ GameObject:
   - component: {fileID: 2739039507171483333}
   - component: {fileID: 1285558539352541738}
   - component: {fileID: 89448546173361740}
+  - component: {fileID: 4549055586561173002}
   m_Layer: 5
   m_Name: Ouija
   m_TagString: Untagged
@@ -1097,6 +1196,9 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &89448546173361740
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1109,6 +1211,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7766edb83043e4192d6319c67db710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4549055586561173002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3803176692174614597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &4473920095819191434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,6 +1348,7 @@ GameObject:
   - component: {fileID: 7490636080011044692}
   - component: {fileID: 2469820094308115435}
   - component: {fileID: 5070053998603349353}
+  - component: {fileID: 1123438077713865090}
   m_Layer: 5
   m_Name: Corps
   m_TagString: Untagged
@@ -1328,6 +1446,21 @@ MonoBehaviour:
   OnPointerExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1123438077713865090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5739113287111686078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &5905188393116024002
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,6 +1474,7 @@ GameObject:
   - component: {fileID: 5542947408788367493}
   - component: {fileID: 3273138364799154859}
   - component: {fileID: 2709351797484284596}
+  - component: {fileID: 5967488295800091732}
   m_Layer: 5
   m_Name: Maze
   m_TagString: Untagged
@@ -1423,6 +1557,9 @@ MonoBehaviour:
   _enigmaNumber: 0
   _canBeClicked: 1
   _enigmaFinish: 0
+  _onButtonClicked:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2709351797484284596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,6 +1572,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7766edb83043e4192d6319c67db710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5967488295800091732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5905188393116024002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &6032094015072608434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1447,6 +1599,7 @@ GameObject:
   - component: {fileID: 1933380914690764906}
   - component: {fileID: 8288578391843737368}
   - component: {fileID: 5603911559142819053}
+  - component: {fileID: 4780818266254328533}
   m_Layer: 5
   m_Name: Corps-Porte
   m_TagString: Untagged
@@ -1470,7 +1623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -765, y: -276}
+  m_AnchoredPosition: {x: 702, y: -249}
   m_SizeDelta: {x: 171.28, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1933380914690764906
@@ -1544,6 +1697,21 @@ MonoBehaviour:
   OnPointerExitEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4780818266254328533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6032094015072608434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
 --- !u!1 &7039490163520269020
 GameObject:
   m_ObjectHideFlags: 0
