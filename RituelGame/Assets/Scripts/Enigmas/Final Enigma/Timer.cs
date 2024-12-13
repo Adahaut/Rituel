@@ -34,6 +34,7 @@ public class Timer : MonoBehaviour
 
     public Action OnEnigmaReset;
 
+
     private void Start()
     {
         for (int i = 0; i < values.Count; i++)

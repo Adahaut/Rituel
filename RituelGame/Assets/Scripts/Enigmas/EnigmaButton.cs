@@ -23,7 +23,7 @@ namespace Enigmas
         
         public Action OnButtonClickedEvent;
         
-        public UnityEvent OnButtonClicked;
+        public UnityEvent _onButtonClicked;
         
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -33,7 +33,7 @@ namespace Enigmas
                 enigmaCanvas.interactable = true;
                 enigmaCanvas.blocksRaycasts = true;
                 OnButtonClickedEvent?.Invoke();
-                OnButtonClicked.Invoke();
+                _onButtonClicked.Invoke();
             }
         }
 
