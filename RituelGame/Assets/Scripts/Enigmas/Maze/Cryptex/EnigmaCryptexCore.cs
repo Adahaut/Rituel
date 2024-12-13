@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class EnigmaCryptexCore : MonoBehaviour
 {
-    public GameObject _cryptex;
+    public Sprite _cryptexOpen;
+    
+    public GameObject _cryptexBackGround;
     public GameObject _codePanel;
     
     public EnigmaData _cryptexData;
@@ -44,12 +46,18 @@ public class EnigmaCryptexCore : MonoBehaviour
         linkCore.AddLink(_cryptexData.LinkToAddIfSuccess);
         _cryptexData.GetReward();
         
-        _cryptex.SetActive(false);
-        _codePanel.SetActive(true);
+        _cryptexBackGround.GetComponent<Image>().sprite = _cryptexOpen;
+        StartCoroutine(PanelCode());
     }
     
     public void Lose()
     {
         linkCore.RemoveLink(_cryptexData.LinkToRemoveIfFail);
+    }
+
+    private IEnumerator PanelCode()
+    {
+        yield return new WaitForSeconds(1f);
+        _codePanel.SetActive(true);
     }
 }
