@@ -1541,11 +1541,19 @@ PrefabInstance:
     - target: {fileID: 4556034733031669588, guid: 6a3ff6f7a3a2e164096eeb0d05b7d657, type: 3}
       propertyPath: sounds.Array.data[21].clip
       value: 
-      objectReference: {fileID: 8300000, guid: 7cf5b76550320ae439126a3b70a484e9, type: 3}
+      objectReference: {fileID: 8300000, guid: c713ed9f430c3b04594e989f27e09aac, type: 3}
     - target: {fileID: 4556034733031669588, guid: 6a3ff6f7a3a2e164096eeb0d05b7d657, type: 3}
       propertyPath: sounds.Array.data[19].volume
       value: 0.7
       objectReference: {fileID: 0}
+    - target: {fileID: 4556034733031669588, guid: 6a3ff6f7a3a2e164096eeb0d05b7d657, type: 3}
+      propertyPath: sounds.Array.data[21].volume
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556034733031669588, guid: 6a3ff6f7a3a2e164096eeb0d05b7d657, type: 3}
+      propertyPath: sounds.Array.data[22].audioMixerGroup
+      value: 
+      objectReference: {fileID: -5073549719074095387, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     - target: {fileID: 5297107729604492259, guid: 6a3ff6f7a3a2e164096eeb0d05b7d657, type: 3}
       propertyPath: m_Name
       value: AudioManger
