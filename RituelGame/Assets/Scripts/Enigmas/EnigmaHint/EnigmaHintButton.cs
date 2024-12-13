@@ -12,15 +12,16 @@ namespace Enigmas.EnigmaHint
         public static Action<EnigmaData, WorldType> OnHintButtonClicked;
 
         public float timeCounter;
-        private float timeLimit = 45;
+        private float timeLimit = 15;
 
-        private bool didShow = false;
+        private bool didShow;
 
         private void Start()
         {
             Image image = gameObject.GetComponent<Image>();
             image.enabled = false;
             image.raycastTarget = false;
+            didShow = false;
         }
 
         private void Update()
