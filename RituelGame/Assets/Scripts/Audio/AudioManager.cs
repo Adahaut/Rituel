@@ -38,14 +38,28 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound (string name)//pas utilisé
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.Play();
+        try
+        {
+            Sound s = Array.Find(sounds, sound => sound.name == name);
+            s.source.Play();
+        }
+        catch
+        {
+            Debug.LogWarning(name + " sound not found");
+        }
     }
 
     public void PlayOverlap(string name)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.PlayOneShot(s.source.clip, s.source.volume);
+        try
+        {
+            Sound s = Array.Find(sounds, sound => sound.name == name);
+            s.source.PlayOneShot(s.source.clip, s.source.volume);
+        }
+        catch
+        {
+            Debug.LogWarning(name + " sound not found");
+        }
     }
 
     public void PlayDelay(string name,float delay)
