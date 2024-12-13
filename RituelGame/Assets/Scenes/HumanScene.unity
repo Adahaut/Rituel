@@ -705,6 +705,49 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
   m_PrefabInstance: {fileID: 309362847}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &324044399 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4019578674761209827, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+  m_PrefabInstance: {fileID: 1854227616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &324044401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324044399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 8b30e8311d23f8946940f4e482618821, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &324044402
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324044399}
+  m_CullTransparentMesh: 1
 --- !u!1001 &385753652
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3269,6 +3312,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1663224234}
     m_Modifications:
+    - target: {fileID: 65266147265873160, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 138
+      objectReference: {fileID: 0}
     - target: {fileID: 841285183480386787, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_text
       value: cryptex
@@ -3277,6 +3324,10 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 842596377}
+    - target: {fileID: 2109446037221148415, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -138
+      objectReference: {fileID: 0}
     - target: {fileID: 2820663399105249246, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: audioManager
       value: 
@@ -3289,6 +3340,22 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 842596377}
+    - target: {fileID: 4064491007523096709, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4115779089718429775, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -260
+      objectReference: {fileID: 0}
+    - target: {fileID: 4582142124324448633, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _cryptexOpen
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b697432573a7234d96e07c026c1cc8f, type: 3}
+    - target: {fileID: 4582142124324448633, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _cryptexBackGround
+      value: 
+      objectReference: {fileID: 324044399}
     - target: {fileID: 4681289944224412123, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _onButtonClickedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3316,6 +3383,14 @@ PrefabInstance:
     - target: {fileID: 4681289944224412123, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _onButtonClickedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284949502967504270, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_IgnoreReversedGraphics
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6627933379126888736, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 265
       objectReference: {fileID: 0}
     - target: {fileID: 6757546086414997573, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: audioManager
@@ -3362,6 +3437,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: bd39e55e23afab64081c01f1f2fe034c, type: 2}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _cryptexOpen
+      value: 
+      objectReference: {fileID: 21300000, guid: 1b697432573a7234d96e07c026c1cc8f, type: 3}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _canvasParent
       value: 
       objectReference: {fileID: 1854227617}
@@ -3373,6 +3452,10 @@ PrefabInstance:
       propertyPath: _cryptexCanvas
       value: 
       objectReference: {fileID: 823444087}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _cryptexBackGround
+      value: 
+      objectReference: {fileID: 324044399}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
@@ -3513,13 +3596,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8722897384375217014, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 8722897384375217014, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4242718374596724340, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+    - {fileID: 8299719008823429247, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+    - {fileID: 5950698292144499053, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+    - {fileID: 1754337402371737536, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 3541141956200198339, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       insertIndex: 1
       addedObject: {fileID: 1339595217}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4019578674761209827, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 324044402}
+    - targetCorrespondingSourceObject: {fileID: 4019578674761209827, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 324044401}
   m_SourcePrefab: {fileID: 100100000, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
 --- !u!223 &1854227617 stripped
 Canvas:
@@ -4717,6 +4818,46 @@ PrefabInstance:
       propertyPath: _buttonToAccessEnigma
       value: 
       objectReference: {fileID: 6004865555073932090}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[0].Key
+      value: Alice
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[1].Key
+      value: Viktor
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[2].Key
+      value: "L\xE9a"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[3].Key
+      value: Thomas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[4].Key
+      value: Emma
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[5].Key
+      value: Lucas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[6].Key
+      value: Camille
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[7].Key
+      value: Hugo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[8].Key
+      value: Sarah
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _bodyData._serializedList.Array.data[9].Key
+      value: Julien
+      objectReference: {fileID: 0}
     - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _bodyData._serializedList.Array.data[0].Value
       value: 
@@ -6147,6 +6288,10 @@ PrefabInstance:
     - target: {fileID: 1437110299580162322, guid: 86923fdecc5f40642908e04b087ce2b0, type: 3}
       propertyPath: m_Name
       value: IntroductionScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437110299580162322, guid: 86923fdecc5f40642908e04b087ce2b0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2931706923733746175, guid: 86923fdecc5f40642908e04b087ce2b0, type: 3}
       propertyPath: m_Pivot.x
