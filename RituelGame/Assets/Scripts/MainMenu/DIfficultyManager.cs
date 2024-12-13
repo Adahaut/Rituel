@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,11 @@ public class DIfficultyManager : MonoBehaviour
     public int _mediumLink;
     public int _hardLink;
 
+    private void Start()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     private void Update()
     {
         if (SceneManager.GetActiveScene().name == "HumanScene" ||
@@ -18,7 +24,7 @@ public class DIfficultyManager : MonoBehaviour
         {
             LinkCore linkCore = GameObject.FindGameObjectWithTag("LinkManager").GetComponent<LinkCore>();
             
-            linkCore.AddLink(_linkToStartWith);
+            linkCore.SetLinkCount(_linkToStartWith);
             
             Destroy(gameObject);
         }
