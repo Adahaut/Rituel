@@ -13,6 +13,7 @@ public class DIfficultyManager : MonoBehaviour
     public int _mediumLink;
     public int _hardLink;
 
+    public GameObject _continueButton;
 
     private void Start()
     {
@@ -37,15 +38,18 @@ public class DIfficultyManager : MonoBehaviour
     public void Easy()
     {
         _linkToStartWith = _easyLink;
+        _continueButton.SetActive(true);
     }
     
     public void Medium()
     {
         _linkToStartWith = _mediumLink;
+        _continueButton.SetActive(true);
     }
     
     public void Hard()
     {
         _linkToStartWith = _hardLink;
+        _continueButton.SetActive(true);
     }
 }
