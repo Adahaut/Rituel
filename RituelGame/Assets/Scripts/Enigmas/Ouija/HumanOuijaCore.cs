@@ -101,37 +101,52 @@ namespace Enigmas.Ouija
                 {
                     return;
                 }
-                
-                isZoomed = true;
-                zoomedOuijaBoard = ouijaBoardClicked;
 
-                Transform zoomedOuijaBoardTransform = zoomedOuijaBoard.transform;
-                zoomedBoardLayoutIndex = zoomedOuijaBoardTransform.GetSiblingIndex();
-                zoomedOuijaBoardTransform.SetParent(ouijaBoardZoomedParent, true);
-                zoomedBoardOriginalScale = zoomedOuijaBoardTransform.localScale;
-                
-                zoomedOuijaBoardTransform.DOMove(Vector3.zero, 1f).SetEase(Ease.InOutQuint);
-                zoomedOuijaBoardTransform.DOScale(Vector3.one * 1, 1).SetEase(Ease.InOutQuint);
-
-                var placeholderObject = new GameObject("ouijaBoardPlaceholder", typeof(RectTransform));
-                placeholderObject.transform.SetParent(ouijaBoardLayoutParent);
-                placeholderObject.transform.SetSiblingIndex(zoomedBoardLayoutIndex);
-
-                CanvasGroup layoutCanvasGroup = ouijaBoardLayoutParent.GetComponent<CanvasGroup>();
-                layoutCanvasGroup.DOFade(0, 1f);
-                layoutCanvasGroup.SetCanvasGroupInteraction(false);
-                
-                OnZoomOuijaBoardEvent?.Invoke();
+                Zoom(ouijaBoardClicked);
             }
         }
 
+        private void Zoom(OuijaBoard ouijaBoardClicked)
+        {
+            isZoomed = true;
+            zoomedOuijaBoard = ouijaBoardClicked;
+
+            Transform zoomedOuijaBoardTransform = zoomedOuijaBoard.transform;
+            zoomedBoardLayoutIndex = zoomedOuijaBoardTransform.GetSiblingIndex();
+            zoomedOuijaBoardTransform.SetParent(ouijaBoardZoomedParent, true);
+            zoomedBoardOriginalScale = zoomedOuijaBoardTransform.localScale;
+                
+            zoomedOuijaBoardTransform.DOMove(Vector3.zero, 1f).SetEase(Ease.InOutQuint);
+            zoomedOuijaBoardTransform.DOScale(Vector3.one * 1, 1).SetEase(Ease.InOutQuint);
+
+            var placeholderObject = new GameObject("ouijaBoardPlaceholder", typeof(RectTransform));
+            placeholderObject.transform.SetParent(ouijaBoardLayoutParent);
+            placeholderObject.transform.SetSiblingIndex(zoomedBoardLayoutIndex);
+
+            CanvasGroup layoutCanvasGroup = ouijaBoardLayoutParent.GetComponent<CanvasGroup>();
+            layoutCanvasGroup.DOFade(0, 1f);
+            layoutCanvasGroup.SetCanvasGroupInteraction(false);
+                
+            OnZoomOuijaBoardEvent?.Invoke();
+        }
+
         public void OnBackgroundClicked()
+        {
+            TryUnZoom();
+        }
+
+        public void TryUnZoom()
         {
             if (!isZoomed)
             {
                 return;
             }
 
+            UnZoom();
+        }
+
+        private void UnZoom()
+        {
             isZoomed = false;
             canZoom = false;
             
