@@ -7,6 +7,9 @@ using UnityEngine.UI;
 public class EnigmaCryptexCore : MonoBehaviour
 {
     public Sprite _cryptexOpen;
+    public GameObject _cryptexSprite;
+
+    public Vector3 OffSet;
     
     public GameObject _cryptexBackGround;
     public GameObject _codePanel;
@@ -50,6 +53,7 @@ public class EnigmaCryptexCore : MonoBehaviour
         _cryptexData.GetReward();
         
         _cryptexBackGround.GetComponent<Image>().sprite = _cryptexOpen;
+        _cryptexSprite.transform.position -= OffSet;
         StartCoroutine(PanelCode());
         
         _mazeButton.GetComponent<EnigmaButton>().ActivateEnigma();

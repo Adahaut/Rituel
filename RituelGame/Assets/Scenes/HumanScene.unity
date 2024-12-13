@@ -3400,10 +3400,6 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 842596377}
-    - target: {fileID: 4064491007523096709, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 4115779089718429775, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -260
@@ -3481,6 +3477,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 842596377}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: OffSet.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: OffSet.y
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptex
       value: 
       objectReference: {fileID: 3518368}
@@ -3512,6 +3516,10 @@ PrefabInstance:
       propertyPath: _cryptexCanvas
       value: 
       objectReference: {fileID: 823444087}
+    - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
+      propertyPath: _cryptexSprite
+      value: 
+      objectReference: {fileID: 324044399}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptexBackGround
       value: 
@@ -4947,6 +4955,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1419701595}
     - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _confirmButton
+      value: 
+      objectReference: {fileID: 2073032062}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _age.Array.data[0]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2246835193355276644, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
       objectReference: {fileID: 6004865555073932090}
@@ -5230,6 +5246,10 @@ PrefabInstance:
       propertyPath: m_PlaneDistance
       value: 7.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8168839541413611198, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6935843050124880977, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
     - {fileID: 6461324765567921233, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
@@ -5253,6 +5273,11 @@ CanvasGroup:
 --- !u!4 &2073032061 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1304000927856066189, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+  m_PrefabInstance: {fileID: 2073032058}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2073032062 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8168839541413611198, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
   m_PrefabInstance: {fileID: 2073032058}
   m_PrefabAsset: {fileID: 0}
 --- !u!225 &2090223440 stripped
