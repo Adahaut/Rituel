@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2557700
 RectTransform:
   m_ObjectHideFlags: 0
@@ -870,6 +870,7 @@ MonoBehaviour:
   _easyLink: 50
   _mediumLink: 30
   _hardLink: 10
+  _continueButton: {fileID: 1570146293}
 --- !u!4 &289407456
 Transform:
   m_ObjectHideFlags: 0
@@ -2825,7 +2826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &780745974
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4163,6 +4164,7 @@ MonoBehaviour:
   _startCanvas: {fileID: 780745973}
   _optionCanvas: {fileID: 1132542264}
   _selectCharacterCanvas: {fileID: 1502934214}
+  _selectDifficultyCanvas: {fileID: 2557699}
   light: {fileID: 830948849}
   _cinematicScene: CinematicScene
 --- !u!114 &1171454145
@@ -4862,7 +4864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1502934215
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5187,7 +5189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1570146294
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5263,6 +5265,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1502934214}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1570146296
 MonoBehaviour:

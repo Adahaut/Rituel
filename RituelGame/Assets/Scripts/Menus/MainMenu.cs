@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     public GameObject _startCanvas;
     public GameObject _optionCanvas;
     public GameObject _selectCharacterCanvas;
+    public GameObject _selectDifficultyCanvas;
     
     private GameObject lastCanvasOpen;
     private GameObject actualCanvas;
@@ -51,9 +52,9 @@ public class MainMenu : MonoBehaviour
         if (PlayerPrefs.GetInt("CinematicDone") == 1)
         {
             _startCanvas.SetActive(false);
-            _selectCharacterCanvas.SetActive(true);
+            _selectDifficultyCanvas.SetActive(true);
 
-            actualCanvas = _selectCharacterCanvas;
+            actualCanvas = _selectDifficultyCanvas;
             lastCanvasOpen = _startCanvas;
         }
         else
