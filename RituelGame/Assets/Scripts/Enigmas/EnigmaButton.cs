@@ -20,7 +20,6 @@ namespace Enigmas
         public bool _canBeClicked;
 
         public bool _enigmaFinish = false;
-
         
         public Action OnButtonClickedEvent;
         

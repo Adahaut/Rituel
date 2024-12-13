@@ -35,6 +35,11 @@ namespace Enigmas.EnigmaHint
                 didShow = true;
             }
         }
+
+        public void Activate()
+        {
+            gameObject.SetActive(true);
+        }
         
         public void OnPointerClick(PointerEventData eventData)
         {
