@@ -73,6 +73,7 @@ namespace Enigmas.Key
             openedChest.SetCanvasGroupInteraction(true);
             closedChest.DOFade(0, 0.5f);
             openedChest.DOFade(1, 0.5f);
+
             _hint.SetActive(true);
             _button.GetComponent<EnigmaButton>()._onButtonClicked.AddListener(_hint.GetComponent<EnigmaHintButton>().Activate);
         }

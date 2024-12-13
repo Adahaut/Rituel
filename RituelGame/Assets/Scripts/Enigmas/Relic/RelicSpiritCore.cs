@@ -1,4 +1,6 @@
 using System;
+using Enigmas;
+using Enigmas.EnigmaHint;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -9,6 +11,10 @@ public class RelicSpiritCore : MonoBehaviour
     [SerializeField] private float chestInteractionCooldown;
     private float chestCooldownTimer;
     [SerializeField] private AudioManager audioManager;
+
+    public GameObject _hint;
+    public GameObject _hint2;
+    public GameObject _button;
 
     private void Update()
     {
@@ -35,6 +41,9 @@ public class RelicSpiritCore : MonoBehaviour
         openedChest.ActivateCanvasGroup();
         closedChest.DeactivateCanvasGroup();
         chestCooldownTimer = chestInteractionCooldown;
+        
+        _button.GetComponent<EnigmaButton>().OnButtonClicked.AddListener(_hint.GetComponent<EnigmaHintButton>().Activate);
+        _hint.SetActive(false);
     }
 
     public void CloseChest()
@@ -47,5 +56,7 @@ public class RelicSpiritCore : MonoBehaviour
         openedChest.DeactivateCanvasGroup();
         closedChest.ActivateCanvasGroup();
         chestCooldownTimer = chestInteractionCooldown;
+        _button.GetComponent<EnigmaButton>().OnButtonClicked.RemoveListener(_hint.GetComponent<EnigmaHintButton>().Activate);
+        _hint.SetActive(true);
     }
 }
