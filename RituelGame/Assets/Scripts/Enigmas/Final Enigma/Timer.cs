@@ -62,6 +62,7 @@ public class Timer : MonoBehaviour
     public void ResetTimer()
     {
         _timer = 0;
+        OnEnigmaReset();
     }
     
     void Update()
