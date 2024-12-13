@@ -6406,14 +6406,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCamera
       objectReference: {fileID: 0}
-    - target: {fileID: 6236177838887111490, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6236177838887111490, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
-      propertyPath: zoomPercentage
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 6924224629535951336, guid: 8381a37a8aa6e224ab067b092f610501, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
