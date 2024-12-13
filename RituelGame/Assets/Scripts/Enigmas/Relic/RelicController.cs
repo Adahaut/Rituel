@@ -19,6 +19,8 @@ public class RelicController : MonoBehaviour
     public GameObject _codePanel;
     public GameObject _enigma;
     
+    public LayoutGroup _horizontalLayoutGroup;
+    
     [SerializeField] private AudioManager audioManager;
     
     [SerializeField] private GameObject correctBreakParticles;
@@ -34,6 +36,7 @@ public class RelicController : MonoBehaviour
     {
         symbole = Random.Range(0, _relics.Count);
         _symboleText.text = symbole.ToString();
+        _horizontalLayoutGroup.enabled = false;
     }
 
     public bool CheckRelicSymbole(RelicItem relic)
