@@ -25,13 +25,17 @@ public class HumanBodyEnigma : MonoBehaviour
     private GameObject body;
     public GameObject _question;
     public GameObject _answerZone;
+
+    public GameObject _confirmButton;
     
     private void Start()
     {
         bodyIndex = Random.Range(0, _bodyData.Count);
 
         body = Instantiate(_bodyData.ElementAt(bodyIndex).Value, _bodyParent.transform, true);
-        body.GetComponentInChildren<TextMeshProUGUI>().text = "";
+        TextMeshProUGUI textMesh = body.GetComponentInChildren<TextMeshProUGUI>();
+        textMesh.text = "";
+        textMesh.gameObject.transform.position = _bodyParent.transform.position - new Vector3(200, 0, 0);
         body.transform.localPosition = Vector3.zero;
         body.transform.localScale = Vector3.one * bodyScale;
     }
@@ -43,10 +47,11 @@ public class HumanBodyEnigma : MonoBehaviour
             _question.SetActive(false);
             _answerZone.SetActive(false);
             body.GetComponentInChildren<TextMeshProUGUI>().text =
-                _bodyData.ElementAt(bodyIndex).Key + " " + _lastName[bodyIndex] + " " + _age[bodyIndex];
+                _bodyData.ElementAt(bodyIndex).Key + "\n" + _lastName[bodyIndex] + "\n" + _age[bodyIndex] + " years old";
             // _canvasParent.gameObject.SetActive(false);
             // _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
+            _confirmButton.SetActive(true);
         }
         else
         {
