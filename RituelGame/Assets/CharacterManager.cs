@@ -17,13 +17,27 @@ public class CharacterManager : MonoBehaviour
 
         if (mousePos.x < 0)
         {
-            humanLight.intensity = 1;
             spiritLight.intensity = 0;
+            if (mousePos.x < -5)
+            {
+                humanLight.intensity = 1;
+            }
+            else
+            {
+                humanLight.intensity = 1f / (1f - Mathf.Abs(mousePos.x) + 5);
+            }
         }
         else
         {
             humanLight.intensity = 0;
-            spiritLight.intensity = 1;
+            if (mousePos.x > 5)
+            {
+                spiritLight.intensity = 1;
+            }
+            else
+            {
+                spiritLight.intensity = 1f / (1f - Mathf.Abs(mousePos.x) + 5);
+            }
         }
     }
 }
