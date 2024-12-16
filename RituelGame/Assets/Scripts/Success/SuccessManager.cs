@@ -30,6 +30,14 @@ public class SuccessManager : MonoBehaviour
             Instantiate(success, _parentInCanvasToSpawn.transform);
         }
     }
+    
+    public void DestroyAllSucessMenu()
+    {
+        foreach (Transform child in _parentInCanvasToSpawn.transform)
+        {
+            Destroy(child.gameObject);
+        }
+    }
 
     public void SpawnSuccess(SuccesType successType)
     {
