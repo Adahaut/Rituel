@@ -1,3 +1,4 @@
+using System.Reflection;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,6 +11,11 @@ public class ChangeScaleOnHover : MonoBehaviour, IPointerEnterHandler, IPointerE
     [SerializeField] private float timeToScale = 0.45f;
     [SerializeField] private Ease easeType = Ease.OutQuint;
     
+    public bool _isCheckingBool;
+    public MonoBehaviour _objectToCheck;
+    public string _boolToCheck;
+    public bool _shouldBeTrue = true;
+    
     private void Awake()
     {
         transform = GetComponent<Transform>();
@@ -18,6 +24,21 @@ public class ChangeScaleOnHover : MonoBehaviour, IPointerEnterHandler, IPointerE
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        if (_isCheckingBool)
+        {
+            FieldInfo field = _objectToCheck.GetType().GetField(_boolToCheck);
+            if (field == null)
+            {
+                Debug.LogError("field not found");
+                return;
+            }
+
+            bool fieldValue = (bool)field.GetValue(_objectToCheck);
+            if ((fieldValue && !_shouldBeTrue) || (!fieldValue && _shouldBeTrue))
+            {
+                return;
+            }
+        }
         ScaleEnter();
     }
     
