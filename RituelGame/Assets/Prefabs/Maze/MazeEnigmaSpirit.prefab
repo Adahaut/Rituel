@@ -1134,6 +1134,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 6651458329258255509}
   _mazePatternScript: {fileID: 4695951172929901317}
+  mazeFrameSpriteWall: {fileID: 21300000, guid: 5f3085c6a7890844ea72604a1d164ae4, type: 3}
   _mazeFramePrefab: {fileID: 6733794824524061442, guid: 5d4bbd53ca888ba40b413d141c3b06ca, type: 3}
   _mazes: {fileID: 720123773365725051}
   _mazeFrameStartPosition: {fileID: 4847803084044399431}
