@@ -99,7 +99,6 @@ public class TraductionEnigmaSpirit : MonoBehaviour
                 int buttonIndex = indexInList;
 
                 button.onClick.AddListener(() => ChooseAnswer(word.Key, objButton, buttonIndex));
-                Debug.Log(word.Key + " " + objButton + " " + indexInList);
 
                 parentButton.transform.localPosition = new Vector3(_topLeftFirstButtonPos.x + 350 + (150 * index), _topLeftFirstButtonPos.y, -0f);
                 parentButton.transform.localScale = Vector3.one;
