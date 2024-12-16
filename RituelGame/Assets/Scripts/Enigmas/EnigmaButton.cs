@@ -24,6 +24,9 @@ namespace Enigmas
         public Action OnButtonClickedEvent;
         
         public UnityEvent _onButtonClicked;
+
+        public GameObject _lights;
+        public GameObject _spotLights;
         
         public void OnPointerClick(PointerEventData eventData)
         {
@@ -52,6 +55,8 @@ namespace Enigmas
 
             if (_enigmaCounter == _enigmaNumber)
             {
+                _lights.SetActive(false);
+                _spotLights.SetActive(true);
                 _canBeClicked = true;
             }
         }
