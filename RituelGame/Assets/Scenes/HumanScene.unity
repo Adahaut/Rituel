@@ -7305,6 +7305,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _enigmaNumber
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: OnButtonClicked.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
