@@ -12,7 +12,8 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
     public MazePattern _mazePatternScript;
 
     public List<MazeStruct> _mazeStructures = new();
-    
+
+    [SerializeField] private Sprite mazeFrameSpriteWall;
     public GameObject _mazeFramePrefab;
     public GameObject _mazes;
     public Transform _mazeFrameStartPosition;
@@ -88,7 +89,7 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
                     
                     if (mazeStruct._mazePattern[i, j] == 1) //Setting th color of the frame according to if it's a wall or not.
                     {
-                        mazeFrame.GetComponent<Image>().color = Color.black;
+                        mazeFrame.GetComponent<Image>().sprite = mazeFrameSpriteWall;
                     } else if (mazeStruct._mazePattern[i, j] == 3)
                     {
                         mazeFrame.GetComponent<Image>().color = Color.green;
