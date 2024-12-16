@@ -84,6 +84,11 @@ public class MainMenu : MonoBehaviour
         actualCanvas = _optionCanvas;
         lastCanvasOpen = _startCanvas;
     }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("MainMenuScene");
+    }
     
     public void Quit()
     {
