@@ -14,7 +14,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject backButton;
     [SerializeField] private List<FinalClock> timeClocks;
     [SerializeField] private List<int> values;
-    
+
+    public WorldType _worldType;
     
     public TextMeshProUGUI _timerText;
 
@@ -92,7 +93,35 @@ public class Timer : MonoBehaviour
 
     void Win()
     {
-        //gain de liaison
+        SuccessManager successManager = FindObjectOfType<SuccessManager>();
+
+        if (_worldType == WorldType.Spirit)
+        {
+            successManager.SpawnSuccess(SuccesType.DimensionTraveler);
+        
+            if (linkCore.linkCount <= 10)
+            {
+                successManager.SpawnSuccess(SuccesType.TheFallen);
+            }
+            else if (linkCore.linkCount == 100)
+            {
+                successManager.SpawnSuccess(SuccesType.SpiritMaster);
+            }
+        }
+        else if (_worldType == WorldType.Human)
+        {
+            successManager.SpawnSuccess(SuccesType.NeedAnExorcist);
+        
+            if (linkCore.linkCount <= 10)
+            {
+                successManager.SpawnSuccess(SuccesType.NoReviveHere);
+            }
+            else if (linkCore.linkCount == 100)
+            {
+                successManager.SpawnSuccess(SuccesType.HumanMaster);
+            }
+        }
+        
         Restart();
     }
 
