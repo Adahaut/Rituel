@@ -275,7 +275,7 @@ PrefabInstance:
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
-      objectReference: {fileID: 1370073790}
+      objectReference: {fileID: 0}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -1055,11 +1055,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.02, y: 2.7777781}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &503912925 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1603416535448960026, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &552216924 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3605057013931967762, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
@@ -1069,6 +1064,11 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2613012818057492096, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
   m_PrefabInstance: {fileID: 20058186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &555784661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6339258441746261372, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
@@ -2659,7 +2659,7 @@ PrefabInstance:
       objectReference: {fileID: 842596377}
     - target: {fileID: 4952846295559224696, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
       propertyPath: _maxLinkCount
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7533212478614044513, guid: 7fd4e955778e3b24a851b95e7d71e0fa, type: 3}
       propertyPath: _linkText
@@ -2693,11 +2693,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2696036e92899b4086a576a7ddaa709, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1183423680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5905188393116024002, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1217796763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3120,11 +3115,6 @@ MonoBehaviour:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8998107892858872447, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
   m_PrefabInstance: {fileID: 1457622469}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1370073790 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2409040863310290482, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1373193840
 PrefabInstance:
@@ -3894,6 +3884,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
   m_PrefabInstance: {fileID: 1765949133}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1826059529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7587010055889265711, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1854227616
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4053,7 +4048,7 @@ PrefabInstance:
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _mazeButton
       value: 
-      objectReference: {fileID: 1183423680}
+      objectReference: {fileID: 1826059529}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptexData
       value: 
@@ -4069,7 +4064,7 @@ PrefabInstance:
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptexButton
       value: 
-      objectReference: {fileID: 503912925}
+      objectReference: {fileID: 0}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _cryptexCanvas
       value: 
@@ -4085,11 +4080,11 @@ PrefabInstance:
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
-      objectReference: {fileID: 503912925}
+      objectReference: {fileID: 555784661}
     - target: {fileID: 7672015753553759679, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: <_unlockButtonThisEnigma>k__BackingField
       value: 
-      objectReference: {fileID: 1183423680}
+      objectReference: {fileID: 0}
     - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -4117,7 +4112,7 @@ PrefabInstance:
     - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 503912925}
+      objectReference: {fileID: 0}
     - target: {fileID: 7877281060021086609, guid: d25ddfd9c1367e54d83ae5edbcc9826f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -6159,7 +6154,7 @@ PrefabInstance:
     - target: {fileID: 2775162104710490214, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: <_unlockButtonThisEnigma>k__BackingField
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1826059529}
     - target: {fileID: 3954053376490732261, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: m_text
       value: maze
@@ -6295,7 +6290,7 @@ PrefabInstance:
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
-      objectReference: {fileID: 1183423680}
+      objectReference: {fileID: 1826059529}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -7052,6 +7047,10 @@ PrefabInstance:
       propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1603416535448960026, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1952618111858169215, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Material
       value: 
@@ -7147,6 +7146,10 @@ PrefabInstance:
     - target: {fileID: 2301251491190636915, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_RaycastPadding.y
       value: 19.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2409040863310290482, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2586867414015639262, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Sprite
@@ -7528,6 +7531,10 @@ PrefabInstance:
       propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: Enigmas.EnigmaHint.EnigmaHintButton, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 5905188393116024002, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6067071919317569407, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -7675,6 +7682,9 @@ PrefabInstance:
     - {fileID: 7532355684632337923, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     - {fileID: 7039490163520269020, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     - {fileID: 1097365775779091819, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+    - {fileID: 1603416535448960026, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+    - {fileID: 5905188393116024002, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+    - {fileID: 2409040863310290482, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 304681315149525377, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       insertIndex: -1
@@ -7706,7 +7716,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
   m_PrefabInstance: {fileID: 6004865555073932088}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1826059529}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff9f0bf6d698efe4da42a0099bc74a09, type: 3}
