@@ -19,6 +19,7 @@ public class SuccessManager : MonoBehaviour
     private void Start()
     {
         spawnQueue = new Queue<SuccesType>();
+        SpawnSuccess(SuccesType.DimensionTraveler);
         ResetAllSuccess();
     }
 
