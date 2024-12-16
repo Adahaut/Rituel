@@ -14,7 +14,10 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject backButton;
     [SerializeField] private List<FinalClock> timeClocks;
     [SerializeField] private List<int> values;
+    [SerializeField] private List<AutoCandle> autoCandleOrdered;
 
+    private int autoIndex = 0;
+    
     public WorldType _worldType;
     
     public TextMeshProUGUI _timerText;
@@ -34,8 +37,7 @@ public class Timer : MonoBehaviour
     private int addedLink = 0;
 
     public Action OnEnigmaReset;
-
-
+    
     private void Start()
     {
         for (int i = 0; i < values.Count; i++)
@@ -46,7 +48,7 @@ public class Timer : MonoBehaviour
 
     public void CheckClickTiming(float clickTime)
     {
-        if (Mathf.Abs(_timer-clickTime) <= acceptanceInterval)
+        if (Mathf.Abs(_timer - clickTime) <= acceptanceInterval) 
         {
             audioManager.PlayOverlap("LightACandle");
             linkCore.AddLink(enigmaData.LinkToAddIfSuccess);
@@ -78,6 +80,16 @@ public class Timer : MonoBehaviour
             else
                 Loose();
         }
+
+        if (values.Count > autoIndex)
+        {
+            if (Mathf.Abs(_timer - values[autoIndex]) <= acceptanceInterval) 
+            {
+                autoCandleOrdered[autoIndex].LightCandle();
+                autoIndex++;
+            }
+        }
+        
         _timerText.text = _timer.ToString();
 
     }
