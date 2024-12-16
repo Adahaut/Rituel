@@ -57,6 +57,7 @@ MonoBehaviour:
   _textSuccessDescription: {fileID: 5442599050569086530}
   _imageSuccess: {fileID: 1768309088942226569}
   _background: {fileID: 8509768185210561659}
+  _animeDuration: 1
 --- !u!1 &2870990071436911293
 GameObject:
   m_ObjectHideFlags: 0
