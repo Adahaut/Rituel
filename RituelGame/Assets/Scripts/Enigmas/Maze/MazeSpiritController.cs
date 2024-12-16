@@ -69,20 +69,20 @@ public class MazeSpiritController : MonoBehaviour
             _panel.SetActive(true);
             Debug.Log(initScale);
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Space)) //Replacing the maze in his original position
-        {
-            _panel.SetActive(false);
-            zoomed = false;
-            maze.transform.parent.SetParent(normalMazeParent, true);
-            maze.transform.localPosition = mazeBasePos;
+    public void UnzoomMaze()
+    {
+        _panel.SetActive(false);
+        zoomed = false;
+        maze.transform.parent.SetParent(normalMazeParent, true);
+        maze.transform.localPosition = mazeBasePos;
             
-            maze.transform.localScale = initScale;
+        maze.transform.localScale = initScale;
             
-            //Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
-            //mazeCanvas.overrideSorting = false;
-            //mazeCanvas.sortingOrder = 0;
-        }
+        //Canvas mazeCanvas = maze.transform.parent.GetComponent<Canvas>();
+        //mazeCanvas.overrideSorting = false;
+        //mazeCanvas.sortingOrder = 0;
     }
 
     private Vector3 ReplaceMaze(LayerMask mazeLayer) //Replacing the maze after zooming in order to place it in the middle
