@@ -36,11 +36,11 @@ public class RelicController : MonoBehaviour
     {
         symbole = Random.Range(0, _relics.Count);
         _symboleText.text = symbole.ToString();
-        _horizontalLayoutGroup.enabled = false;
     }
 
     public bool CheckRelicSymbole(RelicItem relic)
     {
+        _horizontalLayoutGroup.enabled = false;
         audioManager.PlayOverlap("BreakRelic");
         Vector3 particlePos = relic.transform.position;
         particlePos.z = ParticlesConst.ParticleZSpawn;
