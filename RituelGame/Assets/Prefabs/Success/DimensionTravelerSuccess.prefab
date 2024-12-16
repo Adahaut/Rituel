@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6779055675658351537}
   - component: {fileID: 3494782973530423188}
   m_Layer: 5
-  m_Name: Sucesse 4
+  m_Name: DimensionTravelerSuccess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,11 +52,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be722c9283e3ea049bf74982b4f89dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _successData: {fileID: 11400000, guid: 2b8e79924cac18c4d9ef8cd1fb13e468, type: 2}
+  _successData: {fileID: 11400000, guid: c714d3bc82cbdd74a8c6d4cf12ae8525, type: 2}
   _textSuccessName: {fileID: 6937984772819161950}
   _textSuccessDescription: {fileID: 5442599050569086530}
   _imageSuccess: {fileID: 1768309088942226569}
   _background: {fileID: 8509768185210561659}
+  _animeDuration: 1
 --- !u!1 &2870990071436911293
 GameObject:
   m_ObjectHideFlags: 0

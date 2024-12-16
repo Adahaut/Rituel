@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6779055675658351537}
   - component: {fileID: 3494782973530423188}
   m_Layer: 5
-  m_Name: Sucesse
+  m_Name: HumanMasterSuccess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be722c9283e3ea049bf74982b4f89dbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _successData: {fileID: 11400000, guid: c714d3bc82cbdd74a8c6d4cf12ae8525, type: 2}
+  _successData: {fileID: 11400000, guid: 6a78c799a0b6ac844bd334391f6f8ccb, type: 2}
   _textSuccessName: {fileID: 6937984772819161950}
   _textSuccessDescription: {fileID: 5442599050569086530}
   _imageSuccess: {fileID: 1768309088942226569}

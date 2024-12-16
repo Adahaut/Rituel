@@ -17,4 +17,9 @@ public class SuccessData : ScriptableObject
    {
       return unlock;
    }
+
+   public void LockSuccess()
+   {
+      unlock = false;
+   }
 }

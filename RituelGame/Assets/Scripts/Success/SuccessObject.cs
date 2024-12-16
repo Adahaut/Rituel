@@ -24,7 +24,6 @@ public class SuccessObject : MonoBehaviour
         transform.localPosition = Vector3.zero;
         
         Initialize();
-        Unlock();
     }
 
     public void Initialize()
@@ -60,5 +59,7 @@ public class SuccessObject : MonoBehaviour
         _textSuccessDescription.DOFade(0, duration);
         _imageSuccess.DOFade(0, duration);
         _background.DOFade(0, duration);
+        yield return new WaitForSeconds(duration);
+        Destroy(gameObject);
     }
 }
