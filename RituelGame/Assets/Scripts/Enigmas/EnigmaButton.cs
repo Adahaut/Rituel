@@ -49,6 +49,11 @@ namespace Enigmas
             _canBeClicked = true;
         }
 
+        public void DeactivateEnigma()
+        {
+            _canBeClicked = false;
+        }
+        
         public void FinalEnigma()
         {
             _enigmaCounter++;
