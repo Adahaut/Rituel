@@ -289,11 +289,19 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1426833748}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 857321926}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 857321926}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
@@ -305,11 +313,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: FinalEnigma
       objectReference: {fileID: 0}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DisablePostProcess
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: DisablePostProcess
       objectReference: {fileID: 0}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
@@ -321,11 +337,19 @@ PrefabInstance:
       value: PostProcessHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: PostProcessHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 4083040767844415582, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4453366032320231239, guid: 104578e0c6b7daa4b931a0a93be0028c, type: 3}
@@ -1672,10 +1696,14 @@ PrefabInstance:
       objectReference: {fileID: 842596377}
     - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
@@ -1683,7 +1711,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1426833748}
     - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 6004865555073932094}
+    - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
@@ -1691,11 +1727,23 @@ PrefabInstance:
       value: FinalEnigma
       objectReference: {fileID: 0}
     - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: DeactivateEnigma
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Enigmas.EnigmaButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Enigmas.EnigmaButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513552674372205595, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8774148388449520319, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
@@ -1923,7 +1971,7 @@ PrefabInstance:
       objectReference: {fileID: 225110884}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1931,6 +1979,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
@@ -1942,11 +1994,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 857321926}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 225110885}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
@@ -1958,6 +2018,10 @@ PrefabInstance:
       value: DisablePostProcess
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DeactivateEnigma
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Enigmas.EnigmaButton, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -1966,11 +2030,19 @@ PrefabInstance:
       value: PostProcessHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Enigmas.EnigmaButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2099249232464092240, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3568813180956829977, guid: 7be3f639ea9b02e4799fd77e1d6fc692, type: 3}
@@ -2383,6 +2455,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
   m_PrefabInstance: {fileID: 951841570}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &951841572 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 489942024877426236, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
+  m_PrefabInstance: {fileID: 951841570}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 694111116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cd98ee226c4a7f864c9f330fc6182d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1011633224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3176570048978444155, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
@@ -2506,126 +2589,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8293516299823737194, guid: 3c016fd4fc1bb5a4cb2f26c7c604538f, type: 3}
   m_PrefabInstance: {fileID: 755279160}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1137597498
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1137597499}
-  - component: {fileID: 1137597502}
-  - component: {fileID: 1137597501}
-  - component: {fileID: 1137597500}
-  m_Layer: 10
-  m_Name: MazeAndCryptex
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1137597499
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137597498}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1461658061}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 355.5, y: -314}
-  m_SizeDelta: {x: 300, y: 300}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1137597500
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137597498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 1137597501}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &1137597501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137597498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2943b0d4983cf6246b3a81d46f8bfe56, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1137597502
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1137597498}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1168647786
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3142,6 +3105,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
   m_PrefabInstance: {fileID: 1339595216}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1339595218 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 489942024877426236, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
+  m_PrefabInstance: {fileID: 1339595216}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664531338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4cd98ee226c4a7f864c9f330fc6182d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1364683556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8998107892858872447, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
@@ -3761,11 +3735,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
   m_PrefabInstance: {fileID: 1457622469}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1461658061 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 7187242813370081210, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-  m_PrefabInstance: {fileID: 6004865555073932088}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1611750164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8998107892858872447, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
@@ -3815,42 +3784,6 @@ Transform:
   - {fileID: 20058187}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1759470617
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1759470618}
-  m_Layer: 5
-  m_Name: DecorationRelic
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1759470618
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759470617}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2095013020}
-  m_Father: {fileID: 1461658061}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1765949133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4705,7 +4638,7 @@ PrefabInstance:
       objectReference: {fileID: 6004865555073932091}
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -4730,7 +4663,7 @@ PrefabInstance:
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 857321926}
+      objectReference: {fileID: 6004865555073932095}
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -4753,7 +4686,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: DisablePostProcess
+      value: DeactivateEnigma
       objectReference: {fileID: 0}
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -4765,7 +4698,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: PostProcessHandler, Assembly-CSharp
+      value: Enigmas.EnigmaButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3290410462523151297, guid: 87d45281303173446be2be28ac3621e2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
@@ -5829,7 +5762,7 @@ PrefabInstance:
       objectReference: {fileID: 6004865555073932090}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -5837,6 +5770,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
@@ -5848,11 +5785,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 857321926}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2091003869}
+    - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
@@ -5864,6 +5809,10 @@ PrefabInstance:
       value: DisablePostProcess
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DeactivateEnigma
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Enigmas.EnigmaButton, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -5872,11 +5821,19 @@ PrefabInstance:
       value: PostProcessHandler, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Enigmas.EnigmaButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5159265843123416862, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5263291533715618567, guid: ded8dfe4daa040e4bba8cd2f25b41ff2, type: 3}
@@ -6167,81 +6124,10 @@ MonoBehaviour:
   addedScaleOnHover: 0.2
   timeToScale: 0.45
   easeType: 15
---- !u!1 &2095013019
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2095013020}
-  - component: {fileID: 2095013022}
-  - component: {fileID: 2095013021}
-  m_Layer: 5
-  m_Name: ChestShelf
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2095013020
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095013019}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1759470618}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 357.3, y: -88.3}
-  m_SizeDelta: {x: 400, y: 400}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2095013021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095013019}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 2100000, guid: 08947132c945b0341aedeb28bc9f86db, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 81304ca2a8a22494e8b1cbb996cd2f38, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2095013022
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2095013019}
-  m_CullTransparentMesh: 1
+  _isCheckingBool: 0
+  _objectToCheck: {fileID: 0}
+  _boolToCheck: 
+  _shouldBeTrue: 1
 --- !u!1001 &2123735610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6412,7 +6298,7 @@ PrefabInstance:
       objectReference: {fileID: 1183423680}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -6420,6 +6306,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
@@ -6431,11 +6321,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1426833748}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 6004865555073932093}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
@@ -6447,6 +6345,10 @@ PrefabInstance:
       value: FinalEnigma
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: DeactivateEnigma
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Enigmas.EnigmaButton, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -6455,11 +6357,19 @@ PrefabInstance:
       value: Enigmas.EnigmaButton, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: Enigmas.EnigmaButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: _onEnigmaFinished.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8473013917410775666, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
@@ -6707,6 +6617,10 @@ MonoBehaviour:
   addedScaleOnHover: 0.2
   timeToScale: 0.45
   easeType: 15
+  _isCheckingBool: 0
+  _objectToCheck: {fileID: 0}
+  _boolToCheck: 
+  _shouldBeTrue: 1
 --- !u!1001 &559769818522269504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7146,6 +7060,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: df2f97c4e374aa1498e495f9235d9024, type: 3}
+    - target: {fileID: 2026074672078351388, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3ed0b6f0e2749a442bb1a0c08e5e0276, type: 3}
     - target: {fileID: 2159827851434135009, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
@@ -7330,6 +7248,46 @@ PrefabInstance:
       propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: enigmaCanvas
+      value: 
+      objectReference: {fileID: 2123735612}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 857321926}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 951841572}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivatePostProcess
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PostProcessHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Enigmas.EnigmaHint.EnigmaHintButton, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587897356713270263, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 81304ca2a8a22494e8b1cbb996cd2f38, type: 3}
+    - target: {fileID: 3920653350326894855, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a0c80e1c5cca2534392d9ff765bf9234, type: 3}
     - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: _lights
       value: 
@@ -7534,10 +7492,46 @@ PrefabInstance:
       propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: enigmaCanvas
+      value: 
+      objectReference: {fileID: 2090223440}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 857321926}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1339595218}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ActivatePostProcess
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Activate
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PostProcessHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775984464314786313, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _onButtonClicked.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Enigmas.EnigmaHint.EnigmaHintButton, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 6067071919317569407, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: b3e2f87c9ca59dd44aeff4123de165b6, type: 3}
+    - target: {fileID: 6072273722681821451, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2943b0d4983cf6246b3a81d46f8bfe56, type: 3}
     - target: {fileID: 6617937523247442566, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_RaycastPadding.x
       value: 43.66
@@ -7670,10 +7664,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8602054420419673315, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 36.9
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 480137895955041539, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     - {fileID: 3169595666682614236, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
@@ -7682,12 +7672,6 @@ PrefabInstance:
     - {fileID: 7039490163520269020, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     - {fileID: 1097365775779091819, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7187242813370081210, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1759470618}
-    - targetCorrespondingSourceObject: {fileID: 7187242813370081210, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1137597499}
     - targetCorrespondingSourceObject: {fileID: 304681315149525377, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1108281434}
@@ -7713,6 +7697,39 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 304681315149525377, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
   m_PrefabInstance: {fileID: 6004865555073932088}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6004865555073932093 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3570542633844103554, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9f0bf6d698efe4da42a0099bc74a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6004865555073932094 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1295782039012310884, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6004865555073932089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9f0bf6d698efe4da42a0099bc74a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6004865555073932095 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1285558539352541738, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 6004865555073932088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6004865555073932091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9f0bf6d698efe4da42a0099bc74a09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6090327784023084081
 PrefabInstance:
   m_ObjectHideFlags: 0
