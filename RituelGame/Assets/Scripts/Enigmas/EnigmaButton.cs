@@ -24,6 +24,9 @@ namespace Enigmas
         public Action OnButtonClickedEvent;
         
         public UnityEvent _onButtonClicked;
+        
+        public GameObject _secondCanvasGroup;
+        public GameObject _firstCanvasGroup;
 
         public GameObject _lights;
         public GameObject _spotLights;
@@ -63,6 +66,7 @@ namespace Enigmas
                 _lights.SetActive(false);
                 _spotLights.SetActive(true);
                 _canBeClicked = true;
+                _secondCanvasGroup.GetComponent<CanvasGroupFader>().HideThenShowAnother(_firstCanvasGroup);
             }
         }
     }
