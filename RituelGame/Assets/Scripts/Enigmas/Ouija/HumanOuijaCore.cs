@@ -21,6 +21,8 @@ namespace Enigmas.Ouija
         [SerializeField] private Transform ouijaBoardZoomedParent;
         [SerializeField] private List<OuijaBoard> spawnedOuijaBoards = new();
 
+        [SerializeField] private Image zoomedBackground;
+
         private bool isZoomed;
         private bool canZoom = true;
         private int zoomedBoardLayoutIndex = 0;
@@ -126,7 +128,13 @@ namespace Enigmas.Ouija
             CanvasGroup layoutCanvasGroup = ouijaBoardLayoutParent.GetComponent<CanvasGroup>();
             layoutCanvasGroup.DOFade(0, 1f);
             layoutCanvasGroup.SetCanvasGroupInteraction(false);
-                
+
+            float endvalue = zoomedBackground.color.a;
+            zoomedBackground.color = new Color(zoomedBackground.color.r, zoomedBackground.color.g, zoomedBackground.color.b, 0);
+            zoomedBackground.enabled = true;
+            zoomedBackground.DOKill(true);
+            zoomedBackground.DOFade(endvalue, 0.25f);
+            
             OnZoomOuijaBoardEvent?.Invoke();
         }
 
@@ -157,6 +165,14 @@ namespace Enigmas.Ouija
             zoomedOuijaBoard.transform.DOScale(Vector3.one * 0.5f, 1).SetEase(Ease.InOutQuint);
             zoomedOuijaBoard.transform.DOMove(ouijaBoardLayoutParent.GetChild(zoomedBoardLayoutIndex).position, 1f)
                 .SetEase(Ease.InOutQuint).onComplete += OnUnzoomFinished;
+            
+            float startValue = zoomedBackground.color.a;
+            zoomedBackground.DOKill(true);
+            zoomedBackground.DOFade(0, 0.25f).onComplete += () =>
+            {
+                zoomedBackground.color = new Color(zoomedBackground.color.r, zoomedBackground.color.g, zoomedBackground.color.b, startValue);
+                zoomedBackground.enabled = false;
+            };
             
             OnUnzoomOuijaBoardEvent?.Invoke();
         }
