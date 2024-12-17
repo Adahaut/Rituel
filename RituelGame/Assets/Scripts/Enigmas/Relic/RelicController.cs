@@ -36,6 +36,11 @@ public class RelicController : MonoBehaviour
     {
         symbole = Random.Range(0, _relics.Count);
         _symboleText.text = symbole.ToString();
+        foreach (Transform relicTransform in _horizontalLayoutGroup.transform)
+        {
+            int randomValue = Random.Range(0, _horizontalLayoutGroup.transform.childCount);
+            relicTransform.SetSiblingIndex(randomValue);
+        }
     }
 
     public bool CheckRelicSymbole(RelicItem relic)
