@@ -3775,6 +3775,8 @@ GameObject:
   - component: {fileID: 6576205968218427124}
   - component: {fileID: 4943387033428957692}
   - component: {fileID: 133094278578699200}
+  - component: {fileID: 1907320240708168}
+  - component: {fileID: 5968820094876396597}
   m_Layer: 5
   m_Name: ConfirmEnigmaButton
   m_TagString: Untagged
@@ -3912,6 +3914,36 @@ MonoBehaviour:
   _codePanel: {fileID: 1520291833247264938}
   _enigmaCryptexCore: {fileID: 0}
   _circles: []
+--- !u!114 &1907320240708168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5748024333160924841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &5968820094876396597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5748024333160924841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 6, y: -6}
+  m_UseGraphicAlpha: 1
 --- !u!1 &5989491483388440919
 GameObject:
   m_ObjectHideFlags: 0
