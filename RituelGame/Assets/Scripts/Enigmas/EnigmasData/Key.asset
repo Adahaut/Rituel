@@ -17,9 +17,9 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "L\u2019esprit indiquer le sens de rotation \xE0 l\u2019humain"
+      Value: the spirit has to indicate the direction of rotation to the human
     - Key: 1
-      Value: "L\u2019esprit indiquer le sens de rotation \xE0 l\u2019humain"
+      Value: the spirit has to indicate the direction of rotation to the human
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10

@@ -17,11 +17,11 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "L\u2019esprit doit diriger le joueur avec les directions nord, est,
-        ouest et sud par rapport \xE0 son point de d\xE9part"
+      Value: the spirit must direct the player with the directions north, east, west
+        and south relative to its starting point
     - Key: 1
-      Value: "L\u2019esprit doit diriger le joueur avec les directions nord, est,
-        ouest et sud par rapport \xE0 son point de d\xE9part"
+      Value: the spirit must direct the player with the directions north, east, west
+        and south relative to its starting point
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
