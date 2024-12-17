@@ -44,9 +44,9 @@ public class Timer : MonoBehaviour
     
     private void Start()
     {
-        for (int i = 0; i < values.Count; i++)
+        for (int i = 0; i < _values.Count; i++)
         {
-            timeClocks[i].UpdateClock(values[i]);
+            _timeClocks[i].UpdateClock(_values[i]);
         }
         ResetTimer();
     }
