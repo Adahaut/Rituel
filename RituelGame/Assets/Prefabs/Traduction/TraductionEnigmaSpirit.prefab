@@ -598,7 +598,12 @@ MonoBehaviour:
   _answer: []
   _phrases:
   - Hello potato goodbye
+  - There Injury Blossom
+  - Alright Boolean Hello
+  - Corpse Spirit Bubble
   _phraseToTranslate: {fileID: 5371662169042729545}
+  _enigmaData: {fileID: 0}
+  _linkCore: {fileID: 0}
   wordsParent: {fileID: 7992024835160875161}
   _topLeftFirstButtonPos: {x: -700, y: -100}
   enigmaCanvas: {fileID: 7099310445221946199}
