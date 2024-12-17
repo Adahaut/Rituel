@@ -6632,15 +6632,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 6
+      value: 4.61728
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 6
+      value: 4.61728
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 4.61728
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6660,23 +6660,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 731
+      value: -398
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -124.46
+      value: 165
       objectReference: {fileID: 0}
     - target: {fileID: 5539667003759975826, guid: 5cfeaf77a70b5934682a304513402a5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -9461,6 +9461,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2739039507171483333, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7237ebfc6e4202044b08cb3f44fdec20, type: 3}
     - target: {fileID: 3273138364799154859, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: enigmaCanvas
       value: 
