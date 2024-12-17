@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3833642356202890987}
   - component: {fileID: 100259627731886049}
   - component: {fileID: 489942024877426236}
+  - component: {fileID: 1862180762842048840}
   m_Layer: 0
   m_Name: InfoButton
   m_TagString: Untagged
@@ -59,14 +60,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.122840874, g: 0.3869133, b: 0.9169811, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 0ce293324f7ffa640bd4efeb731150ad, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -90,3 +91,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enigmaData: {fileID: 0}
   currentWorldType: 0
+  buttonSprites:
+    _serializedList:
+    - Key: 0
+      Value: {fileID: 21300000, guid: 0ce293324f7ffa640bd4efeb731150ad, type: 3}
+    - Key: 1
+      Value: {fileID: 21300000, guid: c54fe7489db77ac45847ccd8161844ef, type: 3}
+  timeCounter: 0
+--- !u!114 &1862180762842048840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8998107892858872447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0354744f6746914ba71d2ea91cf8c51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addedScaleOnHover: 0.2
+  timeToScale: 0.45
+  easeType: 15
+  _isCheckingBool: 0
+  _objectToCheck: {fileID: 0}
+  _boolToCheck: 
+  _shouldBeTrue: 1
