@@ -21,11 +21,20 @@ namespace Cinematic
             
         private int cinematicIndex;
 
-        private float autoPassTimer;
-
+        public float _autoPassTimer;
+        
+        public Subtitles _subtitlesToPlay;
+        public Vocals _vocalsScript;
+        private int subtitleIndex=0;
         private void Awake()
         {
             ApplyEvent();
+        }
+
+        private void Start()
+        {
+            _vocalsScript.Say(_subtitlesToPlay);
+            _autoPassTimer = _subtitlesToPlay._subtitles[subtitleIndex].time;
         }
 
         private void Update()
@@ -35,16 +44,18 @@ namespace Cinematic
 
         private void AutoPassTimer()
         {
+                        
+            _autoPassTimer -= Time.deltaTime;
+            if (_autoPassTimer <= 0)
+            {
+                NextEvent();
+            }
+            
             if (!currentEvent._passAutomatically)
             {
                 return;
             }
-            
-            autoPassTimer -= Time.deltaTime;
-            if (autoPassTimer <= 0)
-            {
-                NextEvent();
-            }
+
         }
 
         public void OnPointerClick(PointerEventData eventData)
@@ -63,8 +74,11 @@ namespace Cinematic
                 Debug.LogWarning("max cinematicEvent reached");
                 return;
             }
-            
+            subtitleIndex++;
             cinematicIndex++;
+            _autoPassTimer = _subtitlesToPlay._subtitles[subtitleIndex].time;
+            if (cinematicIndex >= 4)
+                _autoPassTimer = _subtitlesToPlay._subtitles[subtitleIndex].time*2;
             ApplyEvent();
         }
         
@@ -82,7 +96,7 @@ namespace Cinematic
                     break;
             }
 
-            autoPassTimer = currentEvent._autoPassDuration;
+            // autoPassTimer = currentEvent._autoPassDuration;
             
         }
 
