@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +15,9 @@ namespace Enigmas.EnigmaHint
         
         public static Action<EnigmaData, WorldType> OnHintButtonClicked;
 
+        [SerializeField] private SerializedDictionary<WorldType, Color> hoverFeedbackColors;
+        [SerializeField] private List<Image> hoverFeedbackImages;
+
         public float timeCounter;
         private float timeLimit = 15;
 
@@ -25,7 +29,13 @@ namespace Enigmas.EnigmaHint
             image.sprite = buttonSprites[currentWorldType];
             image.enabled = false;
             image.raycastTarget = false;
+            foreach (var hoverImage in hoverFeedbackImages) { hoverImage.enabled = false; }
             didShow = false;
+
+            foreach (var hoverImage in hoverFeedbackImages)
+            {
+                hoverImage.color = hoverFeedbackColors[currentWorldType];
+            }
         }
 
         private void Update()
@@ -37,6 +47,7 @@ namespace Enigmas.EnigmaHint
                 Image image = gameObject.GetComponent<Image>();
                 image.enabled = true;
                 image.raycastTarget = true;
+                foreach (var hoverImage in hoverFeedbackImages) { hoverImage.enabled = true; }
                 didShow = true;
             }
         }
@@ -48,7 +59,7 @@ namespace Enigmas.EnigmaHint
         
         public void OnPointerClick(PointerEventData eventData)
         {
-            OnHintButtonClicked.Invoke(enigmaData, currentWorldType);
+            OnHintButtonClicked?.Invoke(enigmaData, currentWorldType);
         }
     }
 }

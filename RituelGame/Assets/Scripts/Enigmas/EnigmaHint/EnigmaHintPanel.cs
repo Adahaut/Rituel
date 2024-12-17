@@ -22,7 +22,7 @@ namespace Enigmas.EnigmaHint
 
         private void OnHintButtonClicked(EnigmaData newEnigmaData, WorldType currentWorldType)
         {
-            if (isOpened)
+            if (isOpened || !panelGroup)
             {
                 return;
             }
