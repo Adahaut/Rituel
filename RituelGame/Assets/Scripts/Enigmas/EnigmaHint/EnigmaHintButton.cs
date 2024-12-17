@@ -1,4 +1,5 @@
 ﻿using System;
+using AYellowpaper.SerializedCollections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -8,6 +9,8 @@ namespace Enigmas.EnigmaHint
     {
         [SerializeField] private EnigmaData enigmaData;
         [SerializeField] private WorldType currentWorldType;
+        
+        [SerializeField] private SerializedDictionary<WorldType, Sprite> buttonSprites;
         
         public static Action<EnigmaData, WorldType> OnHintButtonClicked;
 
@@ -19,6 +22,7 @@ namespace Enigmas.EnigmaHint
         private void Start()
         {
             Image image = gameObject.GetComponent<Image>();
+            image.sprite = buttonSprites[currentWorldType];
             image.enabled = false;
             image.raycastTarget = false;
             didShow = false;
