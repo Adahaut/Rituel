@@ -16,6 +16,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private List<int> values;
     [SerializeField] private List<AutoCandle> autoCandleOrdered;
 
+    [SerializeField] private GameObject _frontPanel;
+
     private int autoIndex = 0;
     
     public WorldType _worldType;
@@ -44,6 +46,7 @@ public class Timer : MonoBehaviour
         {
             timeClocks[i].UpdateClock(values[i]);
         }
+        ResetTimer();
     }
 
     public void CheckClickTiming(float clickTime)
@@ -57,7 +60,6 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail + addedLink);
             Loose();
         }
     }
@@ -96,10 +98,10 @@ public class Timer : MonoBehaviour
 
     void Loose()
     {
+        linkCore.RemoveLink(enigmaData.LinkToRemoveIfFail + addedLink);
+        startButton.SetActive(true);
         currentCandleNumber = 0;
         addedLink = 0;
-        //perte de liaison
-        startButton.SetActive(true);
         Restart();
     }
 
@@ -141,9 +143,8 @@ public class Timer : MonoBehaviour
     {
         _timer = 0;
         timeScript.SetActive(false);
-        timeText.SetActive(false);
-        candle.SetActive(false);
         backButton.SetActive(true);
+        _frontPanel.SetActive(true);
         audioManager.StopSound("CracklingCandle");
         OnEnigmaReset?.Invoke();
     }
