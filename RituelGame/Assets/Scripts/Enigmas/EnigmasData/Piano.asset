@@ -17,11 +17,9 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "L\u2019humain doit d\xE9crire la m\xE9lodie qu\u2019il entend \xE0
-        l\u2019esprit."
+      Value: The human must describe the melody he hears in his mind.
     - Key: 1
-      Value: "L\u2019humain doit d\xE9crire la m\xE9lodie qu\u2019il entend \xE0
-        l\u2019esprit."
+      Value: The human must describe the melody he hears in his mind.
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10

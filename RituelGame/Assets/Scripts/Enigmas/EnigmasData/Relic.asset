@@ -17,11 +17,11 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "L\u2019esprit doit dire \xE0 l\u2019humain de d\xE9truire la relique
-        qui \xE0 le m\xEAme symbole que la relique de l\u2019humain"
+      Value: The spirit must tell the human to destroy the relic that has the same
+        symbol as the human's relic.
     - Key: 1
-      Value: "L\u2019esprit doit dire \xE0 l\u2019humain de d\xE9truire la relique
-        qui \xE0 le m\xEAme symbole que la relique de l\u2019humain"
+      Value: The spirit must tell the human to destroy the relic that has the same
+        symbol as the human's relic.
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10

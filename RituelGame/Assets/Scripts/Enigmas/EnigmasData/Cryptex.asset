@@ -17,11 +17,11 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "L\u2019humain doit entrer les lettres qu\u2019il a en commun avec l\u2019esprit
-        pour chaque colonne."
+      Value: The human must enter the letters he has in common with the spirit for
+        each column.
     - Key: 1
-      Value: "L\u2019humain doit entrer les lettres qu\u2019il a en commun avec l\u2019esprit
-        pour chaque colonne."
+      Value: The human must enter the letters he has in common with the spirit for
+        each column.
   reward: {fileID: 2600705361194805992, guid: 3cbd2a6794920e741ba748035e729841, type: 3}
   success: 
   linkToAddIfSuccess: 10
