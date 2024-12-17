@@ -12,8 +12,8 @@ public class Timer : MonoBehaviour
     [SerializeField] private GameObject timeText;
     [SerializeField] private GameObject candle;
     [SerializeField] private GameObject backButton;
-    [SerializeField] private List<FinalClock> timeClocks;
-    [SerializeField] private List<int> values;
+    public List<FinalClock> _timeClocks;
+    public List<int> _values;
     [SerializeField] private List<AutoCandle> autoCandleOrdered;
 
     private int autoIndex = 0;
@@ -38,12 +38,10 @@ public class Timer : MonoBehaviour
 
     public Action OnEnigmaReset;
     
+    private float minutesClockMakeOneTurn = 60;
+    
     private void Start()
     {
-        for (int i = 0; i < values.Count; i++)
-        {
-            timeClocks[i].UpdateClock(values[i]);
-        }
     }
 
     public void CheckClickTiming(float clickTime)
@@ -71,6 +69,13 @@ public class Timer : MonoBehaviour
     void Update()
     {
         _timer += Time.deltaTime;
+        
+        if (_timer >= minutesClockMakeOneTurn)
+        {
+            audioManager.PlayOverlap("Pendulum");
+            minutesClockMakeOneTurn += 60;
+        }
+        
         if (_timer >= maxTime)
         {
             if (currentCandleNumber >= _finalCandleNumber)
@@ -81,9 +86,9 @@ public class Timer : MonoBehaviour
                 Loose();
         }
 
-        if (values.Count > autoIndex)
+        if (_values.Count > autoIndex)
         {
-            if (Mathf.Abs(_timer - values[autoIndex]) <= acceptanceInterval) 
+            if (Mathf.Abs(_timer - _values[autoIndex]) <= acceptanceInterval) 
             {
                 autoCandleOrdered[autoIndex].LightCandle();
                 autoIndex++;

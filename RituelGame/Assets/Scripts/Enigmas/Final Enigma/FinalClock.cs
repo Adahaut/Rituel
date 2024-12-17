@@ -1,19 +1,23 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class FinalClock : MonoBehaviour
 {
     [SerializeField] private float startTime;
-    
+
     [SerializeField] private Transform minutesClockHand;
     [SerializeField] private Transform hoursClockHand;
-
-    private void Awake()
-    {
-        UpdateClock(startTime);
-    }
+    
+    [SerializeField] private AudioManager audioManager;
+    
+    private float delayToMoveHandClock = 0.5f;
+    public float _currentBigClockRotation;
+    public float _currentSmallClockRotation;
+    private float _timer = 0;
+    private float minutesClockMakeOneTurn = 60;
 
     public void UpdateClock(float time)
     {
@@ -22,5 +26,12 @@ public class FinalClock : MonoBehaviour
 
         minutesClockHand.localRotation = Quaternion.Euler(0, 0, minutesAngle);
         hoursClockHand.localRotation = Quaternion.Euler(0, 0, hoursAngle);
+    }
+    
+    public IEnumerator MoveHandClock()
+    {
+        yield return new WaitForSeconds(delayToMoveHandClock);
+
+        audioManager.PlayOverlap("tickclock");
     }
 }

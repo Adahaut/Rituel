@@ -62,6 +62,7 @@ MonoBehaviour:
   linkCore: {fileID: 0}
   enigmaData: {fileID: 11400000, guid: 086fba4a60bce0946979da4ab2f32b83, type: 2}
   audioManager: {fileID: 0}
+  finalPendulum: {fileID: 1990169877251985071}
 --- !u!1 &1249757916460126610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +1568,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59f703ea272fe34459e0fff955153255, type: 3}
+--- !u!114 &1990169877251985071 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8132556298943246530, guid: 59f703ea272fe34459e0fff955153255, type: 3}
+  m_PrefabInstance: {fileID: 7728779665311612525}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58da2dd27641de347830c55289152c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &2856124261871510527 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5539667003759975826, guid: 59f703ea272fe34459e0fff955153255, type: 3}

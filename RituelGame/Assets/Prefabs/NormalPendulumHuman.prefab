@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5539667003759975826}
-  - component: {fileID: 8132556298943246530}
+  - component: {fileID: 8756976897527583092}
   m_Layer: 5
-  m_Name: FinalPendulumHuman
+  m_Name: NormalPendulumHuman
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchoredPosition: {x: 706, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8132556298943246530
+--- !u!114 &8756976897527583092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,11 +49,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 755738004907746528}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58da2dd27641de347830c55289152c3d, type: 3}
+  m_Script: {fileID: 11500000, guid: cd569483c6a8dd0419a2205a7fb3356e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   finalTimer: {fileID: 0}
-  finalClock: {fileID: 7585271787305444627}
+  clock: {fileID: 3365942985598667113}
   pendulumBalance: {fileID: 1621528347110288973}
 --- !u!1 &3307438049328410505
 GameObject:
@@ -417,24 +417,50 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2427234921802676728, guid: 386940601704f1549960927b25747b96, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 74118413327470534, guid: 386940601704f1549960927b25747b96, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 3365942985598667113}
   m_SourcePrefab: {fileID: 100100000, guid: 386940601704f1549960927b25747b96, type: 3}
+--- !u!224 &512429167425472552 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5762226329876124867, guid: 386940601704f1549960927b25747b96, type: 3}
+  m_PrefabInstance: {fileID: 5254304169071385835}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1800436513095667904 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5771194377505295403, guid: 386940601704f1549960927b25747b96, type: 3}
   m_PrefabInstance: {fileID: 5254304169071385835}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &7585271787305444627 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2427234921802676728, guid: 386940601704f1549960927b25747b96, type: 3}
+--- !u!1 &5326733065708999469 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 74118413327470534, guid: 386940601704f1549960927b25747b96, type: 3}
   m_PrefabInstance: {fileID: 5254304169071385835}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+--- !u!114 &3365942985598667113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5326733065708999469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf4171eb74e2faf45951fc561f1cffab, type: 3}
+  m_Script: {fileID: 11500000, guid: ccceea490f16a3d408edf7da79a78014, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startTime: 0
+  minutesClockHand: {fileID: 5353139032952649984}
+  hoursClockHand: {fileID: 512429167425472552}
+  audioManager: {fileID: 0}
+  _currentBigClockRotation: 0
+  _currentSmallClockRotation: 0
+--- !u!224 &5353139032952649984 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 189470434623825387, guid: 386940601704f1549960927b25747b96, type: 3}
+  m_PrefabInstance: {fileID: 5254304169071385835}
+  m_PrefabAsset: {fileID: 0}

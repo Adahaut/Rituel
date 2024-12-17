@@ -3250,6 +3250,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1663224234}
     m_Modifications:
+    - target: {fileID: 145919111468882814, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 842596377}
     - target: {fileID: 233435105490617887, guid: fd45830974e2cda4085337af110b588d, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -3459,6 +3463,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _values.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
       propertyPath: acceptanceInterval
       value: 0.5
       objectReference: {fileID: 0}
@@ -3486,6 +3494,34 @@ PrefabInstance:
       propertyPath: values.Array.data[2]
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _values.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _values.Array.data[1]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _values.Array.data[2]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _timeClocks.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _timeClocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1429113934}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _timeClocks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1429113933}
+    - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
+      propertyPath: _timeClocks.Array.data[2]
+      value: 
+      objectReference: {fileID: 1429113932}
     - target: {fileID: 4691079303312403241, guid: fd45830974e2cda4085337af110b588d, type: 3}
       propertyPath: _onEnigmaFInished.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3615,6 +3651,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5094031489957111508, guid: fd45830974e2cda4085337af110b588d, type: 3}
   m_PrefabInstance: {fileID: 1429113928}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1429113932 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3625581162710339011, guid: fd45830974e2cda4085337af110b588d, type: 3}
+  m_PrefabInstance: {fileID: 1429113928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4171eb74e2faf45951fc561f1cffab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1429113933 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6468875870610885315, guid: fd45830974e2cda4085337af110b588d, type: 3}
+  m_PrefabInstance: {fileID: 1429113928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4171eb74e2faf45951fc561f1cffab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1429113934 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7738736761712682310, guid: fd45830974e2cda4085337af110b588d, type: 3}
+  m_PrefabInstance: {fileID: 1429113928}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4171eb74e2faf45951fc561f1cffab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1457622469
 PrefabInstance:
   m_ObjectHideFlags: 0

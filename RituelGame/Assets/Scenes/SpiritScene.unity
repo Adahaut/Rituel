@@ -7035,6 +7035,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1940312880322483937, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 901274477}
     - target: {fileID: 2079574291129513876, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
       propertyPath: m_SizeDelta.x
       value: 100
@@ -7192,6 +7196,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4933971863437009771, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      propertyPath: _values.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933971863437009771, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
       propertyPath: acceptanceInterval
       value: 0.5
       objectReference: {fileID: 0}
@@ -7211,6 +7219,26 @@ PrefabInstance:
       propertyPath: values.Array.data[1]
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4933971863437009771, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      propertyPath: _values.Array.data[0]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933971863437009771, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      propertyPath: _values.Array.data[1]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933971863437009771, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      propertyPath: _timeClocks.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4933971863437009771, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      propertyPath: _timeClocks.Array.data[0]
+      value: 
+      objectReference: {fileID: 1704501185}
+    - target: {fileID: 4933971863437009771, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      propertyPath: _timeClocks.Array.data[1]
+      value: 
+      objectReference: {fileID: 1704501184}
     - target: {fileID: 5180263502329769160, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -7418,6 +7446,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 711608924503537833, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
   m_PrefabInstance: {fileID: 1704501180}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1704501184 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3479172126046032988, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+  m_PrefabInstance: {fileID: 1704501180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4171eb74e2faf45951fc561f1cffab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1704501185 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5398676160697614031, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+  m_PrefabInstance: {fileID: 1704501180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf4171eb74e2faf45951fc561f1cffab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1707091726
 GameObject:
   m_ObjectHideFlags: 0
