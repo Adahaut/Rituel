@@ -3317,6 +3317,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &265580725
@@ -3374,6 +3376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036c3a736a2dbe444b41504074e12006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &290592223 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3801017843887782021, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 2000160018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &295681294
 GameObject:
   m_ObjectHideFlags: 0
@@ -3647,6 +3654,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1 &354508184 stripped
@@ -4232,6 +4241,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1 &510873170
@@ -4546,6 +4557,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1 &718860629 stripped
@@ -5598,6 +5611,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1001 &1042661823
@@ -6190,6 +6205,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1001 &1224146516
@@ -6445,6 +6462,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1001 &1320855878
@@ -7165,11 +7184,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 847
+      value: 825
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 329
+      value: 354
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -7494,6 +7513,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1 &1595609864 stripped
@@ -7759,6 +7780,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!1001 &1704501180
@@ -10461,6 +10484,14 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _firstCanvasGroup
+      value: 
+      objectReference: {fileID: 2048082353}
+    - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+      propertyPath: _secondCanvasGroup
+      value: 
+      objectReference: {fileID: 290592223}
+    - target: {fileID: 4436915845284301786, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: OnButtonClicked.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -10874,6 +10905,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036c3a736a2dbe444b41504074e12006, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2048082353 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4473920095819191434, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
+  m_PrefabInstance: {fileID: 2000160018}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2076627019
 GameObject:
   m_ObjectHideFlags: 0
