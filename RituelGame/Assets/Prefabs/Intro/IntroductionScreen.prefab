@@ -261,8 +261,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La communication entre les deux joueurs est essentielle\npour progresser
-    dans le jeu\nN'oubliez pas de bien d\xE9crire ce que vous voyez"
+  m_text: "Communication between the two players is essential\r\nto progress in the
+    game\r\nDon't forget to describe well what you see\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -17,11 +17,11 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "Vous devez indiquer \xE0 votre \xE9quipier sur quel timing et quel
-        position il doit allumer les bougies"
+      Value: You must indicate to your teammate at what timing and position he must
+        light the candles.
     - Key: 1
-      Value: "Vous devez indiquer \xE0 votre \xE9quipier sur quel timing et quel
-        position il doit allumer les bougies"
+      Value: You must indicate to your teammate at what timing and position he must
+        light the candles.
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10

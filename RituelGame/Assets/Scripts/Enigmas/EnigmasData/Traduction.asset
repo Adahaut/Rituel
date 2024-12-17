@@ -17,9 +17,9 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "L\u2019humain doit indiquer \xE0 l'esprit la traduction de chaque mot"
+      Value: The human must indicate to the spirit the translation of each word
     - Key: 1
-      Value: "L\u2019humain doit indiquer \xE0 l'esprit la traduction de chaque mot"
+      Value: The human must indicate to the spirit the translation of each word
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10

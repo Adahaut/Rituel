@@ -17,11 +17,9 @@ MonoBehaviour:
   enigmaHint:
     _serializedList:
     - Key: 0
-      Value: "L\u2019humain doit donner \xE0 l'esprit le mot montr\xE9 par la planchette
-        de ouija "
+      Value: The human must give the spirit the word shown by the ouija board
     - Key: 1
-      Value: "L\u2019humain doit donner \xE0 l'esprit le mot montr\xE9 par la planchette
-        de ouija "
+      Value: The human must give the spirit the word shown by the ouija board
   reward: {fileID: 0}
   success: 
   linkToAddIfSuccess: 10
