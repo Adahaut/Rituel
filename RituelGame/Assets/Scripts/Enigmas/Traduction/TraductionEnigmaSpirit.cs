@@ -19,6 +19,9 @@ public class TraductionEnigmaSpirit : MonoBehaviour
     public List<string> _phrases;
     public TextMeshProUGUI _phraseToTranslate;
 
+    public EnigmaData _enigmaData;
+    public LinkCore _linkCore;
+
     public GameObject wordsParent;
 
     public Vector2 _topLeftFirstButtonPos;
@@ -175,10 +178,12 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         if (won)
         {
             CompleteEnigma();
+            _linkCore.AddLink(_enigmaData.LinkToAddIfSuccess);
         }
         else
         {
             ResetButton();
+            _linkCore.RemoveLink(_enigmaData.LinkToRemoveIfFail);
         }
     }
 
