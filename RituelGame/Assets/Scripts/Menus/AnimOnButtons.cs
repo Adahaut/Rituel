@@ -8,18 +8,20 @@ using UnityEngine.UI;
 
 public class AnimOnButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    public Image _image;
+    
     public void OnPointerEnter(PointerEventData eventData)
     {
-        gameObject.GetComponent<Image>().DOFade(1, 0.5f);
+        _image.DOFade(1, 0.5f);
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        gameObject.GetComponent<Image>().DOFade(0, 0.3f);
+        _image.GetComponent<Image>().DOFade(0, 0.3f);
     }
 
     public void FadingOut()
     {
-        gameObject.GetComponent<Image>().DOFade(0, 0.3f);
+        _image.GetComponent<Image>().DOFade(0, 0.3f);
     }
 }
