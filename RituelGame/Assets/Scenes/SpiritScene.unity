@@ -7035,10 +7035,6 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1940312880322483937, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
-      propertyPath: audioManager
-      value: 
-      objectReference: {fileID: 901274477}
     - target: {fileID: 2079574291129513876, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
       propertyPath: m_SizeDelta.x
       value: 100
