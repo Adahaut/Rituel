@@ -656,6 +656,8 @@ GameObject:
   - component: {fileID: 5095750781869635623}
   - component: {fileID: 2075924245516718979}
   - component: {fileID: 4114971263300584587}
+  - component: {fileID: 4175665750030975875}
+  - component: {fileID: 8338050456205630088}
   m_Layer: 0
   m_Name: ConfirmEnigmaButton
   m_TagString: Untagged
@@ -680,7 +682,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -446.5398, y: 246.85516}
+  m_AnchoredPosition: {x: -414, y: 156}
   m_SizeDelta: {x: 280, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5095750781869635623
@@ -789,6 +791,36 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &4175665750030975875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393074565807936747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 1, y: -1}
+  m_UseGraphicAlpha: 1
+--- !u!114 &8338050456205630088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3393074565807936747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0.2924528, g: 0.1714264, b: 0.08414915, a: 0.5}
+  m_EffectDistance: {x: 6, y: -6}
+  m_UseGraphicAlpha: 1
 --- !u!1 &3417899643496081565
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,11 +3581,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -811
+      value: 795
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 408
+      value: 383
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -3765,11 +3797,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -828.53986
+      value: 795
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 387.85516
+      value: 383
       objectReference: {fileID: 0}
     - target: {fileID: 239599859375539970, guid: 2519ac0732f162d489b225ccf01ad18d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
