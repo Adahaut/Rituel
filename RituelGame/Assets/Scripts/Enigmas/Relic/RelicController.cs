@@ -5,6 +5,7 @@ using Enigmas;
 using Particles;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -27,6 +28,8 @@ public class RelicController : MonoBehaviour
     [SerializeField] private GameObject wrongBreakParticles;
     [SerializeField] private GameObject breakRelicParticles;
 
+    [SerializeField] private UnityEvent onConfirmAnswer;
+     
     private void Start()
     {
         Init();
@@ -58,6 +61,7 @@ public class RelicController : MonoBehaviour
         }
         else
         {
+            onConfirmAnswer.Invoke();
             _codePanel.SetActive(true);
             _enigma.SetActive(false);
             _buttonToAccessEnigma.GetComponent<Image>().color = new Color(1f, 1f, 1f, 0.5f);
