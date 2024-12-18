@@ -161,6 +161,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         _buttonsTargetPosition.position -= new Vector3(0, 1f, 0);
         button.GetComponent<Button>().transform.DOScale(new Vector3(targetScale, 1f, 1f), 1f);
         button.GetComponent<Image>().DOFade(0, 0.5f);
+        button.transform.parent.GetComponent<ChangeScaleOnHover>().enabled = false;
         button.transform.parent.GetComponentInChildren<TextMeshProUGUI>().DOColor(Color.black, 0.5f);
         button.transform.parent.GetComponentInChildren<TextMeshProUGUI>().transform.DOScale(new Vector3(targetScale, targetScale, 1f), 1f);
         
