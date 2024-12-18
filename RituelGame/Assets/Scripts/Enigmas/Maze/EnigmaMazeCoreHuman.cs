@@ -41,6 +41,8 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
 
     private Dictionary<Vector2Int, GameObject> mazeFrames = new();
     private Vector2Int pawnPos;
+
+    public float windRoseScale = 3.3f;
     
     [SerializeField] private AudioManager audioManager;
     
@@ -88,6 +90,7 @@ public class EnigmaMazeCoreHuman : MonoBehaviour
         windRose.transform.SetParent(transform);
         windRose.transform.position = new Vector2((Screen.width / 2) + (gridLenght * _frameScale / 2 + windScale.x),
             Screen.height / 2);
+        windRose.transform.localScale = new Vector3(windRoseScale, windRoseScale, windRoseScale);
 
         mazePawn = Instantiate(
             mazePawnPrefab,

@@ -7818,6 +7818,14 @@ PrefabInstance:
       value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: windScale.x
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: windScale.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 842596377}
@@ -7825,6 +7833,10 @@ PrefabInstance:
       propertyPath: _canvasParent
       value: 
       objectReference: {fileID: 2123735613}
+    - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
+      propertyPath: windRoseScale
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8196154234269234145, guid: a2363ccf819b7c94d83e2d8767b27c5b, type: 3}
       propertyPath: _buttonToAccessEnigma
       value: 
