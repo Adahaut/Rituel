@@ -112,6 +112,11 @@ public class Timer : MonoBehaviour
         startButton.SetActive(true);
         currentCandleNumber = 0;
         addedLink = 0;
+        autoIndex = 0;
+        foreach (var autoCandle in autoCandleOrdered)
+        {
+            autoCandle.UnLightCandle();
+        }
         Restart();
     }
 
@@ -147,6 +152,8 @@ public class Timer : MonoBehaviour
         }
         
         victoryGameObject.SetActive(true);
+        
+        Restart();
     }
 
     void Restart()
