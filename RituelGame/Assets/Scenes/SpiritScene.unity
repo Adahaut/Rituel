@@ -211,7 +211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27223a9bbbd54574aa09b16ae6d91bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unLightCandle: {fileID: 21300000, guid: 928c793c84390e248b9543d2bac1311b, type: 3}
   _lightedCandle: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
 --- !u!114 &45535107
 MonoBehaviour:
@@ -225,9 +224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
-  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
-  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!1 &47072340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8632407285365969917, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
@@ -480,6 +476,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7997228407095075588, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6e4f2005e006514f905480a8af4866c, type: 3}
     - target: {fileID: 8238493876613845701, guid: 8a62f1163b0acdf48a6865a3358036b4, type: 3}
       propertyPath: _onButtonClickedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -3798,7 +3798,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27223a9bbbd54574aa09b16ae6d91bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _unLightCandle: {fileID: 21300000, guid: 928c793c84390e248b9543d2bac1311b, type: 3}
   _lightedCandle: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
 --- !u!114 &358792112
 MonoBehaviour:
@@ -3812,9 +3811,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
-  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
-  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!114 &376034823 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2469820094308115435, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
@@ -5369,6 +5365,10 @@ PrefabInstance:
       propertyPath: _onButtonClickedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5928536122261895169, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6e4f2005e006514f905480a8af4866c, type: 3}
     - target: {fileID: 6125246921608457183, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 3
@@ -5984,6 +5984,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3990533929615139202, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6e4f2005e006514f905480a8af4866c, type: 3}
     - target: {fileID: 4207866252938973541, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_text
       value: translation
@@ -6958,6 +6962,10 @@ PrefabInstance:
       propertyPath: _onButtonClickedEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6273707905847499789, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6e4f2005e006514f905480a8af4866c, type: 3}
     - target: {fileID: 6651458329258255509, guid: 00376a1070350234ca5885ff89462fd2, type: 3}
       propertyPath: m_Camera
       value: 
@@ -8945,6 +8953,10 @@ PrefabInstance:
       propertyPath: m_text
       value: piano
       objectReference: {fileID: 0}
+    - target: {fileID: 7961202569332085863, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6e4f2005e006514f905480a8af4866c, type: 3}
     - target: {fileID: 8274521930584516006, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
       propertyPath: _onButtonClickedEvent.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -9094,9 +9106,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
-  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
-  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!114 &1950319094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9109,9 +9118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
-  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
-  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!114 &1950319095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9124,9 +9130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
-  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
-  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!1001 &1969643942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9411,6 +9414,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -50
       objectReference: {fileID: 0}
+    - target: {fileID: 2989924116149380355, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e6e4f2005e006514f905480a8af4866c, type: 3}
     - target: {fileID: 3083518352376333115, guid: c14a6289c2ed5c747894e0b4ea9f1630, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10808,7 +10815,7 @@ PrefabInstance:
     - target: {fileID: 3816514253504804653, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d77857fb2192c68418f1f9710f35b6f8, type: 3}
+      objectReference: {fileID: 21300000, guid: e6e4f2005e006514f905480a8af4866c, type: 3}
     - target: {fileID: 3920653350326894855, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
       propertyPath: m_Sprite
       value: 
