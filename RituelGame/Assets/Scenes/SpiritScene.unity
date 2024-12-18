@@ -6584,10 +6584,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: IntroductionScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 1437110299580162322, guid: 86923fdecc5f40642908e04b087ce2b0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2931706923733746175, guid: 86923fdecc5f40642908e04b087ce2b0, type: 3}
       propertyPath: m_Pivot.x
       value: 0
