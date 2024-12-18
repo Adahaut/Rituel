@@ -24,7 +24,7 @@ public class LinkAnimation : MonoBehaviour
     {
         linkUI = GetComponent<LinkUI>();
         initScale = _linkSlider.transform.localScale;
-        initColor = Color.black;
+        initColor = Color.white;
         linkUI.UpdateLinkSlider();
     }
 

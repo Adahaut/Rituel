@@ -26,6 +26,7 @@ MonoBehaviour:
   - time: 5
     text: "To revive Bryan\u2019s mother, one of you will play Bryan, and the other
       will play his mother. Make your choice\u2026"
-  - time: 0
-    text: 
-  _audioClip: {fileID: 8300000, guid: 8752e8e0af9058141924d982d128ac43, type: 3}
+  - time: 5
+    text: "To revive Bryan\u2019s mother, one of you will play Bryan, and the other
+      will play his mother. Make your choice\u2026"
+  _audioClip: {fileID: 8300000, guid: 47cb614d0fc909b49baf9809e433df52, type: 3}
