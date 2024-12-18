@@ -4746,8 +4746,8 @@ MonoBehaviour:
       Value: spiritus
     - Key: Pentagramme
       Value: pentagram
-    - Key: Invocation
-      Value: invocatio
+    - Key: Boolean
+      Value: boolean
     - Key: Alright
       Value: licuit
     - Key: Bubble
