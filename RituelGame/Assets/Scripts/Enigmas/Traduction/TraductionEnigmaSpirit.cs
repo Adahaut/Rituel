@@ -38,6 +38,7 @@ public class TraductionEnigmaSpirit : MonoBehaviour
     private int indexInList = 0;
     public GameObject _buttonToAccessEnigma;
     public Transform _buttonsTargetPosition;
+    public float targetScale;
 
     private int nbWords;
 
@@ -84,9 +85,11 @@ public class TraductionEnigmaSpirit : MonoBehaviour
                 parentButton.transform.SetParent(wordsParent.transform);
                 GameObject objButton = new GameObject("button");
                 objButton.transform.SetParent(parentButton.transform);
+                parentButton.transform.localScale = Vector3.one;
 
                 GameObject text = new GameObject("Text");
                 text.transform.SetParent(parentButton.transform);
+                text.transform.localScale = Vector3.one;
                 TextMeshProUGUI textMesh = text.AddComponent<TextMeshProUGUI>();
                 textMesh.raycastTarget = false;
                 textMesh.text = _wordEnglishToLatin[word.Key];
@@ -98,6 +101,8 @@ public class TraductionEnigmaSpirit : MonoBehaviour
                 image.color = Color.black;
                 Button button = objButton.AddComponent<Button>();
                 button.image = image;
+
+                parentButton.AddComponent<ChangeScaleOnHover>();
                 
                 int buttonIndex = indexInList;
 
@@ -154,8 +159,11 @@ public class TraductionEnigmaSpirit : MonoBehaviour
         
         button.transform.parent.DOMove(targetPosition, 1f);
         _buttonsTargetPosition.position -= new Vector3(0, 1f, 0);
-        button.GetComponent<Button>().transform.DOScale(new Vector3(4f, 1f, 1f), 1f);
-        button.transform.parent.GetComponentInChildren<TextMeshProUGUI>().transform.DOScale(new Vector3(3.5f, 3.5f, 1f), 1f);
+        button.GetComponent<Button>().transform.DOScale(new Vector3(targetScale, 1f, 1f), 1f);
+        button.GetComponent<Image>().DOFade(0, 0.5f);
+        button.transform.parent.GetComponent<ChangeScaleOnHover>().enabled = false;
+        button.transform.parent.GetComponentInChildren<TextMeshProUGUI>().DOColor(Color.black, 0.5f);
+        button.transform.parent.GetComponentInChildren<TextMeshProUGUI>().transform.DOScale(new Vector3(targetScale, targetScale, 1f), 1f);
         
         posIndex++;
         wordCompletionIndex++;
