@@ -42,6 +42,8 @@ public class RelicSpiritCore : MonoBehaviour
         closedChest.DeactivateCanvasGroup();
         chestCooldownTimer = chestInteractionCooldown;
         
+        _hint2.SetActive(true);
+        
         _button.GetComponent<EnigmaButton>()._onButtonClicked.AddListener(_hint.GetComponent<EnigmaHintButton>().Activate);
         _hint.SetActive(false);
     }
@@ -58,5 +60,6 @@ public class RelicSpiritCore : MonoBehaviour
         chestCooldownTimer = chestInteractionCooldown;
         _button.GetComponent<EnigmaButton>()._onButtonClicked.RemoveListener(_hint.GetComponent<EnigmaHintButton>().Activate);
         _hint.SetActive(true);
+        _hint2.SetActive(false);
     }
 }
