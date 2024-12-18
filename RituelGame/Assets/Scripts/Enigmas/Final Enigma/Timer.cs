@@ -7,6 +7,7 @@ using UnityEngine.Serialization;
 
 public class Timer : MonoBehaviour
 {
+    [SerializeField] private GameObject victoryGameObject;
     [SerializeField] private GameObject startButton;
     [SerializeField] private GameObject timeScript;
     [SerializeField] private GameObject timeText;
@@ -145,7 +146,7 @@ public class Timer : MonoBehaviour
             }
         }
         
-        Restart();
+        victoryGameObject.SetActive(true);
     }
 
     void Restart()
