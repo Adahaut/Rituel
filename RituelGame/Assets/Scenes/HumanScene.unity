@@ -581,6 +581,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6197700763851743296, guid: c9322eca168cd3e4399138d2a5f5785f, type: 3}
+      propertyPath: mixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 284e93503d383044089250fb2fb36f4e, type: 2}
     - target: {fileID: 7308490802557252205, guid: c9322eca168cd3e4399138d2a5f5785f, type: 3}
       propertyPath: m_Name
       value: Pause
@@ -6954,6 +6958,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &2091003870
