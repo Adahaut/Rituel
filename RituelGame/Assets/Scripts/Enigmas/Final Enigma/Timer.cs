@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 public class Timer : MonoBehaviour
@@ -150,8 +151,8 @@ public class Timer : MonoBehaviour
                 successManager.SpawnSuccess(SuccesType.HumanMaster);
             }
         }
-        
-        victoryGameObject.SetActive(true);
+
+        SceneManager.LoadScene("EndCinematicScene");
         
         Restart();
     }
