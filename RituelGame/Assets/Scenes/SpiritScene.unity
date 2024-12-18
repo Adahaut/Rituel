@@ -5893,6 +5893,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: e4df8a4f3c2604b4b84f842bfeb4b16a, type: 2}
     - target: {fileID: 1318317222958807156, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
+      propertyPath: targetScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318317222958807156, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: _canvasParent
       value: 
       objectReference: {fileID: 2103961687}
@@ -6119,22 +6123,6 @@ PrefabInstance:
     - target: {fileID: 3156995997654487107, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: _onButtonClickedEvent.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3347768319828112190, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3a75b7782ac1e104a88fc45eb60c7cff, type: 3}
-    - target: {fileID: 3347768319828112190, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3347768319828112190, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3347768319828112190, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
-      propertyPath: m_Color.r
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3990533929615139202, guid: 612d05c0199af304d9017cf5b05847ed, type: 3}
       propertyPath: m_Sprite
