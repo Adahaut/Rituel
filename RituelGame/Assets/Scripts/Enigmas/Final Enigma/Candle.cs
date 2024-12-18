@@ -34,11 +34,13 @@ public class Candle : MonoBehaviour
         _isLit = true;
         candleImage.sprite = litCandleSprite;
         finalTimer.CheckClickTiming(_requiredTime);
+        gameObject.GetComponent<AnimeCandle>().StartAnime();
     }
     
     public void ResetCandle()
     {
         _isLit = false;
+        gameObject.GetComponent<AnimeCandle>().StopAnime();
         candleImage.sprite = unlitCandleSprite;
     }
 }

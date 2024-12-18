@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 45535105}
   - component: {fileID: 45535104}
   - component: {fileID: 45535106}
+  - component: {fileID: 45535107}
   m_Layer: 5
   m_Name: AutoCandle1
   m_TagString: Untagged
@@ -210,7 +211,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27223a9bbbd54574aa09b16ae6d91bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unLightCandle: {fileID: 21300000, guid: 928c793c84390e248b9543d2bac1311b, type: 3}
   _lightedCandle: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
+--- !u!114 &45535107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 45535102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
+  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
+  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!1 &47072340 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8632407285365969917, guid: 78965d7c809c16a47bf66def2fa1611e, type: 3}
@@ -3704,6 +3721,7 @@ GameObject:
   - component: {fileID: 358792110}
   - component: {fileID: 358792109}
   - component: {fileID: 358792111}
+  - component: {fileID: 358792112}
   m_Layer: 5
   m_Name: AutoCandle2
   m_TagString: Untagged
@@ -3780,7 +3798,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27223a9bbbd54574aa09b16ae6d91bcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _unLightCandle: {fileID: 21300000, guid: 928c793c84390e248b9543d2bac1311b, type: 3}
   _lightedCandle: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
+--- !u!114 &358792112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358792107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
+  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
+  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!114 &376034823 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2469820094308115435, guid: f26422b781aaad04783501fbf2e7e0d3, type: 3}
@@ -8297,7 +8331,16 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7713460165136593374, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
       insertIndex: 0
       addedObject: {fileID: 1079924113}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5717912080882408357, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1950319095}
+    - targetCorrespondingSourceObject: {fileID: 6488735718932553368, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1950319094}
+    - targetCorrespondingSourceObject: {fileID: 3283382170711548666, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1950319093}
   m_SourcePrefab: {fileID: 100100000, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
 --- !u!224 &1704501181 stripped
 RectTransform:
@@ -9024,6 +9067,66 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1038020495256037666, guid: 94b00de06d17b5246bb75dec44a1c40f, type: 3}
   m_PrefabInstance: {fileID: 444175658}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1950319090 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3283382170711548666, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+  m_PrefabInstance: {fileID: 1704501180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1950319091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6488735718932553368, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+  m_PrefabInstance: {fileID: 1704501180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1950319092 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5717912080882408357, guid: 6454fb12444069b44a2e2b145d804763, type: 3}
+  m_PrefabInstance: {fileID: 1704501180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1950319093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950319090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
+  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
+  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
+--- !u!114 &1950319094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950319091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
+  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
+  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
+--- !u!114 &1950319095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950319092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7112c69ccb40126408f62d4dc40ac82e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _candleAnime1: {fileID: 21300000, guid: 6fa2642bfd29d1a43bf4ab68fc21cfa4, type: 3}
+  _candleAnime2: {fileID: 21300000, guid: 329fdadeeb74c8b48b8d8b2294efe411, type: 3}
+  _candleAnime3: {fileID: 21300000, guid: 8aa02eac99db64d4298b0434f24e2c0c, type: 3}
 --- !u!1001 &1969643942
 PrefabInstance:
   m_ObjectHideFlags: 0
