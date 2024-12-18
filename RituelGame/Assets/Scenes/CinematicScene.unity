@@ -527,48 +527,56 @@ MonoBehaviour:
   _spiritScene: SpiritScene
   cinematicEvents:
   - _eventType: 0
-    _canBeClickedToPass: 1
-    _passAutomatically: 0
+    _canBeClickedToPass: 0
+    _passAutomatically: 1
     _autoPassDuration: 3
     _backgroundSprite: {fileID: 21300000, guid: 6fc4d589f1b606f4b877d742d53bbfda, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
     _audioName: 
   - _eventType: 0
-    _canBeClickedToPass: 1
-    _passAutomatically: 0
+    _canBeClickedToPass: 0
+    _passAutomatically: 1
     _autoPassDuration: 3
     _backgroundSprite: {fileID: 21300000, guid: 6364ab1b5b4b8b642b189b5f5fa6dd84, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
     _audioName: 
   - _eventType: 0
-    _canBeClickedToPass: 1
-    _passAutomatically: 0
+    _canBeClickedToPass: 0
+    _passAutomatically: 1
     _autoPassDuration: 3
     _backgroundSprite: {fileID: 21300000, guid: 0ae1ad1c0617c204d8a455fd4bb04ef2, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
     _audioName: 
   - _eventType: 0
-    _canBeClickedToPass: 1
-    _passAutomatically: 0
+    _canBeClickedToPass: 0
+    _passAutomatically: 1
     _autoPassDuration: 3
     _backgroundSprite: {fileID: 21300000, guid: 2e1f5567be5efe2498607e7f4cb75ea3, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
     _audioName: 
   - _eventType: 0
-    _canBeClickedToPass: 1
-    _passAutomatically: 0
+    _canBeClickedToPass: 0
+    _passAutomatically: 1
     _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: cf0cc29727c3c0746a4bbcab10b7e6ec, type: 3}
+    _backgroundSprite: {fileID: 21300000, guid: a12ce8cc35329f34ebdefa8985f697b0, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
     _audioName: 
+  - _eventType: 0
+    _canBeClickedToPass: 1
+    _passAutomatically: 1
+    _autoPassDuration: 3
+    _backgroundSprite: {fileID: 21300000, guid: e75fa5e0aa88a6047abd24a7fb5ce78f, type: 3}
+    _fadeDuration: 0.5
+    _sceneName: MainMenuScene
+    _audioName: 
   - _eventType: 1
-    _canBeClickedToPass: 0
-    _passAutomatically: 0
+    _canBeClickedToPass: 1
+    _passAutomatically: 1
     _autoPassDuration: 3
     _backgroundSprite: {fileID: 21300000, guid: e75fa5e0aa88a6047abd24a7fb5ce78f, type: 3}
     _fadeDuration: 0.5

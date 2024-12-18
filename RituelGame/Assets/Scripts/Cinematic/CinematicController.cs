@@ -77,8 +77,6 @@ namespace Cinematic
             subtitleIndex++;
             cinematicIndex++;
             _autoPassTimer = _subtitlesToPlay._subtitles[subtitleIndex].time;
-            if (cinematicIndex >= 4)
-                _autoPassTimer = _subtitlesToPlay._subtitles[subtitleIndex].time*2;
             ApplyEvent();
         }
         
