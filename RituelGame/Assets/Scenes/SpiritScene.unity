@@ -5066,6 +5066,10 @@ PrefabInstance:
       propertyPath: _cryptex
       value: 
       objectReference: {fileID: 1384426897}
+    - target: {fileID: 244077447301756305, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.1291008
+      objectReference: {fileID: 0}
     - target: {fileID: 802128640047382831, guid: 46b3ea2eceb77f14c8944eddbcd03dbe, type: 3}
       propertyPath: m_Name
       value: CryptexEnigmaSpirit
@@ -6393,7 +6397,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1437110299580162322, guid: 86923fdecc5f40642908e04b087ce2b0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2931706923733746175, guid: 86923fdecc5f40642908e04b087ce2b0, type: 3}
       propertyPath: m_Pivot.x
