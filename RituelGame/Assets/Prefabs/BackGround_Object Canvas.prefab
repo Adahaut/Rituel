@@ -99,6 +99,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &3169595666682614236
@@ -231,6 +233,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &5824049656516551103
@@ -363,6 +367,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &1980547437546719438
@@ -636,6 +642,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &4778585221116422980
@@ -843,6 +851,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &3503207262803612820
@@ -975,6 +985,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &2044881804803666089
@@ -1068,7 +1080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1340,6 +1352,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &89448546173361740
@@ -1788,6 +1802,8 @@ MonoBehaviour:
   _onButtonClicked:
     m_PersistentCalls:
       m_Calls: []
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &2709351797484284596
@@ -2213,6 +2229,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &6803199943260811251
@@ -2466,6 +2484,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+  _secondCanvasGroup: {fileID: 0}
+  _firstCanvasGroup: {fileID: 0}
   _lights: {fileID: 0}
   _spotLights: {fileID: 0}
 --- !u!114 &8428074981296985910
