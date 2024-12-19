@@ -39,17 +39,20 @@ public class DIfficultyManager : MonoBehaviour
     {
         _linkToStartWith = _easyLink;
         _continueButton.SetActive(true);
+        PlayerPrefs.SetInt("CinematicDone", 0);
     }
     
     public void Medium()
     {
         _linkToStartWith = _mediumLink;
         _continueButton.SetActive(true);
+        PlayerPrefs.SetInt("CinematicDone", 0);
     }
     
     public void Hard()
     {
         _linkToStartWith = _hardLink;
         _continueButton.SetActive(true);
+        PlayerPrefs.SetInt("CinematicDone", 0);
     }
 }
