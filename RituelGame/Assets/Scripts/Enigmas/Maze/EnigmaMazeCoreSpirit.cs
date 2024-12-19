@@ -92,7 +92,7 @@ public class EnigmaMazeCoreSpirit : MonoBehaviour
                         mazeFrame.GetComponent<Image>().sprite = mazeFrameSpriteWall;
                     } else if (mazeStruct._mazePattern[i, j] == 3)
                     {
-                        mazeFrame.GetComponent<Image>().color = Color.green;
+                        mazeFrame.GetComponent<Image>().color = Color.black;
                     }
                 }
             }

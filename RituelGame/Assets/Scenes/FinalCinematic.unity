@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6fc4d589f1b606f4b877d742d53bbfda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 486ca6c867bdb9c4e914159028f5afb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -254,7 +254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6fc4d589f1b606f4b877d742d53bbfda, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 486ca6c867bdb9c4e914159028f5afb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -530,7 +530,7 @@ MonoBehaviour:
     _canBeClickedToPass: 0
     _passAutomatically: 1
     _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: 6fc4d589f1b606f4b877d742d53bbfda, type: 3}
+    _backgroundSprite: {fileID: 21300000, guid: 486ca6c867bdb9c4e914159028f5afb0, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
     _audioName: 
@@ -538,7 +538,7 @@ MonoBehaviour:
     _canBeClickedToPass: 0
     _passAutomatically: 1
     _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: 6364ab1b5b4b8b642b189b5f5fa6dd84, type: 3}
+    _backgroundSprite: {fileID: 21300000, guid: dece12df0c515624cb98241bffd0f64a, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
     _audioName: 
@@ -546,46 +546,22 @@ MonoBehaviour:
     _canBeClickedToPass: 0
     _passAutomatically: 1
     _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: 0ae1ad1c0617c204d8a455fd4bb04ef2, type: 3}
+    _backgroundSprite: {fileID: 21300000, guid: dbb11d642d84b424ab329f732bc97750, type: 3}
     _fadeDuration: 0.5
     _sceneName: 
-    _audioName: 
-  - _eventType: 0
-    _canBeClickedToPass: 0
-    _passAutomatically: 1
-    _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: 2e1f5567be5efe2498607e7f4cb75ea3, type: 3}
-    _fadeDuration: 0.5
-    _sceneName: 
-    _audioName: 
-  - _eventType: 0
-    _canBeClickedToPass: 0
-    _passAutomatically: 1
-    _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: a12ce8cc35329f34ebdefa8985f697b0, type: 3}
-    _fadeDuration: 0.5
-    _sceneName: 
-    _audioName: 
-  - _eventType: 0
-    _canBeClickedToPass: 1
-    _passAutomatically: 1
-    _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: e75fa5e0aa88a6047abd24a7fb5ce78f, type: 3}
-    _fadeDuration: 0.5
-    _sceneName: MainMenuScene
     _audioName: 
   - _eventType: 1
     _canBeClickedToPass: 1
     _passAutomatically: 1
     _autoPassDuration: 3
-    _backgroundSprite: {fileID: 21300000, guid: e75fa5e0aa88a6047abd24a7fb5ce78f, type: 3}
+    _backgroundSprite: {fileID: 21300000, guid: dbb11d642d84b424ab329f732bc97750, type: 3}
     _fadeDuration: 0.5
     _sceneName: MainMenuScene
     _audioName: 
   backgroundImage: {fileID: 177407524}
   oldBackgroundImage: {fileID: 723386495}
   _autoPassTimer: 0
-  _subtitlesToPlay: {fileID: 11400000, guid: 2e100fbae07b0d14784a8be44a2c1a29, type: 2}
+  _subtitlesToPlay: {fileID: 11400000, guid: fac014b72be5946478eea73b291b7398, type: 2}
   _vocalsScript: {fileID: 1568313334}
 --- !u!114 &1568313334
 MonoBehaviour:
